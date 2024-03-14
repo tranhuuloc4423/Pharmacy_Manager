@@ -295,3 +295,22 @@ BEGIN
     DELETE FROM [dbo].[KhoThuoc]
     WHERE MaKhoThuoc = @MaKhoThuoc;
 END
+  
+-- Tạo stored procedure thêm chi tiết hóa đơn
+CREATE PROCEDURE [dbo].[ThemChiTietHoaDon]
+    @MaHoaDon INT,
+    @MaThuoc INT,
+    @SoLuong INT,
+    @GiaBan INT
+AS
+BEGIN
+    -- Thêm chi tiết hóa đơn
+    INSERT INTO [dbo].[ChiTietHoaDon] (MaHoaDon, MaThuoc, SoLuong, GiaBan)
+    VALUES (@MaHoaDon, @MaThuoc, @SoLuong, @GiaBan);
+
+    -- Cập nhật tổng tiền trong hóa đơn
+    UPDATE [dbo].[HoaDon]
+    SET TongTien = (SELECT SUM(SoLuong * GiaBan) FROM [dbo].[ChiTietHoaDon] WHERE MaHoaDon = @MaHoaDon)
+    WHERE MaHoaDon = @MaHoaDon;
+END
+GO
