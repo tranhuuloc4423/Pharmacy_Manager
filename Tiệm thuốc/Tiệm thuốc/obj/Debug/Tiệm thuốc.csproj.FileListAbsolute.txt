@@ -1,0 +1,11 @@
+C:\Users\lengu\Videos\C#\Tiệm thuốc\Tiệm thuốc\bin\Debug\Tiệm thuốc.exe.config
+C:\Users\lengu\Videos\C#\Tiệm thuốc\Tiệm thuốc\bin\Debug\Tiệm thuốc.exe
+C:\Users\lengu\Videos\C#\Tiệm thuốc\Tiệm thuốc\bin\Debug\Tiệm thuốc.pdb
+C:\Users\lengu\Videos\C#\Tiệm thuốc\Tiệm thuốc\obj\Debug\Tiệm thuốc.csprojResolveAssemblyReference.cache
+C:\Users\lengu\Videos\C#\Tiệm thuốc\Tiệm thuốc\obj\Debug\Tiệm_thuốc.FormDangnhap.resources
+C:\Users\lengu\Videos\C#\Tiệm thuốc\Tiệm thuốc\obj\Debug\Tiệm_thuốc.Properties.Resources.resources
+C:\Users\lengu\Videos\C#\Tiệm thuốc\Tiệm thuốc\obj\Debug\Tiệm thuốc.csproj.GenerateResource.Cache
+C:\Users\lengu\Videos\C#\Tiệm thuốc\Tiệm thuốc\obj\Debug\Tiệm thuốc.exe
+C:\Users\lengu\Videos\C#\Tiệm thuốc\Tiệm thuốc\obj\Debug\Tiệm thuốc.pdb
+C:\Users\lengu\Videos\C#\Tiệm thuốc\Tiệm thuốc\obj\Debug\Tiệm_thuốc.FormMain.resources
+C:\Users\lengu\Videos\C#\Tiệm thuốc\Tiệm thuốc\obj\Debug\Tiệm_thuốc.Thuoc.ucThuoc.resources
