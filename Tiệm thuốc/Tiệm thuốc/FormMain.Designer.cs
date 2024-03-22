@@ -260,7 +260,7 @@
             this.lblTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTen.Location = new System.Drawing.Point(117, 24);
             this.lblTen.Name = "lblTen";
-            this.lblTen.Size = new System.Drawing.Size(48, 16);
+            this.lblTen.Size = new System.Drawing.Size(47, 16);
             this.lblTen.TabIndex = 1;
             this.lblTen.Text = "label 1";
             // 
@@ -270,7 +270,7 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(25, 24);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(86, 16);
+            this.label9.Size = new System.Drawing.Size(85, 16);
             this.label9.TabIndex = 0;
             this.label9.Text = "Dashboard / ";
             // 
@@ -288,7 +288,7 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1114, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(48, 49);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

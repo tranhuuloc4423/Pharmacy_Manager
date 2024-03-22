@@ -1,112 +1,79 @@
-﻿
-/****** Object:  Database [Project_QLTT]  ******/
-CREATE DATABASE [Project_QLTT]
+﻿CREATE DATABASE [Project_QLTT]
 
 GO
-ALTER DATABASE [Project_QLTT] SET ANSI_NULL_DEFAULT OFF /*no Null*/
-GO
-ALTER DATABASE [Project_QLTT] SET ANSI_PADDING OFF /*no Padding more space*/ 
-GO
-ALTER DATABASE [Project_QLTT] SET AUTO_SHRINK OFF 
-GO
-ALTER DATABASE [Project_QLTT] SET RECURSIVE_TRIGGERS OFF /*no Recursive */ 
-GO
-ALTER DATABASE [Project_QLTT] SET RECOVERY FULL 
-/*GO
-ALTER DATABASE [Project_QLTT] SET DB_CHAINING OFF*/
-GO
-ALTER DATABASE [Project_QLTT] SET TARGET_RECOVERY_TIME = 0 SECONDS /*Target Recovery Time*/
-GO
+
 USE [Project_QLTT]
 
 GO
-/****** Object:  TABLE [dbo].[Thuoc]   ******/
-SET ANSI_NULLS ON
-GO
-SET ANSI_PADDING ON
-GO
-CREATE TABLE [dbo].[PhanLoai] (
-	[MaLoaiThuoc] [INT] PRIMARY KEY IDENTITY(1,1),
-    [TenLoaiThuoc] [NVARCHAR](50) NOT NULL,
+------------ Thuoc ------------
+CREATE TABLE PhanLoai (
+    MaLoaiThuoc INT PRIMARY KEY IDENTITY(1,1),
+    TenLoaiThuoc NVARCHAR(50) NOT NULL
 );
 GO
-SET ANSI_PADDING OFF
 
-CREATE TABLE [dbo].[NhaCungCap] (
-	[MaNhaCungCap] [INT] PRIMARY KEY IDENTITY(1,1),
-    [TenNhaCungCap] [NVARCHAR](50) NOT NULL,
-    [DiaChi] [NVARCHAR](50) NOT NULL,
+CREATE TABLE NhaCungCap (
+    MaNhaCungCap INT PRIMARY KEY IDENTITY(1,1),
+    TenNhaCungCap NVARCHAR(50) NOT NULL,
+    DiaChi NVARCHAR(50) NOT NULL
 );
 GO
-CREATE TABLE [dbo].[Thuoc] (
-    [MaThuoc] [INT] PRIMARY KEY IDENTITY(1,1),
-    [MaLoaiThuoc] [INT] FOREIGN KEY REFERENCES [dbo].[PhanLoai]([MaLoaiThuoc]),
-    [TenThuoc] [NVARCHAR](50) NOT NULL,
-    [DonViTinh] [NVARCHAR](15) NOT NULL,
-    [GiaBan] [DECIMAL](18,2) NOT NULL
+
+CREATE TABLE Thuoc (
+    MaThuoc INT PRIMARY KEY IDENTITY(1,1),
+    MaLoaiThuoc INT FOREIGN KEY REFERENCES PhanLoai(MaLoaiThuoc),
+    TenThuoc NVARCHAR(50) NOT NULL,
+    DonViTinh NVARCHAR(15) NOT NULL,
+    GiaBan DECIMAL(18,2) NOT NULL
 );
 GO
-CREATE TABLE [dbo].[KhoThuoc] (
-	[MaKhoThuoc] [INT] PRIMARY KEY IDENTITY(1,1),
-    [MaThuoc] [INT] FOREIGN KEY REFERENCES [dbo].[Thuoc]([MaThuoc]),
-    [MaNhaCungCap] [INT] FOREIGN KEY REFERENCES [dbo].[NhaCungCap]([MaNhaCungCap]),
-	[SoLuong] [INT] NOT NULL,
-	[NgaySanXuat] [DATE] NOT NULL,
-	[NgayHetHan] [DATE] NOT NULL,
-); 
-GO
---Phan loai thuoc, ngay nhap kho, nha cung cap
-/****** Object:  TABLE [dbo].[QuyenDangNhap]   ******/
-SET ANSI_NULLS ON
-GO
-SET ANSI_PADDING ON
-CREATE TABLE [dbo].[QuyenDangNhap] (
-	[MaQuyen] [INT] PRIMARY KEY,
-	[MoTa] [NVARCHAR](10) NULL,
+------------ Kho ------------
+
+CREATE TABLE KhoThuoc (
+    MaKhoThuoc INT PRIMARY KEY IDENTITY(1,1),
+    MaThuoc INT FOREIGN KEY REFERENCES Thuoc(MaThuoc),
+    MaNhaCungCap INT FOREIGN KEY REFERENCES NhaCungCap(MaNhaCungCap),
+    SoLuong INT NOT NULL,
+    NgaySanXuat DATE NOT NULL,
+    NgayHetHan DATE NOT NULL
 );
 GO
-SET ANSI_PADDING OFF
-GO
-/****** Object:  TABLE [dbo].[TaiKhoan]   ******/
-SET ANSI_NULLS ON
-GO
-SET ANSI_PADDING ON
-CREATE TABLE [dbo].[TaiKhoan] (
-    [MaTaiKhoan] [INT] PRIMARY KEY IDENTITY(1,1),
-    [TenTaiKhoan] [NVARCHAR](25) NOT NULL,
-    [MatKhau] [NVARCHAR](30) NOT NULL,
-    [VaiTro] [INT] FOREIGN KEY REFERENCES [dbo].[QuyenDangNhap]([MaQuyen]),
-    [HoTen] [NVARCHAR](30) NOT NULL,
-    [SoDienThoai] [NVARCHAR](15) NOT NULL,
-    [Email] [NVARCHAR](30) NOT NULL
+
+------------ Tai Khoan ------------
+CREATE TABLE QuyenDangNhap (
+    MaQuyen INT PRIMARY KEY,
+    MoTa NVARCHAR(10) NULL
 );
 GO
-SET ANSI_PADDING OFF
-GO
-/****** Object:  TABLE [dbo].[HoaDon]   ******/
-SET ANSI_NULLS ON
-GO
-CREATE TABLE [dbo].[HoaDon] (
-    [MaHoaDon] [INT] PRIMARY KEY IDENTITY(1,1),
-    [MaTaiKhoan] [INT] FOREIGN KEY REFERENCES [dbo].[TaiKhoan]([MaTaiKhoan]),
-    [NgayBan] [DATETIME] NOT NULL,
-    [TongTien] [DECIMAL](18,2) NOT NULL,
-	[TenKhachHang] [NVARCHAR](50) NOT NULL,
-	[SoDienThoai] [VARCHAR](10) NOT NULL,
+
+CREATE TABLE TaiKhoan (
+    MaTaiKhoan INT PRIMARY KEY IDENTITY(1,1),
+    TenTaiKhoan NVARCHAR(25) NOT NULL,
+    MatKhau NVARCHAR(30) NOT NULL,
+    VaiTro INT FOREIGN KEY REFERENCES QuyenDangNhap(MaQuyen),
+    HoTen NVARCHAR(30) NOT NULL,
+    SoDienThoai NVARCHAR(15) NOT NULL,
+    Email NVARCHAR(30) NOT NULL
 );
 GO
-/****** Object:  TABLE [dbo].[ChiTietHoaDon]   ******/
-SET ANSI_NULLS ON
-GO
-SET ANSI_PADDING ON
-CREATE TABLE [dbo].[ChiTietHoaDon] (
-    [MaChiTietHoaDon] [INT] PRIMARY KEY IDENTITY(1,1),
-    [MaHoaDon] [INT] FOREIGN KEY REFERENCES [dbo].[HoaDon]([MaHoaDon]),
-    [MaThuoc] [INT] FOREIGN KEY REFERENCES [dbo].[Thuoc]([MaThuoc]),
-    [SoLuong] [INT] NOT NULL,
+
+------------ Hoa Don ------------
+CREATE TABLE HoaDon (
+    MaHoaDon INT PRIMARY KEY IDENTITY(1,1),
+    MaTaiKhoan INT FOREIGN KEY REFERENCES TaiKhoan(MaTaiKhoan),
+    NgayBan DATETIME NOT NULL,
+    TongTien DECIMAL(18,2) NOT NULL,
+    TenKhachHang NVARCHAR(50) NOT NULL,
+    SoDienThoai VARCHAR(10) NOT NULL
 );
 GO
-SET ANSI_PADDING OFF
+
+CREATE TABLE ChiTietHoaDon (
+    MaChiTietHoaDon INT PRIMARY KEY IDENTITY(1,1),
+    MaHoaDon INT FOREIGN KEY REFERENCES HoaDon(MaHoaDon),
+    MaThuoc INT FOREIGN KEY REFERENCES Thuoc(MaThuoc),
+    SoLuong INT NOT NULL
+);
 GO
 --INSERT [dbo].[Thuoc] ( [TenThuoc], [DonViTinh], [SoLuong], [GiaBan]) VALUES ( N'Paracetamol', N'Viên', 100, 5000)
 --INSERT [dbo].[Thuoc] ( [TenThuoc], [DonViTinh], [SoLuong], [GiaBan]) VALUES ( N'Vitamin C', N'Viên sủi', 50, 10000)
@@ -174,8 +141,6 @@ GO
 --GO
 --ALTER DATABASE [Project_QLTT] SET  READ_WRITE 
 --GO*/
-
-
 
 GO
 -- new values
