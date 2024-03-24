@@ -39,6 +39,38 @@ CREATE TABLE KhoThuoc (
 );
 GO
 
+CREATE TABLE PhieuNhap (
+    MaPhieuNhap INT PRIMARY KEY IDENTITY(1,1),
+    NgayNhap DATE,
+    NguoiNhap NVARCHAR(25)
+);
+GO
+
+CREATE TABLE ChiTietPhieuNhap (
+    MaChiTietPhieuNhap INT PRIMARY KEY IDENTITY(1,1),
+    MaPhieuNhap INT FOREIGN KEY REFERENCES PhieuNhap(MaPhieuNhap),
+    MaThuoc INT FOREIGN KEY REFERENCES Thuoc(MaThuoc),
+    SoLuong INT
+);
+GO
+
+CREATE TABLE PhieuXuat (
+    MaPhieuXuat INT PRIMARY KEY IDENTITY(1,1),
+    NgayXuat DATE,
+    NguoiXuat NVARCHAR(25)
+);
+GO
+
+CREATE TABLE ChiTietPhieuXuat (
+    MaChiTietPhieuXuat INT PRIMARY KEY IDENTITY(1,1),
+    MaPhieuXuat INT FOREIGN KEY REFERENCES PhieuXuat(MaPhieuXuat),
+    MaThuoc INT FOREIGN KEY REFERENCES Thuoc(MaThuoc),
+    SoLuong INT
+);
+GO
+
+
+
 ------------ Tai Khoan ------------
 CREATE TABLE QuyenDangNhap (
     MaQuyen INT PRIMARY KEY,
@@ -78,6 +110,7 @@ CREATE TABLE ChiTietHoaDon (
 );
 GO
 
+------------ KhachHang ------------
 CREATE TABLE KhachHang (
     MaKhachHang INT PRIMARY KEY IDENTITY(1,1),
 	HoTen NVARCHAR(50) NOT NULL,
