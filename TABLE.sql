@@ -28,13 +28,14 @@ GO
 ------------ Kho ------------
 
 CREATE TABLE KhoThuoc (
-    Thang INT PRIMARY KEY IDENTITY(1,1),
+    Thang INT NOT NULL,
 	Nam INT NOT NULL,
     MaThuoc INT FOREIGN KEY REFERENCES Thuoc(MaThuoc),
 	DauKy INT NOT NULL,
 	NhapTrongKy INT NOT NULL,
 	XuatTrongThang INT NOT NULL,
-    TonKho INT NOT NULL
+    TonKho INT NOT NULL,
+	CONSTRAINT PK_KhoThuoc PRIMARY KEY (Thang, Nam, MaThuoc)
 );
 GO
 
