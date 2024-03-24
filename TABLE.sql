@@ -1,9 +1,6 @@
 ﻿CREATE DATABASE [Project_QLTT]
-
 GO
-
 USE [Project_QLTT]
-
 GO
 ------------ Thuoc ------------
 CREATE TABLE PhanLoai (
@@ -22,6 +19,7 @@ GO
 CREATE TABLE Thuoc (
     MaThuoc INT PRIMARY KEY IDENTITY(1,1),
     MaLoaiThuoc INT FOREIGN KEY REFERENCES PhanLoai(MaLoaiThuoc),
+	MaNhaCungCap INT FOREIGN KEY REFERENCES NhaCungCap(MaNhaCungCap),
     TenThuoc NVARCHAR(50) NOT NULL,
     DonViTinh NVARCHAR(15) NOT NULL,
     GiaBan DECIMAL(18,2) NOT NULL
@@ -30,12 +28,13 @@ GO
 ------------ Kho ------------
 
 CREATE TABLE KhoThuoc (
-    MaKhoThuoc INT PRIMARY KEY IDENTITY(1,1),
+    Thang INT PRIMARY KEY IDENTITY(1,1),
+	Nam INT NOT NULL,
     MaThuoc INT FOREIGN KEY REFERENCES Thuoc(MaThuoc),
-    MaNhaCungCap INT FOREIGN KEY REFERENCES NhaCungCap(MaNhaCungCap),
-    SoLuong INT NOT NULL,
-    NgaySanXuat DATE NOT NULL,
-    NgayHetHan DATE NOT NULL
+	DauKy INT NOT NULL,
+	NhapTrongKy INT NOT NULL,
+	XuatTrongThang INT NOT NULL,
+    TonKho INT NOT NULL
 );
 GO
 
@@ -63,8 +62,8 @@ CREATE TABLE HoaDon (
     MaTaiKhoan INT FOREIGN KEY REFERENCES TaiKhoan(MaTaiKhoan),
     NgayBan DATETIME NOT NULL,
     TongTien DECIMAL(18,2) NOT NULL,
-    TenKhachHang NVARCHAR(50) NOT NULL,
-    SoDienThoai VARCHAR(10) NOT NULL
+	MaKhachHang INT FOREIGN KEY REFERENCES KhachHang(MaKhachHang),
+	GiamGia INT
 );
 GO
 
@@ -72,9 +71,18 @@ CREATE TABLE ChiTietHoaDon (
     MaChiTietHoaDon INT PRIMARY KEY IDENTITY(1,1),
     MaHoaDon INT FOREIGN KEY REFERENCES HoaDon(MaHoaDon),
     MaThuoc INT FOREIGN KEY REFERENCES Thuoc(MaThuoc),
-    SoLuong INT NOT NULL
+    SoLuong INT NOT NULL,
+	DonGia INT NOT NULL,
+	ThanhTien INT NOT NULL
 );
 GO
+
+CREATE TABLE KhachHang (
+    MaKhachHang INT PRIMARY KEY IDENTITY(1,1),
+	HoTen NVARCHAR(50) NOT NULL,
+	SoDienThoai VARCHAR(10),
+	KhachHangThanThiet INT
+);
 --INSERT [dbo].[Thuoc] ( [TenThuoc], [DonViTinh], [SoLuong], [GiaBan]) VALUES ( N'Paracetamol', N'Viên', 100, 5000)
 --INSERT [dbo].[Thuoc] ( [TenThuoc], [DonViTinh], [SoLuong], [GiaBan]) VALUES ( N'Vitamin C', N'Viên sủi', 50, 10000)
 --INSERT [dbo].[Thuoc] ( [TenThuoc], [DonViTinh], [SoLuong], [GiaBan]) VALUES ( N'Amoxicillin', N'Viên nang', 20, 15000)
@@ -141,81 +149,3 @@ GO
 --GO
 --ALTER DATABASE [Project_QLTT] SET  READ_WRITE 
 --GO*/
-
-GO
--- new values
--- Phan Loai
-INSERT INTO PhanLoai (TenLoaiThuoc)
-VALUES 
-    (N'Thuốc ho'),
-    (N'Thuốc hạ sốt'),
-    (N'Thuốc giảm đau'),
-    (N'Thuốc vitamin'),
-    (N'Thuốc kháng vi khuẩn');
-GO
--- Nha Cung Cap
-INSERT INTO NhaCungCap (TenNhaCungCap, DiaChi)
-VALUES 
-    (N'Nhà cung cấp A', N'Địa chỉ A'),
-    (N'Nhà cung cấp B', N'Địa chỉ B'),
-    (N'Nhà cung cấp C', N'Địa chỉ C'),
-    (N'Nhà cung cấp D', N'Địa chỉ D'),
-    (N'Nhà cung cấp E', N'Địa chỉ E');
-GO
--- Thuoc
-INSERT INTO Thuoc (MaLoaiThuoc, TenThuoc, DonViTinh, GiaBan)
-VALUES 
-    (1, N'Paracetamol', N'Viên', 18000),
-    (2, N'Ibuprofen', N'Viên', 10000),
-    (3, N'Aspirin', N'Viên', 5000),
-    (4, N'Vitamin C', N'Viên', 10000),
-    (5, N'Amoxicillin', N'Viên', 12000);
-GO
--- Kho Thuoc
-INSERT INTO KhoThuoc (MaThuoc, MaNhaCungCap, SoLuong, NgaySanXuat, NgayHetHan)
-VALUES 
-    (1, 1, 100, '2022-01-01', '2024-01-01'),
-    (2, 1, 150, '2021-12-01', '2023-12-01'),
-    (3, 2, 200, '2022-03-01', '2024-03-01'),
-    (4, 3, 80, '2023-02-15', '2025-02-15'),
-    (5, 4, 120, '2022-08-20', '2024-08-20');
-INSERT INTO QuyenDangNhap (MaQuyen, MoTa)
-VALUES 
-    (1, N'Admin'),
-    (2, N'Nhân viên');
-GO
--- TaiKhoan
-INSERT INTO TaiKhoan (TenTaiKhoan, MatKhau, VaiTro, HoTen, SoDienThoai, Email)
-VALUES 
-    ( N'admin', N'123456', 1, N'vippro123', N'0969696969', N'admin@gmail.com'),
-    ( N'nv1', N'123456', 2, N'Trần Hữu Lộc', N'0975757575', N'roku@gmail.com'),
-	( N'nv2', N'123456', 2, N'Lê Nguyễn Thanh Tú', N'0248484848', N'tule123@gmail.com'),
-	( N'nv3', N'123456', 2, N'Dương Kim Nguyên', N'0167676767', N'nguyennguyen@gmail.com');
-
-GO
--- Hoa Don
-INSERT INTO HoaDon (MaTaiKhoan, NgayBan, TongTien, TenKhachHang, SoDienThoai)
-VALUES
-(2, '2024-03-10 10:00:00', 50000, N'Khách hàng A', '0123456789'),
-(2, '2024-03-11 15:30:00', 75000, N'Khách hàng B', '0987654321'),
-(3, '2024-03-12 08:45:00', 30000, N'Khách hàng C', '0123456789'),
-(4, '2024-03-12 11:20:00', 45000, N'Khách hàng D', '0987654321');
-
-GO
--- Chi tiet hoa don
-INSERT INTO ChiTietHoaDon (MaHoaDon, MaThuoc, SoLuong, GiaBan)
-VALUES
-(1, 1, 2, 20000),
-(1, 2, 3, 15000),
-(2, 3, 1, 75000),
-(3, 4, 2, 15000),
-(4, 5, 3, 15000);
-
-SELECT * FROM PhanLoai
-SELECT * FROM NhaCungCap
-SELECT * FROM Thuoc
-SELECT * FROM KhoThuoc
-SELECT * FROM TaiKhoan
-SELECT * FROM QuyenDangNhap
-SELECT * FROM HoaDon
-SELECT * FROM ChiTietHoaDon
