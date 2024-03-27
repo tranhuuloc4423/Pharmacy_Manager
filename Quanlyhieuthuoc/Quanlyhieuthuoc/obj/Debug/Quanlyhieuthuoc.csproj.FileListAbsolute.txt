@@ -1,0 +1,13 @@
+C:\Users\lengu\Videos\C#\Quanlyhieuthuoc\Quanlyhieuthuoc\bin\Debug\Quanlyhieuthuoc.exe.config
+C:\Users\lengu\Videos\C#\Quanlyhieuthuoc\Quanlyhieuthuoc\bin\Debug\Quanlyhieuthuoc.exe
+C:\Users\lengu\Videos\C#\Quanlyhieuthuoc\Quanlyhieuthuoc\bin\Debug\Quanlyhieuthuoc.pdb
+C:\Users\lengu\Videos\C#\Quanlyhieuthuoc\Quanlyhieuthuoc\obj\Debug\Quanlyhieuthuoc.csprojResolveAssemblyReference.cache
+C:\Users\lengu\Videos\C#\Quanlyhieuthuoc\Quanlyhieuthuoc\obj\Debug\Quanlyhieuthuoc.Dangnhap.resources
+C:\Users\lengu\Videos\C#\Quanlyhieuthuoc\Quanlyhieuthuoc\obj\Debug\Quanlyhieuthuoc.Main.resources
+C:\Users\lengu\Videos\C#\Quanlyhieuthuoc\Quanlyhieuthuoc\obj\Debug\Quanlyhieuthuoc.Properties.Resources.resources
+C:\Users\lengu\Videos\C#\Quanlyhieuthuoc\Quanlyhieuthuoc\obj\Debug\Quanlyhieuthuoc.Thuoc.ucSuathuoc.resources
+C:\Users\lengu\Videos\C#\Quanlyhieuthuoc\Quanlyhieuthuoc\obj\Debug\Quanlyhieuthuoc.Thuoc.ucThemthuoc.resources
+C:\Users\lengu\Videos\C#\Quanlyhieuthuoc\Quanlyhieuthuoc\obj\Debug\Quanlyhieuthuoc.Thuoc.ucThuoc.resources
+C:\Users\lengu\Videos\C#\Quanlyhieuthuoc\Quanlyhieuthuoc\obj\Debug\Quanlyhieuthuoc.csproj.GenerateResource.Cache
+C:\Users\lengu\Videos\C#\Quanlyhieuthuoc\Quanlyhieuthuoc\obj\Debug\Quanlyhieuthuoc.exe
+C:\Users\lengu\Videos\C#\Quanlyhieuthuoc\Quanlyhieuthuoc\obj\Debug\Quanlyhieuthuoc.pdb
