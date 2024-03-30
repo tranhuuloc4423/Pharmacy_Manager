@@ -11,3 +11,6 @@ C:\Users\lengu\Videos\C#\Quanlyhieuthuoc\Quanlyhieuthuoc\obj\Debug\Quanlyhieuthu
 C:\Users\lengu\Videos\C#\Quanlyhieuthuoc\Quanlyhieuthuoc\obj\Debug\Quanlyhieuthuoc.csproj.GenerateResource.Cache
 C:\Users\lengu\Videos\C#\Quanlyhieuthuoc\Quanlyhieuthuoc\obj\Debug\Quanlyhieuthuoc.exe
 C:\Users\lengu\Videos\C#\Quanlyhieuthuoc\Quanlyhieuthuoc\obj\Debug\Quanlyhieuthuoc.pdb
+D:\test\Pharmacy_Manager\Quanlyhieuthuoc\Quanlyhieuthuoc\bin\Debug\Quanlyhieuthuoc.exe.config
+D:\test\Pharmacy_Manager\Quanlyhieuthuoc\Quanlyhieuthuoc\obj\Debug\Quanlyhieuthuoc.exe
+D:\test\Pharmacy_Manager\Quanlyhieuthuoc\Quanlyhieuthuoc\obj\Debug\Quanlyhieuthuoc.pdb
