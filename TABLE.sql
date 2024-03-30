@@ -19,7 +19,6 @@ GO
 CREATE TABLE Thuoc (
     MaThuoc INT PRIMARY KEY IDENTITY(1,1),
     MaLoaiThuoc INT FOREIGN KEY REFERENCES PhanLoai(MaLoaiThuoc),
-	MaNhaCungCap INT FOREIGN KEY REFERENCES NhaCungCap(MaNhaCungCap),
     TenThuoc NVARCHAR(50) NOT NULL,
     DonViTinh NVARCHAR(15) NOT NULL,
     GiaBan DECIMAL(18,2) NOT NULL
@@ -41,6 +40,7 @@ GO
 
 CREATE TABLE PhieuNhap (
     MaPhieuNhap INT PRIMARY KEY IDENTITY(1,1),
+    MaNhaCungCap INT FOREIGN KEY REFERENCES NhaCungCap(MaNhaCungCap),
     NgayNhap DATE,
     NguoiNhap NVARCHAR(25)
 );
@@ -84,8 +84,6 @@ CREATE TABLE TaiKhoan (
     MatKhau NVARCHAR(30) NOT NULL,
     VaiTro INT FOREIGN KEY REFERENCES QuyenDangNhap(MaQuyen),
     HoTen NVARCHAR(30) NOT NULL,
-    SoDienThoai NVARCHAR(15) NOT NULL,
-    Email NVARCHAR(30) NOT NULL
 );
 GO
 
