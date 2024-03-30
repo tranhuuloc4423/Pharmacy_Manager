@@ -115,69 +115,64 @@ CREATE TABLE KhachHang (
 	SoDienThoai VARCHAR(10),
 	KhachHangThanThiet INT
 );
---INSERT [dbo].[Thuoc] ( [TenThuoc], [DonViTinh], [SoLuong], [GiaBan]) VALUES ( N'Paracetamol', N'Viên', 100, 5000)
---INSERT [dbo].[Thuoc] ( [TenThuoc], [DonViTinh], [SoLuong], [GiaBan]) VALUES ( N'Vitamin C', N'Viên sủi', 50, 10000)
---INSERT [dbo].[Thuoc] ( [TenThuoc], [DonViTinh], [SoLuong], [GiaBan]) VALUES ( N'Amoxicillin', N'Viên nang', 20, 15000)
---INSERT [dbo].[Thuoc] ( [TenThuoc], [DonViTinh], [SoLuong], [GiaBan]) VALUES ( N'Panadol', N'Viên', 200, 3000)
---INSERT [dbo].[Thuoc] ( [TenThuoc], [DonViTinh], [SoLuong], [GiaBan]) VALUES ( N'Aspirin', N'Viên', 150, 2000)
---INSERT [dbo].[Thuoc] ( [TenThuoc], [DonViTinh], [SoLuong], [GiaBan]) VALUES ( N'Nhỏ mũi Dexpanthenol', N'Chai', 10, 1000)
---INSERT [dbo].[Thuoc] ( [TenThuoc], [DonViTinh], [SoLuong], [GiaBan]) VALUES ( N'Kem chống nắng SPF 50', N'Tuýp', 50, 350000)
---INSERT [dbo].[Thuoc] ( [TenThuoc], [DonViTinh], [SoLuong], [GiaBan]) VALUES ( N'Thuốc ho Prospan', N'Chai', 100, 120000)
---INSERT [dbo].[Thuoc] ( [TenThuoc], [DonViTinh], [SoLuong], [GiaBan]) VALUES ( N'Men vi sinh BioGaia', N'Hộp', 30, 150000)
---INSERT [dbo].[Thuoc] ( [TenThuoc], [DonViTinh], [SoLuong], [GiaBan]) VALUES ( N'Nước muối sinh lý 0,9%', N'Chai', 100, 5000)
---INSERT [dbo].[Thuoc] ( [TenThuoc], [DonViTinh], [SoLuong], [GiaBan]) VALUES ( N'Băng gạc y tế', N'Hộp', 15, 20000)
---INSERT [dbo].[Thuoc] ( [TenThuoc], [DonViTinh], [SoLuong], [GiaBan]) VALUES ( N'Khẩu trang y tế', N'Hộp', 50 , 100000)
---INSERT [dbo].[Thuoc] ( [TenThuoc], [DonViTinh], [SoLuong], [GiaBan]) VALUES ( N'Dung dịch sát khuẩn', N'Chai', 500, 50000)
---INSERT [dbo].[Thuoc] ( [TenThuoc], [DonViTinh], [SoLuong], [GiaBan]) VALUES ( N'Thuốc giảm đau hạ sốt Ibuprofen', N'Viên', 100, 25000)
---INSERT [dbo].[Thuoc] ( [TenThuoc], [DonViTinh], [SoLuong], [GiaBan]) VALUES ( N'Thuốc trị tiêu chảy Smecta', N'Gói', 30, 100000)
---INSERT [dbo].[Thuoc] ( [TenThuoc], [DonViTinh], [SoLuong], [GiaBan]) VALUES ( N'Kem chống hăm Bepanthen', N'Tuýp', 50, 150000)
---INSERT [dbo].[QuyenDangNhap] ([MaQuyen], [MoTa]) VALUES (1, N'Admin')
---INSERT [dbo].[QuyenDangNhap] ([MaQuyen], [MoTa]) VALUES (2, N'Nhan vien')
---INSERT [dbo].[TaiKhoan] ( [TenTaiKhoan], [MatKhau], [VaiTro], [HoTen], [SoDienThoai], [Email]) VALUES ( N'admin', N'123456', 1, N'vippro123', N'0969696969', N'admin@gmail.com')
---INSERT [dbo].[TaiKhoan] ( [TenTaiKhoan], [MatKhau], [VaiTro], [HoTen], [SoDienThoai], [Email]) VALUES ( N'nv1', N'123456', 2, N'Trần Hữu Lộc', N'0975757575', N'roku@gmail.com')
---INSERT [dbo].[TaiKhoan] ( [TenTaiKhoan], [MatKhau], [VaiTro], [HoTen], [SoDienThoai], [Email]) VALUES ( N'nv2', N'123456', 2, N'Lê Nguyễn Thanh Tú', N'0248484848', N'tule123@gmail.com')
---INSERT [dbo].[TaiKhoan] ( [TenTaiKhoan], [MatKhau], [VaiTro], [HoTen], [SoDienThoai], [Email]) VALUES ( N'nv3', N'123456', 2, N'Dương Nguyên', N'0167676767', N'nguyennguyen@gmail.com')
---select * from TaiKhoan 
---INSERT [dbo].[HoaDon] ( [IDTaiKhoan], [NgayBan], [TongTien]) VALUES ( 2, '2023-10-03', 20000)
---INSERT [dbo].[HoaDon] ( [IDTaiKhoan], [NgayBan], [TongTien]) VALUES ( 3, '2023-10-15', 20000)
---INSERT [dbo].[HoaDon] ( [IDTaiKhoan], [NgayBan], [TongTien]) VALUES ( 4, '2023-10-17', 406000)
---INSERT [dbo].[HoaDon] ( [IDTaiKhoan], [NgayBan], [TongTien]) VALUES ( 3, '2023-11-09', 75000)
---INSERT [dbo].[HoaDon] ( [IDTaiKhoan], [NgayBan], [TongTien]) VALUES ( 3, '2023-11-13', 500000)
---INSERT [dbo].[HoaDon] ( [IDTaiKhoan], [NgayBan], [TongTien]) VALUES ( 2, '2023-11-25', 160000)
---INSERT [dbo].[HoaDon] ( [IDTaiKhoan], [NgayBan], [TongTien]) VALUES ( 2, '2023-11-27', 590000)
---INSERT [dbo].[HoaDon] ( [IDTaiKhoan], [NgayBan], [TongTien]) VALUES ( 2, '2023-12-19', 380000)
---INSERT [dbo].[HoaDon] ( [IDTaiKhoan], [NgayBan], [TongTien]) VALUES ( 4, '2023-12-31', 95000)
---INSERT [dbo].[ChiTietHoaDon] ([IDHoaDon], [IDThuoc], [SoLuong], [GiaBan]) VALUES (1, 1, 2, 10000)
---INSERT [dbo].[ChiTietHoaDon] ([IDHoaDon], [IDThuoc], [SoLuong], [GiaBan]) VALUES (1, 2, 1, 10000)
---INSERT [dbo].[ChiTietHoaDon] ([IDHoaDon], [IDThuoc], [SoLuong], [GiaBan]) VALUES (2, 1, 1, 5000)
---INSERT [dbo].[ChiTietHoaDon] ([IDHoaDon], [IDThuoc], [SoLuong], [GiaBan]) VALUES (2, 3, 1, 15000)
---INSERT [dbo].[ChiTietHoaDon] ([IDHoaDon], [IDThuoc], [SoLuong], [GiaBan]) VALUES (3, 1, 10, 50000)
---INSERT [dbo].[ChiTietHoaDon] ([IDHoaDon], [IDThuoc], [SoLuong], [GiaBan]) VALUES (3, 5, 3, 6000)
---INSERT [dbo].[ChiTietHoaDon] ([IDHoaDon], [IDThuoc], [SoLuong], [GiaBan]) VALUES (3, 12, 1, 100000)
---INSERT [dbo].[ChiTietHoaDon] ([IDHoaDon], [IDThuoc], [SoLuong], [GiaBan]) VALUES (3, 15, 1, 100000)
---INSERT [dbo].[ChiTietHoaDon] ([IDHoaDon], [IDThuoc], [SoLuong], [GiaBan]) VALUES (3, 16, 1, 150000)
---INSERT [dbo].[ChiTietHoaDon] ([IDHoaDon], [IDThuoc], [SoLuong], [GiaBan]) VALUES (4, 3, 5, 75000)
---INSERT [dbo].[ChiTietHoaDon] ([IDHoaDon], [IDThuoc], [SoLuong], [GiaBan]) VALUES (5, 3, 2, 30000)
---INSERT [dbo].[ChiTietHoaDon] ([IDHoaDon], [IDThuoc], [SoLuong], [GiaBan]) VALUES (5, 7, 1, 350000)
---INSERT [dbo].[ChiTietHoaDon] ([IDHoaDon], [IDThuoc], [SoLuong], [GiaBan]) VALUES (5, 8, 1, 120000)
---INSERT [dbo].[ChiTietHoaDon] ([IDHoaDon], [IDThuoc], [SoLuong], [GiaBan]) VALUES (6, 4, 15, 45000)
---INSERT [dbo].[ChiTietHoaDon] ([IDHoaDon], [IDThuoc], [SoLuong], [GiaBan]) VALUES (6, 5, 20, 40000)
---INSERT [dbo].[ChiTietHoaDon] ([IDHoaDon], [IDThuoc], [SoLuong], [GiaBan]) VALUES (6, 14, 3, 75000)
---INSERT [dbo].[ChiTietHoaDon] ([IDHoaDon], [IDThuoc], [SoLuong], [GiaBan]) VALUES (7, 1, 5, 25000)
---INSERT [dbo].[ChiTietHoaDon] ([IDHoaDon], [IDThuoc], [SoLuong], [GiaBan]) VALUES (7, 2, 3, 30000)
---INSERT [dbo].[ChiTietHoaDon] ([IDHoaDon], [IDThuoc], [SoLuong], [GiaBan]) VALUES (7, 6, 10, 10000)
---INSERT [dbo].[ChiTietHoaDon] ([IDHoaDon], [IDThuoc], [SoLuong], [GiaBan]) VALUES (7, 9, 1, 150000)
---INSERT [dbo].[ChiTietHoaDon] ([IDHoaDon], [IDThuoc], [SoLuong], [GiaBan]) VALUES (7, 11, 5, 100000)
---INSERT [dbo].[ChiTietHoaDon] ([IDHoaDon], [IDThuoc], [SoLuong], [GiaBan]) VALUES (7, 13, 1, 50000)
---INSERT [dbo].[ChiTietHoaDon] ([IDHoaDon], [IDThuoc], [SoLuong], [GiaBan]) VALUES (7, 14, 1, 25000)
---INSERT [dbo].[ChiTietHoaDon] ([IDHoaDon], [IDThuoc], [SoLuong], [GiaBan]) VALUES (7, 15, 2, 200000)
---INSERT [dbo].[ChiTietHoaDon] ([IDHoaDon], [IDThuoc], [SoLuong], [GiaBan]) VALUES (8, 5, 10, 20000)
---INSERT [dbo].[ChiTietHoaDon] ([IDHoaDon], [IDThuoc], [SoLuong], [GiaBan]) VALUES (8, 8, 3, 360000)
---INSERT [dbo].[ChiTietHoaDon] ([IDHoaDon], [IDThuoc], [SoLuong], [GiaBan]) VALUES (9, 3, 3, 45000)
---INSERT [dbo].[ChiTietHoaDon] ([IDHoaDon], [IDThuoc], [SoLuong], [GiaBan]) VALUES (9, 10, 10, 50000)
 
+-- INSERT DATA
 
---/*USE [master]
---GO
---ALTER DATABASE [Project_QLTT] SET  READ_WRITE 
---GO*/
+INSERT INTO PhanLoai (TenLoaiThuoc)
+VALUES ('Loại 1'), ('Loại 2'), ('Loại 3');
+
+INSERT INTO NhaCungCap (TenNhaCungCap, DiaChi)
+VALUES ('Nhà cung cấp 1', 'Địa chỉ 1'),
+       ('Nhà cung cấp 2', 'Địa chỉ 2'),
+       ('Nhà cung cấp 3', 'Địa chỉ 3');
+
+INSERT INTO Thuoc (MaLoaiThuoc, TenThuoc, DonViTinh, GiaBan)
+VALUES (1, 'Thuốc 1', 'Đơn vị 1', 100.50),
+       (2, 'Thuốc 2', 'Đơn vị 2', 50.25),
+       (3, 'Thuốc 3', 'Đơn vị 3', 75.75);
+
+INSERT INTO KhoThuoc (Thang, Nam, MaThuoc, DauKy, NhapTrongKy, XuatTrongThang, TonKho)
+VALUES (1, 2024, 1, 50, 20, 10, 60),
+       (1, 2024, 2, 100, 30, 20, 110),
+       (1, 2024, 3, 75, 25, 15, 85);
+
+INSERT INTO PhieuNhap (MaNhaCungCap, NgayNhap, NguoiNhap)
+VALUES (1, '2024-01-01', 'Người nhập 1'),
+       (2, '2024-01-02', 'Người nhập 2'),
+       (3, '2024-01-03', 'Người nhập 3');
+
+INSERT INTO ChiTietPhieuNhap (MaPhieuNhap, MaThuoc, SoLuong)
+VALUES (1, 1, 10),
+       (1, 2, 5),
+       (2, 2, 8),
+       (3, 3, 12);
+
+INSERT INTO PhieuXuat (NgayXuat, NguoiXuat)
+VALUES ('2024-01-01', 'Người xuất 1'),
+       ('2024-01-02', 'Người xuất 2'),
+       ('2024-01-03', 'Người xuất 3');
+
+INSERT INTO ChiTietPhieuXuat (MaPhieuXuat, MaThuoc, SoLuong)
+VALUES (1, 1, 5),
+       (1, 2, 3),
+       (2, 2, 6),
+       (3, 3, 10);
+
+INSERT INTO QuyenDangNhap (MaQuyen, MoTa)
+VALUES (1, 'Quyền admin'),
+       (2, 'Quyền user'),
+
+INSERT INTO TaiKhoan (TenTaiKhoan, MatKhau, VaiTro, HoTen)
+VALUES ('user1', 'pass1', 1, 'Người dùng 1'),
+       ('user2', 'pass2', 2, 'Người dùng 2'),
+       ('user3', 'pass3', 3, 'Người dùng 3');
+
+INSERT INTO HoaDon (MaTaiKhoan, NgayBan, TongTien, MaKhachHang, GiamGia)
+VALUES (1, '2024-01-01', 500.00, 1, 10),
+       (2, '2024-01-02', 750.00, 2, 20),
+       (3, '2024-01-03', 1000.00, 3, 30);
+
+INSERT INTO ChiTietHoaDon (MaHoaDon, MaThuoc, SoLuong, DonGia, ThanhTien)
+VALUES (1, 1, 5, 100.00, 500.00),
+       (1, 2, 3, 50.00, 150.00),
+       (2, 2, 6, 100.00, 1000.00);
