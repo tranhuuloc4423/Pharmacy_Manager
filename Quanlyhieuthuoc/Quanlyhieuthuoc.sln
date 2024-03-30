@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quanlyhieuthuoc", "Quanlyhieuthuoc\Quanlyhieuthuoc.csproj", "{653987F0-9A0A-426D-B8FD-D1DA4A2E6BBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{AF4EF3D6-5A12-4783-8760-CEDA4F3C85E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{F2AFFD8D-2848-4391-AA10-606FBA3CCD92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +19,19 @@ Global
 		{653987F0-9A0A-426D-B8FD-D1DA4A2E6BBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{653987F0-9A0A-426D-B8FD-D1DA4A2E6BBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{653987F0-9A0A-426D-B8FD-D1DA4A2E6BBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF4EF3D6-5A12-4783-8760-CEDA4F3C85E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF4EF3D6-5A12-4783-8760-CEDA4F3C85E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF4EF3D6-5A12-4783-8760-CEDA4F3C85E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF4EF3D6-5A12-4783-8760-CEDA4F3C85E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2AFFD8D-2848-4391-AA10-606FBA3CCD92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2AFFD8D-2848-4391-AA10-606FBA3CCD92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2AFFD8D-2848-4391-AA10-606FBA3CCD92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2AFFD8D-2848-4391-AA10-606FBA3CCD92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C5E6BD2-9F97-4DD5-B349-EB4E1B891873}
 	EndGlobalSection
 EndGlobal
