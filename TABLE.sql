@@ -113,7 +113,8 @@ CREATE TABLE KhachHang (
     MaKhachHang INT PRIMARY KEY IDENTITY(1,1),
 	HoTen NVARCHAR(50) NOT NULL,
 	SoDienThoai VARCHAR(10),
-	KhachHangThanThiet INT
+	KhachHangThanThiet INT,
+	MuaTichLuy DECIMAL(18,2) NOT NULL
 );
 
 -- INSERT DATA
