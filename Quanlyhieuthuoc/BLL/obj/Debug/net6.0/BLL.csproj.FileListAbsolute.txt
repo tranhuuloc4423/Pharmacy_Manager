@@ -1,0 +1,6 @@
+E:\c#\Pharmacy_Manager\Quanlyhieuthuoc\BLL\obj\Debug\net6.0\BLL.csproj.AssemblyReference.cache
+E:\c#\Pharmacy_Manager\Quanlyhieuthuoc\BLL\obj\Debug\net6.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+E:\c#\Pharmacy_Manager\Quanlyhieuthuoc\BLL\obj\Debug\net6.0\BLL.AssemblyInfoInputs.cache
+E:\c#\Pharmacy_Manager\Quanlyhieuthuoc\BLL\obj\Debug\net6.0\BLL.AssemblyInfo.cs
+E:\c#\Pharmacy_Manager\Quanlyhieuthuoc\BLL\obj\Debug\net6.0\BLL.csproj.CoreCompileInputs.cache
+E:\c#\Pharmacy_Manager\Quanlyhieuthuoc\BLL\obj\Debug\net6.0\BLL.sourcelink.json

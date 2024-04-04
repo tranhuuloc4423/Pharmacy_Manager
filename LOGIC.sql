@@ -29,8 +29,8 @@ CREATE PROCEDURE ThemTaiKhoan
 )
 AS
 BEGIN
-  INSERT INTO TaiKhoan (TenTaiKhoan, MatKhau, VaiTro, HoTen, SoDienThoai, Email)
-  VALUES (@TenTaiKhoan, @MatKhau, @VaiTro, @HoTen, @SoDienThoai, @Email);
+  INSERT INTO TaiKhoan (TenTaiKhoan, MatKhau, VaiTro, HoTen)
+  VALUES (@TenTaiKhoan, @MatKhau, @VaiTro, @HoTen);
 END;
 
 GO
@@ -51,9 +51,7 @@ BEGIN
   SET TenTaiKhoan = @TenTaiKhoan,
   MatKhau = @MatKhau,
   VaiTro = @VaiTro,
-  HoTen = @HoTen,
-  SoDienThoai = @SoDienThoai,
-  Email = @Email
+  HoTen = @HoTen
   WHERE MaTaiKhoan = @IDTaiKhoan;
 END;
 

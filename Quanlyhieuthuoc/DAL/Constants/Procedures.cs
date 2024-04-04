@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace DAL.Constants
 {
@@ -21,7 +20,45 @@ namespace DAL.Constants
 
         private Procedures() { }
 
-        private string connectionSTR = "Data Source=.\\sqlexpress;Initial Catalog=QuanLyQuanCafe;Integrated Security=True";
+        private string connectionSTR = "Data Source=ROKU\\SQLEXPRESS;Initial Catalog=Project_QLTT;Integrated Security=True;Trust Server Certificate=True";
+
+        public DataTable ExecuteStoredProcedure(string storedProcedureName, ref string error, SqlParameter[] parameters = null)
+        {
+            DataTable data = new DataTable();
+            SqlConnection connection = null;
+            try
+            {
+                using (connection = new SqlConnection(connectionSTR))
+                {
+                    connection.Open();
+
+                    SqlCommand command = new SqlCommand(storedProcedureName, connection);
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    if (parameters != null)
+                    {
+                        command.Parameters.AddRange(parameters);
+                    }
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    adapter.Fill(data);
+                }
+
+                return data;
+            }
+            catch (Exception ex)
+            {
+                error = "Kết nối lỗi: " + ex.Message;
+                return null;
+            }
+            finally
+            {
+                if (connection != null && connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+        }
 
         public DataTable ExecuteQuery(string query, ref string error, object[] parameter = null)
         {

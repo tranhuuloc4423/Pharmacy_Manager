@@ -27,24 +27,13 @@ namespace Quanlyhieuthuoc
             txtMatKhau.SelectAll();
         }
 
-        private void btnDangnhap_MouseEnter(object sender, EventArgs e)
+        private void btnThoat_Click(object sender, EventArgs e)
         {
-            btnDangnhap.ForeColor = Color.White;
+            Application.Exit();
         }
 
-        private void btnDangnhap_MouseLeave(object sender, EventArgs e)
+        private void btnDangnhap_Click(object sender, EventArgs e)
         {
-            btnDangnhap.ForeColor = Color.Black;
-        }
-
-        private void btnThoat_MouseEnter(object sender, EventArgs e)
-        {
-            btnThoat.ForeColor = Color.White;
-        }
-
-        private void btnThoat_MouseLeave(object sender, EventArgs e)
-        {
-            btnThoat.ForeColor = Color.Black;
         }
     }
 }

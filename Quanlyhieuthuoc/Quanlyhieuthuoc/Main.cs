@@ -16,5 +16,10 @@ namespace Quanlyhieuthuoc
         {
             InitializeComponent();
         }
+
+        private void btnTaiKhoan_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

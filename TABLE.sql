@@ -160,13 +160,13 @@ VALUES (1, 1, 5),
        (3, 3, 10);
 
 INSERT INTO QuyenDangNhap (MaQuyen, MoTa)
-VALUES (1, 'Quyền admin'),
-       (2, 'Quyền user'),
-
+VALUES (1, N'admin'),
+       (2, N'user');
+GO
 INSERT INTO TaiKhoan (TenTaiKhoan, MatKhau, VaiTro, HoTen)
-VALUES ('user1', 'pass1', 1, 'Người dùng 1'),
-       ('user2', 'pass2', 2, 'Người dùng 2'),
-       ('user3', 'pass3', 3, 'Người dùng 3');
+VALUES ('admin', '123', 1, N'Quản Trị'),
+       ('user2', 'pass2', 2, N'Người dùng 2'),
+       ('user3', 'pass3', 2, N'Người dùng 3');
 
 INSERT INTO HoaDon (MaTaiKhoan, NgayBan, TongTien, MaKhachHang, GiamGia)
 VALUES (1, '2024-01-01', 500.00, 1, 10),
@@ -177,3 +177,6 @@ INSERT INTO ChiTietHoaDon (MaHoaDon, MaThuoc, SoLuong, DonGia, ThanhTien)
 VALUES (1, 1, 5, 100.00, 500.00),
        (1, 2, 3, 50.00, 150.00),
        (2, 2, 6, 100.00, 1000.00);
+
+
+select * from TaiKhoan
