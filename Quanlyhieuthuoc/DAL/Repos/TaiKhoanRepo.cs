@@ -11,10 +11,48 @@ namespace DAL.Repos
 {
     public class TaiKhoanRepo
     {
+        //public DataTable HienThiDanhSach(ref string error)
+        //{
+        //    string query = "Select * from TaiKhoan";
+        //    return Constants.Procedures.Instance.ExecuteQuery(query, ref error);
+        //}
+        private string connectionSTR = "Data Source=ROKU\\SQLEXPRESS;Initial Catalog=Project_QLTT;Integrated Security=True;";
+
         public DataTable HienThiDanhSach(ref string error)
         {
-            string query = "Select * from TaiKhoan";
-            return Constants.Procedures.Instance.ExecuteQuery(query, ref error);
+            using var command = new SqlCommand();
+            SqlConnection connection = null;
+            try
+            {
+                using (connection = new SqlConnection(connectionSTR))
+                {
+                    connection.Open();
+                    command.Connection = connection;
+                    command.CommandText = "select TenTaiKhoan, HoTen, VaiTro from TaiKhoan";
+                    using var reader = command.ExecuteReader();
+                    DataTable data = new DataTable();
+                    if (reader.HasRows)
+                    {
+                        data.Load(reader);
+                        error = "";
+                        return data;
+                    }
+                    else
+                    {
+                        error = "Khong co du lieu";
+                        return null;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                error = "Ket noi loi : " + ex.Message;
+                return null;
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
 
         public bool ThemTaiKhoan(ref string error)
@@ -32,31 +70,22 @@ namespace DAL.Repos
             return ketqua > 0;
         }
 
-        public int KiemTraDangNhap(string tenTaiKhoan, string matKhau)
+        public int KiemTraDangNhap(string tenTaiKhoan, string matKhau, ref string error)
         {
             int vaiTro = 0;
-
-            string connectionString = "";
             SqlConnection connection = null;
 
             try
             {
-                using (connection = new SqlConnection(connectionString))
+                using (connection = new SqlConnection(connectionSTR))
                 {
                     SqlCommand command = new SqlCommand("KiemTraTaiKhoan", connection);
-                    command.CommandType = CommandType.StoredProcedure;
-
-                    command.Parameters.AddWithValue("@TenTaiKhoan", tenTaiKhoan);
+                    command.CommandText = "SELECT CASE WHEN MatKhau = @MatKhau THEN VaiTro ELSE 0 END AS KetQua FROM TaiKhoan WHERE TenTaiKhoan = @TenTaiKhoan";
                     command.Parameters.AddWithValue("@MatKhau", matKhau);
-
-                    var vaiTroParameter = new SqlParameter("@VaiTro", SqlDbType.Int);
-                    vaiTroParameter.Direction = ParameterDirection.Output;
-                    command.Parameters.Add(vaiTroParameter);
+                    command.Parameters.AddWithValue("@TenTaiKhoan", tenTaiKhoan);
 
                     connection.Open();
-                    command.ExecuteNonQuery();
-
-                    vaiTro = Convert.ToInt32(command.Parameters["@VaiTro"].Value);
+                    object data = command.ExecuteScalar();
                 }
 
                 return vaiTro;

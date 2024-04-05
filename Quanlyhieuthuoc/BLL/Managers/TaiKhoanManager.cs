@@ -1,6 +1,7 @@
 ﻿using DAL.Repos;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,10 +17,15 @@ namespace BLL.Managers
             process = new TaiKhoanRepo();
         }
 
-        public int KiemTraDangNhap(string taikhoan, string matkhau)
+        public DataTable hienThiDanhSachTaiKhoan(ref string error)
         {
-
-            return process.KiemTraDangNhap(taikhoan, matkhau);
+            return process.HienThiDanhSach(ref error);
         }
+
+        //public int KiemTraDangNhap(string taikhoan, string matkhau)
+        //{
+
+        //    return process.KiemTraDangNhap(taikhoan, matkhau);
+        //}
     }
 }
