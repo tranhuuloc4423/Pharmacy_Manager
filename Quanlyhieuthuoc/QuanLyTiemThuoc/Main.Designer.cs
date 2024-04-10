@@ -34,13 +34,11 @@
             pictureBox8 = new PictureBox();
             btnTaiKhoan = new Button();
             pictureBox7 = new PictureBox();
-            pictureBox6 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             btnHoadon = new Button();
-            btnBaocao = new Button();
             btnKho = new Button();
             btnNhacungcap = new Button();
             btnThuoc = new Button();
@@ -48,7 +46,6 @@
             panel1 = new Panel();
             lblHoTen = new Label();
             lblDanhMuc = new Label();
-            label1 = new Label();
             label9 = new Label();
             pictureBox1 = new PictureBox();
             label8 = new Label();
@@ -57,7 +54,6 @@
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -92,13 +88,11 @@
             panel2.Controls.Add(pictureBox8);
             panel2.Controls.Add(btnTaiKhoan);
             panel2.Controls.Add(pictureBox7);
-            panel2.Controls.Add(pictureBox6);
             panel2.Controls.Add(pictureBox5);
             panel2.Controls.Add(pictureBox4);
             panel2.Controls.Add(pictureBox3);
             panel2.Controls.Add(pictureBox2);
             panel2.Controls.Add(btnHoadon);
-            panel2.Controls.Add(btnBaocao);
             panel2.Controls.Add(btnKho);
             panel2.Controls.Add(btnNhacungcap);
             panel2.Controls.Add(btnThuoc);
@@ -114,7 +108,7 @@
             // pictureBox8
             // 
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(1129, 17);
+            pictureBox8.Location = new Point(949, 17);
             pictureBox8.Margin = new Padding(4, 3, 4, 3);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new Size(37, 40);
@@ -125,17 +119,17 @@
             // btnTaiKhoan
             // 
             btnTaiKhoan.BackColor = Color.White;
-            btnTaiKhoan.FlatAppearance.BorderColor = Color.MediumSlateBlue;
+            btnTaiKhoan.FlatAppearance.BorderColor = Color.LightPink;
             btnTaiKhoan.FlatAppearance.BorderSize = 2;
             btnTaiKhoan.FlatAppearance.CheckedBackColor = Color.MediumSlateBlue;
-            btnTaiKhoan.FlatAppearance.MouseDownBackColor = Color.MediumSlateBlue;
-            btnTaiKhoan.FlatAppearance.MouseOverBackColor = Color.MediumSlateBlue;
+            btnTaiKhoan.FlatAppearance.MouseDownBackColor = Color.LightPink;
+            btnTaiKhoan.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnTaiKhoan.FlatStyle = FlatStyle.Flat;
-            btnTaiKhoan.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnTaiKhoan.Location = new Point(1174, 17);
+            btnTaiKhoan.Font = new Font("Microsoft Sans Serif", 14F);
+            btnTaiKhoan.Location = new Point(994, 17);
             btnTaiKhoan.Margin = new Padding(4, 3, 4, 3);
             btnTaiKhoan.Name = "btnTaiKhoan";
-            btnTaiKhoan.Size = new Size(100, 44);
+            btnTaiKhoan.Size = new Size(111, 44);
             btnTaiKhoan.TabIndex = 13;
             btnTaiKhoan.Text = "Tài Khoản";
             btnTaiKhoan.UseVisualStyleBackColor = false;
@@ -152,17 +146,6 @@
             pictureBox7.TabIndex = 12;
             pictureBox7.TabStop = false;
             // 
-            // pictureBox6
-            // 
-            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(961, 17);
-            pictureBox6.Margin = new Padding(4, 3, 4, 3);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(37, 40);
-            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox6.TabIndex = 11;
-            pictureBox6.TabStop = false;
-            // 
             // pictureBox5
             // 
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
@@ -177,7 +160,7 @@
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(391, 17);
+            pictureBox4.Location = new Point(379, 17);
             pictureBox4.Margin = new Padding(4, 3, 4, 3);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(37, 40);
@@ -188,7 +171,7 @@
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(202, 17);
+            pictureBox3.Location = new Point(193, 17);
             pictureBox3.Margin = new Padding(4, 3, 4, 3);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(47, 40);
@@ -199,7 +182,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(33, 17);
+            pictureBox2.Location = new Point(9, 17);
             pictureBox2.Margin = new Padding(4, 3, 4, 3);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(37, 40);
@@ -210,13 +193,13 @@
             // btnHoadon
             // 
             btnHoadon.BackColor = Color.White;
-            btnHoadon.FlatAppearance.BorderColor = Color.MediumSlateBlue;
+            btnHoadon.FlatAppearance.BorderColor = Color.LightPink;
             btnHoadon.FlatAppearance.BorderSize = 2;
             btnHoadon.FlatAppearance.CheckedBackColor = Color.MediumSlateBlue;
-            btnHoadon.FlatAppearance.MouseDownBackColor = Color.MediumSlateBlue;
-            btnHoadon.FlatAppearance.MouseOverBackColor = Color.MediumSlateBlue;
+            btnHoadon.FlatAppearance.MouseDownBackColor = Color.LightPink;
+            btnHoadon.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnHoadon.FlatStyle = FlatStyle.Flat;
-            btnHoadon.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnHoadon.Font = new Font("Microsoft Sans Serif", 14F);
             btnHoadon.Location = new Point(831, 17);
             btnHoadon.Margin = new Padding(4, 3, 4, 3);
             btnHoadon.Name = "btnHoadon";
@@ -225,38 +208,20 @@
             btnHoadon.Text = "Hóa đơn";
             btnHoadon.UseVisualStyleBackColor = false;
             // 
-            // btnBaocao
-            // 
-            btnBaocao.BackColor = Color.White;
-            btnBaocao.FlatAppearance.BorderColor = Color.MediumSlateBlue;
-            btnBaocao.FlatAppearance.BorderSize = 2;
-            btnBaocao.FlatAppearance.CheckedBackColor = Color.MediumSlateBlue;
-            btnBaocao.FlatAppearance.MouseDownBackColor = Color.MediumSlateBlue;
-            btnBaocao.FlatAppearance.MouseOverBackColor = Color.MediumSlateBlue;
-            btnBaocao.FlatStyle = FlatStyle.Flat;
-            btnBaocao.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnBaocao.Location = new Point(1006, 17);
-            btnBaocao.Margin = new Padding(4, 3, 4, 3);
-            btnBaocao.Name = "btnBaocao";
-            btnBaocao.Size = new Size(100, 44);
-            btnBaocao.TabIndex = 4;
-            btnBaocao.Text = "Báo cáo";
-            btnBaocao.UseVisualStyleBackColor = false;
-            // 
             // btnKho
             // 
             btnKho.BackColor = Color.White;
-            btnKho.FlatAppearance.BorderColor = Color.MediumSlateBlue;
+            btnKho.FlatAppearance.BorderColor = Color.LightPink;
             btnKho.FlatAppearance.BorderSize = 2;
             btnKho.FlatAppearance.CheckedBackColor = Color.MediumSlateBlue;
-            btnKho.FlatAppearance.MouseDownBackColor = Color.MediumSlateBlue;
-            btnKho.FlatAppearance.MouseOverBackColor = Color.MediumSlateBlue;
+            btnKho.FlatAppearance.MouseDownBackColor = Color.LightPink;
+            btnKho.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnKho.FlatStyle = FlatStyle.Flat;
-            btnKho.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnKho.Location = new Point(648, 17);
+            btnKho.Font = new Font("Microsoft Sans Serif", 14F);
+            btnKho.Location = new Point(649, 17);
             btnKho.Margin = new Padding(4, 3, 4, 3);
             btnKho.Name = "btnKho";
-            btnKho.Size = new Size(100, 44);
+            btnKho.Size = new Size(117, 44);
             btnKho.TabIndex = 3;
             btnKho.Text = "Kho";
             btnKho.UseVisualStyleBackColor = false;
@@ -264,17 +229,17 @@
             // btnNhacungcap
             // 
             btnNhacungcap.BackColor = Color.White;
-            btnNhacungcap.FlatAppearance.BorderColor = Color.MediumSlateBlue;
+            btnNhacungcap.FlatAppearance.BorderColor = Color.LightPink;
             btnNhacungcap.FlatAppearance.BorderSize = 2;
             btnNhacungcap.FlatAppearance.CheckedBackColor = Color.MediumSlateBlue;
-            btnNhacungcap.FlatAppearance.MouseDownBackColor = Color.MediumSlateBlue;
-            btnNhacungcap.FlatAppearance.MouseOverBackColor = Color.MediumSlateBlue;
+            btnNhacungcap.FlatAppearance.MouseDownBackColor = Color.LightPink;
+            btnNhacungcap.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnNhacungcap.FlatStyle = FlatStyle.Flat;
-            btnNhacungcap.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnNhacungcap.Location = new Point(435, 17);
+            btnNhacungcap.Font = new Font("Microsoft Sans Serif", 14F);
+            btnNhacungcap.Location = new Point(424, 17);
             btnNhacungcap.Margin = new Padding(4, 3, 4, 3);
             btnNhacungcap.Name = "btnNhacungcap";
-            btnNhacungcap.Size = new Size(120, 44);
+            btnNhacungcap.Size = new Size(150, 44);
             btnNhacungcap.TabIndex = 2;
             btnNhacungcap.Text = "Nhà cung cấp";
             btnNhacungcap.UseVisualStyleBackColor = false;
@@ -282,17 +247,17 @@
             // btnThuoc
             // 
             btnThuoc.BackColor = Color.White;
-            btnThuoc.FlatAppearance.BorderColor = Color.MediumSlateBlue;
+            btnThuoc.FlatAppearance.BorderColor = Color.LightPink;
             btnThuoc.FlatAppearance.BorderSize = 2;
             btnThuoc.FlatAppearance.CheckedBackColor = Color.MediumSlateBlue;
-            btnThuoc.FlatAppearance.MouseDownBackColor = Color.MediumSlateBlue;
-            btnThuoc.FlatAppearance.MouseOverBackColor = Color.MediumSlateBlue;
+            btnThuoc.FlatAppearance.MouseDownBackColor = Color.LightPink;
+            btnThuoc.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnThuoc.FlatStyle = FlatStyle.Flat;
-            btnThuoc.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnThuoc.Location = new Point(255, 17);
+            btnThuoc.Font = new Font("Microsoft Sans Serif", 14F);
+            btnThuoc.Location = new Point(248, 17);
             btnThuoc.Margin = new Padding(4, 3, 4, 3);
             btnThuoc.Name = "btnThuoc";
-            btnThuoc.Size = new Size(100, 44);
+            btnThuoc.Size = new Size(108, 44);
             btnThuoc.TabIndex = 1;
             btnThuoc.Text = "Thuốc";
             btnThuoc.UseVisualStyleBackColor = false;
@@ -300,26 +265,25 @@
             // btnTrangchu
             // 
             btnTrangchu.BackColor = Color.White;
-            btnTrangchu.FlatAppearance.BorderColor = Color.MediumSlateBlue;
+            btnTrangchu.FlatAppearance.BorderColor = Color.LightPink;
             btnTrangchu.FlatAppearance.BorderSize = 2;
-            btnTrangchu.FlatAppearance.MouseDownBackColor = Color.MediumSlateBlue;
-            btnTrangchu.FlatAppearance.MouseOverBackColor = Color.MediumSlateBlue;
+            btnTrangchu.FlatAppearance.MouseDownBackColor = Color.LightPink;
+            btnTrangchu.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnTrangchu.FlatStyle = FlatStyle.Flat;
-            btnTrangchu.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnTrangchu.Location = new Point(77, 17);
+            btnTrangchu.Font = new Font("Microsoft Sans Serif", 14F);
+            btnTrangchu.Location = new Point(54, 17);
             btnTrangchu.Margin = new Padding(4, 3, 4, 3);
             btnTrangchu.Name = "btnTrangchu";
-            btnTrangchu.Size = new Size(100, 44);
+            btnTrangchu.Size = new Size(117, 44);
             btnTrangchu.TabIndex = 0;
             btnTrangchu.Text = "Trang chủ";
             btnTrangchu.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
-            panel1.BackColor = Color.SlateBlue;
+            panel1.BackColor = Color.Thistle;
             panel1.Controls.Add(lblHoTen);
             panel1.Controls.Add(lblDanhMuc);
-            panel1.Controls.Add(label1);
             panel1.Controls.Add(label9);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label8);
@@ -343,34 +307,23 @@
             // lblDanhMuc
             // 
             lblDanhMuc.AutoSize = true;
-            lblDanhMuc.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblDanhMuc.Location = new Point(326, 22);
+            lblDanhMuc.Font = new Font("Microsoft Sans Serif", 16F);
+            lblDanhMuc.ForeColor = Color.Black;
+            lblDanhMuc.Location = new Point(328, 15);
             lblDanhMuc.Margin = new Padding(4, 0, 4, 0);
             lblDanhMuc.Name = "lblDanhMuc";
-            lblDanhMuc.Size = new Size(47, 16);
+            lblDanhMuc.Size = new Size(76, 26);
             lblDanhMuc.TabIndex = 1;
             lblDanhMuc.Text = "label 1";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(1222, 17);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(92, 20);
-            label1.TabIndex = 2;
-            label1.Text = "Pharmacy";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(219, 22);
+            label9.Font = new Font("Microsoft Sans Serif", 16F);
+            label9.Location = new Point(202, 15);
             label9.Margin = new Padding(4, 0, 4, 0);
             label9.Name = "label9";
-            label9.Size = new Size(85, 16);
+            label9.Size = new Size(136, 26);
             label9.TabIndex = 0;
             label9.Text = "Dashboard / ";
             // 
@@ -390,7 +343,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.ForeColor = Color.White;
+            label8.ForeColor = Color.Black;
             label8.Location = new Point(77, 15);
             label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
@@ -417,12 +370,10 @@
             Margin = new Padding(4, 3, 4, 3);
             Name = "Main";
             Text = "Main";
-            Load += Main_Load;
             tableLayoutPanel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -438,13 +389,11 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnHoadon;
-        private System.Windows.Forms.Button btnBaocao;
         private System.Windows.Forms.Button btnKho;
         private System.Windows.Forms.Button btnNhacungcap;
         private System.Windows.Forms.Button btnThuoc;
@@ -454,7 +403,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnMain;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Button btnTaiKhoan;

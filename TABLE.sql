@@ -79,18 +79,27 @@ CREATE TABLE QuyenDangNhap (
 GO
 
 CREATE TABLE TaiKhoan (
-    MaTaiKhoan INT PRIMARY KEY IDENTITY(1,1),
-    TenTaiKhoan NVARCHAR(25) NOT NULL,
+    TenTaiKhoan NVARCHAR(25) PRIMARY KEY,
     MatKhau NVARCHAR(30) NOT NULL,
     VaiTro INT FOREIGN KEY REFERENCES QuyenDangNhap(MaQuyen),
     HoTen NVARCHAR(30) NOT NULL,
 );
 GO
 
+------------ KhachHang ------------
+CREATE TABLE KhachHang (
+    MaKhachHang INT PRIMARY KEY IDENTITY(1,1),
+	HoTen NVARCHAR(50) NOT NULL,
+	SoDienThoai VARCHAR(10),
+	KhachHangThanThiet INT,
+	MuaTichLuy DECIMAL(18,2) NOT NULL
+);
+GO
+
 ------------ Hoa Don ------------
 CREATE TABLE HoaDon (
     MaHoaDon INT PRIMARY KEY IDENTITY(1,1),
-    MaTaiKhoan INT FOREIGN KEY REFERENCES TaiKhoan(MaTaiKhoan),
+    TenTaiKhoan NVARCHAR(25) FOREIGN KEY REFERENCES TaiKhoan(TenTaiKhoan),
     NgayBan DATETIME NOT NULL,
     TongTien DECIMAL(18,2) NOT NULL,
 	MaKhachHang INT FOREIGN KEY REFERENCES KhachHang(MaKhachHang),
@@ -108,57 +117,50 @@ CREATE TABLE ChiTietHoaDon (
 );
 GO
 
------------- KhachHang ------------
-CREATE TABLE KhachHang (
-    MaKhachHang INT PRIMARY KEY IDENTITY(1,1),
-	HoTen NVARCHAR(50) NOT NULL,
-	SoDienThoai VARCHAR(10),
-	KhachHangThanThiet INT,
-	MuaTichLuy DECIMAL(18,2) NOT NULL
-);
+
 
 -- INSERT DATA
 
 INSERT INTO PhanLoai (TenLoaiThuoc)
 VALUES ('Loại 1'), ('Loại 2'), ('Loại 3');
-
+GO
 INSERT INTO NhaCungCap (TenNhaCungCap, DiaChi)
 VALUES ('Nhà cung cấp 1', 'Địa chỉ 1'),
        ('Nhà cung cấp 2', 'Địa chỉ 2'),
        ('Nhà cung cấp 3', 'Địa chỉ 3');
-
+GO
 INSERT INTO Thuoc (MaLoaiThuoc, TenThuoc, DonViTinh, GiaBan)
 VALUES (1, 'Thuốc 1', 'Đơn vị 1', 100.50),
        (2, 'Thuốc 2', 'Đơn vị 2', 50.25),
        (3, 'Thuốc 3', 'Đơn vị 3', 75.75);
-
+GO
 INSERT INTO KhoThuoc (Thang, Nam, MaThuoc, DauKy, NhapTrongKy, XuatTrongThang, TonKho)
 VALUES (1, 2024, 1, 50, 20, 10, 60),
        (1, 2024, 2, 100, 30, 20, 110),
        (1, 2024, 3, 75, 25, 15, 85);
-
+GO
 INSERT INTO PhieuNhap (MaNhaCungCap, NgayNhap, NguoiNhap)
 VALUES (1, '2024-01-01', 'Người nhập 1'),
        (2, '2024-01-02', 'Người nhập 2'),
        (3, '2024-01-03', 'Người nhập 3');
-
+GO
 INSERT INTO ChiTietPhieuNhap (MaPhieuNhap, MaThuoc, SoLuong)
 VALUES (1, 1, 10),
        (1, 2, 5),
        (2, 2, 8),
        (3, 3, 12);
-
+GO
 INSERT INTO PhieuXuat (NgayXuat, NguoiXuat)
 VALUES ('2024-01-01', 'Người xuất 1'),
        ('2024-01-02', 'Người xuất 2'),
        ('2024-01-03', 'Người xuất 3');
-
+GO
 INSERT INTO ChiTietPhieuXuat (MaPhieuXuat, MaThuoc, SoLuong)
 VALUES (1, 1, 5),
        (1, 2, 3),
        (2, 2, 6),
        (3, 3, 10);
-
+GO
 INSERT INTO QuyenDangNhap (MaQuyen, MoTa)
 VALUES (1, N'admin'),
        (2, N'user');
@@ -167,16 +169,21 @@ INSERT INTO TaiKhoan (TenTaiKhoan, MatKhau, VaiTro, HoTen)
 VALUES ('admin', '123', 1, N'Quản Trị'),
        ('user2', 'pass2', 2, N'Người dùng 2'),
        ('user3', 'pass3', 2, N'Người dùng 3');
-
-INSERT INTO HoaDon (MaTaiKhoan, NgayBan, TongTien, MaKhachHang, GiamGia)
-VALUES (1, '2024-01-01', 500.00, 1, 10),
-       (2, '2024-01-02', 750.00, 2, 20),
-       (3, '2024-01-03', 1000.00, 3, 30);
-
+GO
+INSERT INTO HoaDon (TenTaiKhoan, NgayBan, TongTien, MaKhachHang, GiamGia)
+VALUES ('admin', '2024-01-01', 500.00, 1, 10),
+       ('admin', '2024-01-02', 750.00, 2, 20),
+       ('admin', '2024-01-03', 1000.00, 3, 30);
+GO
 INSERT INTO ChiTietHoaDon (MaHoaDon, MaThuoc, SoLuong, DonGia, ThanhTien)
 VALUES (1, 1, 5, 100.00, 500.00),
        (1, 2, 3, 50.00, 150.00),
        (2, 2, 6, 100.00, 1000.00);
 
-
+GO
+select * from QuyenDangNhap
 select * from TaiKhoan
+select * from QuyenDangNhap
+select * from QuyenDangNhap
+GO
+select TenTaiKhoan, HoTen, VaiTro from TaiKhoan

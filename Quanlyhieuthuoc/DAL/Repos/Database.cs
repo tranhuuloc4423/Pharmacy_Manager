@@ -17,7 +17,7 @@ namespace DLL.Repos
         {
             try
             {
-                string connectStr = "Data Source=.;Initial Catalog=Learning_QLBH;Integrated Security=True";
+                connectStr = "Data Source=ROKU\\SQLEXPRESS;Initial Catalog=Project_QLTT;Integrated Security=True";
                 connect = new SqlConnection(connectStr);
                 command = new SqlCommand();
                 command.Connection = connect;
@@ -28,13 +28,13 @@ namespace DLL.Repos
             }
         }
 
-        public DataTable GetData(string sql, CommandType type,ref string error, SqlParameter[] parameters = null)
+        public DataTable GetData(string sql, ref string error, SqlParameter[] parameters = null)
         {
             try
             {
                 connect.Open();
                 command.CommandText = sql;
-                command.CommandType = type;
+                command.CommandType = CommandType.Text;
                 command.Parameters.Clear();
                 if (parameters != null)
                 {
@@ -60,42 +60,73 @@ namespace DLL.Repos
             }
         }
 
-        public void HandleDataProcedure()
-        {
-            connect.Open();
-            command = new SqlCommand();
-        }
-
-        public bool HandleData(string sql, CommandType type, ref string error, SqlParameter[] parameters = null)
+        public DataTable ExecuteReader(string procedureName,CommandType type,ref string err, SqlParameter[] parameters = null)
         {
             try
             {
                 connect.Open();
-                command.CommandText = sql;
                 command.CommandType = type;
-                command.Parameters.Clear();
-                if (parameters != null)
-                {
-                    foreach (var item in parameters)
-                    {
-                        command.Parameters.Add(item);
-                    }
-                }
+                command.CommandText = procedureName;
+                command.Parameters.AddRange(parameters);
+                SqlDataReader reader = command.ExecuteReader();
+                DataTable data = new DataTable();
+                data.Load(reader);
+                return data;
 
+            } catch (Exception ex)
+            {
+                err = "Loi : " + ex.Message;
+                return null;
+            }
+            finally
+            {
+                connect.Close();
+            }
+        }
+
+        public object ExecuteScalar(string procedureName, CommandType type, ref string err, SqlParameter[] parameters = null)
+        {
+            try
+            {
+                connect.Open();
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = procedureName;
+                command.Parameters.AddRange(parameters);
+                object data = command.ExecuteScalar();
+                return data;
+
+            }
+            catch (Exception ex)
+            {
+                err = "Loi : " + ex.Message;
+                return null;
+            }
+            finally
+            {
+                connect.Close();
+            }
+        }
+
+        public bool ExecuteNonQuery(string procedureName, CommandType type, ref string err, SqlParameter[] parameters = null)
+        {
+            try
+            {
+                connect.Open();
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = procedureName;
+                command.Parameters.AddRange(parameters);
                 int row = command.ExecuteNonQuery();
-                if (row == 0)
+                if(row == 0)
                 {
-                    error = "KHONG TIM THAY TEN MUON XOA";
                     return false;
-                }
-                else
+                } else 
                 {
                     return true;
                 }
             }
             catch (Exception ex)
             {
-                error = "Ket noi lôi: " + ex.Message;
+                err = "Loi : " + ex.Message;
                 return false;
             }
             finally

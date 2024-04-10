@@ -56,17 +56,18 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.White;
-            label1.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.SlateBlue;
-            label1.Location = new Point(158, 123);
+            label1.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.LightPink;
+            label1.Location = new Point(164, 125);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(185, 31);
+            label1.Size = new Size(219, 37);
             label1.TabIndex = 7;
             label1.Text = "ĐĂNG NHẬP";
             // 
             // txtDangNhap
             // 
+            txtDangNhap.BackColor = SystemColors.Window;
             txtDangNhap.Cursor = Cursors.IBeam;
             txtDangNhap.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtDangNhap.ForeColor = Color.Black;
@@ -75,6 +76,7 @@
             txtDangNhap.Name = "txtDangNhap";
             txtDangNhap.Size = new Size(381, 35);
             txtDangNhap.TabIndex = 0;
+            txtDangNhap.Text = "admin";
             txtDangNhap.Click += txtDangNhap_Click;
             // 
             // txtMatKhau
@@ -87,18 +89,19 @@
             txtMatKhau.PasswordChar = '*';
             txtMatKhau.Size = new Size(381, 35);
             txtMatKhau.TabIndex = 1;
+            txtMatKhau.Text = "123";
             txtMatKhau.Click += txtMatKhau_Click;
             // 
             // btnDangnhap
             // 
             btnDangnhap.BackColor = Color.White;
             btnDangnhap.Cursor = Cursors.Hand;
-            btnDangnhap.FlatAppearance.BorderColor = Color.MediumSlateBlue;
+            btnDangnhap.FlatAppearance.BorderColor = Color.LightPink;
             btnDangnhap.FlatAppearance.BorderSize = 2;
-            btnDangnhap.FlatAppearance.MouseDownBackColor = Color.MediumSlateBlue;
-            btnDangnhap.FlatAppearance.MouseOverBackColor = Color.MediumSlateBlue;
+            btnDangnhap.FlatAppearance.MouseDownBackColor = Color.LightPink;
+            btnDangnhap.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnDangnhap.FlatStyle = FlatStyle.Flat;
-            btnDangnhap.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnDangnhap.Font = new Font("Microsoft Sans Serif", 16F);
             btnDangnhap.Location = new Point(71, 391);
             btnDangnhap.Margin = new Padding(4, 3, 4, 3);
             btnDangnhap.Name = "btnDangnhap";
@@ -112,12 +115,12 @@
             // 
             btnThoat.BackColor = Color.White;
             btnThoat.Cursor = Cursors.Hand;
-            btnThoat.FlatAppearance.BorderColor = Color.MediumSlateBlue;
+            btnThoat.FlatAppearance.BorderColor = Color.LightPink;
             btnThoat.FlatAppearance.BorderSize = 2;
-            btnThoat.FlatAppearance.MouseDownBackColor = Color.MediumSlateBlue;
-            btnThoat.FlatAppearance.MouseOverBackColor = Color.MediumSlateBlue;
+            btnThoat.FlatAppearance.MouseDownBackColor = Color.LightPink;
+            btnThoat.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnThoat.FlatStyle = FlatStyle.Flat;
-            btnThoat.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnThoat.Font = new Font("Microsoft Sans Serif", 16F);
             btnThoat.Location = new Point(71, 467);
             btnThoat.Margin = new Padding(4, 3, 4, 3);
             btnThoat.Name = "btnThoat";
@@ -131,12 +134,12 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.White;
-            label2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 16F);
             label2.ForeColor = Color.Black;
             label2.Location = new Point(66, 202);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(145, 24);
+            label2.Size = new Size(164, 26);
             label2.TabIndex = 8;
             label2.Text = "Tên Đăng Nhập";
             // 
@@ -144,12 +147,12 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.White;
-            label3.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Microsoft Sans Serif", 16F);
             label3.ForeColor = Color.Black;
             label3.Location = new Point(66, 288);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(89, 24);
+            label3.Size = new Size(105, 26);
             label3.TabIndex = 9;
             label3.Text = "Mật Khẩu";
             // 

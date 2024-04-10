@@ -18,22 +18,22 @@ namespace Quanlyhieuthuoc
         {
             InitializeComponent();
             this.hoTen = hoTen;
+            lblDanhMuc.Text = "Trang chủ";
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void Main_Load(object sender, EventArgs e)
+        void handleAddUC(UserControl uc, string title)
         {
-            lblHoTen.Text = hoTen;
+            uc.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(uc);
+            lblDanhMuc.Text = title;
         }
-
-        private ucTaiKhoan ucTaiKhoan;
 
         private void btnTaiKhoan_Click(object sender, EventArgs e)
         {
-            ucTaiKhoan = new ucTaiKhoan();
-            ucTaiKhoan.Dock = DockStyle.Fill;
-            pnMain.Controls.Add(ucTaiKhoan);
+            ucTaiKhoan ucTaiKhoan = new ucTaiKhoan();
+            string title = "Tài Khoản";
+            handleAddUC(ucTaiKhoan, title);
         }
-
-        
     }
 }

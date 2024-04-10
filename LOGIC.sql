@@ -7,13 +7,14 @@ CREATE PROCEDURE KiemTraTaiKhoan
 (
     @TenTaiKhoan NVARCHAR(25),
     @MatKhau NVARCHAR(30),
-    @VaiTro INT OUTPUT
+    @VaiTro INT OUTPUT,
+	@HoTen NVARCHAR(30) OUTPUT
 )
 AS
 BEGIN
     SET NOCOUNT ON;
 
-    SELECT @VaiTro = VaiTro
+    SELECT @VaiTro = VaiTro, @HoTen = HoTen
     FROM TaiKhoan
     WHERE TenTaiKhoan = @TenTaiKhoan AND MatKhau = @MatKhau
 END
@@ -23,9 +24,7 @@ CREATE PROCEDURE ThemTaiKhoan
   @TenTaiKhoan NVARCHAR(25),
   @MatKhau NVARCHAR(30),
   @VaiTro INT,
-  @HoTen NVARCHAR(30),
-  @SoDienThoai NVARCHAR(15),
-  @Email NVARCHAR(30)
+  @HoTen NVARCHAR(30)
 )
 AS
 BEGIN
@@ -37,47 +36,43 @@ GO
 
 CREATE PROCEDURE SuaTaiKhoan
 (
-  @IDTaiKhoan INT,
   @TenTaiKhoan NVARCHAR(25),
   @MatKhau NVARCHAR(30),
   @VaiTro INT,
-  @HoTen NVARCHAR(30),
-  @SoDienThoai NVARCHAR(15),
-  @Email NVARCHAR(30)
+  @HoTen NVARCHAR(30)
 )
 AS
 BEGIN
   UPDATE TaiKhoan
-  SET TenTaiKhoan = @TenTaiKhoan,
-  MatKhau = @MatKhau,
+  SET MatKhau = @MatKhau,
   VaiTro = @VaiTro,
   HoTen = @HoTen
-  WHERE MaTaiKhoan = @IDTaiKhoan;
+  WHERE TenTaiKhoan = @TenTaiKhoan;
 END;
 
 GO
 
 CREATE PROCEDURE XoaTaiKhoan
 (
-  @IDTaiKhoan INT
+  @TenTaiKhoan NVARCHAR(25)
 )
 AS
 BEGIN
   DELETE FROM TaiKhoan
-  WHERE MaTaiKhoan = @IDTaiKhoan;
+  WHERE TenTaiKhoan = @TenTaiKhoan;
 END;
 
 /****************** XEM HOA DON CUA NGUOI BAN  ******************/
 GO
 CREATE PROCEDURE XemHoaDon
 (
-  @IDTaiKhoan INT
+  @TenTaiKhoan NVARCHAR(25)
 )
 AS
 BEGIN
   SELECT *
   FROM HoaDon
-  WHERE MaTaiKhoan = @IDTaiKhoan;
+  WHERE TenTaiKhoan = @TenTaiKhoan;
 END;
 
 /****************** XEM CHI TIET HOA DON CUA NGUOI BAN  ******************/
@@ -85,18 +80,18 @@ END;
 GO
 CREATE PROCEDURE XemChiTietHoaDon
 (
-  @IDTaiKhoan INT
+  @TenTaiKhoan NVARCHAR(25)
 )
 AS
 BEGIN
   SELECT h.MaHoaDon, h.NgayBan, h.TongTien,
-         t.TenThuoc, t.DonViTinh, ct.SoLuong, ct.GiaBan
+         t.TenThuoc, t.DonViTinh, ct.SoLuong, ct.DonGia
   FROM HoaDon h
   INNER JOIN ChiTietHoaDon ct ON h.MaHoaDon = ct.MaHoaDon
   INNER JOIN Thuoc t ON ct.MaThuoc = t.MaThuoc
-  WHERE h.MaTaiKhoan = @IDTaiKhoan;
+  WHERE h.TenTaiKhoan = @TenTaiKhoan;
 END;
-
+GO
 -- 
 -- Tạo stored procedure thêm thuốc
 CREATE PROCEDURE ThemThuoc
@@ -211,50 +206,6 @@ AS
 BEGIN
     DELETE FROM PhanLoai
     WHERE MaLoaiThuoc = @MaLoaiThuoc;
-END
-GO
-
--- thêm kho thuốc
-CREATE PROCEDURE ThemKhoThuoc
-    @MaThuoc INT,
-    @MaNhaCungCap INT,
-    @SoLuong INT,
-    @NgaySanXuat DATE,
-    @NgayHetHan DATE
-AS
-BEGIN
-    INSERT INTO KhoThuoc (MaThuoc, MaNhaCungCap, SoLuong, NgaySanXuat, NgayHetHan)
-    VALUES (@MaThuoc, @MaNhaCungCap, @SoLuong, @NgaySanXuat, @NgayHetHan);
-END
-GO
-
--- sửa thông tin kho thuốc
-CREATE PROCEDURE SuaKhoThuoc
-    @MaKhoThuoc INT,
-    @MaThuoc INT,
-    @MaNhaCungCap INT,
-    @SoLuong INT,
-    @NgaySanXuat DATE,
-    @NgayHetHan DATE
-AS
-BEGIN
-    UPDATE KhoThuoc
-    SET MaThuoc = @MaThuoc,
-        MaNhaCungCap = @MaNhaCungCap,
-        SoLuong = @SoLuong,
-        NgaySanXuat = @NgaySanXuat,
-        NgayHetHan = @NgayHetHan
-    WHERE MaKhoThuoc = @MaKhoThuoc;
-END
-GO
-
---  xóa kho thuốc
-CREATE PROCEDURE XoaKhoThuoc
-    @MaKhoThuoc INT
-AS
-BEGIN
-    DELETE FROM KhoThuoc
-    WHERE MaKhoThuoc = @MaKhoThuoc;
 END
 GO
 

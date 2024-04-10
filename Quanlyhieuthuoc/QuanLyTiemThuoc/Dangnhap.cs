@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Quanlyhieuthuoc
 {
@@ -40,7 +41,7 @@ namespace Quanlyhieuthuoc
         {
             string tenTaiKhoan = txtDangNhap.Text;
             string matKhau = txtMatKhau.Text;
-            if(string.IsNullOrEmpty(tenTaiKhoan))
+            if (string.IsNullOrEmpty(tenTaiKhoan))
             {
                 MessageBox.Show("Vui long nhap ten tai khoan!");
                 return;

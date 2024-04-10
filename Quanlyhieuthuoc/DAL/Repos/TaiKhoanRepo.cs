@@ -1,4 +1,5 @@
-﻿using DAL.Constants;
+﻿using DAL.Entities;
+using DLL.Repos;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,95 +12,93 @@ namespace DAL.Repos
 {
     public class TaiKhoanRepo
     {
-        //public DataTable HienThiDanhSach(ref string error)
-        //{
-        //    string query = "Select * from TaiKhoan";
-        //    return Constants.Procedures.Instance.ExecuteQuery(query, ref error);
-        //}
-        private string connectionSTR = "Data Source=ROKU\\SQLEXPRESS;Initial Catalog=Project_QLTT;Integrated Security=True;";
+        Database database = new Database();
 
         public DataTable HienThiDanhSach(ref string error)
         {
-            using var command = new SqlCommand();
-            SqlConnection connection = null;
             try
             {
-                using (connection = new SqlConnection(connectionSTR))
-                {
-                    connection.Open();
-                    command.Connection = connection;
-                    command.CommandText = "select TenTaiKhoan, HoTen, VaiTro from TaiKhoan";
-                    using var reader = command.ExecuteReader();
-                    DataTable data = new DataTable();
-                    if (reader.HasRows)
-                    {
-                        data.Load(reader);
-                        error = "";
-                        return data;
-                    }
-                    else
-                    {
-                        error = "Khong co du lieu";
-                        return null;
-                    }
-                }
+                string sql = "select TenTaiKhoan, HoTen, VaiTro from TaiKhoan";
+                DataTable dt = new DataTable();
+                dt = database.GetData(sql, ref error);
+                return dt;
             }
             catch (Exception ex)
             {
-                error = "Ket noi loi : " + ex.Message;
+                error = "Loi : " + ex.Message;
                 return null;
             }
-            finally
+        }
+
+        public bool ThemTaiKhoan(TaiKhoanEntity taikhoan, ref string error)
+        {
+            string procedureName = "ThemTaiKhoan";
+            SqlParameter[] parameters =
             {
-                connection.Close();
-            }
+                new SqlParameter("@TenTaiKhoan", taikhoan.TenTaiKhoan),
+                new SqlParameter("@MatKhau", taikhoan.MatKhau),
+                new SqlParameter("@VaiTro", taikhoan.VaiTro),
+                new SqlParameter("@HoTen", taikhoan.HoTen),
+            };
+            return database.ExecuteNonQuery(procedureName, CommandType.StoredProcedure, ref error, parameters);
         }
 
-        public bool ThemTaiKhoan(ref string error)
+        public bool SuaTaiKhoan(TaiKhoanEntity taikhoan, ref string error)
         {
-            string query = "";
-            int ketqua = Constants.Procedures.Instance.ExecuteNonQuery(query, ref error);
-
-            return ketqua > 0;
+            string procedureName = "SuaTaiKhoan";
+            SqlParameter[] parameters =
+            {
+                new SqlParameter("@TenTaiKhoan", taikhoan.TenTaiKhoan),
+                new SqlParameter("@MatKhau", taikhoan.MatKhau),
+                new SqlParameter("@VaiTro", taikhoan.VaiTro),
+                new SqlParameter("@HoTen", taikhoan.HoTen),
+            };
+            return database.ExecuteNonQuery(procedureName, CommandType.StoredProcedure, ref error, parameters);
         }
 
-        public bool XoaTaiKhoan(ref string error)
+        public bool XoaTaiKhoan(string tenTaiKhoan, ref string error)
         {
-            string query = "";
-            int ketqua = Constants.Procedures.Instance.ExecuteNonQuery(query, ref error);
-            return ketqua > 0;
+            string query = "XoaTaiKhoan";
+            SqlParameter[] parameters =
+            {
+                new SqlParameter("@TenTaiKhoan", tenTaiKhoan),
+            };
+            return database.ExecuteNonQuery(query, CommandType.StoredProcedure, ref error, parameters);
         }
 
-        public int KiemTraDangNhap(string tenTaiKhoan, string matKhau, ref string error)
+        public string[] KiemTraDangNhap(string tenTaiKhoan, string matKhau, ref string error)
         {
-            int vaiTro = 0;
-            SqlConnection connection = null;
+            string[] taikhoan = { };
+            error = "";
 
             try
             {
-                using (connection = new SqlConnection(connectionSTR))
+                SqlParameter[] parameters = new SqlParameter[2]
                 {
-                    SqlCommand command = new SqlCommand("KiemTraTaiKhoan", connection);
-                    command.CommandText = "SELECT CASE WHEN MatKhau = @MatKhau THEN VaiTro ELSE 0 END AS KetQua FROM TaiKhoan WHERE TenTaiKhoan = @TenTaiKhoan";
-                    command.Parameters.AddWithValue("@MatKhau", matKhau);
-                    command.Parameters.AddWithValue("@TenTaiKhoan", tenTaiKhoan);
+                    new SqlParameter("@TenTaiKhoan", tenTaiKhoan),
+                    new SqlParameter("@MatKhau", matKhau)
+                };
 
-                    connection.Open();
-                    object data = command.ExecuteScalar();
+                DataTable dataTable = database.ExecuteReader("KiemTraTaiKhoan", CommandType.StoredProcedure, ref error, parameters);
+
+                if (dataTable != null && dataTable.Rows.Count > 0)
+                {
+                    taikhoan[0] = dataTable.Rows[0]["VaiTro"].ToString();
+                    taikhoan[1] = dataTable.Rows[0]["HoTen"].ToString();
+                    Console.WriteLine(taikhoan[0]);
+                    Console.WriteLine(taikhoan[1]);
+                    return taikhoan;
+                } else
+                {
+                    return [];
                 }
 
-                return vaiTro;
             }
             catch (Exception ex)
             {
-                return 0;
-                throw;
+                error = "Lỗi: " + ex.Message;
+                return [];
             }
-            finally
-            {
-                connection.Close();
-            }
-            
         }
     }
 }

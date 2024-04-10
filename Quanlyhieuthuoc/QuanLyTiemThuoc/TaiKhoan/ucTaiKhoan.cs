@@ -8,53 +8,118 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Quanlyhieuthuoc.TaiKhoan
 {
     public partial class ucTaiKhoan : UserControl
     {
         private TaiKhoanManager taiKhoanManager = null;
+        private QuyenManager quyenManager = null;
         private string error = "";
-        private DataTable data = null;
         public ucTaiKhoan()
         {
             InitializeComponent();
             taiKhoanManager = new TaiKhoanManager();
-            data = new DataTable();
+            quyenManager = new QuyenManager();
             hienThiDanhSachTaiKhoan();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCapNhat_Click(object sender, EventArgs e)
-        {
+            hienThiQuyen();
 
         }
 
         private void ucTaiKhoan_Load(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void hienThiQuyen()
+        {
+            DataTable data = new DataTable();
+            data = quyenManager.HienThiDanhSach(ref error);
+            if (data == null)
+            {
+                MessageBox.Show(error);
+            }
+            else
+            {
+                cbQuyen.DataSource = data;
+                cbQuyen.DisplayMember = "MoTa";
+                cbQuyen.ValueMember = "MaQuyen";
+            }
         }
 
         private void hienThiDanhSachTaiKhoan()
         {
+            DataTable data = new DataTable();
             data = taiKhoanManager.hienThiDanhSachTaiKhoan(ref error);
-            if(data == null)
+            if (data == null)
             {
                 MessageBox.Show(error);
-            } else
+            }
+            else
             {
                 dgTaiKhoan.DataSource = data;
-                if(dgTaiKhoan.Rows.Count > 0)
+                if (dgTaiKhoan.Rows.Count > 0)
                 {
                     DataGridViewRow rowselected = dgTaiKhoan.Rows[0];
-                    txtTenTaiKhoan.Text = rowselected.Cells["TenTaiKhoan"].Value.ToString();
-                    txtHoTen.Text = rowselected.Cells["HoTen"].Value.ToString();
-                    txtVaiTro.Text = rowselected.Cells["VaiTro"].Value.ToString();
+                    lblTaiKhoan.Text = rowselected.Cells["TenTaiKhoan"].Value.ToString();
+                    lblHoTen.Text = rowselected.Cells["HoTen"].Value.ToString();
+                    cbQuyen.Text = rowselected.Cells["VaiTro"].Value.ToString();
                 }
+            }
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            ThemTaiKhoan form = new ThemTaiKhoan();
+            form.ShowDialog();
+            hienThiDanhSachTaiKhoan();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            string tenTaiKhoan = lblTenTaiKhoan.Text;
+            if (string.IsNullOrEmpty(tenTaiKhoan))
+            {
+                MessageBox.Show("Chưa chọn tài khoản để xoá");
+                return;
+            }
+
+            try
+            {
+                bool result = taiKhoanManager.XoaTaiKhoan(tenTaiKhoan, ref error);
+                if (result)
+                {
+                    MessageBox.Show("Xoá tài khoản thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Xoá tài khoản không thành công");
+                }
+            }
+            catch (Exception ex)
+            {
+                error = "Lỗi : " + ex.Message;
+                return;
+            }
+            hienThiDanhSachTaiKhoan();
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            SuaTaiKhoan form = new SuaTaiKhoan();
+            form.ShowDialog();
+            hienThiDanhSachTaiKhoan();
+        }
+
+        private void dgTaiKhoan_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < dgTaiKhoan.RowCount)
+            {
+                DataGridViewRow rowselected = dgTaiKhoan.Rows[e.RowIndex];
+                lblTenTaiKhoan.Text = rowselected.Cells["TenTaiKhoan"].Value.ToString();
+                lblHoTen.Text = rowselected.Cells["HoTen"].Value.ToString();
+                cbQuyen.Text = rowselected.Cells["VaiTro"].Value.ToString();
             }
         }
     }

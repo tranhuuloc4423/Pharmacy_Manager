@@ -1,4 +1,5 @@
-﻿using DAL.Repos;
+﻿using DAL.Entities;
+using DAL.Repos;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -22,10 +23,24 @@ namespace BLL.Managers
             return process.HienThiDanhSach(ref error);
         }
 
-        //public int KiemTraDangNhap(string taikhoan, string matkhau)
-        //{
+        public string[] KiemTraDangNhap(string taikhoan, string matkhau, ref string error)
+        {
+            return process.KiemTraDangNhap(taikhoan, matkhau,ref error);
+        }
 
-        //    return process.KiemTraDangNhap(taikhoan, matkhau);
-        //}
+        public bool ThemTaiKhoan(TaiKhoanEntity taiKhoan, ref string error)
+        {
+            return process.ThemTaiKhoan(taiKhoan, ref error);
+        }
+
+        public bool SuaTaiKhoan(TaiKhoanEntity taiKhoan, ref string error)
+        {
+            return process.SuaTaiKhoan(taiKhoan, ref error);
+        }
+
+        public bool XoaTaiKhoan(string tenTaiKhoan, ref string error)
+        {
+            return process.XoaTaiKhoan(tenTaiKhoan, ref error);
+        }
     }
 }

@@ -39,3 +39,5 @@ E:\c#\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-windows\
 E:\c#\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-windows\Quanlyhieuthuoc.genruntimeconfig.cache
 E:\c#\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-windows\ref\Quanlyhieuthuoc.dll
 E:\c#\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-windows\Quanlyhieuthuoc.TaiKhoan.ucTaiKhoan.resources
+E:\c#\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-windows\Quanlyhieuthuoc.TaiKhoan.SuaTaiKhoan.resources
+E:\c#\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-windows\Quanlyhieuthuoc.TaiKhoan.ThemTaiKhoan.resources

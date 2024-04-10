@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
             dgTaiKhoan = new DataGridView();
@@ -35,12 +39,12 @@
             HoTen = new DataGridViewTextBoxColumn();
             VaiTro = new DataGridViewTextBoxColumn();
             panel2 = new Panel();
+            cbQuyen = new ComboBox();
+            lblHoTen = new Label();
+            lblTenTaiKhoan = new Label();
             btnCapNhat = new Button();
-            button1 = new Button();
+            btnXoa = new Button();
             btnThem = new Button();
-            txtHoTen = new TextBox();
-            txtVaiTro = new TextBox();
-            txtTenTaiKhoan = new TextBox();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
@@ -63,7 +67,7 @@
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(1051, 587);
+            tableLayoutPanel1.Size = new Size(1228, 610);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -72,22 +76,52 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(624, 581);
+            panel1.Size = new Size(730, 604);
             panel1.TabIndex = 0;
             // 
             // dgTaiKhoan
             // 
             dgTaiKhoan.AllowUserToAddRows = false;
             dgTaiKhoan.AllowUserToDeleteRows = false;
-            dgTaiKhoan.BackgroundColor = Color.Thistle;
-            dgTaiKhoan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgTaiKhoan.AllowUserToResizeColumns = false;
+            dgTaiKhoan.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgTaiKhoan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgTaiKhoan.BackgroundColor = Color.LightPink;
+            dgTaiKhoan.CellBorderStyle = DataGridViewCellBorderStyle.Sunken;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 14F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgTaiKhoan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgTaiKhoan.ColumnHeadersHeight = 40;
+            dgTaiKhoan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dgTaiKhoan.Columns.AddRange(new DataGridViewColumn[] { TenTaiKhoan, HoTen, VaiTro });
             dgTaiKhoan.Dock = DockStyle.Fill;
+            dgTaiKhoan.GridColor = Color.LightPink;
             dgTaiKhoan.Location = new Point(0, 0);
+            dgTaiKhoan.MultiSelect = false;
             dgTaiKhoan.Name = "dgTaiKhoan";
             dgTaiKhoan.ReadOnly = true;
-            dgTaiKhoan.Size = new Size(624, 581);
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 14F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgTaiKhoan.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dgTaiKhoan.RowHeadersWidth = 40;
+            dgTaiKhoan.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle4.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgTaiKhoan.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dgTaiKhoan.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgTaiKhoan.Size = new Size(730, 604);
             dgTaiKhoan.TabIndex = 0;
+            dgTaiKhoan.CellClick += dgTaiKhoan_CellClick;
             // 
             // TenTaiKhoan
             // 
@@ -115,140 +149,146 @@
             // 
             // panel2
             // 
+            panel2.BackColor = Color.Thistle;
+            panel2.Controls.Add(cbQuyen);
+            panel2.Controls.Add(lblHoTen);
+            panel2.Controls.Add(lblTenTaiKhoan);
             panel2.Controls.Add(btnCapNhat);
-            panel2.Controls.Add(button1);
+            panel2.Controls.Add(btnXoa);
             panel2.Controls.Add(btnThem);
-            panel2.Controls.Add(txtHoTen);
-            panel2.Controls.Add(txtVaiTro);
-            panel2.Controls.Add(txtTenTaiKhoan);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(lblTaiKhoan);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(633, 3);
+            panel2.Location = new Point(739, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(415, 581);
+            panel2.Size = new Size(486, 604);
             panel2.TabIndex = 1;
+            // 
+            // cbQuyen
+            // 
+            cbQuyen.Enabled = false;
+            cbQuyen.Font = new Font("Segoe UI", 14F);
+            cbQuyen.FormattingEnabled = true;
+            cbQuyen.Items.AddRange(new object[] { "admin", "user" });
+            cbQuyen.Location = new Point(249, 232);
+            cbQuyen.Name = "cbQuyen";
+            cbQuyen.Size = new Size(146, 33);
+            cbQuyen.TabIndex = 8;
+            // 
+            // lblHoTen
+            // 
+            lblHoTen.AutoSize = true;
+            lblHoTen.Font = new Font("Segoe UI", 16F);
+            lblHoTen.Location = new Point(249, 169);
+            lblHoTen.Name = "lblHoTen";
+            lblHoTen.Size = new Size(82, 30);
+            lblHoTen.TabIndex = 7;
+            lblHoTen.Text = "Họ Tên";
+            // 
+            // lblTenTaiKhoan
+            // 
+            lblTenTaiKhoan.AutoSize = true;
+            lblTenTaiKhoan.Font = new Font("Segoe UI", 16F);
+            lblTenTaiKhoan.Location = new Point(249, 109);
+            lblTenTaiKhoan.Name = "lblTenTaiKhoan";
+            lblTenTaiKhoan.Size = new Size(146, 30);
+            lblTenTaiKhoan.TabIndex = 6;
+            lblTenTaiKhoan.Text = "Tên Tài Khoản";
             // 
             // btnCapNhat
             // 
             btnCapNhat.BackColor = Color.White;
-            btnCapNhat.FlatAppearance.BorderColor = Color.MediumSlateBlue;
+            btnCapNhat.FlatAppearance.BorderColor = Color.LightPink;
             btnCapNhat.FlatAppearance.BorderSize = 2;
-            btnCapNhat.FlatAppearance.CheckedBackColor = Color.MediumSlateBlue;
-            btnCapNhat.FlatAppearance.MouseDownBackColor = Color.MediumSlateBlue;
-            btnCapNhat.FlatAppearance.MouseOverBackColor = Color.MediumSlateBlue;
+            btnCapNhat.FlatAppearance.CheckedBackColor = Color.LightPink;
+            btnCapNhat.FlatAppearance.MouseDownBackColor = Color.LightPink;
+            btnCapNhat.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnCapNhat.FlatStyle = FlatStyle.Flat;
             btnCapNhat.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnCapNhat.Location = new Point(224, 301);
+            btnCapNhat.Location = new Point(255, 315);
             btnCapNhat.Margin = new Padding(4, 3, 4, 3);
             btnCapNhat.Name = "btnCapNhat";
             btnCapNhat.Size = new Size(164, 44);
-            btnCapNhat.TabIndex = 9;
+            btnCapNhat.TabIndex = 4;
             btnCapNhat.Text = "Cập Nhật";
             btnCapNhat.UseVisualStyleBackColor = false;
             btnCapNhat.Click += btnCapNhat_Click;
             // 
-            // button1
+            // btnXoa
             // 
-            button1.BackColor = Color.White;
-            button1.FlatAppearance.BorderColor = Color.MediumSlateBlue;
-            button1.FlatAppearance.BorderSize = 2;
-            button1.FlatAppearance.CheckedBackColor = Color.MediumSlateBlue;
-            button1.FlatAppearance.MouseDownBackColor = Color.MediumSlateBlue;
-            button1.FlatAppearance.MouseOverBackColor = Color.MediumSlateBlue;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(31, 398);
-            button1.Margin = new Padding(4, 3, 4, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(164, 44);
-            button1.TabIndex = 8;
-            button1.Text = "Xoá";
-            button1.UseVisualStyleBackColor = false;
+            btnXoa.BackColor = Color.White;
+            btnXoa.FlatAppearance.BorderColor = Color.LightPink;
+            btnXoa.FlatAppearance.BorderSize = 2;
+            btnXoa.FlatAppearance.CheckedBackColor = Color.LightPink;
+            btnXoa.FlatAppearance.MouseDownBackColor = Color.LightPink;
+            btnXoa.FlatAppearance.MouseOverBackColor = Color.LightPink;
+            btnXoa.FlatStyle = FlatStyle.Flat;
+            btnXoa.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnXoa.Location = new Point(62, 391);
+            btnXoa.Margin = new Padding(4, 3, 4, 3);
+            btnXoa.Name = "btnXoa";
+            btnXoa.Size = new Size(164, 44);
+            btnXoa.TabIndex = 5;
+            btnXoa.Text = "Xoá";
+            btnXoa.UseVisualStyleBackColor = false;
+            btnXoa.Click += btnXoa_Click;
             // 
             // btnThem
             // 
             btnThem.BackColor = Color.White;
-            btnThem.FlatAppearance.BorderColor = Color.MediumSlateBlue;
+            btnThem.FlatAppearance.BorderColor = Color.LightPink;
             btnThem.FlatAppearance.BorderSize = 2;
-            btnThem.FlatAppearance.CheckedBackColor = Color.MediumSlateBlue;
-            btnThem.FlatAppearance.MouseDownBackColor = Color.MediumSlateBlue;
-            btnThem.FlatAppearance.MouseOverBackColor = Color.MediumSlateBlue;
+            btnThem.FlatAppearance.CheckedBackColor = Color.LightPink;
+            btnThem.FlatAppearance.MouseDownBackColor = Color.LightPink;
+            btnThem.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnThem.FlatStyle = FlatStyle.Flat;
             btnThem.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnThem.Location = new Point(31, 301);
+            btnThem.Location = new Point(62, 315);
             btnThem.Margin = new Padding(4, 3, 4, 3);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(164, 44);
-            btnThem.TabIndex = 7;
+            btnThem.TabIndex = 3;
             btnThem.Text = "Thêm";
             btnThem.UseVisualStyleBackColor = false;
-            // 
-            // txtHoTen
-            // 
-            txtHoTen.BorderStyle = BorderStyle.FixedSingle;
-            txtHoTen.Font = new Font("Segoe UI", 16F);
-            txtHoTen.Location = new Point(173, 158);
-            txtHoTen.Name = "txtHoTen";
-            txtHoTen.Size = new Size(215, 36);
-            txtHoTen.TabIndex = 6;
-            // 
-            // txtVaiTro
-            // 
-            txtVaiTro.BorderStyle = BorderStyle.FixedSingle;
-            txtVaiTro.Font = new Font("Segoe UI", 16F);
-            txtVaiTro.Location = new Point(173, 224);
-            txtVaiTro.Name = "txtVaiTro";
-            txtVaiTro.Size = new Size(215, 36);
-            txtVaiTro.TabIndex = 5;
-            // 
-            // txtTenTaiKhoan
-            // 
-            txtTenTaiKhoan.BorderStyle = BorderStyle.FixedSingle;
-            txtTenTaiKhoan.Font = new Font("Segoe UI", 16F);
-            txtTenTaiKhoan.Location = new Point(173, 98);
-            txtTenTaiKhoan.Name = "txtTenTaiKhoan";
-            txtTenTaiKhoan.Size = new Size(215, 36);
-            txtTenTaiKhoan.TabIndex = 4;
+            btnThem.Click += btnThem_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 16F);
-            label3.Location = new Point(21, 224);
+            label3.Location = new Point(85, 235);
             label3.Name = "label3";
-            label3.Size = new Size(78, 30);
+            label3.Size = new Size(89, 30);
             label3.TabIndex = 3;
-            label3.Text = "Vai Trò";
+            label3.Text = "Vai Trò :";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 16F);
-            label2.Location = new Point(21, 158);
+            label2.Location = new Point(85, 169);
             label2.Name = "label2";
-            label2.Size = new Size(82, 30);
+            label2.Size = new Size(93, 30);
             label2.TabIndex = 2;
-            label2.Text = "Họ Tên";
-            label2.Click += label2_Click;
+            label2.Text = "Họ Tên :";
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 16F);
-            label1.Location = new Point(21, 98);
+            label1.Location = new Point(85, 109);
             label1.Name = "label1";
-            label1.Size = new Size(146, 30);
+            label1.Size = new Size(157, 30);
             label1.TabIndex = 1;
-            label1.Text = "Tên Tài Khoản";
+            label1.Text = "Tên Tài Khoản :";
             // 
             // lblTaiKhoan
             // 
             lblTaiKhoan.AutoSize = true;
             lblTaiKhoan.Font = new Font("Segoe UI", 16F);
-            lblTaiKhoan.Location = new Point(153, 37);
+            lblTaiKhoan.Location = new Point(198, 52);
             lblTaiKhoan.Name = "lblTaiKhoan";
             lblTaiKhoan.Size = new Size(106, 30);
             lblTaiKhoan.TabIndex = 0;
@@ -260,7 +300,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(tableLayoutPanel1);
             Name = "ucTaiKhoan";
-            Size = new Size(1051, 587);
+            Size = new Size(1228, 610);
             Load += ucTaiKhoan_Load;
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
@@ -279,15 +319,15 @@
         private Label label3;
         private Label label2;
         private Label label1;
-        private TextBox txtHoTen;
-        private TextBox txtVaiTro;
-        private TextBox txtTenTaiKhoan;
         private Button btnCapNhat;
-        private Button button1;
+        private Button btnXoa;
         private Button btnThem;
         private DataGridView dgTaiKhoan;
         private DataGridViewTextBoxColumn TenTaiKhoan;
         private DataGridViewTextBoxColumn HoTen;
         private DataGridViewTextBoxColumn VaiTro;
+        private Label lblHoTen;
+        private Label lblTenTaiKhoan;
+        private ComboBox cbQuyen;
     }
 }
