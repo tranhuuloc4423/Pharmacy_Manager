@@ -34,7 +34,7 @@
             panel2 = new Panel();
             btnThoat = new Button();
             btnSua = new Button();
-            comboBox1 = new ComboBox();
+            cbQuyen = new ComboBox();
             txtMatKhau = new TextBox();
             txtHoTen = new TextBox();
             txtTenTaiKhoan = new TextBox();
@@ -57,9 +57,9 @@
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 2;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            tableLayoutPanel1.Size = new Size(465, 491);
+            tableLayoutPanel1.Size = new Size(484, 411);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -69,7 +69,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(459, 44);
+            panel1.Size = new Size(478, 54);
             panel1.TabIndex = 0;
             // 
             // label1
@@ -88,7 +88,7 @@
             panel2.BackColor = Color.Thistle;
             panel2.Controls.Add(btnThoat);
             panel2.Controls.Add(btnSua);
-            panel2.Controls.Add(comboBox1);
+            panel2.Controls.Add(cbQuyen);
             panel2.Controls.Add(txtMatKhau);
             panel2.Controls.Add(txtHoTen);
             panel2.Controls.Add(txtTenTaiKhoan);
@@ -97,9 +97,9 @@
             panel2.Controls.Add(label3);
             panel2.Controls.Add(label2);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(3, 53);
+            panel2.Location = new Point(3, 63);
             panel2.Name = "panel2";
-            panel2.Size = new Size(459, 435);
+            panel2.Size = new Size(478, 435);
             panel2.TabIndex = 1;
             // 
             // btnThoat
@@ -112,11 +112,11 @@
             btnThoat.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnThoat.FlatStyle = FlatStyle.Flat;
             btnThoat.Font = new Font("Microsoft Sans Serif", 16F);
-            btnThoat.Location = new Point(271, 310);
+            btnThoat.Location = new Point(283, 265);
             btnThoat.Margin = new Padding(4, 3, 4, 3);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(169, 46);
-            btnThoat.TabIndex = 20;
+            btnThoat.TabIndex = 5;
             btnThoat.Text = "Thoát";
             btnThoat.UseVisualStyleBackColor = false;
             btnThoat.Click += btnThoat_Click;
@@ -131,48 +131,48 @@
             btnSua.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnSua.FlatStyle = FlatStyle.Flat;
             btnSua.Font = new Font("Microsoft Sans Serif", 16F);
-            btnSua.Location = new Point(15, 310);
+            btnSua.Location = new Point(27, 265);
             btnSua.Margin = new Padding(4, 3, 4, 3);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(169, 46);
-            btnSua.TabIndex = 19;
+            btnSua.TabIndex = 4;
             btnSua.Text = "Sửa";
             btnSua.UseVisualStyleBackColor = false;
             btnSua.Click += btnSua_Click;
             // 
-            // comboBox1
+            // cbQuyen
             // 
-            comboBox1.Font = new Font("Segoe UI", 14F);
-            comboBox1.ForeColor = Color.Black;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(167, 216);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(273, 33);
-            comboBox1.TabIndex = 18;
+            cbQuyen.Font = new Font("Segoe UI", 14F);
+            cbQuyen.ForeColor = Color.Black;
+            cbQuyen.FormattingEnabled = true;
+            cbQuyen.Location = new Point(179, 199);
+            cbQuyen.Name = "cbQuyen";
+            cbQuyen.Size = new Size(273, 33);
+            cbQuyen.TabIndex = 3;
             // 
             // txtMatKhau
             // 
             txtMatKhau.Font = new Font("Segoe UI", 14F);
             txtMatKhau.ForeColor = Color.Black;
-            txtMatKhau.Location = new Point(167, 160);
+            txtMatKhau.Location = new Point(179, 143);
             txtMatKhau.Name = "txtMatKhau";
             txtMatKhau.Size = new Size(273, 32);
-            txtMatKhau.TabIndex = 17;
+            txtMatKhau.TabIndex = 2;
             // 
             // txtHoTen
             // 
             txtHoTen.Font = new Font("Segoe UI", 14F);
             txtHoTen.ForeColor = Color.Black;
-            txtHoTen.Location = new Point(167, 105);
+            txtHoTen.Location = new Point(179, 88);
             txtHoTen.Name = "txtHoTen";
             txtHoTen.Size = new Size(273, 32);
-            txtHoTen.TabIndex = 16;
+            txtHoTen.TabIndex = 1;
             // 
             // txtTenTaiKhoan
             // 
             txtTenTaiKhoan.Font = new Font("Segoe UI", 14F);
             txtTenTaiKhoan.ForeColor = Color.Black;
-            txtTenTaiKhoan.Location = new Point(167, 51);
+            txtTenTaiKhoan.Location = new Point(179, 34);
             txtTenTaiKhoan.Name = "txtTenTaiKhoan";
             txtTenTaiKhoan.ReadOnly = true;
             txtTenTaiKhoan.Size = new Size(273, 32);
@@ -183,7 +183,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 16F);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(15, 105);
+            label5.Location = new Point(27, 88);
             label5.Name = "label5";
             label5.Size = new Size(82, 30);
             label5.TabIndex = 14;
@@ -194,7 +194,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 16F);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(15, 163);
+            label4.Location = new Point(27, 146);
             label4.Name = "label4";
             label4.Size = new Size(105, 30);
             label4.TabIndex = 13;
@@ -205,7 +205,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 16F);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(15, 215);
+            label3.Location = new Point(27, 198);
             label3.Name = "label3";
             label3.Size = new Size(78, 30);
             label3.TabIndex = 12;
@@ -216,7 +216,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 16F);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(15, 50);
+            label2.Location = new Point(27, 33);
             label2.Name = "label2";
             label2.Size = new Size(146, 30);
             label2.TabIndex = 11;
@@ -226,7 +226,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(465, 491);
+            ClientSize = new Size(484, 411);
             Controls.Add(tableLayoutPanel1);
             Name = "SuaTaiKhoan";
             Text = "SuaTaiKhoan";
@@ -246,7 +246,7 @@
         private Label label1;
         private Button btnThoat;
         private Button btnSua;
-        private ComboBox comboBox1;
+        private ComboBox cbQuyen;
         private TextBox txtMatKhau;
         private TextBox txtHoTen;
         private TextBox txtTenTaiKhoan;

@@ -8,6 +8,7 @@ namespace DAL.Entities
 {
     public class PhanLoaiEntity
     {
+        public int MaLoaiThuoc { get; set; }
         public string TenLoaiThuoc { get; set; }
     }
 }

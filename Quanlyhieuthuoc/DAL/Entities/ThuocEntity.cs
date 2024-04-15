@@ -8,10 +8,11 @@ namespace DAL.Entities
 {
     public class ThuocEntity
     {
+        public int MaThuoc { get; set; }
         public int MaLoaiThuoc { get; set; }
         public int MaNhaCungCap { get; set; }
         public string TenThuoc { get; set; }
         public string DonViTinh { get; set; }
-        public int GiaBan { get; set; }
+        public double GiaBan { get; set; }
     }
 }

@@ -1,4 +1,7 @@
-﻿using Quanlyhieuthuoc.TaiKhoan;
+﻿using Quanlyhieuthuoc.Nhacungcap;
+using Quanlyhieuthuoc.PhanLoai;
+using Quanlyhieuthuoc.TaiKhoan;
+using Quanlyhieuthuoc.Thuoc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,6 +27,7 @@ namespace Quanlyhieuthuoc
 
         void handleAddUC(UserControl uc, string title)
         {
+            pnMain.Controls.Clear();
             uc.Dock = DockStyle.Fill;
             pnMain.Controls.Add(uc);
             lblDanhMuc.Text = title;
@@ -31,9 +35,30 @@ namespace Quanlyhieuthuoc
 
         private void btnTaiKhoan_Click(object sender, EventArgs e)
         {
-            ucTaiKhoan ucTaiKhoan = new ucTaiKhoan();
+            ucTaiKhoan uc = new ucTaiKhoan();
             string title = "Tài Khoản";
-            handleAddUC(ucTaiKhoan, title);
+            handleAddUC(uc, title);
+        }
+
+        private void btnThuoc_Click(object sender, EventArgs e)
+        {
+            ucThuoc uc = new ucThuoc();
+            string title = "Thuốc";
+            handleAddUC(uc, title);
+        }
+
+        private void btnNhacungcap_Click(object sender, EventArgs e)
+        {
+            ucNhaCungCap uc = new ucNhaCungCap();
+            string title = "Nhà Cung Cấp";
+            handleAddUC(uc, title);
+        }
+
+        private void btnPhanLoai_Click(object sender, EventArgs e)
+        {
+            ucPhanLoai uc = new ucPhanLoai();
+            string title = "Phân Loại Thuốc";
+            handleAddUC(uc, title);
         }
     }
 }

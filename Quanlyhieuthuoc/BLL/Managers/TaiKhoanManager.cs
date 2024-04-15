@@ -23,7 +23,7 @@ namespace BLL.Managers
             return process.HienThiDanhSach(ref error);
         }
 
-        public string[] KiemTraDangNhap(string taikhoan, string matkhau, ref string error)
+        public DataTable KiemTraDangNhap(string taikhoan, string matkhau, ref string error)
         {
             return process.KiemTraDangNhap(taikhoan, matkhau,ref error);
         }

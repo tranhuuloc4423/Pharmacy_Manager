@@ -18,7 +18,7 @@ namespace DAL.Repos
         {
             try
             {
-                string sql = "select TenTaiKhoan, HoTen, VaiTro from TaiKhoan";
+                string sql = "select TenTaiKhoan, HoTen, MoTa from TaiKhoan inner join QuyenDangNhap on TaiKhoan.VaiTro = QuyenDangNhap.MaQuyen";
                 DataTable dt = new DataTable();
                 dt = database.GetData(sql, ref error);
                 return dt;
@@ -66,9 +66,8 @@ namespace DAL.Repos
             return database.ExecuteNonQuery(query, CommandType.StoredProcedure, ref error, parameters);
         }
 
-        public string[] KiemTraDangNhap(string tenTaiKhoan, string matKhau, ref string error)
+        public DataTable KiemTraDangNhap(string tenTaiKhoan, string matKhau, ref string error)
         {
-            string[] taikhoan = { };
             error = "";
 
             try
@@ -78,26 +77,12 @@ namespace DAL.Repos
                     new SqlParameter("@TenTaiKhoan", tenTaiKhoan),
                     new SqlParameter("@MatKhau", matKhau)
                 };
-
-                DataTable dataTable = database.ExecuteReader("KiemTraTaiKhoan", CommandType.StoredProcedure, ref error, parameters);
-
-                if (dataTable != null && dataTable.Rows.Count > 0)
-                {
-                    taikhoan[0] = dataTable.Rows[0]["VaiTro"].ToString();
-                    taikhoan[1] = dataTable.Rows[0]["HoTen"].ToString();
-                    Console.WriteLine(taikhoan[0]);
-                    Console.WriteLine(taikhoan[1]);
-                    return taikhoan;
-                } else
-                {
-                    return [];
-                }
-
+                return database.ExecuteReader("KiemTraTaiKhoan", CommandType.StoredProcedure, ref error, parameters);
             }
             catch (Exception ex)
             {
                 error = "Lỗi: " + ex.Message;
-                return [];
+                return null;
             }
         }
     }

@@ -50,6 +50,8 @@
             pictureBox1 = new PictureBox();
             label8 = new Label();
             pnMain = new Panel();
+            pictureBox6 = new PictureBox();
+            btnPhanLoai = new Button();
             tableLayoutPanel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
@@ -60,6 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -85,6 +88,8 @@
             // 
             panel2.BackColor = Color.White;
             panel2.BackgroundImageLayout = ImageLayout.None;
+            panel2.Controls.Add(pictureBox6);
+            panel2.Controls.Add(btnPhanLoai);
             panel2.Controls.Add(pictureBox8);
             panel2.Controls.Add(btnTaiKhoan);
             panel2.Controls.Add(pictureBox7);
@@ -243,6 +248,7 @@
             btnNhacungcap.TabIndex = 2;
             btnNhacungcap.Text = "Nhà cung cấp";
             btnNhacungcap.UseVisualStyleBackColor = false;
+            btnNhacungcap.Click += btnNhacungcap_Click;
             // 
             // btnThuoc
             // 
@@ -261,6 +267,7 @@
             btnThuoc.TabIndex = 1;
             btnThuoc.Text = "Thuốc";
             btnThuoc.UseVisualStyleBackColor = false;
+            btnThuoc.Click += btnThuoc_Click;
             // 
             // btnTrangchu
             // 
@@ -323,9 +330,9 @@
             label9.Location = new Point(202, 15);
             label9.Margin = new Padding(4, 0, 4, 0);
             label9.Name = "label9";
-            label9.Size = new Size(136, 26);
+            label9.Size = new Size(131, 26);
             label9.TabIndex = 0;
-            label9.Text = "Dashboard / ";
+            label9.Text = "Trang Chủ / ";
             // 
             // pictureBox1
             // 
@@ -360,15 +367,45 @@
             pnMain.Size = new Size(1355, 668);
             pnMain.TabIndex = 3;
             // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(1128, 17);
+            pictureBox6.Margin = new Padding(4, 3, 4, 3);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(37, 40);
+            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox6.TabIndex = 16;
+            pictureBox6.TabStop = false;
+            // 
+            // btnPhanLoai
+            // 
+            btnPhanLoai.BackColor = Color.White;
+            btnPhanLoai.FlatAppearance.BorderColor = Color.LightPink;
+            btnPhanLoai.FlatAppearance.BorderSize = 2;
+            btnPhanLoai.FlatAppearance.CheckedBackColor = Color.MediumSlateBlue;
+            btnPhanLoai.FlatAppearance.MouseDownBackColor = Color.LightPink;
+            btnPhanLoai.FlatAppearance.MouseOverBackColor = Color.LightPink;
+            btnPhanLoai.FlatStyle = FlatStyle.Flat;
+            btnPhanLoai.Font = new Font("Microsoft Sans Serif", 14F);
+            btnPhanLoai.Location = new Point(1173, 17);
+            btnPhanLoai.Margin = new Padding(4, 3, 4, 3);
+            btnPhanLoai.Name = "btnPhanLoai";
+            btnPhanLoai.Size = new Size(111, 44);
+            btnPhanLoai.TabIndex = 15;
+            btnPhanLoai.Text = "Phân Loại";
+            btnPhanLoai.UseVisualStyleBackColor = false;
+            btnPhanLoai.Click += btnPhanLoai_Click;
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1364, 820);
+            ClientSize = new Size(1366, 820);
             Controls.Add(tableLayoutPanel1);
-            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 3, 4, 3);
             Name = "Main";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Main";
             tableLayoutPanel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
@@ -381,6 +418,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ResumeLayout(false);
         }
 
@@ -407,5 +445,7 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Button btnTaiKhoan;
         private Label lblHoTen;
+        private PictureBox pictureBox6;
+        private Button btnPhanLoai;
     }
 }

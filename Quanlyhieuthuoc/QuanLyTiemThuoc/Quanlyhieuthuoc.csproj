@@ -25,26 +25,8 @@
     <Compile Update="Kho\ucKho.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Kho\ucThemkho.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="Main.cs">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Nhacungcap\ucNhapcungcap.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Nhacungcap\ucSuaNCC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Nhacungcap\ucThemNCC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Thuoc\ucSuathuoc.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Thuoc\ucThemthuoc.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Thuoc\ucThuoc.cs">
       <SubType>UserControl</SubType>

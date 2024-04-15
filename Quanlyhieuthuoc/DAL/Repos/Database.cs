@@ -69,9 +69,17 @@ namespace DLL.Repos
                 command.CommandText = procedureName;
                 command.Parameters.AddRange(parameters);
                 SqlDataReader reader = command.ExecuteReader();
-                DataTable data = new DataTable();
-                data.Load(reader);
-                return data;
+                if (reader.HasRows)
+                {
+                    DataTable data = new DataTable();
+                    data.Load(reader);
+                    return data;
+                }
+                else
+                {
+                    // Không có dữ liệu trả về
+                    return null;
+                }
 
             } catch (Exception ex)
             {

@@ -1,4 +1,5 @@
 ﻿using BLL.Managers;
+using DAL.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,7 +25,6 @@ namespace Quanlyhieuthuoc.TaiKhoan
             quyenManager = new QuyenManager();
             hienThiDanhSachTaiKhoan();
             hienThiQuyen();
-
         }
 
         private void ucTaiKhoan_Load(object sender, EventArgs e)
@@ -64,7 +64,7 @@ namespace Quanlyhieuthuoc.TaiKhoan
                     DataGridViewRow rowselected = dgTaiKhoan.Rows[0];
                     lblTaiKhoan.Text = rowselected.Cells["TenTaiKhoan"].Value.ToString();
                     lblHoTen.Text = rowselected.Cells["HoTen"].Value.ToString();
-                    cbQuyen.Text = rowselected.Cells["VaiTro"].Value.ToString();
+                    cbQuyen.Text = rowselected.Cells["MoTa"].Value.ToString();
                 }
             }
         }
@@ -107,7 +107,11 @@ namespace Quanlyhieuthuoc.TaiKhoan
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            SuaTaiKhoan form = new SuaTaiKhoan();
+            TaiKhoanEntity entity = new TaiKhoanEntity();
+            entity.TenTaiKhoan = lblTenTaiKhoan.Text;
+            entity.HoTen = lblHoTen.Text;
+            entity.VaiTro = Convert.ToInt32(cbQuyen.SelectedValue);
+            SuaTaiKhoan form = new SuaTaiKhoan(entity);
             form.ShowDialog();
             hienThiDanhSachTaiKhoan();
         }
@@ -119,7 +123,7 @@ namespace Quanlyhieuthuoc.TaiKhoan
                 DataGridViewRow rowselected = dgTaiKhoan.Rows[e.RowIndex];
                 lblTenTaiKhoan.Text = rowselected.Cells["TenTaiKhoan"].Value.ToString();
                 lblHoTen.Text = rowselected.Cells["HoTen"].Value.ToString();
-                cbQuyen.Text = rowselected.Cells["VaiTro"].Value.ToString();
+                cbQuyen.Text = rowselected.Cells["MoTa"].Value.ToString();
             }
         }
     }

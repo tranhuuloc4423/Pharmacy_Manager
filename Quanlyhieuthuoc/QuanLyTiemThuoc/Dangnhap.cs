@@ -1,4 +1,5 @@
 ﻿using BLL.Managers;
+using Quanlyhieuthuoc.TaiKhoan;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,11 +16,13 @@ namespace Quanlyhieuthuoc
 {
     public partial class Dangnhap : Form
     {
-        TaiKhoanManager taiKhoanManager;
+        private TaiKhoanManager manager;
+        private string error = null;
         public Dangnhap()
         {
             InitializeComponent();
-            taiKhoanManager = new TaiKhoanManager();
+            manager = new TaiKhoanManager();
+            error = "";
         }
 
         private void txtDangNhap_Click(object sender, EventArgs e)
@@ -51,47 +54,61 @@ namespace Quanlyhieuthuoc
                 MessageBox.Show("Vui long nhap mat khau!");
                 return;
             }
-            string connectionSTR = "Data Source=ROKU\\SQLEXPRESS;Initial Catalog=Project_QLTT;Integrated Security=True";
-
-            SqlConnection connection = null;
-
-            try
+            var result = manager.KiemTraDangNhap(tenTaiKhoan, matKhau, ref error);
+            if(result != null && result.Rows.Count > 0)
             {
-                using (connection = new SqlConnection(connectionSTR))
-                {
-                    SqlCommand command = new SqlCommand("KiemTraTaiKhoan", connection);
-                    command.CommandText = "select VaiTro from TaiKhoan where TenTaiKhoan like @TenTaiKhoan and MatKhau like @MatKhau";
-                    command.Parameters.AddWithValue("@MatKhau", matKhau);
-                    command.Parameters.AddWithValue("@TenTaiKhoan", tenTaiKhoan);
-
-                    connection.Open();
-                    object data = command.ExecuteScalar();
-
-                    if (data == null)
-                    {
-                        MessageBox.Show("Loi tai khoan, dang nhap khong thanh cong");
-                    }
-                    else
-                    {
-                        //MessageBox.Show("Dan nhap thanh cong, ten nguoi dang la: "+data.ToString());
-                        CauHinhHeThong.TenDangNhap = txtDangNhap.Text;
-                        CauHinhHeThong.TenDayDu = data.ToString();
-                        Main frm = new Main(data.ToString());
-                        frm.Show();
-                        this.Hide();
-                    }
-                }
+                MessageBox.Show("Dang nhap thanh cong, ten nguoi dung la: " + result.Rows[0]["HoTen"].ToString());
+                CauHinhHeThong.TenDangNhap = tenTaiKhoan;
+                CauHinhHeThong.TenDayDu = result.Rows[0]["HoTen"].ToString();
+                Main frm = new Main(result.Rows[0]["HoTen"].ToString());
+                frm.Show();
+                this.Hide();
+            } else
+            {
+                MessageBox.Show("Loi tai khoan, dang nhap khong thanh cong");
 
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Loi " + ex.Message);
-                throw;
-            }
-            finally
-            {
-                connection.Close();
-            }
+            //string connectionSTR = "Data Source=ROKU\\SQLEXPRESS;Initial Catalog=Project_QLTT;Integrated Security=True";
+
+            //SqlConnection connection = null;
+
+            //try
+            //{
+            //    using (connection = new SqlConnection(connectionSTR))
+            //    {
+            //        SqlCommand command = new SqlCommand("KiemTraTaiKhoan", connection);
+            //        command.CommandText = "select VaiTro from TaiKhoan where TenTaiKhoan like @TenTaiKhoan and MatKhau like @MatKhau";
+            //        command.Parameters.AddWithValue("@MatKhau", matKhau);
+            //        command.Parameters.AddWithValue("@TenTaiKhoan", tenTaiKhoan);
+
+            //        connection.Open();
+            //        object data = command.ExecuteScalar();
+
+            //        if (data == null)
+            //        {
+            //            MessageBox.Show("Loi tai khoan, dang nhap khong thanh cong");
+            //        }
+            //        else
+            //        {
+            //            //MessageBox.Show("Dan nhap thanh cong, ten nguoi dang la: "+data.ToString());
+            //            CauHinhHeThong.TenDangNhap = txtDangNhap.Text;
+            //            CauHinhHeThong.TenDayDu = data.ToString();
+            //            Main frm = new Main(data.ToString());
+            //            frm.Show();
+            //            this.Hide();
+            //        }
+            //    }
+
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Loi " + ex.Message);
+            //    throw;
+            //}
+            //finally
+            //{
+            //    connection.Close();
+            //}
         }
     }
 }

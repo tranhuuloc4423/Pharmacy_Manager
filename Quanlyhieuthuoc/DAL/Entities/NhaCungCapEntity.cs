@@ -8,6 +8,7 @@ namespace DAL.Entities
 {
     public class NhaCungCapEntity
     {
+        public int MaNhaCungCap { get; set; }
         public string TenNhaCungCap { get; set; }
         public string DiaChi { get; set; }
 

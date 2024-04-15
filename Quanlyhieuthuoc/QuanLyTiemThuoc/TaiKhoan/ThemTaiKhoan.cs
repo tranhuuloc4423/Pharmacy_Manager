@@ -49,7 +49,6 @@ namespace Quanlyhieuthuoc.TaiKhoan
             string tenTaiKhoan = txtTenTaiKhoan.Text;
             string hoTen = txtHoTen.Text;
             string matKhau = txtMatKhau.Text;
-            string vaiTro = cbQuyen.Text;
             if (string.IsNullOrEmpty(tenTaiKhoan))
             {
                 MessageBox.Show("Vui lòng nhập tên tài khoản");
@@ -71,30 +70,26 @@ namespace Quanlyhieuthuoc.TaiKhoan
             taiKhoan.HoTen = hoTen;
             taiKhoan.MatKhau = matKhau;
             taiKhoan.VaiTro = Convert.ToInt32(cbQuyen.SelectedValue);
-            string error = "";
 
             try
             {
-                bool result = taiKhoanManager.ThemTaiKhoan(taiKhoan,ref error);
+                bool result = taiKhoanManager.ThemTaiKhoan(taiKhoan, ref error);
                 if (result)
                 {
                     MessageBox.Show("Thêm tài khoản thành công");
                     this.Close();
-                } else
+                }
+                else
                 {
                     MessageBox.Show("Thêm tài khoản thất bại");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi : " + ex.Message);
+                error = "Lỗi : " + ex.Message;
+                MessageBox.Show(error);
                 return;
             }
-        }
-
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

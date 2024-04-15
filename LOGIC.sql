@@ -6,15 +6,12 @@ GO
 CREATE PROCEDURE KiemTraTaiKhoan
 (
     @TenTaiKhoan NVARCHAR(25),
-    @MatKhau NVARCHAR(30),
-    @VaiTro INT OUTPUT,
-	@HoTen NVARCHAR(30) OUTPUT
+    @MatKhau NVARCHAR(30)
 )
 AS
 BEGIN
     SET NOCOUNT ON;
-
-    SELECT @VaiTro = VaiTro, @HoTen = HoTen
+    SELECT VaiTro, HoTen
     FROM TaiKhoan
     WHERE TenTaiKhoan = @TenTaiKhoan AND MatKhau = @MatKhau
 END
@@ -141,7 +138,7 @@ END
 GO
 
 -- thêm nhà cung cấp
-CREATE PROCEDURE ThemNhaCungCap
+	CREATE PROCEDURE ThemNhaCungCap
 (
     @TenNhaCungCap NVARCHAR(50),
     @DiaChi NVARCHAR(50)
@@ -356,7 +353,6 @@ BEGIN
 
 	INSERT INTO HoaDon (MaTaiKhoan, NgayBan, MaKhachHang, GiamGia, TongTien)
 	VALUES (@MaTaiKhoan, @NgayBan, @MaKhachHang, @GiamGia, 0)
-
 END
 GO
 -- Thêm chi tiết hóa đơn
@@ -366,7 +362,6 @@ CREATE PROCEDURE ThemChiTietHoaDon
 	@MaThuoc INT,
 	@SoLuong INT,
 	@DonGia INT,
-	@MaPhieuXuat INT
 )
 AS
 BEGIN
@@ -406,8 +401,46 @@ BEGIN
 	WHERE MaKhachHang = (SELECT MaKhachHang FROM HoaDon WHERE MaHoaDon = @MaHoaDon);
 
 	-- Thêm chi tiết phiếu xuất
-	EXEC ThemChiTietPhieuXuat @MaPhieuXuat, @MaThuoc, @SoLuong
+	EXEC ThemChiTietPhieuXuat @MaHoaDon, @MaThuoc, @SoLuong
 END
 GO
 
+--------------------------- Khách Hàng ---------------------------
+CREATE PROCEDURE ThemKhachHang
+    @HoTen NVARCHAR(50),
+    @SoDienThoai VARCHAR(10),
+    @KhachHangThanThiet INT,
+    @MuaTichLuy DECIMAL(18,2)
+AS
+BEGIN
+    INSERT INTO KhachHang (HoTen, SoDienThoai, KhachHangThanThiet, MuaTichLuy)
+    VALUES (@HoTen, @SoDienThoai, @KhachHangThanThiet, @MuaTichLuy)
+END
 
+GO
+
+CREATE PROCEDURE SuaKhachHang
+    @MaKhachHang INT,
+    @HoTen NVARCHAR(50),
+    @SoDienThoai VARCHAR(10),
+    @KhachHangThanThiet INT,
+    @MuaTichLuy DECIMAL(18,2)
+AS
+BEGIN
+    UPDATE KhachHang
+    SET HoTen = @HoTen,
+        SoDienThoai = @SoDienThoai,
+        KhachHangThanThiet = @KhachHangThanThiet,
+        MuaTichLuy = @MuaTichLuy
+    WHERE MaKhachHang = @MaKhachHang
+END
+
+GO
+
+CREATE PROCEDURE XoaKhachHang
+    @MaKhachHang INT
+AS
+BEGIN
+    DELETE FROM KhachHang
+    WHERE MaKhachHang = @MaKhachHang
+END

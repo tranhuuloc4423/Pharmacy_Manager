@@ -117,8 +117,6 @@ CREATE TABLE ChiTietHoaDon (
 );
 GO
 
-
-
 -- INSERT DATA
 
 INSERT INTO PhanLoai (TenLoaiThuoc)
@@ -130,9 +128,9 @@ VALUES ('Nhà cung cấp 1', 'Địa chỉ 1'),
        ('Nhà cung cấp 3', 'Địa chỉ 3');
 GO
 INSERT INTO Thuoc (MaLoaiThuoc, TenThuoc, DonViTinh, GiaBan)
-VALUES (1, 'Thuốc 1', 'Đơn vị 1', 100.50),
-       (2, 'Thuốc 2', 'Đơn vị 2', 50.25),
-       (3, 'Thuốc 3', 'Đơn vị 3', 75.75);
+VALUES (1, N'Thuốc 1', N'Đơn vị 1', 100.50),
+       (2, N'Thuốc 2', N'Đơn vị 2', 50.25),
+       (3, N'Thuốc 3', N'Đơn vị 3', 75.75);
 GO
 INSERT INTO KhoThuoc (Thang, Nam, MaThuoc, DauKy, NhapTrongKy, XuatTrongThang, TonKho)
 VALUES (1, 2024, 1, 50, 20, 10, 60),
@@ -183,7 +181,14 @@ VALUES (1, 1, 5, 100.00, 500.00),
 GO
 select * from QuyenDangNhap
 select * from TaiKhoan
-select * from QuyenDangNhap
-select * from QuyenDangNhap
-GO
-select TenTaiKhoan, HoTen, VaiTro from TaiKhoan
+select * from Thuoc
+select * from NhaCungCap
+select * from PhanLoai
+select * from ChiTietPhieuNhap
+select * from KhachHang
+select * from KhoThuoc
+
+select MaThuoc, TenLoaiThuoc, TenThuoc, DonViTinh, GiaBan
+from Thuoc inner join PhanLoai on Thuoc.MaLoaiThuoc = PhanLoai.MaLoaiThuoc
+
+select TenTaiKhoan, HoTen, MoTa from TaiKhoan inner join QuyenDangNhap on TaiKhoan.VaiTro = QuyenDangNhap.MaQuyen
