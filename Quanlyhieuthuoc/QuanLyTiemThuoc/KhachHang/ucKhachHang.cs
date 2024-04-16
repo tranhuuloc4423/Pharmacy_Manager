@@ -69,7 +69,12 @@ namespace Quanlyhieuthuoc.KhachHang
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            
+            KhachHangEntity entity = new KhachHangEntity();
+            entity.HoTen = lblHoTen.Text.Trim();
+            entity.SoDienThoai = lblSoDienThoai.Text.Trim();
+            SuaKhachHang form = new SuaKhachHang(entity);
+            form.ShowDialog();
+            hienThiDanhSach();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
