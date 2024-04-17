@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL.Managers;
+using DAL.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +15,7 @@ namespace Quanlyhieuthuoc.KhachHang
     public partial class SuaKhachHang : Form
     {
         private KhachHangManager manager = null;
-        private KhachHangEntity khacHang = null;
+        private KhachHangEntity khachHang;
         private string error = null;
         public SuaKhachHang(KhachHangEntity khachHang)
         {
@@ -30,16 +32,16 @@ namespace Quanlyhieuthuoc.KhachHang
             txtSoDienThoai.Text = khachHang.SoDienThoai;
         }
 
-        private void btnSua_Click()
+        private void btnSua_Click(object sender, EventArgs e)
         {
             string hoTen = txtHoTen.Text.Trim();
             string sdt = txtSoDienThoai.Text.Trim();
-            if(string.IsNullOrEmpty(hoTen))
+            if (string.IsNullOrEmpty(hoTen))
             {
                 MessageBox.Show("Vui lòng nhập họ tên khách hàng muốn sửa!");
                 return;
             }
-            if(string.IsNullOrEmpty(sdt))
+            if (string.IsNullOrEmpty(sdt))
             {
                 MessageBox.Show("Vui lòng nhập số điện thoại khách hàng muốn sửa!");
                 return;
@@ -50,23 +52,24 @@ namespace Quanlyhieuthuoc.KhachHang
             try
             {
                 var result = manager.SuaKhachHang(entity, ref error);
-                if(result)
+                if (result)
                 {
                     MessageBox.Show("Sửa khách hàng thành công!");
                     this.Close();
-                } else
+                }
+                else
                 {
                     MessageBox.Show("Sửa khách hàng không thành công!");
-                    MessageBox.Show("Lỗi : " + error.Message);
+                    MessageBox.Show("Lỗi : " + error);
                 }
-            } catch(Exception ex)
-            {
-                
             }
-        
+            catch (Exception ex)
+            {
+
+            }
         }
 
-        private void btnThoat_Click()
+        private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
         }

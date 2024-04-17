@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace DAL.Entities
 {
-    internal class HoaDonEntity
+    public class HoaDonEntity
     {
+        public int MaHoaDon { get; set; }
+        public string TenTaiKhoan { get; set; }
+        public double TongTien { get; set; }
+        public int MaKhachHang { get; set; }
+        public int GiamGia { get; set; }
+
     }
 }

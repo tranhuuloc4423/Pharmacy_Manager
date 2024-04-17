@@ -28,32 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
             dgTaiKhoan = new DataGridView();
-            MaThuoc = new DataGridViewTextBoxColumn();
-            TenLoaiThuoc = new DataGridViewTextBoxColumn();
-            TenThuoc = new DataGridViewTextBoxColumn();
-            DonViTinh = new DataGridViewTextBoxColumn();
-            GiaBan = new DataGridViewTextBoxColumn();
             panel2 = new Panel();
             lblGiaBan = new Label();
             label6 = new Label();
             lblDonViTinh = new Label();
             cbLoaiThuoc = new ComboBox();
             lblTenThuoc = new Label();
-            btnSua = new Button();
-            btnXoa = new Button();
             btnThem = new Button();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            lblTaiKhoan = new Label();
+            lblKhoThuoc = new Label();
+            Thang = new DataGridViewTextBoxColumn();
+            Nam = new DataGridViewTextBoxColumn();
+            TenThuoc = new DataGridViewTextBoxColumn();
+            DauKy = new DataGridViewTextBoxColumn();
+            NhapTrongKy = new DataGridViewTextBoxColumn();
+            XuatTrongThang = new DataGridViewTextBoxColumn();
+            TonKho = new DataGridViewTextBoxColumn();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgTaiKhoan).BeginInit();
@@ -63,8 +63,8 @@
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 100F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 400F));
             tableLayoutPanel1.Controls.Add(panel1, 0, 0);
             tableLayoutPanel1.Controls.Add(panel2, 1, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
@@ -81,7 +81,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(616, 586);
+            panel1.Size = new Size(726, 586);
             panel1.TabIndex = 0;
             // 
             // dgTaiKhoan
@@ -90,91 +90,51 @@
             dgTaiKhoan.AllowUserToDeleteRows = false;
             dgTaiKhoan.AllowUserToResizeColumns = false;
             dgTaiKhoan.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgTaiKhoan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgTaiKhoan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             dgTaiKhoan.BackgroundColor = Color.LightPink;
             dgTaiKhoan.CellBorderStyle = DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Tahoma", 14F, FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgTaiKhoan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = SystemColors.Control;
+            dataGridViewCellStyle7.Font = new Font("Tahoma", 14F, FontStyle.Bold);
+            dataGridViewCellStyle7.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            dgTaiKhoan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             dgTaiKhoan.ColumnHeadersHeight = 40;
             dgTaiKhoan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dgTaiKhoan.Columns.AddRange(new DataGridViewColumn[] { MaThuoc, TenLoaiThuoc, TenThuoc, DonViTinh, GiaBan });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Window;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 14F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgTaiKhoan.DefaultCellStyle = dataGridViewCellStyle3;
+            dgTaiKhoan.Columns.AddRange(new DataGridViewColumn[] { Thang, Nam, TenThuoc, DauKy, NhapTrongKy, XuatTrongThang, TonKho });
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = SystemColors.Window;
+            dataGridViewCellStyle8.Font = new Font("Segoe UI", 14F);
+            dataGridViewCellStyle8.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
+            dgTaiKhoan.DefaultCellStyle = dataGridViewCellStyle8;
             dgTaiKhoan.Dock = DockStyle.Fill;
             dgTaiKhoan.GridColor = Color.LightPink;
             dgTaiKhoan.Location = new Point(0, 0);
             dgTaiKhoan.MultiSelect = false;
             dgTaiKhoan.Name = "dgTaiKhoan";
             dgTaiKhoan.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Control;
-            dataGridViewCellStyle4.Font = new Font("Tahoma", 14F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgTaiKhoan.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = SystemColors.Control;
+            dataGridViewCellStyle9.Font = new Font("Tahoma", 14F);
+            dataGridViewCellStyle9.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
+            dgTaiKhoan.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             dgTaiKhoan.RowHeadersVisible = false;
             dgTaiKhoan.RowHeadersWidth = 40;
             dgTaiKhoan.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Font = new Font("Tahoma", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgTaiKhoan.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Font = new Font("Tahoma", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgTaiKhoan.RowsDefaultCellStyle = dataGridViewCellStyle10;
             dgTaiKhoan.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgTaiKhoan.Size = new Size(616, 586);
+            dgTaiKhoan.Size = new Size(726, 586);
             dgTaiKhoan.TabIndex = 1;
-            // 
-            // MaThuoc
-            // 
-            MaThuoc.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            MaThuoc.DataPropertyName = "MaThuoc";
-            MaThuoc.HeaderText = "Mã Thuốc";
-            MaThuoc.Name = "MaThuoc";
-            MaThuoc.ReadOnly = true;
-            // 
-            // TenLoaiThuoc
-            // 
-            TenLoaiThuoc.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            TenLoaiThuoc.DataPropertyName = "TenLoaiThuoc";
-            TenLoaiThuoc.HeaderText = "Tên Loại Thuốc";
-            TenLoaiThuoc.Name = "TenLoaiThuoc";
-            TenLoaiThuoc.ReadOnly = true;
-            // 
-            // TenThuoc
-            // 
-            TenThuoc.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            TenThuoc.DataPropertyName = "TenThuoc";
-            TenThuoc.HeaderText = "Tên Thuốc";
-            TenThuoc.Name = "TenThuoc";
-            TenThuoc.ReadOnly = true;
-            // 
-            // DonViTinh
-            // 
-            DonViTinh.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            DonViTinh.DataPropertyName = "DonViTinh";
-            DonViTinh.HeaderText = "Đơn Vị Tính";
-            DonViTinh.Name = "DonViTinh";
-            DonViTinh.ReadOnly = true;
-            // 
-            // GiaBan
-            // 
-            GiaBan.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            GiaBan.DataPropertyName = "GiaBan";
-            GiaBan.HeaderText = "Giá Bán";
-            GiaBan.Name = "GiaBan";
-            GiaBan.ReadOnly = true;
             // 
             // panel2
             // 
@@ -184,17 +144,15 @@
             panel2.Controls.Add(lblDonViTinh);
             panel2.Controls.Add(cbLoaiThuoc);
             panel2.Controls.Add(lblTenThuoc);
-            panel2.Controls.Add(btnSua);
-            panel2.Controls.Add(btnXoa);
             panel2.Controls.Add(btnThem);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label1);
-            panel2.Controls.Add(lblTaiKhoan);
+            panel2.Controls.Add(lblKhoThuoc);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(625, 3);
+            panel2.Location = new Point(735, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(504, 586);
+            panel2.Size = new Size(394, 586);
             panel2.TabIndex = 1;
             // 
             // lblGiaBan
@@ -248,42 +206,6 @@
             lblTenThuoc.TabIndex = 16;
             lblTenThuoc.Text = "Tên Thuốc";
             // 
-            // btnSua
-            // 
-            btnSua.BackColor = Color.White;
-            btnSua.FlatAppearance.BorderColor = Color.LightPink;
-            btnSua.FlatAppearance.BorderSize = 2;
-            btnSua.FlatAppearance.CheckedBackColor = Color.LightPink;
-            btnSua.FlatAppearance.MouseDownBackColor = Color.LightPink;
-            btnSua.FlatAppearance.MouseOverBackColor = Color.LightPink;
-            btnSua.FlatStyle = FlatStyle.Flat;
-            btnSua.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnSua.Location = new Point(215, 364);
-            btnSua.Margin = new Padding(4, 3, 4, 3);
-            btnSua.Name = "btnSua";
-            btnSua.Size = new Size(164, 44);
-            btnSua.TabIndex = 14;
-            btnSua.Text = "Sửa";
-            btnSua.UseVisualStyleBackColor = false;
-            // 
-            // btnXoa
-            // 
-            btnXoa.BackColor = Color.White;
-            btnXoa.FlatAppearance.BorderColor = Color.LightPink;
-            btnXoa.FlatAppearance.BorderSize = 2;
-            btnXoa.FlatAppearance.CheckedBackColor = Color.LightPink;
-            btnXoa.FlatAppearance.MouseDownBackColor = Color.LightPink;
-            btnXoa.FlatAppearance.MouseOverBackColor = Color.LightPink;
-            btnXoa.FlatStyle = FlatStyle.Flat;
-            btnXoa.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnXoa.Location = new Point(22, 440);
-            btnXoa.Margin = new Padding(4, 3, 4, 3);
-            btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(164, 44);
-            btnXoa.TabIndex = 15;
-            btnXoa.Text = "Xoá";
-            btnXoa.UseVisualStyleBackColor = false;
-            // 
             // btnThem
             // 
             btnThem.BackColor = Color.White;
@@ -294,7 +216,7 @@
             btnThem.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnThem.FlatStyle = FlatStyle.Flat;
             btnThem.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnThem.Location = new Point(22, 364);
+            btnThem.Location = new Point(39, 356);
             btnThem.Margin = new Padding(4, 3, 4, 3);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(164, 44);
@@ -332,15 +254,71 @@
             label1.TabIndex = 10;
             label1.Text = "Tên Thuốc :";
             // 
-            // lblTaiKhoan
+            // lblKhoThuoc
             // 
-            lblTaiKhoan.AutoSize = true;
-            lblTaiKhoan.Font = new Font("Segoe UI", 16F);
-            lblTaiKhoan.Location = new Point(170, 41);
-            lblTaiKhoan.Name = "lblTaiKhoan";
-            lblTaiKhoan.Size = new Size(72, 30);
-            lblTaiKhoan.TabIndex = 9;
-            lblTaiKhoan.Text = "Thuốc";
+            lblKhoThuoc.AutoSize = true;
+            lblKhoThuoc.Font = new Font("Segoe UI", 16F);
+            lblKhoThuoc.Location = new Point(170, 41);
+            lblKhoThuoc.Name = "lblKhoThuoc";
+            lblKhoThuoc.Size = new Size(116, 30);
+            lblKhoThuoc.TabIndex = 9;
+            lblKhoThuoc.Text = "Kho Thuốc";
+            // 
+            // Thang
+            // 
+            Thang.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Thang.DataPropertyName = "Thang";
+            Thang.HeaderText = "Tháng";
+            Thang.Name = "Thang";
+            Thang.ReadOnly = true;
+            // 
+            // Nam
+            // 
+            Nam.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Nam.DataPropertyName = "Nam";
+            Nam.HeaderText = "Năm";
+            Nam.Name = "Nam";
+            Nam.ReadOnly = true;
+            // 
+            // TenThuoc
+            // 
+            TenThuoc.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            TenThuoc.DataPropertyName = "TenThuoc";
+            TenThuoc.HeaderText = "Tên Thuốc";
+            TenThuoc.Name = "TenThuoc";
+            TenThuoc.ReadOnly = true;
+            // 
+            // DauKy
+            // 
+            DauKy.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            DauKy.DataPropertyName = "DauKy";
+            DauKy.HeaderText = "Đầu Kỳ";
+            DauKy.Name = "DauKy";
+            DauKy.ReadOnly = true;
+            // 
+            // NhapTrongKy
+            // 
+            NhapTrongKy.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            NhapTrongKy.DataPropertyName = "NhapTrongKy";
+            NhapTrongKy.HeaderText = "Trong Kỳ";
+            NhapTrongKy.Name = "NhapTrongKy";
+            NhapTrongKy.ReadOnly = true;
+            // 
+            // XuatTrongThang
+            // 
+            XuatTrongThang.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            XuatTrongThang.DataPropertyName = "XuatTrongThang";
+            XuatTrongThang.HeaderText = "Xuất Trong Tháng";
+            XuatTrongThang.Name = "XuatTrongThang";
+            XuatTrongThang.ReadOnly = true;
+            // 
+            // TonKho
+            // 
+            TonKho.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            TonKho.DataPropertyName = "TonKho";
+            TonKho.HeaderText = "Tồn Kho";
+            TonKho.Name = "TonKho";
+            TonKho.ReadOnly = true;
             // 
             // ucKho
             // 
@@ -363,23 +341,23 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Panel panel1;
         private DataGridView dgTaiKhoan;
-        private DataGridViewTextBoxColumn MaThuoc;
-        private DataGridViewTextBoxColumn TenLoaiThuoc;
-        private DataGridViewTextBoxColumn TenThuoc;
-        private DataGridViewTextBoxColumn DonViTinh;
-        private DataGridViewTextBoxColumn GiaBan;
         private Panel panel2;
         private Label lblGiaBan;
         private Label label6;
         private Label lblDonViTinh;
         private ComboBox cbLoaiThuoc;
         private Label lblTenThuoc;
-        private Button btnSua;
-        private Button btnXoa;
         private Button btnThem;
         private Label label3;
         private Label label2;
         private Label label1;
-        private Label lblTaiKhoan;
+        private Label lblKhoThuoc;
+        private DataGridViewTextBoxColumn Thang;
+        private DataGridViewTextBoxColumn Nam;
+        private DataGridViewTextBoxColumn TenThuoc;
+        private DataGridViewTextBoxColumn DauKy;
+        private DataGridViewTextBoxColumn NhapTrongKy;
+        private DataGridViewTextBoxColumn XuatTrongThang;
+        private DataGridViewTextBoxColumn TonKho;
     }
 }

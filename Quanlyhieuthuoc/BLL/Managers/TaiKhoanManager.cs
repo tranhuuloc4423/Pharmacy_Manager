@@ -18,7 +18,7 @@ namespace BLL.Managers
             process = new TaiKhoanRepo();
         }
 
-        public DataTable hienThiDanhSachTaiKhoan(ref string error)
+        public DataTable HienThiDanhSach(ref string error)
         {
             return process.HienThiDanhSach(ref error);
         }

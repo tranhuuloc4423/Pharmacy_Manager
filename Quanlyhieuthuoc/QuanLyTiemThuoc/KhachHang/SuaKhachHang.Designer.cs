@@ -32,6 +32,8 @@
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
+            txtMaKhachHang = new TextBox();
+            label6 = new Label();
             btnThoat = new Button();
             btnSua = new Button();
             cba = new ComboBox();
@@ -42,8 +44,6 @@
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
-            txtMaKhachHang = new TextBox();
-            label6 = new Label();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -106,6 +106,26 @@
             panel2.Size = new Size(478, 401);
             panel2.TabIndex = 1;
             // 
+            // txtMaKhachHang
+            // 
+            txtMaKhachHang.Font = new Font("Segoe UI", 14F);
+            txtMaKhachHang.ForeColor = Color.Black;
+            txtMaKhachHang.Location = new Point(203, 31);
+            txtMaKhachHang.Name = "txtMaKhachHang";
+            txtMaKhachHang.Size = new Size(253, 32);
+            txtMaKhachHang.TabIndex = 22;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 16F);
+            label6.ForeColor = Color.Black;
+            label6.Location = new Point(31, 30);
+            label6.Name = "label6";
+            label6.Size = new Size(166, 30);
+            label6.TabIndex = 21;
+            label6.Text = "Mã Khách Hàng";
+            // 
             // btnThoat
             // 
             btnThoat.BackColor = Color.White;
@@ -123,6 +143,7 @@
             btnThoat.TabIndex = 20;
             btnThoat.Text = "Thoát";
             btnThoat.UseVisualStyleBackColor = false;
+            btnThoat.Click += btnThoat_Click;
             // 
             // btnSua
             // 
@@ -141,6 +162,7 @@
             btnSua.TabIndex = 19;
             btnSua.Text = "Sửa";
             btnSua.UseVisualStyleBackColor = false;
+            btnSua.Click += btnSua_Click;
             // 
             // cba
             // 
@@ -222,26 +244,6 @@
             label2.Size = new Size(82, 30);
             label2.TabIndex = 11;
             label2.Text = "Họ Tên";
-            // 
-            // txtMaKhachHang
-            // 
-            txtMaKhachHang.Font = new Font("Segoe UI", 14F);
-            txtMaKhachHang.ForeColor = Color.Black;
-            txtMaKhachHang.Location = new Point(203, 31);
-            txtMaKhachHang.Name = "txtMaKhachHang";
-            txtMaKhachHang.Size = new Size(253, 32);
-            txtMaKhachHang.TabIndex = 22;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 16F);
-            label6.ForeColor = Color.Black;
-            label6.Location = new Point(31, 30);
-            label6.Name = "label6";
-            label6.Size = new Size(166, 30);
-            label6.TabIndex = 21;
-            label6.Text = "Mã Khách Hàng";
             // 
             // SuaKhachHang
             // 

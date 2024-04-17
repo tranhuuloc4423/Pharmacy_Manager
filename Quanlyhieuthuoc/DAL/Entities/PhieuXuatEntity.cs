@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace DAL.Entities
 {
-    internal class PhiẽuuatEntity
+    public class PhieuXuatEntity
     {
+        public int MaPhieuXuat { get; set; }
+        public string NguoiXuat { get; set; }
     }
 }

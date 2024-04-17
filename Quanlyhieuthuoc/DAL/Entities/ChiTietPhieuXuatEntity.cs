@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace DAL.Entities
 {
-    internal class ChiTietPhieuXuatEntity
+    public class ChiTietPhieuXuatEntity
     {
+        public int MaChiTietPhieuXuat {  get; set; }
+        public int MaPhieuXuat { get; set; }
+        public int MaThuoc { get; set; }
+        public int SoLuong { get; set; }
     }
 }

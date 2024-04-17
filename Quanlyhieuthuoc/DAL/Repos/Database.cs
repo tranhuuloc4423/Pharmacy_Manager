@@ -60,7 +60,35 @@ namespace DLL.Repos
             }
         }
 
-        public DataTable ExecuteReader(string procedureName,CommandType type,ref string err, SqlParameter[] parameters = null)
+        public int ThemPhieu(string procedureName, ref string error, string output, SqlParameter[] parameters = null)
+        {
+            try
+            {
+                connect.Open();
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Clear();
+                command.Parameters.AddRange(parameters);
+
+                SqlParameter outputParameter = new SqlParameter(output, SqlDbType.Int);
+                outputParameter.Direction = ParameterDirection.Output;
+                command.Parameters.Add(outputParameter);
+
+                command.ExecuteNonQuery();
+
+                return (int)command.Parameters[output].Value;
+            }
+            catch (Exception ex)
+            {
+                error = "Loi : " + ex.Message;
+                return 0;
+            }
+            finally
+            {
+                connect.Close();
+            }
+        }
+
+        public DataTable ExecuteReader(string procedureName,CommandType type,ref string error, SqlParameter[] parameters = null)
         {
             try
             {
@@ -83,7 +111,7 @@ namespace DLL.Repos
 
             } catch (Exception ex)
             {
-                err = "Loi : " + ex.Message;
+                error = "Loi : " + ex.Message;
                 return null;
             }
             finally
@@ -92,7 +120,7 @@ namespace DLL.Repos
             }
         }
 
-        public object ExecuteScalar(string procedureName, CommandType type, ref string err, SqlParameter[] parameters = null)
+        public object ExecuteScalar(string procedureName, CommandType type, ref string error, SqlParameter[] parameters = null)
         {
             try
             {
@@ -106,7 +134,7 @@ namespace DLL.Repos
             }
             catch (Exception ex)
             {
-                err = "Loi : " + ex.Message;
+                error = "Loi : " + ex.Message;
                 return null;
             }
             finally
@@ -115,7 +143,7 @@ namespace DLL.Repos
             }
         }
 
-        public bool ExecuteNonQuery(string procedureName, CommandType type, ref string err, SqlParameter[] parameters = null)
+        public bool ExecuteNonQuery(string procedureName, CommandType type, ref string error, SqlParameter[] parameters = null)
         {
             try
             {
@@ -134,7 +162,7 @@ namespace DLL.Repos
             }
             catch (Exception ex)
             {
-                err = "Loi : " + ex.Message;
+                error = "Loi : " + ex.Message;
                 return false;
             }
             finally

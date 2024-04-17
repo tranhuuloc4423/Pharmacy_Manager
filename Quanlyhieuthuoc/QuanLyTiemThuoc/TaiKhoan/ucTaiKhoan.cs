@@ -51,7 +51,7 @@ namespace Quanlyhieuthuoc.TaiKhoan
         private void hienThiDanhSachTaiKhoan()
         {
             DataTable data = new DataTable();
-            data = taiKhoanManager.hienThiDanhSachTaiKhoan(ref error);
+            data = taiKhoanManager.HienThiDanhSach(ref error);
             if (data == null)
             {
                 MessageBox.Show(error);

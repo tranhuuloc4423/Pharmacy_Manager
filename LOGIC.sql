@@ -209,13 +209,15 @@ GO
 /****************** Thêm phiếu nhập và thêm chi tiết phiếu nhập  ******************/
 CREATE PROCEDURE ThemPhieuNhap
 (
-	@NgayNhap DATE,
-	@NguoiNhap NVARCHAR(25)
+	@NguoiNhap NVARCHAR(25),
+	@MaNhaCungCap INT,
+	@MaPhieuNhap INT OUTPUT
 )
 AS
 BEGIN
-	INSERT INTO PhieuNhap (NgayNhap, NguoiNhap)
-	VALUES (@NgayNhap, @NguoiNhap)
+	INSERT INTO PhieuNhap (NgayNhap, NguoiNhap, MaNhaCungCap)
+	VALUES (GETDATE(), @NguoiNhap, @MaNhaCungCap)
+	SET @MaPhieuNhap = SCOPE_IDENTITY()
 END
 GO
 --thêm chi tiết phiếu nhập
@@ -231,13 +233,8 @@ BEGIN
 	DECLARE @Thang INT, @Nam INT, @TonKho INT
 
 	-- Lấy tháng và năm từ ngày nhập
-	SELECT @Thang = MONTH(NgayNhap)
-	FROM PhieuNhap
-	WHERE MaPhieuNhap = @MaPhieuNhap
-
-	SELECT @Nam = YEAR(NgayNhap)
-	FROM PhieuNhap
-	WHERE MaPhieuNhap = @MaPhieuNhap
+	SET @Thang = MONTH(GETDATE())
+	SET @Nam = YEAR(GETDATE())
 
 	-- Kiểm tra xem đã có loại thuốc này trong bảng kho thuốc chưa
 	IF EXISTS (SELECT * FROM KhoThuoc WHERE MaThuoc = @MaThuoc AND Thang = @Thang AND Nam = @Nam)
@@ -266,13 +263,14 @@ GO
 /****************** Thêm phiếu nhập và Them chi tiết phiếu xuất  ******************/
 CREATE PROCEDURE ThemPhieuXuat
 (
-	@NgayXuat DATE,
-	@NguoiXuat NVARCHAR(25)
+	@NguoiXuat NVARCHAR(25),
+	@MaPhieuXuat INT OUTPUT
 )
 AS
 BEGIN
 	INSERT INTO PhieuXuat (NgayXuat, NguoiXuat)
-	VALUES (@NgayXuat, @NguoiXuat)
+	VALUES (GETDATE(), @NguoiXuat)
+	SET @MaPhieuXuat = SCOPE_IDENTITY()
 END
 GO
 --Them chi tiết phiếu xuất
@@ -288,13 +286,8 @@ BEGIN
 	DECLARE @Thang INT, @Nam INT, @TonKho INT
 
 	-- Lấy tháng và năm từ ngày xuất
-	SELECT @Thang = MONTH(NgayXuat)
-	FROM PhieuXuat
-	WHERE MaPhieuXuat = @MaPhieuXuat
-
-	SELECT @Nam = YEAR(NgayXuat)
-	FROM PhieuXuat
-	WHERE MaPhieuXuat = @MaPhieuXuat
+	SET @Thang = MONTH(GETDATE())
+	SET @Nam = YEAR(GETDATE())
 
 	-- Kiểm tra xem đã có loại thuốc này trong bảng kho thuốc chưa
 	IF EXISTS (SELECT * FROM KhoThuoc WHERE MaThuoc = @MaThuoc AND Thang = @Thang AND Nam = @Nam)
@@ -340,9 +333,9 @@ GO
 /****************** Hóa đơn và chi tiết hóa đơn  ******************/
 CREATE PROCEDURE ThemHoaDon
 (
-	@MaTaiKhoan INT,
-	@NgayBan DATETIME,
-	@MaKhachHang INT
+	@TenTaiKhoan NVARCHAR(25),
+	@MaKhachHang INT,
+	@MaHoaDon INT OUTPUT
 )
 AS
 BEGIN
@@ -351,8 +344,9 @@ BEGIN
 	DECLARE @GiamGia INT
 	SET @GiamGia = (SELECT CASE WHEN KhachHangThanThiet = 1 THEN 10 ELSE 0 END FROM KhachHang WHERE MaKhachHang = @MaKhachHang)
 
-	INSERT INTO HoaDon (MaTaiKhoan, NgayBan, MaKhachHang, GiamGia, TongTien)
-	VALUES (@MaTaiKhoan, @NgayBan, @MaKhachHang, @GiamGia, 0)
+	INSERT INTO HoaDon (TenTaiKhoan, NgayBan, MaKhachHang, GiamGia, TongTien)
+	VALUES (@TenTaiKhoan, GETDATE(), @MaKhachHang, @GiamGia, 0)
+	SET @MaHoaDon = SCOPE_IDENTITY()
 END
 GO
 -- Thêm chi tiết hóa đơn
@@ -361,7 +355,7 @@ CREATE PROCEDURE ThemChiTietHoaDon
 	@MaHoaDon INT,
 	@MaThuoc INT,
 	@SoLuong INT,
-	@DonGia INT,
+	@DonGia INT
 )
 AS
 BEGIN
@@ -408,13 +402,11 @@ GO
 --------------------------- Khách Hàng ---------------------------
 CREATE PROCEDURE ThemKhachHang
     @HoTen NVARCHAR(50),
-    @SoDienThoai VARCHAR(10),
-    @KhachHangThanThiet INT,
-    @MuaTichLuy DECIMAL(18,2)
+    @SoDienThoai VARCHAR(10)
 AS
 BEGIN
-    INSERT INTO KhachHang (HoTen, SoDienThoai, KhachHangThanThiet, MuaTichLuy)
-    VALUES (@HoTen, @SoDienThoai, @KhachHangThanThiet, @MuaTichLuy)
+    INSERT INTO KhachHang (HoTen, SoDienThoai)
+    VALUES (@HoTen, @SoDienThoai)
 END
 
 GO
@@ -422,16 +414,12 @@ GO
 CREATE PROCEDURE SuaKhachHang
     @MaKhachHang INT,
     @HoTen NVARCHAR(50),
-    @SoDienThoai VARCHAR(10),
-    @KhachHangThanThiet INT,
-    @MuaTichLuy DECIMAL(18,2)
+    @SoDienThoai VARCHAR(10)
 AS
 BEGIN
     UPDATE KhachHang
     SET HoTen = @HoTen,
-        SoDienThoai = @SoDienThoai,
-        KhachHangThanThiet = @KhachHangThanThiet,
-        MuaTichLuy = @MuaTichLuy
+        SoDienThoai = @SoDienThoai
     WHERE MaKhachHang = @MaKhachHang
 END
 

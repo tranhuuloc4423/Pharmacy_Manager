@@ -187,6 +187,7 @@ select * from PhanLoai
 select * from ChiTietPhieuNhap
 select * from KhachHang
 select * from KhoThuoc
+select * from PhieuNhap
 
 select MaThuoc, TenLoaiThuoc, TenThuoc, DonViTinh, GiaBan
 from Thuoc inner join PhanLoai on Thuoc.MaLoaiThuoc = PhanLoai.MaLoaiThuoc

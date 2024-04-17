@@ -1,4 +1,5 @@
 ﻿using BLL.Managers;
+using DAL.Entities;
 using Quanlyhieuthuoc.Thuoc;
 using System;
 using System.Collections.Generic;
@@ -27,7 +28,7 @@ namespace Quanlyhieuthuoc.KhachHang
         private void hienThiDanhSach()
         {
             DataTable data = new DataTable();
-            data = manager.hienThiDanhSach(ref error);
+            data = manager.HienThiDanhSach(ref error);
             if (data == null)
             {
                 MessageBox.Show(error);

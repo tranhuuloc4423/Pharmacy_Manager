@@ -1,4 +1,5 @@
 ﻿using BLL.Managers;
+using DAL.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,7 +40,7 @@ namespace Quanlyhieuthuoc.KhachHang
             }
 
             KhachHangEntity entity = new KhachHangEntity();
-            entity.hoTen = hoTen;
+            entity.HoTen = hoTen;
             entity.SoDienThoai = sdt;
             
             try
