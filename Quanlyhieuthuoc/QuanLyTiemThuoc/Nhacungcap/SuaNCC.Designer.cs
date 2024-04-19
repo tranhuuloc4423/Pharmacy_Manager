@@ -204,6 +204,7 @@
             ClientSize = new Size(484, 411);
             Controls.Add(tableLayoutPanel1);
             Name = "SuaNCC";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "SuaNCC";
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);

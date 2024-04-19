@@ -18,6 +18,11 @@ namespace BLL.Managers
             process = new ThuocRepo();
         }
 
+        public DataTable HienThiDanhSachThuoc(ref string error)
+        {
+            return process.HienThiDanhSachThuoc(ref error);
+        }
+
         public DataTable HienThiDanhSach(ref string error)
         {
             return process.HienThiDanhSach(ref error);

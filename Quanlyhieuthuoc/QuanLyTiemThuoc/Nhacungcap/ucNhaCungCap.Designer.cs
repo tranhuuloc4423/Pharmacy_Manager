@@ -59,8 +59,8 @@
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 100F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 400F));
             tableLayoutPanel1.Controls.Add(panel1, 0, 0);
             tableLayoutPanel1.Controls.Add(panel2, 1, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
@@ -77,7 +77,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(616, 565);
+            panel1.Size = new Size(659, 565);
             panel1.TabIndex = 0;
             // 
             // dgNhaCungCap
@@ -129,7 +129,7 @@
             dataGridViewCellStyle5.Font = new Font("Tahoma", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgNhaCungCap.RowsDefaultCellStyle = dataGridViewCellStyle5;
             dgNhaCungCap.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgNhaCungCap.Size = new Size(616, 565);
+            dgNhaCungCap.Size = new Size(659, 565);
             dgNhaCungCap.TabIndex = 1;
             dgNhaCungCap.CellClick += dgNhaCungCap_CellClick;
             // 
@@ -171,9 +171,9 @@
             panel2.Controls.Add(label1);
             panel2.Controls.Add(lblTaiKhoan);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(625, 3);
+            panel2.Location = new Point(668, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(437, 565);
+            panel2.Size = new Size(394, 565);
             panel2.TabIndex = 1;
             // 
             // lblTenNCC
@@ -297,7 +297,7 @@
             // 
             lblTaiKhoan.AutoSize = true;
             lblTaiKhoan.Font = new Font("Segoe UI", 16F);
-            lblTaiKhoan.Location = new Point(170, 41);
+            lblTaiKhoan.Location = new Point(136, 29);
             lblTaiKhoan.Name = "lblTaiKhoan";
             lblTaiKhoan.Size = new Size(153, 30);
             lblTaiKhoan.TabIndex = 9;

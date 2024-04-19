@@ -66,6 +66,7 @@ namespace DLL.Repos
             {
                 connect.Open();
                 command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = procedureName;
                 command.Parameters.Clear();
                 command.Parameters.AddRange(parameters);
 
@@ -150,6 +151,7 @@ namespace DLL.Repos
                 connect.Open();
                 command.CommandType = CommandType.StoredProcedure;
                 command.CommandText = procedureName;
+                command.Parameters.Clear();
                 command.Parameters.AddRange(parameters);
                 int row = command.ExecuteNonQuery();
                 if(row == 0)

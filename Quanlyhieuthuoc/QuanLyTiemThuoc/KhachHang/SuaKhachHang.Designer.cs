@@ -36,13 +36,9 @@
             label6 = new Label();
             btnThoat = new Button();
             btnSua = new Button();
-            cba = new ComboBox();
-            txtKHTT = new TextBox();
             txtSoDienThoai = new TextBox();
             txtHoTen = new TextBox();
             label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
             label2 = new Label();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
@@ -92,13 +88,9 @@
             panel2.Controls.Add(label6);
             panel2.Controls.Add(btnThoat);
             panel2.Controls.Add(btnSua);
-            panel2.Controls.Add(cba);
-            panel2.Controls.Add(txtKHTT);
             panel2.Controls.Add(txtSoDienThoai);
             panel2.Controls.Add(txtHoTen);
             panel2.Controls.Add(label5);
-            panel2.Controls.Add(label4);
-            panel2.Controls.Add(label3);
             panel2.Controls.Add(label2);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(3, 63);
@@ -112,6 +104,7 @@
             txtMaKhachHang.ForeColor = Color.Black;
             txtMaKhachHang.Location = new Point(203, 31);
             txtMaKhachHang.Name = "txtMaKhachHang";
+            txtMaKhachHang.ReadOnly = true;
             txtMaKhachHang.Size = new Size(253, 32);
             txtMaKhachHang.TabIndex = 22;
             // 
@@ -164,25 +157,6 @@
             btnSua.UseVisualStyleBackColor = false;
             btnSua.Click += btnSua_Click;
             // 
-            // cba
-            // 
-            cba.Font = new Font("Segoe UI", 14F);
-            cba.ForeColor = Color.Black;
-            cba.FormattingEnabled = true;
-            cba.Location = new Point(203, 251);
-            cba.Name = "cba";
-            cba.Size = new Size(253, 33);
-            cba.TabIndex = 18;
-            // 
-            // txtKHTT
-            // 
-            txtKHTT.Font = new Font("Segoe UI", 14F);
-            txtKHTT.ForeColor = Color.Black;
-            txtKHTT.Location = new Point(203, 195);
-            txtKHTT.Name = "txtKHTT";
-            txtKHTT.Size = new Size(253, 32);
-            txtKHTT.TabIndex = 17;
-            // 
             // txtSoDienThoai
             // 
             txtSoDienThoai.Font = new Font("Segoe UI", 14F);
@@ -212,28 +186,6 @@
             label5.TabIndex = 14;
             label5.Text = "Số ĐT";
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 16F);
-            label4.ForeColor = Color.Black;
-            label4.Location = new Point(31, 198);
-            label4.Name = "label4";
-            label4.Size = new Size(66, 30);
-            label4.TabIndex = 13;
-            label4.Text = "KHTT";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 16F);
-            label3.ForeColor = Color.Black;
-            label3.Location = new Point(31, 250);
-            label3.Name = "label3";
-            label3.Size = new Size(140, 30);
-            label3.TabIndex = 12;
-            label3.Text = "Mua Tích Luỹ";
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -252,6 +204,7 @@
             ClientSize = new Size(484, 467);
             Controls.Add(tableLayoutPanel1);
             Name = "SuaKhachHang";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "SuaKhachHang";
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
@@ -271,13 +224,9 @@
         private Label label6;
         private Button btnThoat;
         private Button btnSua;
-        private ComboBox cba;
-        private TextBox txtKHTT;
         private TextBox txtSoDienThoai;
         private TextBox txtHoTen;
         private Label label5;
-        private Label label4;
-        private Label label3;
         private Label label2;
     }
 }

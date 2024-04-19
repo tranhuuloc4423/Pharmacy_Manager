@@ -27,11 +27,6 @@ namespace Quanlyhieuthuoc.TaiKhoan
             hienThiQuyen();
         }
 
-        private void ucTaiKhoan_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void hienThiQuyen()
         {
             DataTable data = new DataTable();

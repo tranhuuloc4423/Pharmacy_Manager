@@ -28,6 +28,7 @@ namespace Quanlyhieuthuoc.KhachHang
 
         private void hienThiThongTinSua()
         {
+            txtMaKhachHang.Text = khachHang.MaKhachHang.ToString();
             txtHoTen.Text = khachHang.HoTen;
             txtSoDienThoai.Text = khachHang.SoDienThoai;
         }
@@ -47,25 +48,20 @@ namespace Quanlyhieuthuoc.KhachHang
                 return;
             }
             KhachHangEntity entity = new KhachHangEntity();
+            entity.MaKhachHang = khachHang.MaKhachHang;
             entity.HoTen = hoTen;
             entity.SoDienThoai = sdt;
-            try
-            {
-                var result = manager.SuaKhachHang(entity, ref error);
-                if (result)
-                {
-                    MessageBox.Show("Sửa khách hàng thành công!");
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Sửa khách hàng không thành công!");
-                    MessageBox.Show("Lỗi : " + error);
-                }
-            }
-            catch (Exception ex)
-            {
 
+            var result = manager.SuaKhachHang(entity, ref error);
+            if (result)
+            {
+                MessageBox.Show("Sửa khách hàng thành công!");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Sửa khách hàng không thành công!");
+                MessageBox.Show("Lỗi : " + error);
             }
         }
 

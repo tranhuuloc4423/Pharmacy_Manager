@@ -1,4 +1,8 @@
-﻿using Quanlyhieuthuoc.Nhacungcap;
+﻿using Quanlyhieuthuoc.BanThuoc;
+using Quanlyhieuthuoc.Hoadon;
+using Quanlyhieuthuoc.KhachHang;
+using Quanlyhieuthuoc.Kho;
+using Quanlyhieuthuoc.Nhacungcap;
 using Quanlyhieuthuoc.PhanLoai;
 using Quanlyhieuthuoc.TaiKhoan;
 using Quanlyhieuthuoc.Thuoc;
@@ -16,11 +20,9 @@ namespace Quanlyhieuthuoc
 {
     public partial class Main : Form
     {
-        string hoTen;
         public Main(string hoTen)
         {
             InitializeComponent();
-            this.hoTen = hoTen;
             lblDanhMuc.Text = "Trang chủ";
             this.StartPosition = FormStartPosition.CenterScreen;
         }
@@ -47,17 +49,38 @@ namespace Quanlyhieuthuoc
             handleAddUC(uc, title);
         }
 
-        private void btnNhacungcap_Click(object sender, EventArgs e)
-        {
-            ucNhaCungCap uc = new ucNhaCungCap();
-            string title = "Nhà Cung Cấp";
-            handleAddUC(uc, title);
-        }
-
         private void btnPhanLoai_Click(object sender, EventArgs e)
         {
             ucPhanLoai uc = new ucPhanLoai();
             string title = "Phân Loại Thuốc";
+            handleAddUC(uc, title);
+        }
+
+        private void btnKhachHang_Click(object sender, EventArgs e)
+        {
+            ucKhachHang uc = new ucKhachHang();
+            string title = "Khách Hàng";
+            handleAddUC(uc, title);
+        }
+
+        private void btnKho_Click(object sender, EventArgs e)
+        {
+            ucKho uc = new ucKho();
+            string title = "Kho Thuốc";
+            handleAddUC(uc, title);
+        }
+
+        private void btnHoadon_Click(object sender, EventArgs e)
+        {
+            ucHoadon uc = new ucHoadon();
+            string title = "Hoá Đơn";
+            handleAddUC(uc, title);
+        }
+
+        private void btnBanThuoc_Click(object sender, EventArgs e)
+        {
+            ucBanThuoc uc = new ucBanThuoc();
+            string title = "Bán Thuốc";
             handleAddUC(uc, title);
         }
     }

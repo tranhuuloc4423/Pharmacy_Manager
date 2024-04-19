@@ -38,9 +38,7 @@ namespace DAL.Repos
                 SqlParameter[] parameters =
                 {
                     new SqlParameter("@HoTen", entity.HoTen),
-                    new SqlParameter("@SoDienThoai", entity.SoDienThoai),
-                    new SqlParameter("@KhachHangThanThiet", entity.KhachHangThanThiet),
-                    new SqlParameter("@MuaTichLuy", entity.MuaTichLuy)
+                    new SqlParameter("@SoDienThoai", entity.SoDienThoai)
                 };
                 return database.ExecuteNonQuery(procedureName, CommandType.StoredProcedure, ref error, parameters);
             }
@@ -61,9 +59,7 @@ namespace DAL.Repos
                 {
                     new SqlParameter("@MaKhachHang", entity.MaKhachHang),
                     new SqlParameter("@HoTen", entity.HoTen),
-                    new SqlParameter("@SoDienThoai", entity.SoDienThoai),
-                    new SqlParameter("@KhachHangThanThiet", entity.KhachHangThanThiet),
-                    new SqlParameter("@MuaTichLuy", entity.MuaTichLuy)
+                    new SqlParameter("@SoDienThoai", entity.SoDienThoai)
                 };
                 return database.ExecuteNonQuery(procedureName, CommandType.StoredProcedure, ref error, parameters);
             }

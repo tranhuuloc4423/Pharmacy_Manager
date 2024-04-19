@@ -179,6 +179,7 @@
             ClientSize = new Size(484, 450);
             Controls.Add(tableLayoutPanel1);
             Name = "ThemNCC";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ThemNCC";
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);

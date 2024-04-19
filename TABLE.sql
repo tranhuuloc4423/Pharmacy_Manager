@@ -21,9 +21,10 @@ CREATE TABLE Thuoc (
     MaLoaiThuoc INT FOREIGN KEY REFERENCES PhanLoai(MaLoaiThuoc),
     TenThuoc NVARCHAR(50) NOT NULL,
     DonViTinh NVARCHAR(15) NOT NULL,
-    GiaBan DECIMAL(18,2) NOT NULL
+    GiaBan DECIMAL(18,0) NOT NULL
 );
 GO
+
 ------------ Kho ------------
 
 CREATE TABLE KhoThuoc (
@@ -92,20 +93,23 @@ CREATE TABLE KhachHang (
 	HoTen NVARCHAR(50) NOT NULL,
 	SoDienThoai VARCHAR(10),
 	KhachHangThanThiet INT,
-	MuaTichLuy DECIMAL(18,2) NOT NULL
+	MuaTichLuy DECIMAL(18,0)
 );
 GO
+
+
 
 ------------ Hoa Don ------------
 CREATE TABLE HoaDon (
     MaHoaDon INT PRIMARY KEY IDENTITY(1,1),
     TenTaiKhoan NVARCHAR(25) FOREIGN KEY REFERENCES TaiKhoan(TenTaiKhoan),
     NgayBan DATETIME NOT NULL,
-    TongTien DECIMAL(18,2) NOT NULL,
+    TongTien DECIMAL(18,0) NOT NULL,
 	MaKhachHang INT FOREIGN KEY REFERENCES KhachHang(MaKhachHang),
 	GiamGia INT
 );
 GO
+
 
 CREATE TABLE ChiTietHoaDon (
     MaChiTietHoaDon INT PRIMARY KEY IDENTITY(1,1),
@@ -120,64 +124,46 @@ GO
 -- INSERT DATA
 
 INSERT INTO PhanLoai (TenLoaiThuoc)
-VALUES ('Loại 1'), ('Loại 2'), ('Loại 3');
+VALUES (N'Hoạt chất'),
+       (N'Dược phẩm'),
+       (N'Thuốc bảo vệ thực vật'),
+       (N'Thuốc thông thường'),
+       (N'Thực phẩm chức năng'),
+       (N'Thuốc giảm đau'),
+       (N'Thuốc dị ứng'),
+       (N'Thuốc kháng viêm'),
+       (N'Thuốc hạ sốt');
 GO
+
 INSERT INTO NhaCungCap (TenNhaCungCap, DiaChi)
-VALUES ('Nhà cung cấp 1', 'Địa chỉ 1'),
-       ('Nhà cung cấp 2', 'Địa chỉ 2'),
-       ('Nhà cung cấp 3', 'Địa chỉ 3');
+VALUES (N'Nhà thuốc ABC', N'123 Đường ABC, Thành phố XYZ'),
+       (N'Công ty XYZ', N'456 Đường XYZ, Thành phố ABC'),
+       (N'Phân xưởng KLM', N'789 Đường KLM, Thành phố DEF'),
+       (N'Công ty Dược phẩm Traphaco', N'789 Đường ABX, Thành phố XYZ'),
+       (N'Công ty Dược phẩm DHG Pharma', N'789 Đường KLM, Thành phố DEF');
 GO
+
 INSERT INTO Thuoc (MaLoaiThuoc, TenThuoc, DonViTinh, GiaBan)
-VALUES (1, N'Thuốc 1', N'Đơn vị 1', 100.50),
-       (2, N'Thuốc 2', N'Đơn vị 2', 50.25),
-       (3, N'Thuốc 3', N'Đơn vị 3', 75.75);
+VALUES (1, N'Paracetamol', N'Viên', 5000),
+       (2, N'Amoxicillin', N'Viên', 10000),
+       (3, N'Glyphosate', N'Lít', 200000),
+       (4, N'Cetirizine', N'Viên', 6000),
+       (5, N'Calamine lotion', N'Chai(ml)', 20000);
 GO
-INSERT INTO KhoThuoc (Thang, Nam, MaThuoc, DauKy, NhapTrongKy, XuatTrongThang, TonKho)
-VALUES (1, 2024, 1, 50, 20, 10, 60),
-       (1, 2024, 2, 100, 30, 20, 110),
-       (1, 2024, 3, 75, 25, 15, 85);
-GO
-INSERT INTO PhieuNhap (MaNhaCungCap, NgayNhap, NguoiNhap)
-VALUES (1, '2024-01-01', 'Người nhập 1'),
-       (2, '2024-01-02', 'Người nhập 2'),
-       (3, '2024-01-03', 'Người nhập 3');
-GO
-INSERT INTO ChiTietPhieuNhap (MaPhieuNhap, MaThuoc, SoLuong)
-VALUES (1, 1, 10),
-       (1, 2, 5),
-       (2, 2, 8),
-       (3, 3, 12);
-GO
-INSERT INTO PhieuXuat (NgayXuat, NguoiXuat)
-VALUES ('2024-01-01', 'Người xuất 1'),
-       ('2024-01-02', 'Người xuất 2'),
-       ('2024-01-03', 'Người xuất 3');
-GO
-INSERT INTO ChiTietPhieuXuat (MaPhieuXuat, MaThuoc, SoLuong)
-VALUES (1, 1, 5),
-       (1, 2, 3),
-       (2, 2, 6),
-       (3, 3, 10);
+
+INSERT INTO KhachHang(HoTen, SoDienThoai)
+VALUES (N'Nguyễn Văn A', N'0123456789'),
+       (N'Trần Thị B', N'0987654321'),
+       (N'Lê Minh C', N'0369852147');
 GO
 INSERT INTO QuyenDangNhap (MaQuyen, MoTa)
 VALUES (1, N'admin'),
        (2, N'user');
 GO
 INSERT INTO TaiKhoan (TenTaiKhoan, MatKhau, VaiTro, HoTen)
-VALUES ('admin', '123', 1, N'Quản Trị'),
-       ('user2', 'pass2', 2, N'Người dùng 2'),
-       ('user3', 'pass3', 2, N'Người dùng 3');
-GO
-INSERT INTO HoaDon (TenTaiKhoan, NgayBan, TongTien, MaKhachHang, GiamGia)
-VALUES ('admin', '2024-01-01', 500.00, 1, 10),
-       ('admin', '2024-01-02', 750.00, 2, 20),
-       ('admin', '2024-01-03', 1000.00, 3, 30);
-GO
-INSERT INTO ChiTietHoaDon (MaHoaDon, MaThuoc, SoLuong, DonGia, ThanhTien)
-VALUES (1, 1, 5, 100.00, 500.00),
-       (1, 2, 3, 50.00, 150.00),
-       (2, 2, 6, 100.00, 1000.00);
-
+VALUES (N'admin', '123', 1, N'Quản Trị'),
+       (N'user2', 'pass2', 2, N'Người dùng 2'),
+       (N'user3', 'pass3', 2, N'Người dùng 3');
 GO
 select * from QuyenDangNhap
 select * from TaiKhoan
@@ -185,9 +171,16 @@ select * from Thuoc
 select * from NhaCungCap
 select * from PhanLoai
 select * from ChiTietPhieuNhap
+select * from ChiTietHoaDon
+select * from HoaDon
 select * from KhachHang
 select * from KhoThuoc
 select * from PhieuNhap
+select MaThuoc, TenThuoc from Thuoc
+
+select MaPhieuNhap, TenThuoc, SoLuong from ChiTietPhieuNhap inner join Thuoc on ChiTietPhieuNhap.MaThuoc = Thuoc.MaThuoc
+
+select Thang, Nam, TenThuoc, DauKy, NhapTrongKy, XuatTrongThang, TonKho from KhoThuoc inner join Thuoc on KhoThuoc.MaThuoc = Thuoc.MaThuoc
 
 select MaThuoc, TenLoaiThuoc, TenThuoc, DonViTinh, GiaBan
 from Thuoc inner join PhanLoai on Thuoc.MaLoaiThuoc = PhanLoai.MaLoaiThuoc

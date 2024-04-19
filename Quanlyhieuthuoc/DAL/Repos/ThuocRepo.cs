@@ -15,6 +15,22 @@ namespace DAL.Repos
     {
         private Database database = new Database();
 
+        public DataTable HienThiDanhSachThuoc(ref string error)
+        {
+            try
+            {
+                string sql = "select MaThuoc, TenThuoc from Thuoc";
+                DataTable dt = new DataTable();
+                dt = database.GetData(sql, ref error);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                error = "Loi : " + ex.Message;
+                throw;
+            }
+        }
+
         public DataTable HienThiDanhSach(ref string error)
         {
             try

@@ -36,6 +36,9 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
             dgTaiKhoan = new DataGridView();
+            TenTaiKhoan = new DataGridViewTextBoxColumn();
+            HoTen = new DataGridViewTextBoxColumn();
+            MoTa = new DataGridViewTextBoxColumn();
             panel2 = new Panel();
             cbQuyen = new ComboBox();
             lblHoTen = new Label();
@@ -47,9 +50,6 @@
             label2 = new Label();
             label1 = new Label();
             lblTaiKhoan = new Label();
-            TenTaiKhoan = new DataGridViewTextBoxColumn();
-            HoTen = new DataGridViewTextBoxColumn();
-            MoTa = new DataGridViewTextBoxColumn();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgTaiKhoan).BeginInit();
@@ -59,8 +59,8 @@
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 100F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 400F));
             tableLayoutPanel1.Controls.Add(panel1, 0, 0);
             tableLayoutPanel1.Controls.Add(panel2, 1, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
@@ -132,6 +132,30 @@
             dgTaiKhoan.Size = new Size(822, 604);
             dgTaiKhoan.TabIndex = 0;
             dgTaiKhoan.CellClick += dgTaiKhoan_CellClick;
+            // 
+            // TenTaiKhoan
+            // 
+            TenTaiKhoan.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            TenTaiKhoan.DataPropertyName = "TenTaiKhoan";
+            TenTaiKhoan.HeaderText = "Tên Tài Khoản";
+            TenTaiKhoan.Name = "TenTaiKhoan";
+            TenTaiKhoan.ReadOnly = true;
+            // 
+            // HoTen
+            // 
+            HoTen.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            HoTen.DataPropertyName = "HoTen";
+            HoTen.HeaderText = "Họ Tên";
+            HoTen.Name = "HoTen";
+            HoTen.ReadOnly = true;
+            // 
+            // MoTa
+            // 
+            MoTa.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            MoTa.DataPropertyName = "MoTa";
+            MoTa.HeaderText = "Vai Trò";
+            MoTa.Name = "MoTa";
+            MoTa.ReadOnly = true;
             // 
             // panel2
             // 
@@ -280,30 +304,6 @@
             lblTaiKhoan.TabIndex = 0;
             lblTaiKhoan.Text = "Tài Khoản";
             // 
-            // TenTaiKhoan
-            // 
-            TenTaiKhoan.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            TenTaiKhoan.DataPropertyName = "TenTaiKhoan";
-            TenTaiKhoan.HeaderText = "Tên Tài Khoản";
-            TenTaiKhoan.Name = "TenTaiKhoan";
-            TenTaiKhoan.ReadOnly = true;
-            // 
-            // HoTen
-            // 
-            HoTen.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            HoTen.DataPropertyName = "HoTen";
-            HoTen.HeaderText = "Họ Tên";
-            HoTen.Name = "HoTen";
-            HoTen.ReadOnly = true;
-            // 
-            // MoTa
-            // 
-            MoTa.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            MoTa.DataPropertyName = "MoTa";
-            MoTa.HeaderText = "Vai Trò";
-            MoTa.Name = "MoTa";
-            MoTa.ReadOnly = true;
-            // 
             // ucTaiKhoan
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -311,7 +311,6 @@
             Controls.Add(tableLayoutPanel1);
             Name = "ucTaiKhoan";
             Size = new Size(1228, 610);
-            Load += ucTaiKhoan_Load;
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgTaiKhoan).EndInit();

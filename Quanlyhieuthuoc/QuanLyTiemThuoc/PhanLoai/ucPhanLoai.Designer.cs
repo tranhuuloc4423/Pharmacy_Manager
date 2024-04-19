@@ -56,8 +56,8 @@
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 400F));
             tableLayoutPanel1.Controls.Add(panel1, 0, 0);
             tableLayoutPanel1.Controls.Add(panel2, 1, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
@@ -74,7 +74,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(676, 571);
+            panel1.Size = new Size(713, 571);
             panel1.TabIndex = 0;
             // 
             // dgPhanLoai
@@ -126,7 +126,7 @@
             dataGridViewCellStyle5.Font = new Font("Tahoma", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgPhanLoai.RowsDefaultCellStyle = dataGridViewCellStyle5;
             dgPhanLoai.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgPhanLoai.Size = new Size(676, 571);
+            dgPhanLoai.Size = new Size(713, 571);
             dgPhanLoai.TabIndex = 1;
             dgPhanLoai.CellClick += dgPhanLoai_CellClick;
             // 
@@ -158,16 +158,16 @@
             panel2.Controls.Add(label1);
             panel2.Controls.Add(lblPhanLoai);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(685, 3);
+            panel2.Location = new Point(722, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(431, 571);
+            panel2.Size = new Size(394, 571);
             panel2.TabIndex = 1;
             // 
             // lblTenLoaiThuoc
             // 
             lblTenLoaiThuoc.AutoSize = true;
             lblTenLoaiThuoc.Font = new Font("Segoe UI", 16F);
-            lblTenLoaiThuoc.Location = new Point(272, 167);
+            lblTenLoaiThuoc.Location = new Point(231, 171);
             lblTenLoaiThuoc.Name = "lblTenLoaiThuoc";
             lblTenLoaiThuoc.Size = new Size(112, 30);
             lblTenLoaiThuoc.TabIndex = 19;
@@ -177,7 +177,7 @@
             // 
             lblMaLoaiThuoc.AutoSize = true;
             lblMaLoaiThuoc.Font = new Font("Segoe UI", 16F);
-            lblMaLoaiThuoc.Location = new Point(272, 107);
+            lblMaLoaiThuoc.Location = new Point(231, 111);
             lblMaLoaiThuoc.Name = "lblMaLoaiThuoc";
             lblMaLoaiThuoc.Size = new Size(112, 30);
             lblMaLoaiThuoc.TabIndex = 16;
@@ -193,7 +193,7 @@
             btnSua.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnSua.FlatStyle = FlatStyle.Flat;
             btnSua.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnSua.Location = new Point(231, 367);
+            btnSua.Location = new Point(217, 371);
             btnSua.Margin = new Padding(4, 3, 4, 3);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(164, 44);
@@ -212,7 +212,7 @@
             btnXoa.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnXoa.FlatStyle = FlatStyle.Flat;
             btnXoa.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnXoa.Location = new Point(38, 443);
+            btnXoa.Location = new Point(24, 447);
             btnXoa.Margin = new Padding(4, 3, 4, 3);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(164, 44);
@@ -231,7 +231,7 @@
             btnThem.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnThem.FlatStyle = FlatStyle.Flat;
             btnThem.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnThem.Location = new Point(38, 367);
+            btnThem.Location = new Point(24, 371);
             btnThem.Margin = new Padding(4, 3, 4, 3);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(164, 44);
@@ -244,7 +244,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 16F);
-            label2.Location = new Point(55, 167);
+            label2.Location = new Point(41, 171);
             label2.Name = "label2";
             label2.Size = new Size(168, 30);
             label2.TabIndex = 11;
@@ -254,7 +254,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 16F);
-            label1.Location = new Point(55, 107);
+            label1.Location = new Point(41, 111);
             label1.Name = "label1";
             label1.Size = new Size(153, 30);
             label1.TabIndex = 10;
@@ -264,7 +264,7 @@
             // 
             lblPhanLoai.AutoSize = true;
             lblPhanLoai.Font = new Font("Segoe UI", 16F);
-            lblPhanLoai.Location = new Point(166, 45);
+            lblPhanLoai.Location = new Point(128, 51);
             lblPhanLoai.Name = "lblPhanLoai";
             lblPhanLoai.Size = new Size(170, 30);
             lblPhanLoai.TabIndex = 9;

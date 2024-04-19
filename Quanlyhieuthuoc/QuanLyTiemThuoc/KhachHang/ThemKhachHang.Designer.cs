@@ -34,13 +34,9 @@
             panel2 = new Panel();
             btnThoat = new Button();
             btnThem = new Button();
-            cbMuaTichLuy = new ComboBox();
-            txtKHTT = new TextBox();
             txtSoDienThoai = new TextBox();
             txtHoTen = new TextBox();
             label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
             label2 = new Label();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
@@ -88,13 +84,9 @@
             panel2.BackColor = Color.Thistle;
             panel2.Controls.Add(btnThoat);
             panel2.Controls.Add(btnThem);
-            panel2.Controls.Add(cbMuaTichLuy);
-            panel2.Controls.Add(txtKHTT);
             panel2.Controls.Add(txtSoDienThoai);
             panel2.Controls.Add(txtHoTen);
             panel2.Controls.Add(label5);
-            panel2.Controls.Add(label4);
-            panel2.Controls.Add(label3);
             panel2.Controls.Add(label2);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(3, 63);
@@ -140,25 +132,6 @@
             btnThem.UseVisualStyleBackColor = false;
             btnThem.Click += btnThem_Click;
             // 
-            // cbMuaTichLuy
-            // 
-            cbMuaTichLuy.Font = new Font("Segoe UI", 14F);
-            cbMuaTichLuy.ForeColor = Color.Black;
-            cbMuaTichLuy.FormattingEnabled = true;
-            cbMuaTichLuy.Location = new Point(203, 201);
-            cbMuaTichLuy.Name = "cbMuaTichLuy";
-            cbMuaTichLuy.Size = new Size(253, 33);
-            cbMuaTichLuy.TabIndex = 18;
-            // 
-            // txtKHTT
-            // 
-            txtKHTT.Font = new Font("Segoe UI", 14F);
-            txtKHTT.ForeColor = Color.Black;
-            txtKHTT.Location = new Point(203, 145);
-            txtKHTT.Name = "txtKHTT";
-            txtKHTT.Size = new Size(253, 32);
-            txtKHTT.TabIndex = 17;
-            // 
             // txtSoDienThoai
             // 
             txtSoDienThoai.Font = new Font("Segoe UI", 14F);
@@ -188,28 +161,6 @@
             label5.TabIndex = 14;
             label5.Text = "Số ĐT";
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 16F);
-            label4.ForeColor = Color.Black;
-            label4.Location = new Point(31, 148);
-            label4.Name = "label4";
-            label4.Size = new Size(66, 30);
-            label4.TabIndex = 13;
-            label4.Text = "KHTT";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 16F);
-            label3.ForeColor = Color.Black;
-            label3.Location = new Point(31, 200);
-            label3.Name = "label3";
-            label3.Size = new Size(140, 30);
-            label3.TabIndex = 12;
-            label3.Text = "Mua Tích Luỹ";
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -228,6 +179,7 @@
             ClientSize = new Size(484, 461);
             Controls.Add(tableLayoutPanel1);
             Name = "ThemKhachHang";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ThemKhachHang";
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
@@ -247,13 +199,9 @@
         private Label label6;
         private Button btnThoat;
         private Button btnThem;
-        private ComboBox cbMuaTichLuy;
-        private TextBox txtKHTT;
         private TextBox txtSoDienThoai;
         private TextBox txtHoTen;
         private Label label5;
-        private Label label4;
-        private Label label3;
         private Label label2;
     }
 }

@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
             dgThuoc = new DataGridView();
@@ -65,8 +65,8 @@
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 65F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 35F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 400F));
             tableLayoutPanel1.Controls.Add(panel1, 0, 0);
             tableLayoutPanel1.Controls.Add(panel2, 1, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
@@ -83,7 +83,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(733, 545);
+            panel1.Size = new Size(731, 545);
             panel1.TabIndex = 0;
             // 
             // dgThuoc
@@ -92,50 +92,50 @@
             dgThuoc.AllowUserToDeleteRows = false;
             dgThuoc.AllowUserToResizeColumns = false;
             dgThuoc.AllowUserToResizeRows = false;
-            dataGridViewCellStyle11.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgThuoc.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgThuoc.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgThuoc.BackgroundColor = Color.LightPink;
             dgThuoc.CellBorderStyle = DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = SystemColors.Control;
-            dataGridViewCellStyle12.Font = new Font("Tahoma", 14F, FontStyle.Bold);
-            dataGridViewCellStyle12.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
-            dgThuoc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Tahoma", 14F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgThuoc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgThuoc.ColumnHeadersHeight = 40;
             dgThuoc.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dgThuoc.Columns.AddRange(new DataGridViewColumn[] { MaThuoc, TenLoaiThuoc, TenThuoc, DonViTinh, GiaBan });
-            dataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = SystemColors.Window;
-            dataGridViewCellStyle13.Font = new Font("Tahoma", 14F);
-            dataGridViewCellStyle13.ForeColor = Color.Black;
-            dataGridViewCellStyle13.SelectionBackColor = Color.Thistle;
-            dataGridViewCellStyle13.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle13.WrapMode = DataGridViewTriState.False;
-            dgThuoc.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Window;
+            dataGridViewCellStyle3.Font = new Font("Tahoma", 14F);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = Color.Thistle;
+            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgThuoc.DefaultCellStyle = dataGridViewCellStyle3;
             dgThuoc.Dock = DockStyle.Fill;
             dgThuoc.GridColor = Color.LightPink;
             dgThuoc.Location = new Point(0, 0);
             dgThuoc.MultiSelect = false;
             dgThuoc.Name = "dgThuoc";
             dgThuoc.ReadOnly = true;
-            dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = SystemColors.Control;
-            dataGridViewCellStyle14.Font = new Font("Tahoma", 14F);
-            dataGridViewCellStyle14.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = DataGridViewTriState.True;
-            dgThuoc.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Tahoma", 14F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgThuoc.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgThuoc.RowHeadersVisible = false;
             dgThuoc.RowHeadersWidth = 40;
             dgThuoc.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle15.Font = new Font("Tahoma", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgThuoc.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle5.Font = new Font("Tahoma", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgThuoc.RowsDefaultCellStyle = dataGridViewCellStyle5;
             dgThuoc.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgThuoc.Size = new Size(733, 545);
+            dgThuoc.Size = new Size(731, 545);
             dgThuoc.TabIndex = 1;
             dgThuoc.CellClick += dgThuoc_CellClick;
             // 
@@ -197,9 +197,9 @@
             panel2.Controls.Add(label1);
             panel2.Controls.Add(lblThuoc);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(742, 3);
+            panel2.Location = new Point(740, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(392, 545);
+            panel2.Size = new Size(394, 545);
             panel2.TabIndex = 1;
             // 
             // lblMaThuoc

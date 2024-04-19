@@ -47,3 +47,7 @@ E:\c#\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-windows\
 E:\c#\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-windows\Quanlyhieuthuoc.PhanLoai.ucPhanLoai.resources
 E:\c#\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-windows\Quanlyhieuthuoc.Thuoc.SuaThuoc.resources
 E:\c#\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-windows\Quanlyhieuthuoc.Thuoc.ThemThuoc.resources
+E:\c#\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-windows\Quanlyhieuthuoc.BanThuoc.ThemKhachHang.resources
+E:\c#\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-windows\Quanlyhieuthuoc.BanThuoc.ucBanThuoc.resources
+E:\c#\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-windows\Quanlyhieuthuoc.Kho.ThemThuoc.resources
+E:\c#\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-windows\Quanlyhieuthuoc.Kho.ThemNhaCungCap.resources

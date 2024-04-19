@@ -29,7 +29,7 @@ namespace Quanlyhieuthuoc.Thuoc
         private void hienThiPhanLoai()
         {
             DataTable data = new DataTable();
-            data = phanLoaiManager.hienThiDanhSach(ref error);
+            data = phanLoaiManager.HienThiDanhSach(ref error);
             if (data == null)
             {
                 MessageBox.Show(error);

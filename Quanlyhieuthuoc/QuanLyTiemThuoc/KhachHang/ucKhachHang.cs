@@ -71,6 +71,7 @@ namespace Quanlyhieuthuoc.KhachHang
         private void btnSua_Click(object sender, EventArgs e)
         {
             KhachHangEntity entity = new KhachHangEntity();
+            entity.MaKhachHang = Convert.ToInt32(lblMaKhachHang.Text);
             entity.HoTen = lblHoTen.Text.Trim();
             entity.SoDienThoai = lblSoDienThoai.Text.Trim();
             SuaKhachHang form = new SuaKhachHang(entity);
@@ -80,7 +81,7 @@ namespace Quanlyhieuthuoc.KhachHang
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(lblMaKhachHang.Text))
+            if (string.IsNullOrEmpty(lblMaKhachHang.Text))
             {
                 MessageBox.Show("Chưa chọn khách hàng để xoá!");
                 return;
@@ -90,12 +91,13 @@ namespace Quanlyhieuthuoc.KhachHang
             try
             {
                 var result = manager.XoaKhachHang(maKhachHang, ref error);
-                if(result)
+                if (result)
                 {
                     MessageBox.Show("Xoá Khách Hàng thành công!");
                     hienThiDanhSach();
                     return;
-                } else
+                }
+                else
                 {
                     MessageBox.Show("Xoá Khách Hàng không thành công!");
                     return;

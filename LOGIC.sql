@@ -96,7 +96,7 @@ CREATE PROCEDURE ThemThuoc
     @MaLoaiThuoc INT,
     @TenThuoc NVARCHAR(50),
     @DonViTinh NVARCHAR(15),
-    @GiaBan DECIMAL(18,2)
+    @GiaBan DECIMAL(18,0)
 )
 AS
 BEGIN
@@ -112,7 +112,7 @@ CREATE PROCEDURE SuaThuoc
     @MaLoaiThuoc INT,
     @TenThuoc NVARCHAR(50),
     @DonViTinh NVARCHAR(15),
-    @GiaBan DECIMAL(18,2)
+    @GiaBan DECIMAL(18,0)
 )
 AS
 BEGIN
@@ -360,7 +360,7 @@ CREATE PROCEDURE ThemChiTietHoaDon
 AS
 BEGIN
 	-- Tính thành tiền
-	DECLARE @ThanhTien DECIMAL(18,2) 
+	DECLARE @ThanhTien DECIMAL(18,0) 
 	SET @ThanhTien = @SoLuong * @DonGia
 
 	-- Lấy giá trị giảm giá
@@ -378,7 +378,7 @@ BEGIN
 	VALUES (@MaHoaDon, @MaThuoc, @SoLuong, @DonGia, @SoLuong*@DonGia)
 
 	-- Cập nhật tổng tiền
-	DECLARE @TongTien DECIMAL(18,2)
+	DECLARE @TongTien DECIMAL(18,0)
 	SET @TongTien = (SELECT SUM(ThanhTien) FROM ChiTietHoaDon WHERE MaHoaDon = @MaHoaDon);
 
 	UPDATE HoaDon
@@ -386,7 +386,7 @@ BEGIN
 	WHERE MaHoaDon = @MaHoaDon;
 
 	-- Cập nhật điểm mua tích lũy
-	DECLARE @MuaTichLuy DECIMAL(18,2) 
+	DECLARE @MuaTichLuy DECIMAL(18,0) 
 	SET @MuaTichLuy = (SELECT MuaTichLuy FROM KhachHang WHERE MaKhachHang = (SELECT MaKhachHang FROM HoaDon WHERE MaHoaDon = @MaHoaDon));
 	SET @MuaTichLuy = @MuaTichLuy + @ThanhTien;
 

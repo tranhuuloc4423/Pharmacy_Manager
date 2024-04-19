@@ -42,23 +42,17 @@ namespace Quanlyhieuthuoc.KhachHang
             KhachHangEntity entity = new KhachHangEntity();
             entity.HoTen = hoTen;
             entity.SoDienThoai = sdt;
-            
-            try
+
+            var result = manager.ThemKhachHang(entity, ref error);
+            if (result)
             {
-                var result = manager.ThemKhachHang(entity, ref error);
-                if(result) 
-                {
-                    MessageBox.Show("Thêm khách hàng thành công!");
-                    this.Close();
-                } else 
-                {
-                    MessageBox.Show("Thêm khách hàng không thành công!");
-                    MessageBox.Show("Lỗi : " + error);
-                }
+                MessageBox.Show("Thêm khách hàng thành công!");
+                this.Close();
             }
-            catch (Exception ex)
+            else
             {
-                throw;
+                MessageBox.Show("Thêm khách hàng không thành công!");
+                MessageBox.Show("Lỗi : " + error);
             }
         }
 
