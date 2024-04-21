@@ -22,6 +22,7 @@ namespace Quanlyhieuthuoc.Kho
             InitializeComponent();
             manager = new KhoThuocManager();
             error = "";
+            HienThiDanhSach();
         }
 
         private void HienThiDanhSach()

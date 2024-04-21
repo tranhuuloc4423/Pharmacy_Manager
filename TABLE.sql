@@ -175,6 +175,7 @@ select * from ChiTietHoaDon
 select * from HoaDon
 select * from KhachHang
 select * from KhoThuoc
+select * from Thuoc
 select * from PhieuNhap
 select MaThuoc, TenThuoc from Thuoc
 
@@ -186,3 +187,9 @@ select MaThuoc, TenLoaiThuoc, TenThuoc, DonViTinh, GiaBan
 from Thuoc inner join PhanLoai on Thuoc.MaLoaiThuoc = PhanLoai.MaLoaiThuoc
 
 select TenTaiKhoan, HoTen, MoTa from TaiKhoan inner join QuyenDangNhap on TaiKhoan.VaiTro = QuyenDangNhap.MaQuyen
+
+select Thuoc.TenThuoc, PhanLoai.TenLoaiThuoc, Thuoc.DonViTinh, Thuoc.GiaBan, KhoThuoc.TonKho from Thuoc 
+inner join KhoThuoc on Thuoc.MaThuoc = KhoThuoc.MaThuoc
+inner join PhanLoai on PhanLoai.MaLoaiThuoc = Thuoc.MaLoaiThuoc
+
+select VaiTro, HoTen from TaiKhoan 

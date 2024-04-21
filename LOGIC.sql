@@ -347,6 +347,7 @@ BEGIN
 	INSERT INTO HoaDon (TenTaiKhoan, NgayBan, MaKhachHang, GiamGia, TongTien)
 	VALUES (@TenTaiKhoan, GETDATE(), @MaKhachHang, @GiamGia, 0)
 	SET @MaHoaDon = SCOPE_IDENTITY()
+	EXEC ThemPhieuXuat @TenTaiKhoan, MaPhieuXuat
 END
 GO
 -- Thêm chi tiết hóa đơn
