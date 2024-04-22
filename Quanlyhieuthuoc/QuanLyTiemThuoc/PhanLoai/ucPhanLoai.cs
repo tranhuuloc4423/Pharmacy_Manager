@@ -64,32 +64,31 @@ namespace Quanlyhieuthuoc.PhanLoai
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(lblMaLoaiThuoc.Text))
-            {
-                MessageBox.Show("Vui lòng chọn phân loại thuốc muốn xoá!");
-                return;
-            }
-
             int maLoaiThuoc = Convert.ToInt32(lblMaLoaiThuoc.Text);
-
-            try
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa phân loại này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
             {
-                var result = manager.XoaLoaiThuoc(maLoaiThuoc, ref error);
-                if(result)
+                try
                 {
-                    MessageBox.Show("Xoá phân loại thuốc thành công!");
-                    hienThiDanhSach();
-                } else
+                    var result = manager.XoaLoaiThuoc(maLoaiThuoc, ref error);
+                    if (result)
+                    {
+                        MessageBox.Show("Xoá phân loại thuốc thành công!");
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xoá phân loại thuốc không thành công!");
+                    }
+                }
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Xoá phân loại thuốc không thành công!");
+                    error = "Lỗi : " + ex.Message;
+                    MessageBox.Show(error);
+                    throw;
                 }
             }
-            catch (Exception ex)
-            {
-                error = "Lỗi : " + ex.Message;
-                MessageBox.Show(error);
-                throw;
-            }
+            hienThiDanhSach();
         }
 
         private void btnSua_Click(object sender, EventArgs e)

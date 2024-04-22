@@ -81,33 +81,32 @@ namespace Quanlyhieuthuoc.KhachHang
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(lblMaKhachHang.Text))
-            {
-                MessageBox.Show("Chưa chọn khách hàng để xoá!");
-                return;
-            }
-
             int maKhachHang = Convert.ToInt32(lblMaKhachHang.Text);
-            try
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa khách hàng này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
             {
-                var result = manager.XoaKhachHang(maKhachHang, ref error);
-                if (result)
+                try
                 {
-                    MessageBox.Show("Xoá Khách Hàng thành công!");
-                    hienThiDanhSach();
-                    return;
+                    var result = manager.XoaKhachHang(maKhachHang, ref error);
+                    if (result)
+                    {
+                        MessageBox.Show("Xoá Khách Hàng thành công!");
+                        hienThiDanhSach();
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xoá Khách Hàng không thành công!");
+                        return;
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Xoá Khách Hàng không thành công!");
-                    return;
+                    MessageBox.Show("Lỗi : " + ex.Message);
+                    throw;
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi : " + ex.Message);
-                throw;
-            }
+            hienThiDanhSach();
         }
     }
 }

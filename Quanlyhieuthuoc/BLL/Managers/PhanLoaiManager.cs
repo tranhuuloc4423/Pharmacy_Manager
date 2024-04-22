@@ -25,11 +25,21 @@ namespace BLL.Managers
 
         public bool ThemLoaiThuoc(PhanLoaiEntity entity, ref string error)
         {
+            if (string.IsNullOrEmpty(entity.TenLoaiThuoc) == true)
+            {
+                error = "Vui lòng nhập tên loại thuốc!";
+                return false;
+            }
             return process.ThemLoaiThuoc(entity, ref error);
         }
 
         public bool SuaLoaiThuoc(PhanLoaiEntity entity, ref string error)
         {
+            if (string.IsNullOrEmpty(entity.TenLoaiThuoc) == true)
+            {
+                error = "Vui lòng nhập tên loại thuốc!";
+                return false;
+            }
             return process.SuaLoaiThuoc(entity, ref error);
         }
 

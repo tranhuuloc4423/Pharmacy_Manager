@@ -25,34 +25,28 @@ namespace Quanlyhieuthuoc.KhachHang
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string hoTen = txtHoTen.Text.Trim();
-            string sdt = txtSoDienThoai.Text.Trim();
-            if(string.IsNullOrEmpty(hoTen))
-            {
-                MessageBox.Show("Vui lòng nhập họ tên khách hàng!");
-                return;
-            }
-
-            if(string.IsNullOrEmpty(sdt))
-            {
-                MessageBox.Show("Vui lòng nhập Số điện thoại khách hàng!");
-                return;
-            }
-
             KhachHangEntity entity = new KhachHangEntity();
-            entity.HoTen = hoTen;
-            entity.SoDienThoai = sdt;
+            entity.HoTen = txtHoTen.Text.Trim();
+            entity.SoDienThoai = txtSoDienThoai.Text.Trim();
+            try
+            {
+                var result = manager.ThemKhachHang(entity, ref error);
 
-            var result = manager.ThemKhachHang(entity, ref error);
-            if (result)
-            {
-                MessageBox.Show("Thêm khách hàng thành công!");
-                this.Close();
+                if (result)
+                {
+                    MessageBox.Show("Thêm khách hàng thành công!");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(error);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Thêm khách hàng không thành công!");
-                MessageBox.Show("Lỗi : " + error);
+                error = "Lỗi : " + ex.Message;
+                MessageBox.Show(error);
+                throw;
             }
         }
 

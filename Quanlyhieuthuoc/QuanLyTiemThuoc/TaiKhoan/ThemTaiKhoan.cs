@@ -49,31 +49,20 @@ namespace Quanlyhieuthuoc.TaiKhoan
             string tenTaiKhoan = txtTenTaiKhoan.Text;
             string hoTen = txtHoTen.Text;
             string matKhau = txtMatKhau.Text;
-            if (string.IsNullOrEmpty(tenTaiKhoan))
-            {
-                MessageBox.Show("Vui lòng nhập tên tài khoản");
-                return;
-            }
-            if (string.IsNullOrEmpty(hoTen))
-            {
-                MessageBox.Show("Vui lòng nhập họ tên");
-                return;
-            }
-            if (string.IsNullOrEmpty(matKhau))
-            {
-                MessageBox.Show("Vui lòng nhập mật khẩu");
-                return;
-            }
 
             TaiKhoanEntity taiKhoan = new TaiKhoanEntity();
             taiKhoan.TenTaiKhoan = tenTaiKhoan;
             taiKhoan.HoTen = hoTen;
             taiKhoan.MatKhau = matKhau;
             taiKhoan.VaiTro = Convert.ToInt32(cbQuyen.SelectedValue);
-
-            try
+            if (!string.IsNullOrEmpty(txtMatKhau.Text) && txtMatKhau.Text != txtNhapLaiMK.Text)
             {
-                bool result = taiKhoanManager.ThemTaiKhoan(taiKhoan, ref error);
+                MessageBox.Show("Mật khẩu nhập lại chưa khớp, vui lòng nhập lại!");
+                txtNhapLaiMK.Focus();
+                return;
+            }
+            bool result = taiKhoanManager.ThemTaiKhoan(taiKhoan, ref error);
+            try { 
                 if (result)
                 {
                     MessageBox.Show("Thêm tài khoản thành công");
@@ -81,15 +70,19 @@ namespace Quanlyhieuthuoc.TaiKhoan
                 }
                 else
                 {
-                    MessageBox.Show("Thêm tài khoản thất bại");
+                    MessageBox.Show(error);
                 }
             }
             catch (Exception ex)
             {
                 error = "Lỗi : " + ex.Message;
-                MessageBox.Show(error);
                 return;
             }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -79,25 +79,28 @@ namespace Quanlyhieuthuoc.TaiKhoan
                 MessageBox.Show("Chưa chọn tài khoản để xoá");
                 return;
             }
-
-            try
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa tài khoản này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
             {
-                bool result = taiKhoanManager.XoaTaiKhoan(tenTaiKhoan, ref error);
-                if (result)
+                try
                 {
-                    MessageBox.Show("Xoá tài khoản thành công");
+                    bool result = taiKhoanManager.XoaTaiKhoan(tenTaiKhoan, ref error);
+                    if (result)
+                    {
+                        MessageBox.Show("Xoá tài khoản thành công");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xoá tài khoản không thành công");
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Xoá tài khoản không thành công");
+                    error = "Lỗi : " + ex.Message;
+                    return;
                 }
             }
-            catch (Exception ex)
-            {
-                error = "Lỗi : " + ex.Message;
-                return;
-            }
-            hienThiDanhSachTaiKhoan();
+            hienThiDanhSachTaiKhoan() ;
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)

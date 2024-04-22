@@ -35,11 +35,6 @@ namespace Quanlyhieuthuoc.PhanLoai
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(txtTenLoaiThuoc.Text))
-            {
-                MessageBox.Show("Vui lòng nhập tên loại thuốc muốn sửa!");
-                return;
-            }
             PhanLoaiEntity entity = new PhanLoaiEntity();
             entity.MaLoaiThuoc = phanLoaiEntity.MaLoaiThuoc;
             entity.TenLoaiThuoc = txtTenLoaiThuoc.Text.Trim();
@@ -54,7 +49,7 @@ namespace Quanlyhieuthuoc.PhanLoai
                 }
                 else
                 {
-                    MessageBox.Show("Sửa Thuốc không thành công!");
+                    MessageBox.Show(error);
                 }
             }
             catch (Exception ex)

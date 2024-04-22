@@ -25,11 +25,31 @@ namespace BLL.Managers
 
         public bool ThemKhachHang(KhachHangEntity entity, ref string error)
         {
+            if (string.IsNullOrEmpty(entity.HoTen) == true)
+            {
+                error = "Vui lòng nhập họ tên khách hàng!";
+                return false;
+            }
+            if(string.IsNullOrEmpty(entity.SoDienThoai) == true)
+            {
+                error = "Vui lòng nhập số điện thoại khách hàng!";
+                return false;
+            }
             return process.ThemKhachHang(entity, ref error);
         }
 
         public bool SuaKhachHang(KhachHangEntity entity, ref string error)
         {
+            if (string.IsNullOrEmpty(entity.HoTen) == true)
+            {
+                error = "Vui lòng nhập họ tên khách hàng!";
+                return false;
+            }
+            if (string.IsNullOrEmpty(entity.SoDienThoai) == true)
+            {
+                error = "Vui lòng nhập số điện thoại khách hàng!";
+                return false;
+            }
             return process.SuaKhachHang(entity, ref error);
         }
 

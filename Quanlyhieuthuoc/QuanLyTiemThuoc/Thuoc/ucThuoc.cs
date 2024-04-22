@@ -69,22 +69,26 @@ namespace Quanlyhieuthuoc.Thuoc
                 return;
             }
             int maThuoc = Convert.ToInt32(lblMaThuoc.Text);
-            try
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa thuốc này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
             {
-                bool result = manager.XoaThuoc(maThuoc, ref error);
-                if (result)
+                try
                 {
-                    MessageBox.Show("Xoá Thuốc thành công");
+                    bool result = manager.XoaThuoc(maThuoc, ref error);
+                    if (result)
+                    {
+                        MessageBox.Show("Xoá Thuốc thành công");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xoá Thuốc không thành công");
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Xoá Thuốc không thành công");
+                    error = "Lỗi : " + ex.Message;
+                    return;
                 }
-            }
-            catch (Exception ex)
-            {
-                error = "Lỗi : " + ex.Message;
-                return;
             }
             hienThiDanhSach();
         }

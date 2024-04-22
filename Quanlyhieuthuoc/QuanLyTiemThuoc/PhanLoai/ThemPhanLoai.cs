@@ -25,15 +25,8 @@ namespace Quanlyhieuthuoc.PhanLoai
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-
-            if(string.IsNullOrEmpty(txtTenLoaiThuoc.Text))
-            {
-                MessageBox.Show("Vui lòng nhập tên phân loại!");
-                return;
-            }
             PhanLoaiEntity entity = new PhanLoaiEntity();
             entity.TenLoaiThuoc = txtTenLoaiThuoc.Text;
-
             try
             {
                 var result = manager.ThemLoaiThuoc(entity, ref error);
@@ -43,12 +36,13 @@ namespace Quanlyhieuthuoc.PhanLoai
                     this.Close();
                 } else
                 {
-                    MessageBox.Show("Thêm phân loại thuốc không thành công!");
+                    MessageBox.Show(error);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                error = "Lỗi : " + ex.Message;
+                MessageBox.Show(error);
                 throw;
             }
         }

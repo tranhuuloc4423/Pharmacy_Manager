@@ -55,21 +55,22 @@ namespace Quanlyhieuthuoc.TaiKhoan
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(taikhoan.TenTaiKhoan))
-            {
-                MessageBox.Show("Vui lòng chọn tài khoản muốn sửa!");
-                return;
-            }
-
             TaiKhoanEntity entity = new TaiKhoanEntity();
             entity.TenTaiKhoan = taikhoan.TenTaiKhoan;
             entity.HoTen = txtHoTen.Text.Trim();
             entity.MatKhau = txtMatKhau.Text.Trim();
             entity.VaiTro = Convert.ToInt32(cbQuyen.SelectedValue);
             string error = "";
+
+            if (!string.IsNullOrEmpty(txtMatKhau.Text) && txtMatKhau.Text != txtNhapLaiMK.Text)
+            {
+                MessageBox.Show("Mật khẩu nhập lại chưa khớp, vui lòng nhập lại!");
+                txtNhapLaiMK.Focus();
+                return;
+            }
+            var result = manager.SuaTaiKhoan(entity, ref error);
             try
             {
-                var result = manager.SuaTaiKhoan(entity, ref error);
                 if (result)
                 {
                     MessageBox.Show("Sửa tài khoản thành công!");
@@ -77,14 +78,15 @@ namespace Quanlyhieuthuoc.TaiKhoan
                 }
                 else
                 {
-                    MessageBox.Show("Sửa tài khoản thất bại!");
+                    MessageBox.Show(error);
                 }
             }
             catch (Exception ex)
             {
-                error = "Loi : " + ex.Message;
-                throw;
+                error = "Lỗi : " + ex.Message;
+                return;
             }
+
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

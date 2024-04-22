@@ -44,42 +44,41 @@ namespace Quanlyhieuthuoc.Thuoc
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string tenThuoc = txtTenThuoc.Text;
-            string dvt = txtDonViTinh.Text;
-            string giaBan = txtGiaBan.Text;
 
-
-            if (string.IsNullOrEmpty(tenThuoc))
+            if (string.IsNullOrEmpty(txtTenThuoc.Text))
             {
                 MessageBox.Show("Vui lòng nhập tên thuốc!");
+                txtTenThuoc.Focus();
                 return;
             }
 
-            if (string.IsNullOrEmpty(dvt))
+            if (string.IsNullOrEmpty(txtDonViTinh.Text))
             {
                 MessageBox.Show("Vui lòng nhập đơn vị tính của thuốc!");
+                txtDonViTinh.Focus();
                 return;
             }
-
-            if (string.IsNullOrEmpty(giaBan))
+            if (string.IsNullOrEmpty(txtGiaBan.Text))
             {
                 MessageBox.Show("Vui lòng nhập giá bán thuốc!");
+                txtGiaBan.Focus();
                 return;
             }
             ThuocEntity entity = new ThuocEntity();
             entity.MaLoaiThuoc = Convert.ToInt32(cbLoaiThuoc.SelectedValue);
-            entity.TenThuoc = tenThuoc;
-            entity.DonViTinh = dvt;
-            entity.GiaBan = Convert.ToDouble(giaBan);
+            entity.TenThuoc = txtTenThuoc.Text;
+            entity.DonViTinh = txtDonViTinh.Text;
+            entity.GiaBan = Convert.ToDouble(txtGiaBan.Text);
 
             try
             {
                 var result = manager.ThemThuoc(entity, ref error);
-                if(result)
+                if (result)
                 {
                     MessageBox.Show("Thêm Thuốc thành công!");
                     this.Close();
-                } else
+                }
+                else
                 {
                     MessageBox.Show("Thêm Thuốc không thành công!");
                 }
@@ -95,6 +94,14 @@ namespace Quanlyhieuthuoc.Thuoc
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtGiaBan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; 
+            }
         }
     }
 }

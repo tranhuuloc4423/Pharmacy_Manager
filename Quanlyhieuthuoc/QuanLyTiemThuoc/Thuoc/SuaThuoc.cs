@@ -1,5 +1,6 @@
 ﻿using BLL.Managers;
 using DAL.Entities;
+using Quanlyhieuthuoc.Kho;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -56,6 +57,33 @@ namespace Quanlyhieuthuoc.Thuoc
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtTenThuoc.Text))
+            {
+                MessageBox.Show("Vui lòng nhập tên thuốc!");
+                txtTenThuoc.Focus();
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txtDonViTinh.Text))
+            {
+                MessageBox.Show("Vui lòng nhập đơn vị tính của thuốc!");
+                txtDonViTinh.Focus();
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txtGiaBan.Text) || Convert.ToDouble(txtGiaBan.Text) < 0)
+            {
+                MessageBox.Show("Vui lòng nhập giá bán thuốc!");
+                txtGiaBan.Focus();
+                return;
+            }
+            if (string.IsNullOrEmpty(cbLoaiThuoc.Text))
+            {
+                MessageBox.Show("Vui lòng nhập loại thuốc!");
+                cbLoaiThuoc.Focus();
+                return;
+            }
+            //tương tự cần nghiên cưu thêm khúc double, nửa bên này nửa bên kia trông phèn ác
             ThuocEntity entity = new ThuocEntity();
             entity.MaThuoc = thuoc.MaThuoc;
             entity.MaLoaiThuoc = Convert.ToInt32(cbLoaiThuoc.SelectedValue);
@@ -87,6 +115,14 @@ namespace Quanlyhieuthuoc.Thuoc
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtGiaBan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
