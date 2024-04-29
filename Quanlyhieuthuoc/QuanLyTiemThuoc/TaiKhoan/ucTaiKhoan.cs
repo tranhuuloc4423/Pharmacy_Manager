@@ -91,7 +91,7 @@ namespace Quanlyhieuthuoc.TaiKhoan
                     }
                     else
                     {
-                        MessageBox.Show("Xoá tài khoản không thành công");
+                        MessageBox.Show(error);
                     }
                 }
                 catch (Exception ex)

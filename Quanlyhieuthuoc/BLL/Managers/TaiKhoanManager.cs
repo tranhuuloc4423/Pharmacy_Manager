@@ -70,6 +70,11 @@ namespace BLL.Managers
 
         public bool XoaTaiKhoan(string tenTaiKhoan, ref string error)
         {
+            if (string.IsNullOrEmpty(tenTaiKhoan) == true)
+            {
+                error = "Vui lòng chọn tài khoản để xóa!";
+                return false;
+            }
             return process.XoaTaiKhoan(tenTaiKhoan, ref error);
         }
     }

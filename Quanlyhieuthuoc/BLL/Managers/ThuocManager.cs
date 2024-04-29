@@ -30,11 +30,51 @@ namespace BLL.Managers
 
         public bool ThemThuoc(ThuocEntity entity, ref string error)
         {
+            if(string.IsNullOrEmpty(entity.TenThuoc))
+            {
+                error = "Vui lòng nhập tên thuốc!";
+                return false;
+            }
+            if (string.IsNullOrEmpty(entity.DonViTinh))
+            {
+                error = "Vui lòng nhập đơn vị tính!";
+                return false;
+            }
+            if (string.IsNullOrEmpty(entity.GiaBan.ToString()))
+            {
+                error = "Vui lòng nhập giá bán!";
+                return false;
+            }
+            if (string.IsNullOrEmpty(entity.MaLoaiThuoc.ToString()))
+            {
+                error = "Vui lòng chọn mã loại thuốc!";
+                return false;
+            }
             return process.ThemThuoc(entity, ref error);
         }
 
         public bool SuaThuoc(ThuocEntity entity, ref string error)
         {
+            if (string.IsNullOrEmpty(entity.TenThuoc))
+            {
+                error = "Vui lòng nhập tên thuốc!";
+                return false;
+            }
+            if (string.IsNullOrEmpty(entity.DonViTinh))
+            {
+                error = "Vui lòng nhập đơn vị tính!";
+                return false;
+            }
+            if (string.IsNullOrEmpty(entity.GiaBan.ToString()))
+            {
+                error = "Vui lòng nhập giá bán!";
+                return false;
+            }
+            if (string.IsNullOrEmpty(entity.MaLoaiThuoc.ToString()))
+            {
+                error = "Vui lòng chọn mã loại thuốc!";
+                return false;
+            }
             return process.SuaThuoc(entity, ref error);
         }
 

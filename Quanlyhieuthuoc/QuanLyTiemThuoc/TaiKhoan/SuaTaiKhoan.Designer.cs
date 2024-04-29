@@ -32,6 +32,8 @@
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
+            txtNhapLaiMK = new TextBox();
+            label6 = new Label();
             btnThoat = new Button();
             btnSua = new Button();
             cbQuyen = new ComboBox();
@@ -42,8 +44,6 @@
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
-            label6 = new Label();
-            txtNhapLaiMK = new TextBox();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -106,6 +106,27 @@
             panel2.Size = new Size(543, 435);
             panel2.TabIndex = 1;
             // 
+            // txtNhapLaiMK
+            // 
+            txtNhapLaiMK.Font = new Font("Segoe UI", 14F);
+            txtNhapLaiMK.ForeColor = Color.Black;
+            txtNhapLaiMK.Location = new Point(245, 200);
+            txtNhapLaiMK.Name = "txtNhapLaiMK";
+            txtNhapLaiMK.Size = new Size(273, 32);
+            txtNhapLaiMK.TabIndex = 17;
+            txtNhapLaiMK.TextChanged += txtNhapLaiMK_TextChanged;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 16F);
+            label6.ForeColor = Color.Black;
+            label6.Location = new Point(27, 202);
+            label6.Name = "label6";
+            label6.Size = new Size(195, 30);
+            label6.TabIndex = 16;
+            label6.Text = "Nhập Lại Mật Khẩu";
+            // 
             // btnThoat
             // 
             btnThoat.BackColor = Color.White;
@@ -162,6 +183,7 @@
             txtMatKhau.Name = "txtMatKhau";
             txtMatKhau.Size = new Size(273, 32);
             txtMatKhau.TabIndex = 2;
+            txtMatKhau.TextChanged += txtMatKhau_TextChanged;
             // 
             // txtHoTen
             // 
@@ -225,26 +247,6 @@
             label2.Size = new Size(146, 30);
             label2.TabIndex = 11;
             label2.Text = "Tên Tài Khoản";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 16F);
-            label6.ForeColor = Color.Black;
-            label6.Location = new Point(27, 202);
-            label6.Name = "label6";
-            label6.Size = new Size(195, 30);
-            label6.TabIndex = 16;
-            label6.Text = "Nhập Lại Mật Khẩu";
-            // 
-            // txtNhapLaiMK
-            // 
-            txtNhapLaiMK.Font = new Font("Segoe UI", 14F);
-            txtNhapLaiMK.ForeColor = Color.Black;
-            txtNhapLaiMK.Location = new Point(245, 200);
-            txtNhapLaiMK.Name = "txtNhapLaiMK";
-            txtNhapLaiMK.Size = new Size(273, 32);
-            txtNhapLaiMK.TabIndex = 17;
             // 
             // SuaTaiKhoan
             // 

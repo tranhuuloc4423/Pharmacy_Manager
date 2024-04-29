@@ -93,5 +93,20 @@ namespace Quanlyhieuthuoc.TaiKhoan
         {
             this.Close();
         }
+        //
+        private void ClearSpace()
+        {
+            txtMatKhau.Text = txtMatKhau.Text.Replace(" ", "");
+            txtNhapLaiMK.Text = txtNhapLaiMK.Text.Replace(" ", "");
+        }
+        private void txtMatKhau_TextChanged(object sender, EventArgs e)
+        {
+            ClearSpace();
+        }
+
+        private void txtNhapLaiMK_TextChanged(object sender, EventArgs e)
+        {
+            ClearSpace();
+        }
     }
 }

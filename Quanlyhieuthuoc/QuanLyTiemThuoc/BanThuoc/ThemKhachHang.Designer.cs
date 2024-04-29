@@ -97,7 +97,6 @@
             dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgKhachHang.DefaultCellStyle = dataGridViewCellStyle3;
-            dgKhachHang.Dock = DockStyle.Fill;
             dgKhachHang.GridColor = Color.LightPink;
             dgKhachHang.Location = new Point(0, 0);
             dgKhachHang.MultiSelect = false;

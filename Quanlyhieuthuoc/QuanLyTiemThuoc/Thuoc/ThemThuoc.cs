@@ -44,32 +44,20 @@ namespace Quanlyhieuthuoc.Thuoc
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-
-            if (string.IsNullOrEmpty(txtTenThuoc.Text))
-            {
-                MessageBox.Show("Vui lòng nhập tên thuốc!");
-                txtTenThuoc.Focus();
-                return;
-            }
-
-            if (string.IsNullOrEmpty(txtDonViTinh.Text))
-            {
-                MessageBox.Show("Vui lòng nhập đơn vị tính của thuốc!");
-                txtDonViTinh.Focus();
-                return;
-            }
-            if (string.IsNullOrEmpty(txtGiaBan.Text))
-            {
-                MessageBox.Show("Vui lòng nhập giá bán thuốc!");
-                txtGiaBan.Focus();
-                return;
-            }
             ThuocEntity entity = new ThuocEntity();
             entity.MaLoaiThuoc = Convert.ToInt32(cbLoaiThuoc.SelectedValue);
             entity.TenThuoc = txtTenThuoc.Text;
             entity.DonViTinh = txtDonViTinh.Text;
-            entity.GiaBan = Convert.ToDouble(txtGiaBan.Text);
-
+            //Nếu validate như thế này thì giá trị double bị null xong lỗi nên phải kiểm tra trước
+            //mà nếu thế thì mỗi bên một ít
+            //manager check rồi bên này cũng check, trông hơi khó chịu
+            //có thể đổi kiểu dữ liệu thành double? thì kiểm tra full bên manager
+            //hoặc kiểm tra full ở đây
+            if(!string.IsNullOrWhiteSpace(txtGiaBan.Text))
+            {
+                entity.GiaBan = Convert.ToDouble(txtGiaBan.Text);
+            }
+            else { MessageBox.Show("Chưa nhập giá bán!"); }
             try
             {
                 var result = manager.ThemThuoc(entity, ref error);
@@ -80,7 +68,7 @@ namespace Quanlyhieuthuoc.Thuoc
                 }
                 else
                 {
-                    MessageBox.Show("Thêm Thuốc không thành công!");
+                    MessageBox.Show(error);
                 }
             }
             catch (Exception ex)

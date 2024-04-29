@@ -125,6 +125,7 @@
             txtNhapLaiMK.Name = "txtNhapLaiMK";
             txtNhapLaiMK.Size = new Size(273, 32);
             txtNhapLaiMK.TabIndex = 15;
+            txtNhapLaiMK.TextChanged += txtNhapLaiMK_TextChanged;
             // 
             // btnThoat
             // 
@@ -182,6 +183,7 @@
             txtMatKhau.Name = "txtMatKhau";
             txtMatKhau.Size = new Size(273, 32);
             txtMatKhau.TabIndex = 3;
+            txtMatKhau.TextChanged += txtMatKhau_TextChanged;
             // 
             // txtHoTen
             // 

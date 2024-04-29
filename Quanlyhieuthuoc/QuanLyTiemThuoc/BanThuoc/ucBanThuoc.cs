@@ -109,6 +109,10 @@ namespace Quanlyhieuthuoc.BanThuoc
 
         private void btnGiam_Click(object sender, EventArgs e)
         {
+            if(nudSoLuong.Value == 0) 
+            {
+                return;
+            }
             nudSoLuong.Value -= 1;
         }
 

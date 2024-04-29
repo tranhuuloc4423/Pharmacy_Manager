@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Quanlyhieuthuoc.TaiKhoan
 {
@@ -62,7 +63,8 @@ namespace Quanlyhieuthuoc.TaiKhoan
                 return;
             }
             bool result = taiKhoanManager.ThemTaiKhoan(taiKhoan, ref error);
-            try { 
+            try
+            {
                 if (result)
                 {
                     MessageBox.Show("Thêm tài khoản thành công");
@@ -83,6 +85,20 @@ namespace Quanlyhieuthuoc.TaiKhoan
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        //
+        private void ClearSpace()
+        {
+            txtMatKhau.Text = txtMatKhau.Text.Replace(" ", "");
+            txtNhapLaiMK.Text = txtNhapLaiMK.Text.Replace(" ", "");
+        }
+        private void txtMatKhau_TextChanged(object sender, EventArgs e)
+        {
+            ClearSpace();
+        }
+        private void txtNhapLaiMK_TextChanged(object sender, EventArgs e)
+        {
+            ClearSpace();
         }
     }
 }

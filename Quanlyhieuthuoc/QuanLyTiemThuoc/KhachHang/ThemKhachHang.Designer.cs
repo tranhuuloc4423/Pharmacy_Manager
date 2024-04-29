@@ -140,6 +140,7 @@
             txtSoDienThoai.Name = "txtSoDienThoai";
             txtSoDienThoai.Size = new Size(253, 32);
             txtSoDienThoai.TabIndex = 16;
+            txtSoDienThoai.TextChanged += txtSoDienThoai_TextChanged;
             // 
             // txtHoTen
             // 

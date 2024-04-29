@@ -57,40 +57,21 @@ namespace Quanlyhieuthuoc.Thuoc
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtTenThuoc.Text))
-            {
-                MessageBox.Show("Vui lòng nhập tên thuốc!");
-                txtTenThuoc.Focus();
-                return;
-            }
-
-            if (string.IsNullOrEmpty(txtDonViTinh.Text))
-            {
-                MessageBox.Show("Vui lòng nhập đơn vị tính của thuốc!");
-                txtDonViTinh.Focus();
-                return;
-            }
-
-            if (string.IsNullOrEmpty(txtGiaBan.Text) || Convert.ToDouble(txtGiaBan.Text) < 0)
-            {
-                MessageBox.Show("Vui lòng nhập giá bán thuốc!");
-                txtGiaBan.Focus();
-                return;
-            }
-            if (string.IsNullOrEmpty(cbLoaiThuoc.Text))
-            {
-                MessageBox.Show("Vui lòng nhập loại thuốc!");
-                cbLoaiThuoc.Focus();
-                return;
-            }
-            //tương tự cần nghiên cưu thêm khúc double, nửa bên này nửa bên kia trông phèn ác
             ThuocEntity entity = new ThuocEntity();
             entity.MaThuoc = thuoc.MaThuoc;
             entity.MaLoaiThuoc = Convert.ToInt32(cbLoaiThuoc.SelectedValue);
             entity.TenThuoc = txtTenThuoc.Text;
             entity.DonViTinh = txtDonViTinh.Text;
-            entity.GiaBan = Convert.ToInt32(txtGiaBan.Text);
-
+            //Nếu validate như thế này thì giá trị double bị null xong lỗi nên phải kiểm tra trước
+            //mà nếu thế thì mỗi bên một ít
+            //manager check rồi bên này cũng check, trông hơi khó chịu
+            //có thể đổi kiểu dữ liệu thành double? thì kiểm tra full bên manager
+            //hoặc kiểm tra full ở đây
+            if (!string.IsNullOrWhiteSpace(txtGiaBan.Text))
+            {
+                entity.GiaBan = Convert.ToDouble(txtGiaBan.Text);
+            }
+            else { MessageBox.Show("Chưa nhập giá bán!"); }
             try
             {
                 var result = manager.SuaThuoc(entity, ref error);
