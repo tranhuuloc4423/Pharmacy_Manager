@@ -36,6 +36,11 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
             dgKhachHang = new DataGridView();
+            MaKhachHang = new DataGridViewTextBoxColumn();
+            HoTen = new DataGridViewTextBoxColumn();
+            SoDienThoai = new DataGridViewTextBoxColumn();
+            KhachHangThanThiet = new DataGridViewTextBoxColumn();
+            MuaTichLuy = new DataGridViewTextBoxColumn();
             panel2 = new Panel();
             lblMuaTL = new Label();
             label7 = new Label();
@@ -50,12 +55,6 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            lblNCC = new Label();
-            MaKhachHang = new DataGridViewTextBoxColumn();
-            HoTen = new DataGridViewTextBoxColumn();
-            SoDienThoai = new DataGridViewTextBoxColumn();
-            KhachHangThanThiet = new DataGridViewTextBoxColumn();
-            MuaTichLuy = new DataGridViewTextBoxColumn();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgKhachHang).BeginInit();
@@ -139,6 +138,48 @@
             dgKhachHang.TabIndex = 1;
             dgKhachHang.CellClick += dgKhachHang_CellClick;
             // 
+            // MaKhachHang
+            // 
+            MaKhachHang.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            MaKhachHang.DataPropertyName = "MaKhachHang";
+            MaKhachHang.HeaderText = "Mã Khách Hàng";
+            MaKhachHang.Name = "MaKhachHang";
+            MaKhachHang.ReadOnly = true;
+            // 
+            // HoTen
+            // 
+            HoTen.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            HoTen.DataPropertyName = "HoTen";
+            HoTen.HeaderText = "Họ Tên";
+            HoTen.Name = "HoTen";
+            HoTen.ReadOnly = true;
+            // 
+            // SoDienThoai
+            // 
+            SoDienThoai.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            SoDienThoai.DataPropertyName = "SoDienThoai";
+            SoDienThoai.HeaderText = "Số ĐT";
+            SoDienThoai.Name = "SoDienThoai";
+            SoDienThoai.ReadOnly = true;
+            // 
+            // KhachHangThanThiet
+            // 
+            KhachHangThanThiet.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            KhachHangThanThiet.DataPropertyName = "KhachHangThanThiet";
+            KhachHangThanThiet.HeaderText = "Khách Hàng Thân Thiết";
+            KhachHangThanThiet.Name = "KhachHangThanThiet";
+            KhachHangThanThiet.ReadOnly = true;
+            KhachHangThanThiet.Visible = false;
+            // 
+            // MuaTichLuy
+            // 
+            MuaTichLuy.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            MuaTichLuy.DataPropertyName = "MuaTichLuy";
+            MuaTichLuy.HeaderText = "Mua Tích Luỹ";
+            MuaTichLuy.Name = "MuaTichLuy";
+            MuaTichLuy.ReadOnly = true;
+            MuaTichLuy.Visible = false;
+            // 
             // panel2
             // 
             panel2.BackColor = Color.Thistle;
@@ -155,7 +196,6 @@
             panel2.Controls.Add(label3);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label1);
-            panel2.Controls.Add(lblNCC);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(739, 3);
             panel2.Name = "panel2";
@@ -165,72 +205,72 @@
             // lblMuaTL
             // 
             lblMuaTL.AutoSize = true;
-            lblMuaTL.Font = new Font("Segoe UI", 16F);
-            lblMuaTL.Location = new Point(249, 289);
+            lblMuaTL.Font = new Font("Tahoma", 16F);
+            lblMuaTL.Location = new Point(210, 244);
             lblMuaTL.Name = "lblMuaTL";
-            lblMuaTL.Size = new Size(112, 30);
+            lblMuaTL.Size = new Size(33, 27);
             lblMuaTL.TabIndex = 25;
-            lblMuaTL.Text = "Tên Thuốc";
+            lblMuaTL.Text = "...";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 16F);
-            label7.Location = new Point(32, 289);
+            label7.Font = new Font("Tahoma", 16F);
+            label7.Location = new Point(27, 244);
             label7.Name = "label7";
-            label7.Size = new Size(151, 30);
+            label7.Size = new Size(156, 27);
             label7.TabIndex = 24;
             label7.Text = "Mua Tích Luỹ :";
             // 
             // lblKHTT
             // 
             lblKHTT.AutoSize = true;
-            lblKHTT.Font = new Font("Segoe UI", 16F);
-            lblKHTT.Location = new Point(249, 233);
+            lblKHTT.Font = new Font("Tahoma", 16F);
+            lblKHTT.Location = new Point(210, 188);
             lblKHTT.Name = "lblKHTT";
-            lblKHTT.Size = new Size(112, 30);
+            lblKHTT.Size = new Size(33, 27);
             lblKHTT.TabIndex = 23;
-            lblKHTT.Text = "Tên Thuốc";
+            lblKHTT.Text = "...";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 16F);
-            label5.Location = new Point(32, 233);
+            label5.Font = new Font("Tahoma", 16F);
+            label5.Location = new Point(27, 188);
             label5.Name = "label5";
-            label5.Size = new Size(77, 30);
+            label5.Size = new Size(81, 27);
             label5.TabIndex = 22;
             label5.Text = "KHTT :";
             // 
             // lblSoDienThoai
             // 
             lblSoDienThoai.AutoSize = true;
-            lblSoDienThoai.Font = new Font("Segoe UI", 16F);
-            lblSoDienThoai.Location = new Point(249, 182);
+            lblSoDienThoai.Font = new Font("Tahoma", 16F);
+            lblSoDienThoai.Location = new Point(210, 137);
             lblSoDienThoai.Name = "lblSoDienThoai";
-            lblSoDienThoai.Size = new Size(112, 30);
+            lblSoDienThoai.Size = new Size(33, 27);
             lblSoDienThoai.TabIndex = 21;
-            lblSoDienThoai.Text = "Tên Thuốc";
+            lblSoDienThoai.Text = "...";
             // 
             // lblHoTen
             // 
             lblHoTen.AutoSize = true;
-            lblHoTen.Font = new Font("Segoe UI", 16F);
-            lblHoTen.Location = new Point(249, 131);
+            lblHoTen.Font = new Font("Tahoma", 16F);
+            lblHoTen.Location = new Point(210, 86);
             lblHoTen.Name = "lblHoTen";
-            lblHoTen.Size = new Size(112, 30);
+            lblHoTen.Size = new Size(33, 27);
             lblHoTen.TabIndex = 19;
-            lblHoTen.Text = "Tên Thuốc";
+            lblHoTen.Text = "...";
             // 
             // lblMaKhachHang
             // 
             lblMaKhachHang.AutoSize = true;
-            lblMaKhachHang.Font = new Font("Segoe UI", 16F);
-            lblMaKhachHang.Location = new Point(249, 81);
+            lblMaKhachHang.Font = new Font("Tahoma", 16F);
+            lblMaKhachHang.Location = new Point(210, 36);
             lblMaKhachHang.Name = "lblMaKhachHang";
-            lblMaKhachHang.Size = new Size(112, 30);
+            lblMaKhachHang.Size = new Size(33, 27);
             lblMaKhachHang.TabIndex = 16;
-            lblMaKhachHang.Text = "Tên Thuốc";
+            lblMaKhachHang.Text = "...";
             // 
             // btnSua
             // 
@@ -292,84 +332,32 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 16F);
-            label3.Location = new Point(32, 182);
+            label3.Font = new Font("Tahoma", 16F);
+            label3.Location = new Point(27, 137);
             label3.Name = "label3";
-            label3.Size = new Size(158, 30);
+            label3.Size = new Size(163, 27);
             label3.TabIndex = 13;
             label3.Text = "Số Điện Thoại :";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 16F);
-            label2.Location = new Point(32, 131);
+            label2.Font = new Font("Tahoma", 16F);
+            label2.Location = new Point(27, 86);
             label2.Name = "label2";
-            label2.Size = new Size(99, 30);
+            label2.Size = new Size(105, 27);
             label2.TabIndex = 11;
             label2.Text = "Họ Tên : ";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 16F);
-            label1.Location = new Point(32, 81);
+            label1.Font = new Font("Tahoma", 16F);
+            label1.Location = new Point(27, 36);
             label1.Name = "label1";
-            label1.Size = new Size(177, 30);
+            label1.Size = new Size(180, 27);
             label1.TabIndex = 10;
             label1.Text = "Mã Khách Hàng :";
-            // 
-            // lblNCC
-            // 
-            lblNCC.AutoSize = true;
-            lblNCC.Font = new Font("Tahoma", 24F);
-            lblNCC.Location = new Point(113, 19);
-            lblNCC.Name = "lblNCC";
-            lblNCC.Size = new Size(189, 39);
-            lblNCC.TabIndex = 9;
-            lblNCC.Text = "Khách Hàng";
-            // 
-            // MaKhachHang
-            // 
-            MaKhachHang.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            MaKhachHang.DataPropertyName = "MaKhachHang";
-            MaKhachHang.HeaderText = "Mã Khách Hàng";
-            MaKhachHang.Name = "MaKhachHang";
-            MaKhachHang.ReadOnly = true;
-            // 
-            // HoTen
-            // 
-            HoTen.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            HoTen.DataPropertyName = "HoTen";
-            HoTen.HeaderText = "Họ Tên";
-            HoTen.Name = "HoTen";
-            HoTen.ReadOnly = true;
-            // 
-            // SoDienThoai
-            // 
-            SoDienThoai.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            SoDienThoai.DataPropertyName = "SoDienThoai";
-            SoDienThoai.HeaderText = "Số ĐT";
-            SoDienThoai.Name = "SoDienThoai";
-            SoDienThoai.ReadOnly = true;
-            // 
-            // KhachHangThanThiet
-            // 
-            KhachHangThanThiet.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            KhachHangThanThiet.DataPropertyName = "KhachHangThanThiet";
-            KhachHangThanThiet.HeaderText = "Khách Hàng Thân Thiết";
-            KhachHangThanThiet.Name = "KhachHangThanThiet";
-            KhachHangThanThiet.ReadOnly = true;
-            KhachHangThanThiet.Visible = false;
-            // 
-            // MuaTichLuy
-            // 
-            MuaTichLuy.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            MuaTichLuy.DataPropertyName = "MuaTichLuy";
-            MuaTichLuy.HeaderText = "Mua Tích Luỹ";
-            MuaTichLuy.Name = "MuaTichLuy";
-            MuaTichLuy.ReadOnly = true;
-            MuaTichLuy.Visible = false;
             // 
             // ucKhachHang
             // 

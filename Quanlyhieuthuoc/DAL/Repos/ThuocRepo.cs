@@ -19,6 +19,24 @@ namespace DAL.Repos
         {
             try
             {
+                string sql = "select t.MaThuoc, t.TenThuoc, pl.TenLoaiThuoc, t.DonViTinh, t.GiaBan " +
+                    " from Thuoc t " +
+                    " inner join PhanLoai pl on t.MaLoaiThuoc = pl.MaLoaiThuoc ";
+                DataTable dt = new DataTable();
+                dt = database.GetData(sql, ref error);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                error = "Loi : " + ex.Message;
+                throw;
+            }
+        }
+
+        public DataTable HienThiDanhSachMaVaTen(ref string error)
+        {
+            try
+            {
                 string sql = "select MaThuoc, TenThuoc from Thuoc";
                 DataTable dt = new DataTable();
                 dt = database.GetData(sql, ref error);
@@ -31,11 +49,14 @@ namespace DAL.Repos
             }
         }
 
-        public DataTable HienThiDanhSach(ref string error)
+        public DataTable HienThiDanhSachKhoThuoc(ref string error)
         {
             try
             {
-                string sql = "select MaThuoc, TenLoaiThuoc, TenThuoc, DonViTinh, GiaBan from Thuoc inner join PhanLoai on Thuoc.MaLoaiThuoc = PhanLoai.MaLoaiThuoc";
+                string sql = "select t.MaThuoc, t.TenThuoc, pl.TenLoaiThuoc, t.DonViTinh, t.GiaBan, kho.TonKho as SoLuong " +
+                    " from Thuoc t " +
+                    " inner join PhanLoai pl on t.MaLoaiThuoc = pl.MaLoaiThuoc " +
+                    " inner join KhoThuoc kho on kho.MaThuoc = t.MaThuoc ";
                 DataTable dt = new DataTable();
                 dt = database.GetData(sql, ref error);
                 return dt;

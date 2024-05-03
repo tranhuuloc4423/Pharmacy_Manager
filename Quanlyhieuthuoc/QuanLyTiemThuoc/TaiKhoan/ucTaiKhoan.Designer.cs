@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
             dgTaiKhoan = new DataGridView();
@@ -49,7 +49,6 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            lblTaiKhoan = new Label();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgTaiKhoan).BeginInit();
@@ -86,48 +85,48 @@
             dgTaiKhoan.AllowUserToDeleteRows = false;
             dgTaiKhoan.AllowUserToResizeColumns = false;
             dgTaiKhoan.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgTaiKhoan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgTaiKhoan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             dgTaiKhoan.BackgroundColor = Color.LightPink;
             dgTaiKhoan.CellBorderStyle = DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Tahoma", 14F, FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgTaiKhoan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = SystemColors.Control;
+            dataGridViewCellStyle7.Font = new Font("Tahoma", 14F, FontStyle.Bold);
+            dataGridViewCellStyle7.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            dgTaiKhoan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             dgTaiKhoan.ColumnHeadersHeight = 40;
             dgTaiKhoan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dgTaiKhoan.Columns.AddRange(new DataGridViewColumn[] { TenTaiKhoan, HoTen, MoTa });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Window;
-            dataGridViewCellStyle3.Font = new Font("Tahoma", 14F);
-            dataGridViewCellStyle3.ForeColor = Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = Color.Thistle;
-            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgTaiKhoan.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = SystemColors.Window;
+            dataGridViewCellStyle8.Font = new Font("Tahoma", 14F);
+            dataGridViewCellStyle8.ForeColor = Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = Color.Thistle;
+            dataGridViewCellStyle8.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
+            dgTaiKhoan.DefaultCellStyle = dataGridViewCellStyle8;
             dgTaiKhoan.Dock = DockStyle.Fill;
             dgTaiKhoan.GridColor = Color.LightPink;
             dgTaiKhoan.Location = new Point(0, 0);
             dgTaiKhoan.MultiSelect = false;
             dgTaiKhoan.Name = "dgTaiKhoan";
             dgTaiKhoan.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Control;
-            dataGridViewCellStyle4.Font = new Font("Tahoma", 14F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgTaiKhoan.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = SystemColors.Control;
+            dataGridViewCellStyle9.Font = new Font("Tahoma", 14F);
+            dataGridViewCellStyle9.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
+            dgTaiKhoan.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             dgTaiKhoan.RowHeadersVisible = false;
             dgTaiKhoan.RowHeadersWidth = 40;
             dgTaiKhoan.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Font = new Font("Tahoma", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgTaiKhoan.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Font = new Font("Tahoma", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgTaiKhoan.RowsDefaultCellStyle = dataGridViewCellStyle10;
             dgTaiKhoan.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgTaiKhoan.Size = new Size(822, 604);
             dgTaiKhoan.TabIndex = 0;
@@ -169,7 +168,6 @@
             panel2.Controls.Add(label3);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label1);
-            panel2.Controls.Add(lblTaiKhoan);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(831, 3);
             panel2.Name = "panel2";
@@ -182,7 +180,7 @@
             cbQuyen.Font = new Font("Segoe UI", 14F);
             cbQuyen.FormattingEnabled = true;
             cbQuyen.Items.AddRange(new object[] { "admin", "user" });
-            cbQuyen.Location = new Point(208, 230);
+            cbQuyen.Location = new Point(185, 165);
             cbQuyen.Name = "cbQuyen";
             cbQuyen.Size = new Size(146, 33);
             cbQuyen.TabIndex = 8;
@@ -190,20 +188,20 @@
             // lblHoTen
             // 
             lblHoTen.AutoSize = true;
-            lblHoTen.Font = new Font("Segoe UI", 16F);
-            lblHoTen.Location = new Point(208, 167);
+            lblHoTen.Font = new Font("Tahoma", 16F);
+            lblHoTen.Location = new Point(185, 102);
             lblHoTen.Name = "lblHoTen";
-            lblHoTen.Size = new Size(82, 30);
+            lblHoTen.Size = new Size(83, 27);
             lblHoTen.TabIndex = 7;
             lblHoTen.Text = "Họ Tên";
             // 
             // lblTenTaiKhoan
             // 
             lblTenTaiKhoan.AutoSize = true;
-            lblTenTaiKhoan.Font = new Font("Segoe UI", 16F);
-            lblTenTaiKhoan.Location = new Point(208, 107);
+            lblTenTaiKhoan.Font = new Font("Tahoma", 16F);
+            lblTenTaiKhoan.Location = new Point(214, 42);
             lblTenTaiKhoan.Name = "lblTenTaiKhoan";
-            lblTenTaiKhoan.Size = new Size(146, 30);
+            lblTenTaiKhoan.Size = new Size(154, 27);
             lblTenTaiKhoan.TabIndex = 6;
             lblTenTaiKhoan.Text = "Tên Tài Khoản";
             // 
@@ -216,7 +214,7 @@
             btnSua.FlatAppearance.MouseDownBackColor = Color.LightPink;
             btnSua.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnSua.FlatStyle = FlatStyle.Flat;
-            btnSua.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSua.Font = new Font("Tahoma", 16F);
             btnSua.Location = new Point(214, 313);
             btnSua.Margin = new Padding(4, 3, 4, 3);
             btnSua.Name = "btnSua";
@@ -235,7 +233,7 @@
             btnXoa.FlatAppearance.MouseDownBackColor = Color.LightPink;
             btnXoa.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnXoa.FlatStyle = FlatStyle.Flat;
-            btnXoa.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnXoa.Font = new Font("Tahoma", 16F);
             btnXoa.Location = new Point(21, 389);
             btnXoa.Margin = new Padding(4, 3, 4, 3);
             btnXoa.Name = "btnXoa";
@@ -254,7 +252,7 @@
             btnThem.FlatAppearance.MouseDownBackColor = Color.LightPink;
             btnThem.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnThem.FlatStyle = FlatStyle.Flat;
-            btnThem.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnThem.Font = new Font("Tahoma", 16F);
             btnThem.Location = new Point(21, 313);
             btnThem.Margin = new Padding(4, 3, 4, 3);
             btnThem.Name = "btnThem";
@@ -267,42 +265,32 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 16F);
-            label3.Location = new Point(44, 233);
+            label3.Font = new Font("Tahoma", 16F);
+            label3.Location = new Point(21, 168);
             label3.Name = "label3";
-            label3.Size = new Size(89, 30);
+            label3.Size = new Size(97, 27);
             label3.TabIndex = 3;
             label3.Text = "Vai Trò :";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 16F);
-            label2.Location = new Point(44, 167);
+            label2.Font = new Font("Tahoma", 16F);
+            label2.Location = new Point(21, 102);
             label2.Name = "label2";
-            label2.Size = new Size(93, 30);
+            label2.Size = new Size(98, 27);
             label2.TabIndex = 2;
             label2.Text = "Họ Tên :";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 16F);
-            label1.Location = new Point(44, 107);
+            label1.Font = new Font("Tahoma", 16F);
+            label1.Location = new Point(21, 42);
             label1.Name = "label1";
-            label1.Size = new Size(157, 30);
+            label1.Size = new Size(169, 27);
             label1.TabIndex = 1;
             label1.Text = "Tên Tài Khoản :";
-            // 
-            // lblTaiKhoan
-            // 
-            lblTaiKhoan.AutoSize = true;
-            lblTaiKhoan.Font = new Font("Segoe UI", 16F);
-            lblTaiKhoan.Location = new Point(157, 50);
-            lblTaiKhoan.Name = "lblTaiKhoan";
-            lblTaiKhoan.Size = new Size(106, 30);
-            lblTaiKhoan.TabIndex = 0;
-            lblTaiKhoan.Text = "Tài Khoản";
             // 
             // ucTaiKhoan
             // 
@@ -324,7 +312,6 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Panel panel1;
         private Panel panel2;
-        private Label lblTaiKhoan;
         private Label label3;
         private Label label2;
         private Label label1;

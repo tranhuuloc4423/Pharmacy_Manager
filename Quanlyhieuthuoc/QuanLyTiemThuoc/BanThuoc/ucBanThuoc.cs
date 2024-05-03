@@ -26,14 +26,14 @@ namespace Quanlyhieuthuoc.BanThuoc
             hoaDonManager = new HoaDonManager();
             thuocManager = new ThuocManager();
             error = "";
-            hienThiDanhSachThuoc();
+            hienThiDanhSachKhoThuoc();
             lblNguoiBan.Text = CauHinhHeThong.TenDayDu;
         }
 
-        private void hienThiDanhSachThuoc()
+        private void hienThiDanhSachKhoThuoc()
         {
             DataTable data = new DataTable();
-            data = thuocManager.HienThiDanhSach(ref error);
+            data = thuocManager.HienThiDanhSachKhoThuoc(ref error);
             if (data == null)
             {
                 MessageBox.Show(error);
@@ -44,9 +44,9 @@ namespace Quanlyhieuthuoc.BanThuoc
                 if (dgThuoc.Rows.Count > 0)
                 {
                     thuocSelected = dgThuoc.Rows[0];
-                    lblTenThuoc.Text = thuocSelected.Cells["TenThuoc"].Value.ToString();
-                    lblLoaiThuoc.Text = thuocSelected.Cells["TenLoaiThuoc"].Value.ToString();
-                    lblGiaBan.Text = thuocSelected.Cells["GiaBan"].Value.ToString();
+                    //lblTenThuoc.Text = thuocSelected.Cells["TenThuoc"].Value.ToString();
+                    //lblLoaiThuoc.Text = thuocSelected.Cells["TenLoaiThuoc"].Value.ToString();
+                    //lblGiaBan.Text = thuocSelected.Cells["GiaBan"].Value.ToString();
                 }
             }
         }
@@ -88,9 +88,26 @@ namespace Quanlyhieuthuoc.BanThuoc
             string maThuoc = thuocSelected.Cells["MaThuoc"].Value.ToString();
             string tenThuoc = thuocSelected.Cells["TenThuoc"].Value.ToString();
             string loaiThuoc = thuocSelected.Cells["TenLoaiThuoc"].Value.ToString();
+            int soLuongTonKho = Convert.ToInt32(thuocSelected.Cells["SoLuongTonKho"].Value);
             int soLuong = Convert.ToInt32(nudSoLuong.Value);
             int giaBan = Convert.ToInt32(thuocSelected.Cells["GiaBan"].Value);
             int thanhTien = soLuong * giaBan;
+            MessageBox.Show(soLuongTonKho.ToString());
+
+            foreach (DataGridViewRow row in dgCTHD.Rows)
+            {
+                if (row.Cells["MaThuocCTHD"].Value != null && row.Cells["MaThuocCTHD"].Value.ToString() == maThuoc)
+                {
+                    MessageBox.Show("Thuốc này đã được thêm vào chi tiết hóa đơn!");
+                    return;
+                }
+            }
+
+            if (soLuong > soLuongTonKho)
+            {
+                MessageBox.Show("Số lượng tồn kho không đủ cung cấp!");
+                return;
+            }
             
 
             dgCTHD.Rows.Add(maThuoc, tenThuoc, soLuong.ToString(), giaBan.ToString(), thanhTien.ToString());
@@ -100,11 +117,6 @@ namespace Quanlyhieuthuoc.BanThuoc
             lblGiaBan.Text = "";
             nudSoLuong.Value = 0;
             CapNhatTongTien();
-        }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnGiam_Click(object sender, EventArgs e)

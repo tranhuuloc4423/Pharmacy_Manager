@@ -55,7 +55,6 @@
             btnThem = new Button();
             label3 = new Label();
             label1 = new Label();
-            lblKhoThuoc = new Label();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgKhoThuoc).BeginInit();
@@ -209,7 +208,6 @@
             panel2.Controls.Add(btnThem);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(label1);
-            panel2.Controls.Add(lblKhoThuoc);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(735, 3);
             panel2.Name = "panel2";
@@ -219,82 +217,82 @@
             // lblTonKho
             // 
             lblTonKho.AutoSize = true;
-            lblTonKho.Font = new Font("Segoe UI", 16F);
-            lblTonKho.Location = new Point(234, 310);
+            lblTonKho.Font = new Font("Tahoma", 16F);
+            lblTonKho.Location = new Point(223, 238);
             lblTonKho.Name = "lblTonKho";
-            lblTonKho.Size = new Size(112, 30);
+            lblTonKho.Size = new Size(33, 27);
             lblTonKho.TabIndex = 25;
-            lblTonKho.Text = "Tên Thuốc";
+            lblTonKho.Text = "...";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 16F);
-            label4.Location = new Point(39, 310);
+            label4.Font = new Font("Tahoma", 16F);
+            label4.Location = new Point(18, 238);
             label4.Name = "label4";
-            label4.Size = new Size(105, 30);
+            label4.Size = new Size(108, 27);
             label4.TabIndex = 24;
             label4.Text = "Tồn Kho :";
             // 
             // lblXuatTrongThang
             // 
             lblXuatTrongThang.AutoSize = true;
-            lblXuatTrongThang.Font = new Font("Segoe UI", 16F);
-            lblXuatTrongThang.Location = new Point(234, 260);
+            lblXuatTrongThang.Font = new Font("Tahoma", 16F);
+            lblXuatTrongThang.Location = new Point(223, 188);
             lblXuatTrongThang.Name = "lblXuatTrongThang";
-            lblXuatTrongThang.Size = new Size(112, 30);
+            lblXuatTrongThang.Size = new Size(33, 27);
             lblXuatTrongThang.TabIndex = 23;
-            lblXuatTrongThang.Text = "Tên Thuốc";
+            lblXuatTrongThang.Text = "...";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 16F);
-            label7.Location = new Point(39, 260);
+            label7.Font = new Font("Tahoma", 16F);
+            label7.Location = new Point(18, 188);
             label7.Name = "label7";
-            label7.Size = new Size(195, 30);
+            label7.Size = new Size(203, 27);
             label7.TabIndex = 22;
             label7.Text = "Xuất Trong Tháng :";
             // 
             // lblNhapTrongKy
             // 
             lblNhapTrongKy.AutoSize = true;
-            lblNhapTrongKy.Font = new Font("Segoe UI", 16F);
-            lblNhapTrongKy.Location = new Point(234, 210);
+            lblNhapTrongKy.Font = new Font("Tahoma", 16F);
+            lblNhapTrongKy.Location = new Point(223, 138);
             lblNhapTrongKy.Name = "lblNhapTrongKy";
-            lblNhapTrongKy.Size = new Size(112, 30);
+            lblNhapTrongKy.Size = new Size(33, 27);
             lblNhapTrongKy.TabIndex = 21;
-            lblNhapTrongKy.Text = "Tên Thuốc";
+            lblNhapTrongKy.Text = "...";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 16F);
-            label6.Location = new Point(39, 210);
+            label6.Font = new Font("Tahoma", 16F);
+            label6.Location = new Point(18, 138);
             label6.Name = "label6";
-            label6.Size = new Size(167, 30);
+            label6.Size = new Size(173, 27);
             label6.TabIndex = 20;
             label6.Text = "Nhập Trong Kỳ :";
             // 
             // lblDauKy
             // 
             lblDauKy.AutoSize = true;
-            lblDauKy.Font = new Font("Segoe UI", 16F);
-            lblDauKy.Location = new Point(234, 160);
+            lblDauKy.Font = new Font("Tahoma", 16F);
+            lblDauKy.Location = new Point(223, 88);
             lblDauKy.Name = "lblDauKy";
-            lblDauKy.Size = new Size(112, 30);
+            lblDauKy.Size = new Size(33, 27);
             lblDauKy.TabIndex = 19;
-            lblDauKy.Text = "Tên Thuốc";
+            lblDauKy.Text = "...";
             // 
             // lblTenThuoc
             // 
             lblTenThuoc.AutoSize = true;
-            lblTenThuoc.Font = new Font("Segoe UI", 16F);
-            lblTenThuoc.Location = new Point(234, 104);
+            lblTenThuoc.Font = new Font("Tahoma", 16F);
+            lblTenThuoc.Location = new Point(223, 32);
             lblTenThuoc.Name = "lblTenThuoc";
-            lblTenThuoc.Size = new Size(112, 30);
+            lblTenThuoc.Size = new Size(33, 27);
             lblTenThuoc.TabIndex = 16;
-            lblTenThuoc.Text = "Tên Thuốc";
+            lblTenThuoc.Text = "...";
             // 
             // btnThem
             // 
@@ -305,8 +303,8 @@
             btnThem.FlatAppearance.MouseDownBackColor = Color.LightPink;
             btnThem.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnThem.FlatStyle = FlatStyle.Flat;
-            btnThem.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnThem.Location = new Point(39, 372);
+            btnThem.Font = new Font("Tahoma", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnThem.Location = new Point(27, 310);
             btnThem.Margin = new Padding(4, 3, 4, 3);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(164, 44);
@@ -318,32 +316,22 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 16F);
-            label3.Location = new Point(39, 160);
+            label3.Font = new Font("Tahoma", 16F);
+            label3.Location = new Point(18, 88);
             label3.Name = "label3";
-            label3.Size = new Size(91, 30);
+            label3.Size = new Size(97, 27);
             label3.TabIndex = 13;
             label3.Text = "Đầu Kỳ :";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 16F);
-            label1.Location = new Point(39, 104);
+            label1.Font = new Font("Tahoma", 16F);
+            label1.Location = new Point(18, 32);
             label1.Name = "label1";
-            label1.Size = new Size(123, 30);
+            label1.Size = new Size(130, 27);
             label1.TabIndex = 10;
             label1.Text = "Tên Thuốc :";
-            // 
-            // lblKhoThuoc
-            // 
-            lblKhoThuoc.AutoSize = true;
-            lblKhoThuoc.Font = new Font("Segoe UI", 16F);
-            lblKhoThuoc.Location = new Point(170, 41);
-            lblKhoThuoc.Name = "lblKhoThuoc";
-            lblKhoThuoc.Size = new Size(116, 30);
-            lblKhoThuoc.TabIndex = 9;
-            lblKhoThuoc.Text = "Kho Thuốc";
             // 
             // ucKho
             // 
@@ -374,7 +362,6 @@
         private Button btnThem;
         private Label label3;
         private Label label1;
-        private Label lblKhoThuoc;
         private DataGridViewTextBoxColumn Thang;
         private DataGridViewTextBoxColumn Nam;
         private DataGridViewTextBoxColumn TenThuoc;

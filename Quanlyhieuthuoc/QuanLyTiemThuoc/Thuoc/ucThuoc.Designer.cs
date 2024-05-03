@@ -36,11 +36,6 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
             dgThuoc = new DataGridView();
-            MaThuoc = new DataGridViewTextBoxColumn();
-            TenLoaiThuoc = new DataGridViewTextBoxColumn();
-            TenThuoc = new DataGridViewTextBoxColumn();
-            DonViTinh = new DataGridViewTextBoxColumn();
-            GiaBan = new DataGridViewTextBoxColumn();
             panel2 = new Panel();
             lblMaThuoc = new Label();
             label5 = new Label();
@@ -56,6 +51,11 @@
             label2 = new Label();
             label1 = new Label();
             lblThuoc = new Label();
+            MaThuoc = new DataGridViewTextBoxColumn();
+            TenThuoc = new DataGridViewTextBoxColumn();
+            TenLoaiThuoc = new DataGridViewTextBoxColumn();
+            DonViTinh = new DataGridViewTextBoxColumn();
+            GiaBan = new DataGridViewTextBoxColumn();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgThuoc).BeginInit();
@@ -106,7 +106,7 @@
             dgThuoc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgThuoc.ColumnHeadersHeight = 40;
             dgThuoc.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dgThuoc.Columns.AddRange(new DataGridViewColumn[] { MaThuoc, TenLoaiThuoc, TenThuoc, DonViTinh, GiaBan });
+            dgThuoc.Columns.AddRange(new DataGridViewColumn[] { MaThuoc, TenThuoc, TenLoaiThuoc, DonViTinh, GiaBan });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = SystemColors.Window;
             dataGridViewCellStyle3.Font = new Font("Tahoma", 14F);
@@ -138,46 +138,6 @@
             dgThuoc.Size = new Size(731, 545);
             dgThuoc.TabIndex = 1;
             dgThuoc.CellClick += dgThuoc_CellClick;
-            // 
-            // MaThuoc
-            // 
-            MaThuoc.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            MaThuoc.DataPropertyName = "MaThuoc";
-            MaThuoc.HeaderText = "Mã Thuốc";
-            MaThuoc.Name = "MaThuoc";
-            MaThuoc.ReadOnly = true;
-            // 
-            // TenLoaiThuoc
-            // 
-            TenLoaiThuoc.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            TenLoaiThuoc.DataPropertyName = "TenLoaiThuoc";
-            TenLoaiThuoc.HeaderText = "Tên Loại Thuốc";
-            TenLoaiThuoc.Name = "TenLoaiThuoc";
-            TenLoaiThuoc.ReadOnly = true;
-            // 
-            // TenThuoc
-            // 
-            TenThuoc.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            TenThuoc.DataPropertyName = "TenThuoc";
-            TenThuoc.HeaderText = "Tên Thuốc";
-            TenThuoc.Name = "TenThuoc";
-            TenThuoc.ReadOnly = true;
-            // 
-            // DonViTinh
-            // 
-            DonViTinh.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            DonViTinh.DataPropertyName = "DonViTinh";
-            DonViTinh.HeaderText = "Đơn Vị Tính";
-            DonViTinh.Name = "DonViTinh";
-            DonViTinh.ReadOnly = true;
-            // 
-            // GiaBan
-            // 
-            GiaBan.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            GiaBan.DataPropertyName = "GiaBan";
-            GiaBan.HeaderText = "Giá Bán";
-            GiaBan.Name = "GiaBan";
-            GiaBan.ReadOnly = true;
             // 
             // panel2
             // 
@@ -370,6 +330,46 @@
             lblThuoc.TabIndex = 9;
             lblThuoc.Text = "Thuốc";
             // 
+            // MaThuoc
+            // 
+            MaThuoc.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            MaThuoc.DataPropertyName = "MaThuoc";
+            MaThuoc.HeaderText = "Mã Thuốc";
+            MaThuoc.Name = "MaThuoc";
+            MaThuoc.ReadOnly = true;
+            // 
+            // TenThuoc
+            // 
+            TenThuoc.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            TenThuoc.DataPropertyName = "TenThuoc";
+            TenThuoc.HeaderText = "Tên Thuốc";
+            TenThuoc.Name = "TenThuoc";
+            TenThuoc.ReadOnly = true;
+            // 
+            // TenLoaiThuoc
+            // 
+            TenLoaiThuoc.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            TenLoaiThuoc.DataPropertyName = "TenLoaiThuoc";
+            TenLoaiThuoc.HeaderText = "Tên Loại Thuốc";
+            TenLoaiThuoc.Name = "TenLoaiThuoc";
+            TenLoaiThuoc.ReadOnly = true;
+            // 
+            // DonViTinh
+            // 
+            DonViTinh.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            DonViTinh.DataPropertyName = "DonViTinh";
+            DonViTinh.HeaderText = "Đơn Vị Tính";
+            DonViTinh.Name = "DonViTinh";
+            DonViTinh.ReadOnly = true;
+            // 
+            // GiaBan
+            // 
+            GiaBan.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            GiaBan.DataPropertyName = "GiaBan";
+            GiaBan.HeaderText = "Giá Bán";
+            GiaBan.Name = "GiaBan";
+            GiaBan.ReadOnly = true;
+            // 
             // ucThuoc
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -404,12 +404,12 @@
         private Label label6;
         private Label lblDonViTinh;
         private DataGridView dgThuoc;
-        private DataGridViewTextBoxColumn MaThuoc;
-        private DataGridViewTextBoxColumn TenLoaiThuoc;
-        private DataGridViewTextBoxColumn TenThuoc;
-        private DataGridViewTextBoxColumn DonViTinh;
-        private DataGridViewTextBoxColumn GiaBan;
         private Label lblMaThuoc;
         private Label label5;
+        private DataGridViewTextBoxColumn MaThuoc;
+        private DataGridViewTextBoxColumn TenThuoc;
+        private DataGridViewTextBoxColumn TenLoaiThuoc;
+        private DataGridViewTextBoxColumn DonViTinh;
+        private DataGridViewTextBoxColumn GiaBan;
     }
 }

@@ -57,7 +57,7 @@ namespace Quanlyhieuthuoc.TaiKhoan
                 if (dgTaiKhoan.Rows.Count > 0)
                 {
                     DataGridViewRow rowselected = dgTaiKhoan.Rows[0];
-                    lblTaiKhoan.Text = rowselected.Cells["TenTaiKhoan"].Value.ToString();
+                    lblTenTaiKhoan.Text = rowselected.Cells["TenTaiKhoan"].Value.ToString();
                     lblHoTen.Text = rowselected.Cells["HoTen"].Value.ToString();
                     cbQuyen.Text = rowselected.Cells["MoTa"].Value.ToString();
                 }

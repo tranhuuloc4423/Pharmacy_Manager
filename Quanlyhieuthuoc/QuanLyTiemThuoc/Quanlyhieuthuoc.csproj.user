@@ -7,6 +7,9 @@
     <Compile Update="BanThuoc\ucBanThuoc.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Hoadon\InChiTietHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="KhachHang\SuaKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +60,9 @@
     </Compile>
     <Compile Update="Thuoc\ThemThuoc.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TrangChu\ucTrangChu.cs">
+      <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
 </Project>

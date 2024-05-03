@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dangnhap));
             pictureBox3 = new PictureBox();
             label1 = new Label();
             txtDangNhap = new TextBox();
@@ -43,7 +42,7 @@
             // pictureBox3
             // 
             pictureBox3.Dock = DockStyle.Fill;
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Image = Properties.Resources.login_image;
             pictureBox3.Location = new Point(0, 0);
             pictureBox3.Margin = new Padding(4, 3, 4, 3);
             pictureBox3.Name = "pictureBox3";
@@ -55,10 +54,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = Color.White;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.LightPink;
-            label1.Location = new Point(164, 125);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(159, 65);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(219, 37);
@@ -133,7 +132,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = Color.White;
+            label2.BackColor = Color.Transparent;
             label2.Font = new Font("Microsoft Sans Serif", 16F);
             label2.ForeColor = Color.Black;
             label2.Location = new Point(66, 202);
@@ -146,7 +145,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.BackColor = Color.White;
+            label3.BackColor = Color.Transparent;
             label3.Font = new Font("Microsoft Sans Serif", 16F);
             label3.ForeColor = Color.Black;
             label3.Location = new Point(66, 288);

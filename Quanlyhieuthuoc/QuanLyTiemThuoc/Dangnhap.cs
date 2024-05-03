@@ -55,7 +55,7 @@ namespace Quanlyhieuthuoc
                 return;
             }
             var result = manager.KiemTraDangNhap(tenTaiKhoan, matKhau, ref error);
-            if(result != null && result.Rows.Count > 0)
+            if (result != null && result.Rows.Count > 0)
             {
                 MessageBox.Show("Dang nhap thanh cong, ten nguoi dung la: " + result.Rows[0]["HoTen"].ToString());
                 CauHinhHeThong.TenDangNhap = tenTaiKhoan;
@@ -63,52 +63,12 @@ namespace Quanlyhieuthuoc
                 Main frm = new Main(result.Rows[0]["HoTen"].ToString());
                 frm.Show();
                 this.Hide();
-            } else
+            }
+            else
             {
                 MessageBox.Show("Loi tai khoan, dang nhap khong thanh cong");
 
             }
-            //string connectionSTR = "Data Source=ROKU\\SQLEXPRESS;Initial Catalog=Project_QLTT;Integrated Security=True";
-
-            //SqlConnection connection = null;
-
-            //try
-            //{
-            //    using (connection = new SqlConnection(connectionSTR))
-            //    {
-            //        SqlCommand command = new SqlCommand("KiemTraTaiKhoan", connection);
-            //        command.CommandText = "select VaiTro from TaiKhoan where TenTaiKhoan like @TenTaiKhoan and MatKhau like @MatKhau";
-            //        command.Parameters.AddWithValue("@MatKhau", matKhau);
-            //        command.Parameters.AddWithValue("@TenTaiKhoan", tenTaiKhoan);
-
-            //        connection.Open();
-            //        object data = command.ExecuteScalar();
-
-            //        if (data == null)
-            //        {
-            //            MessageBox.Show("Loi tai khoan, dang nhap khong thanh cong");
-            //        }
-            //        else
-            //        {
-            //            //MessageBox.Show("Dan nhap thanh cong, ten nguoi dang la: "+data.ToString());
-            //            CauHinhHeThong.TenDangNhap = txtDangNhap.Text;
-            //            CauHinhHeThong.TenDayDu = data.ToString();
-            //            Main frm = new Main(data.ToString());
-            //            frm.Show();
-            //            this.Hide();
-            //        }
-            //    }
-
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Loi " + ex.Message);
-            //    throw;
-            //}
-            //finally
-            //{
-            //    connection.Close();
-            //}
         }
     }
 }

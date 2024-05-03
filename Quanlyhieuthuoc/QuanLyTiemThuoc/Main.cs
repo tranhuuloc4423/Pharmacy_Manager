@@ -6,6 +6,7 @@ using Quanlyhieuthuoc.Nhacungcap;
 using Quanlyhieuthuoc.PhanLoai;
 using Quanlyhieuthuoc.TaiKhoan;
 using Quanlyhieuthuoc.Thuoc;
+using Quanlyhieuthuoc.TrangChu;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,8 +24,9 @@ namespace Quanlyhieuthuoc
         public Main(string hoTen)
         {
             InitializeComponent();
-            lblDanhMuc.Text = "Trang chủ";
             this.StartPosition = FormStartPosition.CenterScreen;
+            lblTenDayDu.Text = hoTen;
+            btnTrangChu.Click += btnTrangChu_Click;
         }
 
         void handleAddUC(UserControl uc, string title)
@@ -82,6 +84,23 @@ namespace Quanlyhieuthuoc
             ucBanThuoc uc = new ucBanThuoc();
             string title = "Bán Thuốc";
             handleAddUC(uc, title);
+        }
+
+        private void btnTrangChu_Click(object sender, EventArgs e)
+        {
+            ucTrangChu uc = new ucTrangChu();
+            string title = "";
+            handleAddUC(uc, title);
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDoiThongTin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

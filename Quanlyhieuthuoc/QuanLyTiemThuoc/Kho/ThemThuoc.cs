@@ -28,7 +28,7 @@ namespace Quanlyhieuthuoc.Kho
         private void hienThiDanhSach()
         {
             DataTable data = new DataTable();
-            data = manager.HienThiDanhSach(ref error);
+            data = manager.HienThiDanhSachThuoc(ref error);
             if (data == null)
             {
                 MessageBox.Show(error);
