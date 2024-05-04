@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\Quanlyhieuthuoc.csproj": {}
+    "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\Quanlyhieuthuoc.csproj": {}
   },
   "projects": {
-    "E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\BLL\\BLL.csproj": {
+    "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\BLL\\BLL.csproj",
+        "projectUniqueName": "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\BLL\\BLL.csproj",
-        "packagesPath": "C:\\Users\\TGC\\.nuget\\packages\\",
-        "outputPath": "E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\BLL\\obj\\",
+        "projectPath": "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\BLL\\BLL.csproj",
+        "packagesPath": "C:\\Users\\LHUser\\.nuget\\packages\\",
+        "outputPath": "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\BLL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\TGC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\LHUser\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,15 +22,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\DAL.csproj": {
-                "projectPath": "E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\DAL.csproj"
+              "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\DAL.csproj": {
+                "projectPath": "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\DAL.csproj"
               }
             }
           }
@@ -75,25 +70,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\DAL.csproj": {
+    "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\DAL.csproj",
+        "projectUniqueName": "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\TGC\\.nuget\\packages\\",
-        "outputPath": "E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\obj\\",
+        "projectPath": "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\LHUser\\.nuget\\packages\\",
+        "outputPath": "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\TGC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\LHUser\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -101,7 +92,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -146,25 +136,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\Quanlyhieuthuoc.csproj": {
+    "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\Quanlyhieuthuoc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\Quanlyhieuthuoc.csproj",
+        "projectUniqueName": "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\Quanlyhieuthuoc.csproj",
         "projectName": "Quanlyhieuthuoc",
-        "projectPath": "E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\Quanlyhieuthuoc.csproj",
-        "packagesPath": "C:\\Users\\TGC\\.nuget\\packages\\",
-        "outputPath": "E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\obj\\",
+        "projectPath": "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\Quanlyhieuthuoc.csproj",
+        "packagesPath": "C:\\Users\\LHUser\\.nuget\\packages\\",
+        "outputPath": "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\TGC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\LHUser\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -172,15 +158,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\BLL\\BLL.csproj": {
-                "projectPath": "E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\BLL\\BLL.csproj"
+              "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\BLL\\BLL.csproj": {
+                "projectPath": "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\BLL\\BLL.csproj"
               }
             }
           }
@@ -218,7 +203,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

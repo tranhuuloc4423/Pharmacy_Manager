@@ -7,6 +7,9 @@
     <Compile Update="BanThuoc\ucBanThuoc.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="DoiThongTin\DoiThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Hoadon\InChiTietHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>

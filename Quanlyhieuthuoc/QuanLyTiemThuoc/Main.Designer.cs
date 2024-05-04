@@ -65,11 +65,12 @@
             tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 2;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 80F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(1359, 748);
+            tableLayoutPanel1.Size = new Size(1553, 997);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -80,16 +81,17 @@
             panel1.Controls.Add(lblTrangChu);
             panel1.Controls.Add(lblDanhMuc);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(3, 3);
+            panel1.Location = new Point(3, 4);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1353, 54);
+            panel1.Size = new Size(1547, 72);
             panel1.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 16F);
-            label1.Location = new Point(1016, 10);
+            label1.Location = new Point(1161, 13);
             label1.Name = "label1";
             label1.Size = new Size(99, 30);
             label1.TabIndex = 3;
@@ -99,7 +101,7 @@
             // 
             lblTenDayDu.AutoSize = true;
             lblTenDayDu.Font = new Font("Segoe UI", 16F);
-            lblTenDayDu.Location = new Point(1138, 10);
+            lblTenDayDu.Location = new Point(1301, 13);
             lblTenDayDu.Name = "lblTenDayDu";
             lblTenDayDu.Size = new Size(71, 30);
             lblTenDayDu.TabIndex = 2;
@@ -109,7 +111,7 @@
             // 
             lblTrangChu.AutoSize = true;
             lblTrangChu.Font = new Font("Segoe UI", 16F);
-            lblTrangChu.Location = new Point(98, 10);
+            lblTrangChu.Location = new Point(112, 13);
             lblTrangChu.Name = "lblTrangChu";
             lblTrangChu.Size = new Size(132, 30);
             lblTrangChu.TabIndex = 1;
@@ -119,7 +121,7 @@
             // 
             lblDanhMuc.AutoSize = true;
             lblDanhMuc.Font = new Font("Segoe UI", 16F);
-            lblDanhMuc.Location = new Point(224, 10);
+            lblDanhMuc.Location = new Point(256, 13);
             lblDanhMuc.Name = "lblDanhMuc";
             lblDanhMuc.Size = new Size(71, 30);
             lblDanhMuc.TabIndex = 0;
@@ -128,25 +130,27 @@
             // tableLayoutPanel2
             // 
             tableLayoutPanel2.ColumnCount = 2;
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 250F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 286F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel2.Controls.Add(pnMain, 1, 0);
             tableLayoutPanel2.Controls.Add(tableLayoutPanel3, 0, 0);
             tableLayoutPanel2.Dock = DockStyle.Fill;
-            tableLayoutPanel2.Location = new Point(3, 63);
+            tableLayoutPanel2.Location = new Point(3, 84);
+            tableLayoutPanel2.Margin = new Padding(3, 4, 3, 4);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Size = new Size(1353, 682);
+            tableLayoutPanel2.Size = new Size(1547, 909);
             tableLayoutPanel2.TabIndex = 1;
             // 
             // pnMain
             // 
             pnMain.BorderStyle = BorderStyle.FixedSingle;
             pnMain.Dock = DockStyle.Fill;
-            pnMain.Location = new Point(253, 3);
+            pnMain.Location = new Point(289, 4);
+            pnMain.Margin = new Padding(3, 4, 3, 4);
             pnMain.Name = "pnMain";
-            pnMain.Size = new Size(1097, 676);
+            pnMain.Size = new Size(1255, 901);
             pnMain.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -156,12 +160,13 @@
             tableLayoutPanel3.Controls.Add(panel2, 0, 0);
             tableLayoutPanel3.Controls.Add(panel3, 0, 1);
             tableLayoutPanel3.Dock = DockStyle.Fill;
-            tableLayoutPanel3.Location = new Point(3, 3);
+            tableLayoutPanel3.Location = new Point(3, 4);
+            tableLayoutPanel3.Margin = new Padding(3, 4, 3, 4);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 2;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 140F));
-            tableLayoutPanel3.Size = new Size(244, 676);
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 187F));
+            tableLayoutPanel3.Size = new Size(280, 901);
             tableLayoutPanel3.TabIndex = 1;
             // 
             // panel2
@@ -177,9 +182,10 @@
             panel2.Controls.Add(btnThuoc);
             panel2.Controls.Add(btnTrangChu);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(3, 3);
+            panel2.Location = new Point(3, 4);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(238, 530);
+            panel2.Size = new Size(274, 706);
             panel2.TabIndex = 0;
             // 
             // btnTaiKhoan
@@ -191,11 +197,11 @@
             btnTaiKhoan.FlatAppearance.MouseDownBackColor = Color.LightPink;
             btnTaiKhoan.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnTaiKhoan.FlatStyle = FlatStyle.Flat;
-            btnTaiKhoan.Font = new Font("Microsoft Sans Serif", 14F);
-            btnTaiKhoan.Location = new Point(70, 450);
-            btnTaiKhoan.Margin = new Padding(4, 3, 4, 3);
+            btnTaiKhoan.Font = new Font("Tahoma", 14F);
+            btnTaiKhoan.Location = new Point(80, 600);
+            btnTaiKhoan.Margin = new Padding(5, 4, 5, 4);
             btnTaiKhoan.Name = "btnTaiKhoan";
-            btnTaiKhoan.Size = new Size(153, 38);
+            btnTaiKhoan.Size = new Size(175, 51);
             btnTaiKhoan.TabIndex = 13;
             btnTaiKhoan.Text = "Tài Khoản";
             btnTaiKhoan.UseVisualStyleBackColor = false;
@@ -210,11 +216,11 @@
             HoaDon.FlatAppearance.MouseDownBackColor = Color.LightPink;
             HoaDon.FlatAppearance.MouseOverBackColor = Color.LightPink;
             HoaDon.FlatStyle = FlatStyle.Flat;
-            HoaDon.Font = new Font("Microsoft Sans Serif", 14F);
-            HoaDon.Location = new Point(70, 393);
-            HoaDon.Margin = new Padding(4, 3, 4, 3);
+            HoaDon.Font = new Font("Tahoma", 14F);
+            HoaDon.Location = new Point(80, 524);
+            HoaDon.Margin = new Padding(5, 4, 5, 4);
             HoaDon.Name = "HoaDon";
-            HoaDon.Size = new Size(153, 38);
+            HoaDon.Size = new Size(175, 51);
             HoaDon.TabIndex = 12;
             HoaDon.Text = "Hoá Đơn";
             HoaDon.UseVisualStyleBackColor = false;
@@ -229,11 +235,11 @@
             btnPhanLoai.FlatAppearance.MouseDownBackColor = Color.LightPink;
             btnPhanLoai.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnPhanLoai.FlatStyle = FlatStyle.Flat;
-            btnPhanLoai.Font = new Font("Microsoft Sans Serif", 14F);
-            btnPhanLoai.Location = new Point(70, 330);
-            btnPhanLoai.Margin = new Padding(4, 3, 4, 3);
+            btnPhanLoai.Font = new Font("Tahoma", 14F);
+            btnPhanLoai.Location = new Point(80, 440);
+            btnPhanLoai.Margin = new Padding(5, 4, 5, 4);
             btnPhanLoai.Name = "btnPhanLoai";
-            btnPhanLoai.Size = new Size(153, 38);
+            btnPhanLoai.Size = new Size(175, 51);
             btnPhanLoai.TabIndex = 11;
             btnPhanLoai.Text = "Phân Loại";
             btnPhanLoai.UseVisualStyleBackColor = false;
@@ -248,11 +254,11 @@
             btnBanThuoc.FlatAppearance.MouseDownBackColor = Color.LightPink;
             btnBanThuoc.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnBanThuoc.FlatStyle = FlatStyle.Flat;
-            btnBanThuoc.Font = new Font("Microsoft Sans Serif", 14F);
-            btnBanThuoc.Location = new Point(70, 264);
-            btnBanThuoc.Margin = new Padding(4, 3, 4, 3);
+            btnBanThuoc.Font = new Font("Tahoma", 14F);
+            btnBanThuoc.Location = new Point(80, 352);
+            btnBanThuoc.Margin = new Padding(5, 4, 5, 4);
             btnBanThuoc.Name = "btnBanThuoc";
-            btnBanThuoc.Size = new Size(153, 38);
+            btnBanThuoc.Size = new Size(175, 51);
             btnBanThuoc.TabIndex = 10;
             btnBanThuoc.Text = "Bán Thuốc";
             btnBanThuoc.UseVisualStyleBackColor = false;
@@ -267,11 +273,11 @@
             btnKhachHang.FlatAppearance.MouseDownBackColor = Color.LightPink;
             btnKhachHang.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnKhachHang.FlatStyle = FlatStyle.Flat;
-            btnKhachHang.Font = new Font("Microsoft Sans Serif", 14F);
-            btnKhachHang.Location = new Point(70, 198);
-            btnKhachHang.Margin = new Padding(4, 3, 4, 3);
+            btnKhachHang.Font = new Font("Tahoma", 14F);
+            btnKhachHang.Location = new Point(80, 264);
+            btnKhachHang.Margin = new Padding(5, 4, 5, 4);
             btnKhachHang.Name = "btnKhachHang";
-            btnKhachHang.Size = new Size(153, 38);
+            btnKhachHang.Size = new Size(175, 51);
             btnKhachHang.TabIndex = 9;
             btnKhachHang.Text = "Khách Hàng";
             btnKhachHang.UseVisualStyleBackColor = false;
@@ -286,11 +292,11 @@
             btnKho.FlatAppearance.MouseDownBackColor = Color.LightPink;
             btnKho.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnKho.FlatStyle = FlatStyle.Flat;
-            btnKho.Font = new Font("Microsoft Sans Serif", 14F);
-            btnKho.Location = new Point(70, 139);
-            btnKho.Margin = new Padding(4, 3, 4, 3);
+            btnKho.Font = new Font("Tahoma", 14F);
+            btnKho.Location = new Point(80, 185);
+            btnKho.Margin = new Padding(5, 4, 5, 4);
             btnKho.Name = "btnKho";
-            btnKho.Size = new Size(153, 38);
+            btnKho.Size = new Size(175, 51);
             btnKho.TabIndex = 8;
             btnKho.Text = "Kho";
             btnKho.UseVisualStyleBackColor = false;
@@ -305,11 +311,11 @@
             btnThuoc.FlatAppearance.MouseDownBackColor = Color.LightPink;
             btnThuoc.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnThuoc.FlatStyle = FlatStyle.Flat;
-            btnThuoc.Font = new Font("Microsoft Sans Serif", 14F);
-            btnThuoc.Location = new Point(70, 79);
-            btnThuoc.Margin = new Padding(4, 3, 4, 3);
+            btnThuoc.Font = new Font("Tahoma", 14F);
+            btnThuoc.Location = new Point(80, 105);
+            btnThuoc.Margin = new Padding(5, 4, 5, 4);
             btnThuoc.Name = "btnThuoc";
-            btnThuoc.Size = new Size(153, 38);
+            btnThuoc.Size = new Size(175, 51);
             btnThuoc.TabIndex = 7;
             btnThuoc.Text = "Thuốc";
             btnThuoc.UseVisualStyleBackColor = false;
@@ -324,11 +330,11 @@
             btnTrangChu.FlatAppearance.MouseDownBackColor = Color.LightPink;
             btnTrangChu.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnTrangChu.FlatStyle = FlatStyle.Flat;
-            btnTrangChu.Font = new Font("Microsoft Sans Serif", 14F);
-            btnTrangChu.Location = new Point(70, 15);
-            btnTrangChu.Margin = new Padding(4, 3, 4, 3);
+            btnTrangChu.Font = new Font("Tahoma", 14F);
+            btnTrangChu.Location = new Point(80, 20);
+            btnTrangChu.Margin = new Padding(5, 4, 5, 4);
             btnTrangChu.Name = "btnTrangChu";
-            btnTrangChu.Size = new Size(153, 38);
+            btnTrangChu.Size = new Size(175, 51);
             btnTrangChu.TabIndex = 6;
             btnTrangChu.Text = "Trang Chủ";
             btnTrangChu.UseVisualStyleBackColor = false;
@@ -341,9 +347,10 @@
             panel3.Controls.Add(btnDangXuat);
             panel3.Controls.Add(btnDoiThongTin);
             panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(3, 539);
+            panel3.Location = new Point(3, 718);
+            panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(238, 134);
+            panel3.Size = new Size(274, 179);
             panel3.TabIndex = 1;
             // 
             // btnDangXuat
@@ -356,10 +363,10 @@
             btnDangXuat.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnDangXuat.FlatStyle = FlatStyle.Flat;
             btnDangXuat.Font = new Font("Microsoft Sans Serif", 14F);
-            btnDangXuat.Location = new Point(70, 75);
-            btnDangXuat.Margin = new Padding(4, 3, 4, 3);
+            btnDangXuat.Location = new Point(80, 100);
+            btnDangXuat.Margin = new Padding(5, 4, 5, 4);
             btnDangXuat.Name = "btnDangXuat";
-            btnDangXuat.Size = new Size(153, 38);
+            btnDangXuat.Size = new Size(175, 51);
             btnDangXuat.TabIndex = 15;
             btnDangXuat.Text = "Đăng Xuất";
             btnDangXuat.UseVisualStyleBackColor = false;
@@ -375,10 +382,10 @@
             btnDoiThongTin.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnDoiThongTin.FlatStyle = FlatStyle.Flat;
             btnDoiThongTin.Font = new Font("Microsoft Sans Serif", 14F);
-            btnDoiThongTin.Location = new Point(70, 20);
-            btnDoiThongTin.Margin = new Padding(4, 3, 4, 3);
+            btnDoiThongTin.Location = new Point(80, 27);
+            btnDoiThongTin.Margin = new Padding(5, 4, 5, 4);
             btnDoiThongTin.Name = "btnDoiThongTin";
-            btnDoiThongTin.Size = new Size(153, 38);
+            btnDoiThongTin.Size = new Size(175, 51);
             btnDoiThongTin.TabIndex = 14;
             btnDoiThongTin.Text = "Đổi Thông Tin";
             btnDoiThongTin.UseVisualStyleBackColor = false;
@@ -386,11 +393,11 @@
             // 
             // Main
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1359, 748);
+            ClientSize = new Size(1553, 997);
             Controls.Add(tableLayoutPanel1);
-            Margin = new Padding(4, 3, 4, 3);
+            Margin = new Padding(5, 4, 5, 4);
             Name = "Main";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Main";

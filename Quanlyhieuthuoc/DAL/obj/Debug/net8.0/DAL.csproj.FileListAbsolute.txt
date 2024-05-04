@@ -24,3 +24,16 @@ C:\Users\Asus\Downloads\pharmacy\Pharmacy_Manager\Quanlyhieuthuoc\DAL\obj\Debug\
 C:\Users\Asus\Downloads\pharmacy\Pharmacy_Manager\Quanlyhieuthuoc\DAL\obj\Debug\net8.0\refint\DAL.dll
 C:\Users\Asus\Downloads\pharmacy\Pharmacy_Manager\Quanlyhieuthuoc\DAL\obj\Debug\net8.0\DAL.pdb
 C:\Users\Asus\Downloads\pharmacy\Pharmacy_Manager\Quanlyhieuthuoc\DAL\obj\Debug\net8.0\ref\DAL.dll
+D:\test\Pharmacy_Manager\Quanlyhieuthuoc\DAL\bin\Debug\net8.0\DAL.deps.json
+D:\test\Pharmacy_Manager\Quanlyhieuthuoc\DAL\bin\Debug\net8.0\DAL.dll
+D:\test\Pharmacy_Manager\Quanlyhieuthuoc\DAL\bin\Debug\net8.0\DAL.pdb
+D:\test\Pharmacy_Manager\Quanlyhieuthuoc\DAL\obj\Debug\net8.0\DAL.csproj.AssemblyReference.cache
+D:\test\Pharmacy_Manager\Quanlyhieuthuoc\DAL\obj\Debug\net8.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\test\Pharmacy_Manager\Quanlyhieuthuoc\DAL\obj\Debug\net8.0\DAL.AssemblyInfoInputs.cache
+D:\test\Pharmacy_Manager\Quanlyhieuthuoc\DAL\obj\Debug\net8.0\DAL.AssemblyInfo.cs
+D:\test\Pharmacy_Manager\Quanlyhieuthuoc\DAL\obj\Debug\net8.0\DAL.csproj.CoreCompileInputs.cache
+D:\test\Pharmacy_Manager\Quanlyhieuthuoc\DAL\obj\Debug\net8.0\DAL.sourcelink.json
+D:\test\Pharmacy_Manager\Quanlyhieuthuoc\DAL\obj\Debug\net8.0\DAL.dll
+D:\test\Pharmacy_Manager\Quanlyhieuthuoc\DAL\obj\Debug\net8.0\refint\DAL.dll
+D:\test\Pharmacy_Manager\Quanlyhieuthuoc\DAL\obj\Debug\net8.0\DAL.pdb
+D:\test\Pharmacy_Manager\Quanlyhieuthuoc\DAL\obj\Debug\net8.0\ref\DAL.dll
