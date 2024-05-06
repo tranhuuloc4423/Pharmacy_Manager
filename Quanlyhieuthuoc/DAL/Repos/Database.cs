@@ -17,8 +17,8 @@ namespace DLL.Repos
         {
             try
             {
-                //connectStr = "Data Source=ROKU\\SQLEXPRESS;Initial Catalog=Project_QLTT;Integrated Security=True";
-                connectStr = "Data Source=.;Initial Catalog=Project_QLTT;Integrated Security=True";
+                connectStr = "Data Source=ROKU\\SQLEXPRESS;Initial Catalog=Project_QLTT;Integrated Security=True";
+                //connectStr = "Data Source=.;Initial Catalog=Project_QLTT;Integrated Security=True";
                 connect = new SqlConnection(connectStr);
                 command = new SqlCommand();
                 command.Connection = connect;

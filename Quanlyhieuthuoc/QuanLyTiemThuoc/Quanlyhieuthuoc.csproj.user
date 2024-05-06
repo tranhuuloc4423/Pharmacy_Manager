@@ -22,23 +22,11 @@
     <Compile Update="KhachHang\ucKhachHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Kho\ThemNhaCungCap.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Kho\ThemPhieuNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Kho\ThemThuoc.cs">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Nhacungcap\SuaNCC.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Nhacungcap\ThemNCC.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Nhacungcap\ucNhaCungCap.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="PhanLoai\SuaPhanLoai.cs">
       <SubType>Form</SubType>

@@ -9,13 +9,6 @@ CREATE TABLE PhanLoai (
 );
 GO
 
-CREATE TABLE NhaCungCap (
-    MaNhaCungCap INT PRIMARY KEY IDENTITY(1,1),
-    TenNhaCungCap NVARCHAR(50) NOT NULL,
-    DiaChi NVARCHAR(50) NOT NULL
-);
-GO
-
 CREATE TABLE Thuoc (
     MaThuoc INT PRIMARY KEY IDENTITY(1,1),
     MaLoaiThuoc INT FOREIGN KEY REFERENCES PhanLoai(MaLoaiThuoc),
@@ -41,7 +34,6 @@ GO
 
 CREATE TABLE PhieuNhap (
     MaPhieuNhap INT PRIMARY KEY IDENTITY(1,1),
-    MaNhaCungCap INT FOREIGN KEY REFERENCES NhaCungCap(MaNhaCungCap),
     NgayNhap DATE,
     NguoiNhap NVARCHAR(25)
 );
@@ -135,14 +127,6 @@ VALUES (N'Hoạt chất'),
        (N'Thuốc hạ sốt');
 GO
 
-INSERT INTO NhaCungCap (TenNhaCungCap, DiaChi)
-VALUES (N'Nhà thuốc ABC', N'123 Đường ABC, Thành phố XYZ'),
-       (N'Công ty XYZ', N'456 Đường XYZ, Thành phố ABC'),
-       (N'Phân xưởng KLM', N'789 Đường KLM, Thành phố DEF'),
-       (N'Công ty Dược phẩm Traphaco', N'789 Đường ABX, Thành phố XYZ'),
-       (N'Công ty Dược phẩm DHG Pharma', N'789 Đường KLM, Thành phố DEF');
-GO
-
 INSERT INTO Thuoc (MaLoaiThuoc, TenThuoc, DonViTinh, GiaBan)
 VALUES (1, N'Paracetamol', N'Viên', 5000),
        (2, N'Amoxicillin', N'Viên', 10000),
@@ -168,7 +152,6 @@ GO
 select * from QuyenDangNhap
 select * from TaiKhoan
 select * from Thuoc
-select * from NhaCungCap
 select * from PhanLoai
 select * from ChiTietPhieuNhap
 select * from ChiTietHoaDon
@@ -179,12 +162,15 @@ select * from Thuoc
 select * from PhieuNhap
 select MaThuoc, TenThuoc from Thuoc
 
+
+
 select MaPhieuNhap, TenThuoc, SoLuong from ChiTietPhieuNhap inner join Thuoc on ChiTietPhieuNhap.MaThuoc = Thuoc.MaThuoc
 
 select Thang, Nam, TenThuoc, DauKy, NhapTrongKy, XuatTrongThang, TonKho from KhoThuoc inner join Thuoc on KhoThuoc.MaThuoc = Thuoc.MaThuoc
 
-select MaThuoc, TenLoaiThuoc, TenThuoc, DonViTinh, GiaBan
-from Thuoc inner join PhanLoai on Thuoc.MaLoaiThuoc = PhanLoai.MaLoaiThuoc
+select t.MaThuoc, t.TenThuoc, pl.TenLoaiThuoc, t.DonViTinh, t.GiaBan
+from Thuoc t
+inner join PhanLoai pl on t.MaLoaiThuoc = pl.MaLoaiThuoc
 
 select TenTaiKhoan, HoTen, MoTa from TaiKhoan inner join QuyenDangNhap on TaiKhoan.VaiTro = QuyenDangNhap.MaQuyen
 
@@ -193,3 +179,9 @@ inner join KhoThuoc on Thuoc.MaThuoc = KhoThuoc.MaThuoc
 inner join PhanLoai on PhanLoai.MaLoaiThuoc = Thuoc.MaLoaiThuoc
 
 select VaiTro, HoTen from TaiKhoan 
+
+
+-- select khi in hoá đơn
+
+select th.TenThuoc, th.DonViTinh,  cthd.SoLuong, cthd.DonGia, cthd.ThanhTien from ChiTietHoaDon cthd
+inner join Thuoc th on th.MaThuoc = cthd.MaThuoc

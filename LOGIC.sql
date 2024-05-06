@@ -137,43 +137,6 @@ BEGIN
 END
 GO
 
--- thêm nhà cung cấp
-	CREATE PROCEDURE ThemNhaCungCap
-(
-    @TenNhaCungCap NVARCHAR(50),
-    @DiaChi NVARCHAR(50)
-)
-AS
-BEGIN
-    INSERT INTO NhaCungCap (TenNhaCungCap, DiaChi)
-    VALUES (@TenNhaCungCap, @DiaChi);
-END
-GO
-
--- sửa thông tin nhà cung cấp
-CREATE PROCEDURE SuaNhaCungCap
-    @MaNhaCungCap INT,
-    @TenNhaCungCap NVARCHAR(50),
-    @DiaChi NVARCHAR(50)
-AS
-BEGIN
-    UPDATE NhaCungCap
-    SET TenNhaCungCap = @TenNhaCungCap,
-        DiaChi = @DiaChi
-    WHERE MaNhaCungCap = @MaNhaCungCap;
-END
-GO
-
--- xóa nhà cung cấp
-CREATE PROCEDURE XoaNhaCungCap
-    @MaNhaCungCap INT
-AS
-BEGIN
-    DELETE FROM NhaCungCap
-    WHERE MaNhaCungCap = @MaNhaCungCap;
-END
-GO
-
 -- thêm phân loại
 CREATE PROCEDURE ThemPhanLoai
     @TenLoaiThuoc NVARCHAR(50)
@@ -210,46 +173,52 @@ GO
 CREATE PROCEDURE ThemPhieuNhap
 (
 	@NguoiNhap NVARCHAR(25),
-	@MaNhaCungCap INT,
 	@MaPhieuNhap INT OUTPUT
 )
 AS
 BEGIN
-	INSERT INTO PhieuNhap (NgayNhap, NguoiNhap, MaNhaCungCap)
-	VALUES (GETDATE(), @NguoiNhap, @MaNhaCungCap)
+	INSERT INTO PhieuNhap (NgayNhap, NguoiNhap)
+	VALUES (GETDATE(), @NguoiNhap)
 	SET @MaPhieuNhap = SCOPE_IDENTITY()
 END
 GO
---thêm chi tiết phiếu nhập
+
 CREATE PROCEDURE ThemChiTietPhieuNhap
 (
 	@MaPhieuNhap INT,
 	@MaThuoc INT,
-	@SoLuong INT
+	@SoLuong INT,
+	@NgayNhap Date
 )
 AS
 BEGIN
-
 	DECLARE @Thang INT, @Nam INT, @TonKho INT
 
 	-- Lấy tháng và năm từ ngày nhập
-	SET @Thang = MONTH(GETDATE())
-	SET @Nam = YEAR(GETDATE())
+	
+	SET @Thang = MONTH(@NgayNhap)
+	SET @Nam = YEAR(@NgayNhap)
+
+	-- Lấy tồn kho của tháng trước cho mã thuốc tương ứng
+	SELECT @TonKho = ISNULL(TonKho, 0) 
+	FROM KhoThuoc 
+	WHERE MaThuoc = @MaThuoc AND Thang = @Thang - 1 AND Nam = @Nam
 
 	-- Kiểm tra xem đã có loại thuốc này trong bảng kho thuốc chưa
 	IF EXISTS (SELECT * FROM KhoThuoc WHERE MaThuoc = @MaThuoc AND Thang = @Thang AND Nam = @Nam)
 	BEGIN
-		-- Cập nhật số lượng nhập trong tháng và tồn kho
+		-- Cập nhật số lượng nhập trong tháng, tồn kho và đầu kỳ của tháng hiện tại
 		UPDATE KhoThuoc
-		SET NhapTrongKy = NhapTrongKy + @SoLuong,
-			TonKho = TonKho + @SoLuong
+		SET DauKy = @TonKho,
+			NhapTrongKy = NhapTrongKy + @SoLuong,
+			TonKho = @TonKho + @SoLuong
 		WHERE MaThuoc = @MaThuoc AND Thang = @Thang AND Nam = @Nam
 	END
 	ELSE
 	BEGIN
 		-- Thêm mới thông tin vào bảng kho thuốc
 		INSERT INTO KhoThuoc (Thang, Nam, MaThuoc, DauKy, NhapTrongKy, XuatTrongThang, TonKho)
-		VALUES (@Thang, @Nam, @MaThuoc, 0, @SoLuong, 0, @SoLuong)
+		VALUES (@Thang, @Nam, @MaThuoc, @TonKho, @SoLuong, 0, @TonKho + @SoLuong)
 	END
 
 	-- Thêm mới chi tiết phiếu nhập
@@ -257,6 +226,45 @@ BEGIN
 	VALUES (@MaPhieuNhap, @MaThuoc, @SoLuong)
 
 END
+------
+
+--thêm chi tiết phiếu nhập
+--CREATE PROCEDURE ThemChiTietPhieuNhap
+--(
+--	@MaPhieuNhap INT,
+--	@MaThuoc INT,
+--	@SoLuong INT
+--)
+--AS
+--BEGIN
+
+--	DECLARE @Thang INT, @Nam INT, @TonKho INT
+
+--	-- Lấy tháng và năm từ ngày nhập
+--	SET @Thang = MONTH(GETDATE())
+--	SET @Nam = YEAR(GETDATE())
+
+--	-- Kiểm tra xem đã có loại thuốc này trong bảng kho thuốc chưa
+--	IF EXISTS (SELECT * FROM KhoThuoc WHERE MaThuoc = @MaThuoc AND Thang = @Thang AND Nam = @Nam)
+--	BEGIN
+--		-- Cập nhật số lượng nhập trong tháng và tồn kho
+--		UPDATE KhoThuoc
+--		SET NhapTrongKy = NhapTrongKy + @SoLuong,
+--			TonKho = TonKho + @SoLuong
+--		WHERE MaThuoc = @MaThuoc AND Thang = @Thang AND Nam = @Nam
+--	END
+--	ELSE
+--	BEGIN
+--		-- Thêm mới thông tin vào bảng kho thuốc
+--		INSERT INTO KhoThuoc (Thang, Nam, MaThuoc, DauKy, NhapTrongKy, XuatTrongThang, TonKho)
+--		VALUES (@Thang, @Nam, @MaThuoc, 0, @SoLuong, 0, @SoLuong)
+--	END
+
+--	-- Thêm mới chi tiết phiếu nhập
+--	INSERT INTO ChiTietPhieuNhap (MaPhieuNhap, MaThuoc, SoLuong)
+--	VALUES (@MaPhieuNhap, @MaThuoc, @SoLuong)
+
+--END
 GO
 
 

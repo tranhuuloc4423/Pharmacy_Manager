@@ -164,3 +164,4 @@ D:\test\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-window
 D:\test\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-windows\Quanlyhieuthuoc.pdb
 D:\test\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-windows\Quanlyhieuthuoc.genruntimeconfig.cache
 D:\test\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-windows\ref\Quanlyhieuthuoc.dll
+E:\c#\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-windows\Quanlyhieuthuoc.DoiThongTin.DoiThongTin.resources
