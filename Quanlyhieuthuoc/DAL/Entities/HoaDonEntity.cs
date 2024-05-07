@@ -10,9 +10,9 @@ namespace DAL.Entities
     {
         public int MaHoaDon { get; set; }
         public string TenTaiKhoan { get; set; }
+        public string NgayBan { get; set; }
         public double TongTien { get; set; }
         public int MaKhachHang { get; set; }
         public int GiamGia { get; set; }
-
     }
 }

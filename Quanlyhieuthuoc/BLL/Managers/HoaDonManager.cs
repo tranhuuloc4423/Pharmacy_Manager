@@ -18,11 +18,15 @@ namespace BLL.Managers
             process = new HoaDonRepo();
         }
 
-        public DataTable HienThiDanhSach(ref string error)
+        public DataTable HienThiDanhSach(DateTime TuNgay, DateTime DenNgay, ref string error)
         {
-            return process.HienThiDanhSach(ref error);
+            return process.HienThiDanhSachHoaDon(TuNgay, DenNgay, ref error);
         }
 
+        public DataTable HienThiDanhSachChiTietHoaDon(int MaHoaDon, ref string error)
+        {
+            return process.HienThiDanhSachChiTietHoaDon(MaHoaDon, ref error);
+        }
         public int ThemHoaDon(HoaDonEntity entity, ref string error)
         {
             return process.ThemHoaDon(entity, ref error);

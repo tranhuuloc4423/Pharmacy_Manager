@@ -60,20 +60,23 @@ BEGIN
 END;
 
 /****************** XEM HOA DON CUA NGUOI BAN  ******************/
+--drop PROCEDURE XemHoaDon
 GO
 CREATE PROCEDURE XemHoaDon
 (
-  @TenTaiKhoan NVARCHAR(25)
+	@TuNgay DATETIME,
+	@DenNgay DATETIME
 )
 AS
 BEGIN
-  SELECT *
-  FROM HoaDon
-  WHERE TenTaiKhoan = @TenTaiKhoan;
+  SELECT HD.MaHoaDon, HD.TenTaiKhoan, HD.NgayBan, KH.HoTen, HD.GiamGia, HD.TongTien
+  FROM HoaDon HD
+  INNER JOIN KhachHang KH on HD.MaKhachHang = KH.MaKhachHang
+  WHERE HD.NgayBan >= @TuNgay AND HD.NgayBan <= @DenNgay
 END;
 
-/****************** XEM CHI TIET HOA DON CUA NGUOI BAN  ******************/
-
+/****************** XEM CHI TIET HOA DON CUA NGUOI BAN ******************/
+--drop  XemChiTietHoaDon
 GO
 CREATE PROCEDURE XemChiTietHoaDon
 (

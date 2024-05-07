@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\Quanlyhieuthuoc.csproj": {}
+    "C:\\Users\\Asus\\Downloads\\pharmacy\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\Quanlyhieuthuoc.csproj": {}
   },
   "projects": {
-    "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\BLL\\BLL.csproj": {
+    "C:\\Users\\Asus\\Downloads\\pharmacy\\Pharmacy_Manager\\Quanlyhieuthuoc\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\BLL\\BLL.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Downloads\\pharmacy\\Pharmacy_Manager\\Quanlyhieuthuoc\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\BLL\\BLL.csproj",
-        "packagesPath": "C:\\Users\\LHUser\\.nuget\\packages\\",
-        "outputPath": "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\BLL\\obj\\",
+        "projectPath": "C:\\Users\\Asus\\Downloads\\pharmacy\\Pharmacy_Manager\\Quanlyhieuthuoc\\BLL\\BLL.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Asus\\Downloads\\pharmacy\\Pharmacy_Manager\\Quanlyhieuthuoc\\BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LHUser\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\DAL.csproj": {
-                "projectPath": "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\DAL.csproj"
+              "C:\\Users\\Asus\\Downloads\\pharmacy\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\Asus\\Downloads\\pharmacy\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\DAL.csproj"
               }
             }
           }
@@ -70,21 +70,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\DAL.csproj": {
+    "C:\\Users\\Asus\\Downloads\\pharmacy\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Downloads\\pharmacy\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\LHUser\\.nuget\\packages\\",
-        "outputPath": "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\obj\\",
+        "projectPath": "C:\\Users\\Asus\\Downloads\\pharmacy\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Asus\\Downloads\\pharmacy\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LHUser\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -136,21 +136,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\Quanlyhieuthuoc.csproj": {
+    "C:\\Users\\Asus\\Downloads\\pharmacy\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\Quanlyhieuthuoc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\Quanlyhieuthuoc.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Downloads\\pharmacy\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\Quanlyhieuthuoc.csproj",
         "projectName": "Quanlyhieuthuoc",
-        "projectPath": "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\Quanlyhieuthuoc.csproj",
-        "packagesPath": "C:\\Users\\LHUser\\.nuget\\packages\\",
-        "outputPath": "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\obj\\",
+        "projectPath": "C:\\Users\\Asus\\Downloads\\pharmacy\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\Quanlyhieuthuoc.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Asus\\Downloads\\pharmacy\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LHUser\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -164,8 +164,8 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\BLL\\BLL.csproj": {
-                "projectPath": "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\BLL\\BLL.csproj"
+              "C:\\Users\\Asus\\Downloads\\pharmacy\\Pharmacy_Manager\\Quanlyhieuthuoc\\BLL\\BLL.csproj": {
+                "projectPath": "C:\\Users\\Asus\\Downloads\\pharmacy\\Pharmacy_Manager\\Quanlyhieuthuoc\\BLL\\BLL.csproj"
               }
             }
           }
@@ -203,7 +203,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

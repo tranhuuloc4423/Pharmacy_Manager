@@ -175,7 +175,7 @@ select * from ChiTietHoaDon
 select * from HoaDon
 select * from KhachHang
 select * from KhoThuoc
-select * from Thuoc
+
 select * from PhieuNhap
 select MaThuoc, TenThuoc from Thuoc
 
@@ -193,3 +193,29 @@ inner join KhoThuoc on Thuoc.MaThuoc = KhoThuoc.MaThuoc
 inner join PhanLoai on PhanLoai.MaLoaiThuoc = Thuoc.MaLoaiThuoc
 
 select VaiTro, HoTen from TaiKhoan 
+
+	
+
+
+INSERT INTO HoaDon ( TenTaiKhoan, NgayBan, TongTien,MaKhachHang,GiamGia)
+VALUES ( 'admin', GETDATE(), 1000, 6, 0)
+
+INSERT INTO ChiTietHoaDon ( MaHoaDon, MaThuoc, SoLuong,DonGia,ThanhTien)
+VALUES (6, 16, 9, 120, 1080),
+       (6, 3, 12, 10000, 120000),
+       (6, 12, 10, 6500, 65000),
+	   (6, 5, 3, 5, 1500)
+
+
+	   SELECT HD.MaHoaDon, HD.TenTaiKhoan, HD.NgayBan, KH.HoTen, HD.GiamGia, HD.TongTien
+  FROM HoaDon HD
+  INNER JOIN KhachHang KH on HD.MaKhachHang = KH.MaKhachHang
+  WHERE HD.NgayBan >= '02/06/2024 9:34:00 PM' AND HD.NgayBan <= GETDATE()
+
+ select * from Thuoc
+select * from ChiTietHoaDon
+
+  SELECT T.TenThuoc, T.DonViTinh, CT.SoLuong, CT.DonGia, CT.ThanhTien
+  FROM ChiTietHoaDon CT
+  INNER JOIN Thuoc T on CT.MaThuoc = T.MaThuoc
+  where CT.MaHoaDon = 3

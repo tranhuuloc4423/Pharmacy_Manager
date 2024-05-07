@@ -36,7 +36,11 @@
             btnThoat = new Button();
             label2 = new Label();
             label3 = new Label();
+            pbOpenEye = new PictureBox();
+            pbCloseEye = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbOpenEye).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbCloseEye).BeginInit();
             SuspendLayout();
             // 
             // pictureBox3
@@ -85,7 +89,6 @@
             txtMatKhau.Location = new Point(71, 320);
             txtMatKhau.Margin = new Padding(4, 3, 4, 3);
             txtMatKhau.Name = "txtMatKhau";
-            txtMatKhau.PasswordChar = '*';
             txtMatKhau.Size = new Size(381, 35);
             txtMatKhau.TabIndex = 1;
             txtMatKhau.Text = "123";
@@ -155,11 +158,35 @@
             label3.TabIndex = 9;
             label3.Text = "Mật Khẩu";
             // 
+            // pbOpenEye
+            // 
+            pbOpenEye.Image = Properties.Resources.open_eyes;
+            pbOpenEye.Location = new Point(406, 320);
+            pbOpenEye.Name = "pbOpenEye";
+            pbOpenEye.Size = new Size(47, 35);
+            pbOpenEye.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbOpenEye.TabIndex = 10;
+            pbOpenEye.TabStop = false;
+            pbOpenEye.Click += pbOpenEye_Click;
+            // 
+            // pbCloseEye
+            // 
+            pbCloseEye.Image = Properties.Resources.close_eyes;
+            pbCloseEye.Location = new Point(406, 320);
+            pbCloseEye.Name = "pbCloseEye";
+            pbCloseEye.Size = new Size(46, 35);
+            pbCloseEye.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbCloseEye.TabIndex = 11;
+            pbCloseEye.TabStop = false;
+            pbCloseEye.Click += pbCloseEye_Click;
+            // 
             // Dangnhap
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(530, 642);
+            Controls.Add(pbOpenEye);
+            Controls.Add(pbCloseEye);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(txtMatKhau);
@@ -174,6 +201,8 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbOpenEye).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbCloseEye).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -188,6 +217,8 @@
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private PictureBox pbOpenEye;
+        private PictureBox pbCloseEye;
     }
 }
 

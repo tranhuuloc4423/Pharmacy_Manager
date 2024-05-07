@@ -70,5 +70,18 @@ namespace Quanlyhieuthuoc
 
             }
         }
+        private void pbOpenEye_Click(object sender, EventArgs e)
+        {
+            pbOpenEye.Visible = false;
+            pbCloseEye.Visible = true;
+            txtMatKhau.UseSystemPasswordChar = true;
+        }
+
+        private void pbCloseEye_Click(object sender, EventArgs e)
+        {
+            pbCloseEye.Visible = false;
+            pbOpenEye.Visible = true;
+            txtMatKhau.UseSystemPasswordChar = false;
+        }
     }
 }

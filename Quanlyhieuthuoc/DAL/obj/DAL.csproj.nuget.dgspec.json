@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\DAL.csproj": {}
+    "C:\\Users\\Asus\\Downloads\\pharmacy\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\DAL.csproj": {}
   },
   "projects": {
-    "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\DAL.csproj": {
+    "C:\\Users\\Asus\\Downloads\\pharmacy\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Downloads\\pharmacy\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\LHUser\\.nuget\\packages\\",
-        "outputPath": "D:\\test\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\obj\\",
+        "projectPath": "C:\\Users\\Asus\\Downloads\\pharmacy\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Asus\\Downloads\\pharmacy\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LHUser\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -66,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

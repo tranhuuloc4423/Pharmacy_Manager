@@ -164,3 +164,7 @@ D:\test\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-window
 D:\test\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-windows\Quanlyhieuthuoc.pdb
 D:\test\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-windows\Quanlyhieuthuoc.genruntimeconfig.cache
 D:\test\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-windows\ref\Quanlyhieuthuoc.dll
+C:\Users\Asus\Downloads\pharmacy\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-windows\Quanlyhieuthuoc.DoiThongTin.DoiThongTin.resources
+C:\Users\Asus\Downloads\pharmacy\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-windows\Quanlyhieuthuoc.Hoadon.InChiTietHoaDon.resources
+C:\Users\Asus\Downloads\pharmacy\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-windows\Quanlyhieuthuoc.Properties.Resources.resources
+C:\Users\Asus\Downloads\pharmacy\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-windows\Quanlyhieuthuoc.TrangChu.ucTrangChu.resources

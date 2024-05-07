@@ -35,17 +35,23 @@
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
-            panel2 = new Panel();
-            dgThuoc = new DataGridView();
-            dtpNgayBatDau = new DateTimePicker();
-            dtpNgayKetThuc = new DateTimePicker();
-            btnInHoaDon = new Button();
-            lblNgayBatDau = new Label();
             lblNgayKetThuc = new Label();
+            lblNgayBatDau = new Label();
+            btnInHoaDon = new Button();
+            dtpNgayKetThuc = new DateTimePicker();
+            dtpNgayBatDau = new DateTimePicker();
+            panel2 = new Panel();
+            dgHoaDon = new DataGridView();
+            MaHoaDon = new DataGridViewTextBoxColumn();
+            TenTaiKhoan = new DataGridViewTextBoxColumn();
+            NgayBan = new DataGridViewTextBoxColumn();
+            TenKhachHang = new DataGridViewTextBoxColumn();
+            GiamGia = new DataGridViewTextBoxColumn();
+            TongTien = new DataGridViewTextBoxColumn();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgThuoc).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgHoaDon).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -77,82 +83,25 @@
             panel1.Size = new Size(1104, 74);
             panel1.TabIndex = 0;
             // 
-            // panel2
+            // lblNgayKetThuc
             // 
-            panel2.Controls.Add(dgThuoc);
-            panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(3, 83);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1104, 535);
-            panel2.TabIndex = 1;
+            lblNgayKetThuc.AutoSize = true;
+            lblNgayKetThuc.Font = new Font("Tahoma", 16F);
+            lblNgayKetThuc.Location = new Point(405, 24);
+            lblNgayKetThuc.Name = "lblNgayKetThuc";
+            lblNgayKetThuc.Size = new Size(155, 27);
+            lblNgayKetThuc.TabIndex = 15;
+            lblNgayKetThuc.Text = "Ngày Kết Thúc";
             // 
-            // dgThuoc
+            // lblNgayBatDau
             // 
-            dgThuoc.AllowUserToAddRows = false;
-            dgThuoc.AllowUserToDeleteRows = false;
-            dgThuoc.AllowUserToResizeColumns = false;
-            dgThuoc.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgThuoc.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dgThuoc.BackgroundColor = Color.LightPink;
-            dgThuoc.CellBorderStyle = DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Tahoma", 14F, FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgThuoc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgThuoc.ColumnHeadersHeight = 40;
-            dgThuoc.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Window;
-            dataGridViewCellStyle3.Font = new Font("Tahoma", 14F);
-            dataGridViewCellStyle3.ForeColor = Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = Color.Thistle;
-            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgThuoc.DefaultCellStyle = dataGridViewCellStyle3;
-            dgThuoc.Dock = DockStyle.Fill;
-            dgThuoc.GridColor = Color.LightPink;
-            dgThuoc.Location = new Point(0, 0);
-            dgThuoc.MultiSelect = false;
-            dgThuoc.Name = "dgThuoc";
-            dgThuoc.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Control;
-            dataGridViewCellStyle4.Font = new Font("Tahoma", 14F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgThuoc.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            dgThuoc.RowHeadersVisible = false;
-            dgThuoc.RowHeadersWidth = 40;
-            dgThuoc.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Font = new Font("Tahoma", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgThuoc.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            dgThuoc.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgThuoc.Size = new Size(1104, 535);
-            dgThuoc.TabIndex = 2;
-            // 
-            // dtpNgayBatDau
-            // 
-            dtpNgayBatDau.Font = new Font("Segoe UI", 16F);
-            dtpNgayBatDau.Location = new Point(175, 20);
-            dtpNgayBatDau.Name = "dtpNgayBatDau";
-            dtpNgayBatDau.Size = new Size(200, 36);
-            dtpNgayBatDau.TabIndex = 0;
-            // 
-            // dtpNgayKetThuc
-            // 
-            dtpNgayKetThuc.Font = new Font("Segoe UI", 16F);
-            dtpNgayKetThuc.Location = new Point(566, 19);
-            dtpNgayKetThuc.Name = "dtpNgayKetThuc";
-            dtpNgayKetThuc.Size = new Size(200, 36);
-            dtpNgayKetThuc.TabIndex = 1;
-            dtpNgayKetThuc.Value = new DateTime(2024, 5, 3, 0, 0, 0, 0);
+            lblNgayBatDau.AutoSize = true;
+            lblNgayBatDau.Font = new Font("Tahoma", 16F);
+            lblNgayBatDau.Location = new Point(22, 24);
+            lblNgayBatDau.Name = "lblNgayBatDau";
+            lblNgayBatDau.Size = new Size(147, 27);
+            lblNgayBatDau.TabIndex = 14;
+            lblNgayBatDau.Text = "Ngày Bắt Đầu";
             // 
             // btnInHoaDon
             // 
@@ -171,26 +120,136 @@
             btnInHoaDon.TabIndex = 13;
             btnInHoaDon.Text = "In Hoá Đơn";
             btnInHoaDon.UseVisualStyleBackColor = false;
+            btnInHoaDon.Click += btnInHoaDon_Click;
             // 
-            // lblNgayBatDau
+            // dtpNgayKetThuc
             // 
-            lblNgayBatDau.AutoSize = true;
-            lblNgayBatDau.Font = new Font("Tahoma", 16F);
-            lblNgayBatDau.Location = new Point(22, 24);
-            lblNgayBatDau.Name = "lblNgayBatDau";
-            lblNgayBatDau.Size = new Size(147, 27);
-            lblNgayBatDau.TabIndex = 14;
-            lblNgayBatDau.Text = "Ngày Bắt Đầu";
+            dtpNgayKetThuc.Font = new Font("Segoe UI", 16F);
+            dtpNgayKetThuc.Location = new Point(566, 19);
+            dtpNgayKetThuc.Name = "dtpNgayKetThuc";
+            dtpNgayKetThuc.Size = new Size(215, 36);
+            dtpNgayKetThuc.TabIndex = 1;
+            dtpNgayKetThuc.Value = new DateTime(2024, 5, 3, 0, 0, 0, 0);
+            dtpNgayKetThuc.ValueChanged += dtpNgayKetThuc_ValueChanged;
             // 
-            // lblNgayKetThuc
+            // dtpNgayBatDau
             // 
-            lblNgayKetThuc.AutoSize = true;
-            lblNgayKetThuc.Font = new Font("Tahoma", 16F);
-            lblNgayKetThuc.Location = new Point(405, 24);
-            lblNgayKetThuc.Name = "lblNgayKetThuc";
-            lblNgayKetThuc.Size = new Size(155, 27);
-            lblNgayKetThuc.TabIndex = 15;
-            lblNgayKetThuc.Text = "Ngày Kết Thúc";
+            dtpNgayBatDau.Font = new Font("Segoe UI", 16F);
+            dtpNgayBatDau.Location = new Point(175, 20);
+            dtpNgayBatDau.Name = "dtpNgayBatDau";
+            dtpNgayBatDau.Size = new Size(211, 36);
+            dtpNgayBatDau.TabIndex = 0;
+            dtpNgayBatDau.ValueChanged += dtpNgayBatDau_ValueChanged;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(dgHoaDon);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(3, 83);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1104, 535);
+            panel2.TabIndex = 1;
+            // 
+            // dgHoaDon
+            // 
+            dgHoaDon.AllowUserToAddRows = false;
+            dgHoaDon.AllowUserToDeleteRows = false;
+            dgHoaDon.AllowUserToResizeColumns = false;
+            dgHoaDon.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgHoaDon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgHoaDon.BackgroundColor = Color.LightPink;
+            dgHoaDon.CellBorderStyle = DataGridViewCellBorderStyle.Sunken;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Tahoma", 14F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgHoaDon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgHoaDon.ColumnHeadersHeight = 40;
+            dgHoaDon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgHoaDon.Columns.AddRange(new DataGridViewColumn[] { MaHoaDon, TenTaiKhoan, NgayBan, TenKhachHang, GiamGia, TongTien });
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Window;
+            dataGridViewCellStyle3.Font = new Font("Tahoma", 14F);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = Color.Thistle;
+            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgHoaDon.DefaultCellStyle = dataGridViewCellStyle3;
+            dgHoaDon.Dock = DockStyle.Fill;
+            dgHoaDon.GridColor = Color.LightPink;
+            dgHoaDon.Location = new Point(0, 0);
+            dgHoaDon.MultiSelect = false;
+            dgHoaDon.Name = "dgHoaDon";
+            dgHoaDon.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Tahoma", 14F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgHoaDon.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dgHoaDon.RowHeadersVisible = false;
+            dgHoaDon.RowHeadersWidth = 40;
+            dgHoaDon.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle5.Font = new Font("Tahoma", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgHoaDon.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dgHoaDon.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgHoaDon.Size = new Size(1104, 535);
+            dgHoaDon.TabIndex = 2;
+            dgHoaDon.CellClick += dgHoaDon_CellClick;
+            // 
+            // MaHoaDon
+            // 
+            MaHoaDon.DataPropertyName = "MaHoaDon";
+            MaHoaDon.HeaderText = "Mã Hóa Đơn";
+            MaHoaDon.Name = "MaHoaDon";
+            MaHoaDon.ReadOnly = true;
+            MaHoaDon.Width = 150;
+            // 
+            // TenTaiKhoan
+            // 
+            TenTaiKhoan.DataPropertyName = "TenTaiKhoan";
+            TenTaiKhoan.HeaderText = "Tên Người Bán";
+            TenTaiKhoan.Name = "TenTaiKhoan";
+            TenTaiKhoan.ReadOnly = true;
+            TenTaiKhoan.Width = 225;
+            // 
+            // NgayBan
+            // 
+            NgayBan.DataPropertyName = "NgayBan";
+            NgayBan.HeaderText = "Ngày Bán";
+            NgayBan.Name = "NgayBan";
+            NgayBan.ReadOnly = true;
+            NgayBan.Width = 200;
+            // 
+            // TenKhachHang
+            // 
+            TenKhachHang.DataPropertyName = "HoTen";
+            TenKhachHang.HeaderText = "Tên Khách Hàng";
+            TenKhachHang.Name = "TenKhachHang";
+            TenKhachHang.ReadOnly = true;
+            TenKhachHang.Width = 200;
+            // 
+            // GiamGia
+            // 
+            GiamGia.DataPropertyName = "GiamGia";
+            GiamGia.HeaderText = "Giảm Giá";
+            GiamGia.Name = "GiamGia";
+            GiamGia.ReadOnly = true;
+            GiamGia.Width = 150;
+            // 
+            // TongTien
+            // 
+            TongTien.DataPropertyName = "TongTien";
+            TongTien.HeaderText = "Tổng Tiền";
+            TongTien.Name = "TongTien";
+            TongTien.ReadOnly = true;
+            TongTien.Width = 200;
             // 
             // ucHoadon
             // 
@@ -204,7 +263,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgThuoc).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgHoaDon).EndInit();
             ResumeLayout(false);
         }
 
@@ -215,9 +274,15 @@
         private Panel panel2;
         private DateTimePicker dtpNgayKetThuc;
         private DateTimePicker dtpNgayBatDau;
-        private DataGridView dgThuoc;
+        private DataGridView dgHoaDon;
         private Label lblNgayKetThuc;
         private Label lblNgayBatDau;
         private Button btnInHoaDon;
+        private DataGridViewTextBoxColumn MaHoaDon;
+        private DataGridViewTextBoxColumn TenTaiKhoan;
+        private DataGridViewTextBoxColumn NgayBan;
+        private DataGridViewTextBoxColumn TenKhachHang;
+        private DataGridViewTextBoxColumn GiamGia;
+        private DataGridViewTextBoxColumn TongTien;
     }
 }
