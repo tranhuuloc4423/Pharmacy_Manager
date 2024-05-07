@@ -2,7 +2,6 @@
 using Quanlyhieuthuoc.Hoadon;
 using Quanlyhieuthuoc.KhachHang;
 using Quanlyhieuthuoc.Kho;
-using Quanlyhieuthuoc.Nhacungcap;
 using Quanlyhieuthuoc.PhanLoai;
 using Quanlyhieuthuoc.TaiKhoan;
 using Quanlyhieuthuoc.Thuoc;

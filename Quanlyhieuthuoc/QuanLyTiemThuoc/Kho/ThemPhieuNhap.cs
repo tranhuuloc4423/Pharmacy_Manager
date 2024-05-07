@@ -122,13 +122,5 @@ namespace Quanlyhieuthuoc.Kho
             rowThuoc = form.row;
             txtThuoc.Text = form.row.Cells["TenThuoc"].Value.ToString();
         }
-
-        private void btnThemNCC_Click(object sender, EventArgs e)
-        {
-            ThemNhaCungCap form = new ThemNhaCungCap();
-            form.ShowDialog();
-            rowNhaCungCap = form.row;
-            txtNhaCungCap.Text = form.row.Cells["TenNhaCungCap"].Value.ToString();
-        }
     }
 }

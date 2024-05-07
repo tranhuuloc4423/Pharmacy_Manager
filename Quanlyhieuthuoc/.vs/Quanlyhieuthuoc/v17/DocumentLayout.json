@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\Asus\\Downloads\\pharmacy\\Pharmacy_Manager\\Quanlyhieuthuoc\\",
   "Documents": [
     {
@@ -13,6 +14,29 @@
     {
       "AbsoluteMoniker": "D:0:0:{AF4EF3D6-5A12-4783-8760-CEDA4F3C85E0}|DAL\\DAL.csproj|C:\\Users\\Asus\\Downloads\\pharmacy\\Pharmacy_Manager\\Quanlyhieuthuoc\\dal\\repos\\hoadonrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AF4EF3D6-5A12-4783-8760-CEDA4F3C85E0}|DAL\\DAL.csproj|solutionrelative:dal\\repos\\hoadonrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+  "WorkspaceRootPath": "E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9D9A714C-9DBD-41E0-80C7-80ABB1781E0B}|QuanLyTiemThuoc\\Quanlyhieuthuoc.csproj|E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\quanlytiemthuoc\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D9A714C-9DBD-41E0-80C7-80ABB1781E0B}|QuanLyTiemThuoc\\Quanlyhieuthuoc.csproj|solutionrelative:quanlytiemthuoc\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D9A714C-9DBD-41E0-80C7-80ABB1781E0B}|QuanLyTiemThuoc\\Quanlyhieuthuoc.csproj|e:\\c#\\pharmacy_manager\\quanlyhieuthuoc\\quanlytiemthuoc\\kho\\themphieunhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9D9A714C-9DBD-41E0-80C7-80ABB1781E0B}|QuanLyTiemThuoc\\Quanlyhieuthuoc.csproj|solutionrelative:quanlytiemthuoc\\kho\\themphieunhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D9A714C-9DBD-41E0-80C7-80ABB1781E0B}|QuanLyTiemThuoc\\Quanlyhieuthuoc.csproj|e:\\c#\\pharmacy_manager\\quanlyhieuthuoc\\quanlytiemthuoc\\kho\\themphieunhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D9A714C-9DBD-41E0-80C7-80ABB1781E0B}|QuanLyTiemThuoc\\Quanlyhieuthuoc.csproj|solutionrelative:quanlytiemthuoc\\kho\\themphieunhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D9A714C-9DBD-41E0-80C7-80ABB1781E0B}|QuanLyTiemThuoc\\Quanlyhieuthuoc.csproj|E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\quanlytiemthuoc\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9D9A714C-9DBD-41E0-80C7-80ABB1781E0B}|QuanLyTiemThuoc\\Quanlyhieuthuoc.csproj|solutionrelative:quanlytiemthuoc\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D9A714C-9DBD-41E0-80C7-80ABB1781E0B}|QuanLyTiemThuoc\\Quanlyhieuthuoc.csproj|E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\quanlytiemthuoc\\trangchu\\uctrangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9D9A714C-9DBD-41E0-80C7-80ABB1781E0B}|QuanLyTiemThuoc\\Quanlyhieuthuoc.csproj|solutionrelative:quanlytiemthuoc\\trangchu\\uctrangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+>>>>>>> 63a418475e4d353562582a64a5306e6356363e47
     }
   ],
   "DocumentGroupContainers": [
@@ -21,8 +45,13 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
+<<<<<<< HEAD
           "DockedWidth": 227,
           "SelectedChildIndex": 1,
+=======
+          "DockedWidth": 206,
+          "SelectedChildIndex": 3,
+>>>>>>> 63a418475e4d353562582a64a5306e6356363e47
           "Children": [
             {
               "$type": "Document",
@@ -39,6 +68,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 0,
               "Title": "Dangnhap.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Asus\\Downloads\\pharmacy\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\Dangnhap.cs",
@@ -47,6 +77,29 @@
               "RelativeToolTip": "QuanLyTiemThuoc\\Dangnhap.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-07T20:10:56.837Z",
+=======
+              "DocumentIndex": 2,
+              "Title": "ThemPhieuNhap.cs",
+              "DocumentMoniker": "E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\Kho\\ThemPhieuNhap.cs",
+              "RelativeDocumentMoniker": "QuanLyTiemThuoc\\Kho\\ThemPhieuNhap.cs",
+              "ToolTip": "E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\Kho\\ThemPhieuNhap.cs",
+              "RelativeToolTip": "QuanLyTiemThuoc\\Kho\\ThemPhieuNhap.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAAGgAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T14:00:30.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ThemPhieuNhap.cs [Design]",
+              "DocumentMoniker": "E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\Kho\\ThemPhieuNhap.cs",
+              "RelativeDocumentMoniker": "QuanLyTiemThuoc\\Kho\\ThemPhieuNhap.cs",
+              "ToolTip": "E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\Kho\\ThemPhieuNhap.cs [Design]",
+              "RelativeToolTip": "QuanLyTiemThuoc\\Kho\\ThemPhieuNhap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T14:00:04.366Z",
+>>>>>>> 63a418475e4d353562582a64a5306e6356363e47
               "EditorCaption": " [Design]"
             }
           ]
@@ -57,6 +110,7 @@
           "Children": [
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 2,
               "Title": "HoaDonRepo.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Downloads\\pharmacy\\Pharmacy_Manager\\Quanlyhieuthuoc\\DAL\\Repos\\HoaDonRepo.cs",
@@ -67,6 +121,41 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-05T15:17:36.655Z",
               "EditorCaption": ""
+=======
+              "DocumentIndex": 0,
+              "Title": "Main.cs",
+              "DocumentMoniker": "E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\Main.cs",
+              "RelativeDocumentMoniker": "QuanLyTiemThuoc\\Main.cs",
+              "ToolTip": "E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\Main.cs",
+              "RelativeToolTip": "QuanLyTiemThuoc\\Main.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAAAEcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T13:54:31.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ucTrangChu.cs [Design]",
+              "DocumentMoniker": "E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\TrangChu\\ucTrangChu.cs",
+              "RelativeDocumentMoniker": "QuanLyTiemThuoc\\TrangChu\\ucTrangChu.cs",
+              "ToolTip": "E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\TrangChu\\ucTrangChu.cs [Design]",
+              "RelativeToolTip": "QuanLyTiemThuoc\\TrangChu\\ucTrangChu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T13:43:49.977Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Main.cs [Design]",
+              "DocumentMoniker": "E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\Main.cs",
+              "RelativeDocumentMoniker": "QuanLyTiemThuoc\\Main.cs",
+              "ToolTip": "E:\\c#\\Pharmacy_Manager\\Quanlyhieuthuoc\\QuanLyTiemThuoc\\Main.cs [Design]",
+              "RelativeToolTip": "QuanLyTiemThuoc\\Main.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T13:43:12.561Z",
+              "EditorCaption": " [Design]"
+>>>>>>> 63a418475e4d353562582a64a5306e6356363e47
             }
           ]
         }

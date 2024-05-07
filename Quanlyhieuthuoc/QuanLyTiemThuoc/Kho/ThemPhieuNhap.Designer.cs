@@ -36,10 +36,10 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
             dgCTPN = new DataGridView();
+            MaThuoc = new DataGridViewTextBoxColumn();
+            TenThuoc = new DataGridViewTextBoxColumn();
+            SoLuong = new DataGridViewTextBoxColumn();
             panel2 = new Panel();
-            btnThemNCC = new Button();
-            txtNhaCungCap = new TextBox();
-            label1 = new Label();
             btnThemThuoc = new Button();
             txtThuoc = new TextBox();
             txtSoLuong = new TextBox();
@@ -48,9 +48,6 @@
             btnThemPhieuNhap = new Button();
             btnThemCTPN = new Button();
             btnXoaCTPN = new Button();
-            MaThuoc = new DataGridViewTextBoxColumn();
-            TenThuoc = new DataGridViewTextBoxColumn();
-            SoLuong = new DataGridViewTextBoxColumn();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgCTPN).BeginInit();
@@ -135,12 +132,33 @@
             dgCTPN.TabIndex = 2;
             dgCTPN.CellClick += dgTaiKhoan_CellClick;
             // 
+            // MaThuoc
+            // 
+            MaThuoc.DataPropertyName = "MaThuoc";
+            MaThuoc.HeaderText = "Mã Thuốc";
+            MaThuoc.Name = "MaThuoc";
+            MaThuoc.ReadOnly = true;
+            MaThuoc.Visible = false;
+            // 
+            // TenThuoc
+            // 
+            TenThuoc.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            TenThuoc.DataPropertyName = "TenThuoc";
+            TenThuoc.HeaderText = "Tên Thuốc";
+            TenThuoc.Name = "TenThuoc";
+            TenThuoc.ReadOnly = true;
+            // 
+            // SoLuong
+            // 
+            SoLuong.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            SoLuong.DataPropertyName = "SoLuong";
+            SoLuong.HeaderText = "Số Lượng";
+            SoLuong.Name = "SoLuong";
+            SoLuong.ReadOnly = true;
+            // 
             // panel2
             // 
             panel2.BackColor = Color.Thistle;
-            panel2.Controls.Add(btnThemNCC);
-            panel2.Controls.Add(txtNhaCungCap);
-            panel2.Controls.Add(label1);
             panel2.Controls.Add(btnThemThuoc);
             panel2.Controls.Add(txtThuoc);
             panel2.Controls.Add(txtSoLuong);
@@ -155,46 +173,6 @@
             panel2.Size = new Size(476, 567);
             panel2.TabIndex = 1;
             // 
-            // btnThemNCC
-            // 
-            btnThemNCC.BackColor = Color.White;
-            btnThemNCC.FlatAppearance.BorderColor = Color.LightPink;
-            btnThemNCC.FlatAppearance.BorderSize = 2;
-            btnThemNCC.FlatAppearance.CheckedBackColor = Color.LightPink;
-            btnThemNCC.FlatAppearance.MouseDownBackColor = Color.LightPink;
-            btnThemNCC.FlatAppearance.MouseOverBackColor = Color.LightPink;
-            btnThemNCC.FlatStyle = FlatStyle.Flat;
-            btnThemNCC.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnThemNCC.Location = new Point(416, 56);
-            btnThemNCC.Margin = new Padding(4, 3, 4, 3);
-            btnThemNCC.Name = "btnThemNCC";
-            btnThemNCC.Size = new Size(41, 32);
-            btnThemNCC.TabIndex = 29;
-            btnThemNCC.Text = "+";
-            btnThemNCC.UseVisualStyleBackColor = false;
-            btnThemNCC.Click += btnThemNCC_Click;
-            // 
-            // txtNhaCungCap
-            // 
-            txtNhaCungCap.Font = new Font("Segoe UI", 14F);
-            txtNhaCungCap.ForeColor = Color.Black;
-            txtNhaCungCap.Location = new Point(224, 56);
-            txtNhaCungCap.Name = "txtNhaCungCap";
-            txtNhaCungCap.ReadOnly = true;
-            txtNhaCungCap.Size = new Size(181, 32);
-            txtNhaCungCap.TabIndex = 27;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 16F);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(32, 55);
-            label1.Name = "label1";
-            label1.Size = new Size(153, 30);
-            label1.TabIndex = 28;
-            label1.Text = "Nhà Cung Cấp";
-            // 
             // btnThemThuoc
             // 
             btnThemThuoc.BackColor = Color.White;
@@ -205,7 +183,7 @@
             btnThemThuoc.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnThemThuoc.FlatStyle = FlatStyle.Flat;
             btnThemThuoc.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnThemThuoc.Location = new Point(416, 119);
+            btnThemThuoc.Location = new Point(413, 53);
             btnThemThuoc.Margin = new Padding(4, 3, 4, 3);
             btnThemThuoc.Name = "btnThemThuoc";
             btnThemThuoc.Size = new Size(41, 32);
@@ -218,7 +196,7 @@
             // 
             txtThuoc.Font = new Font("Segoe UI", 14F);
             txtThuoc.ForeColor = Color.Black;
-            txtThuoc.Location = new Point(224, 119);
+            txtThuoc.Location = new Point(221, 53);
             txtThuoc.Name = "txtThuoc";
             txtThuoc.ReadOnly = true;
             txtThuoc.Size = new Size(181, 32);
@@ -228,7 +206,7 @@
             // 
             txtSoLuong.Font = new Font("Segoe UI", 14F);
             txtSoLuong.ForeColor = Color.Black;
-            txtSoLuong.Location = new Point(224, 189);
+            txtSoLuong.Location = new Point(221, 123);
             txtSoLuong.Name = "txtSoLuong";
             txtSoLuong.Size = new Size(181, 32);
             txtSoLuong.TabIndex = 23;
@@ -238,7 +216,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 16F);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(32, 188);
+            label4.Location = new Point(29, 122);
             label4.Name = "label4";
             label4.Size = new Size(105, 30);
             label4.TabIndex = 24;
@@ -249,7 +227,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 16F);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(32, 118);
+            label3.Location = new Point(29, 52);
             label3.Name = "label3";
             label3.Size = new Size(72, 30);
             label3.TabIndex = 22;
@@ -312,30 +290,6 @@
             btnXoaCTPN.UseVisualStyleBackColor = false;
             btnXoaCTPN.Click += btnXoaCTPN_Click;
             // 
-            // MaThuoc
-            // 
-            MaThuoc.DataPropertyName = "MaThuoc";
-            MaThuoc.HeaderText = "Mã Thuốc";
-            MaThuoc.Name = "MaThuoc";
-            MaThuoc.ReadOnly = true;
-            MaThuoc.Visible = false;
-            // 
-            // TenThuoc
-            // 
-            TenThuoc.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            TenThuoc.DataPropertyName = "TenThuoc";
-            TenThuoc.HeaderText = "Tên Thuốc";
-            TenThuoc.Name = "TenThuoc";
-            TenThuoc.ReadOnly = true;
-            // 
-            // SoLuong
-            // 
-            SoLuong.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            SoLuong.DataPropertyName = "SoLuong";
-            SoLuong.HeaderText = "Số Lượng";
-            SoLuong.Name = "SoLuong";
-            SoLuong.ReadOnly = true;
-            // 
             // ThemPhieuNhap
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -368,9 +322,6 @@
         private Label label3;
         private TextBox txtThuoc;
         private Button btnThemThuoc;
-        private Button btnThemNCC;
-        private TextBox txtNhaCungCap;
-        private Label label1;
         private DataGridViewTextBoxColumn MaThuoc;
         private DataGridViewTextBoxColumn TenThuoc;
         private DataGridViewTextBoxColumn SoLuong;
