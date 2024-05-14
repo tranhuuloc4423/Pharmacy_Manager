@@ -19,9 +19,10 @@ namespace DAL.Repos
         {
             try
             {
-                string sql = "select t.MaThuoc, t.TenThuoc, pl.TenLoaiThuoc, t.DonViTinh, t.GiaBan " +
+                string sql = "select t.MaThuoc, t.TenThuoc, pl.TenLoaiThuoc, ncc.TenNhaCungCap, t.DonViTinh, t.GiaBan " +
                     " from Thuoc t " +
-                    " inner join PhanLoai pl on t.MaLoaiThuoc = pl.MaLoaiThuoc ";
+                    " inner join PhanLoai pl on t.MaLoaiThuoc = pl.MaLoaiThuoc " +
+                    " inner join NhaCungCap ncc on ncc.MaNhaCungCap = t.MaNhaCungCap ";
                 DataTable dt = new DataTable();
                 dt = database.GetData(sql, ref error);
                 return dt;
@@ -76,6 +77,7 @@ namespace DAL.Repos
                 SqlParameter[] parameters =
                 {
                     new SqlParameter("@MaLoaiThuoc", entity.MaLoaiThuoc),
+                    new SqlParameter("@MaNhaCungCap", entity.MaNhaCungCap),
                     new SqlParameter("@TenThuoc", entity.TenThuoc),
                     new SqlParameter("@DonViTinh", entity.DonViTinh),
                     new SqlParameter("@GiaBan", entity.GiaBan)
@@ -99,6 +101,7 @@ namespace DAL.Repos
                 {
                     new SqlParameter("@MaThuoc", entity.MaThuoc),
                     new SqlParameter("@MaLoaiThuoc", entity.MaLoaiThuoc),
+                    new SqlParameter("@MaNhaCungCap", entity.MaNhaCungCap),
                     new SqlParameter("@TenThuoc", entity.TenThuoc),
                     new SqlParameter("@DonViTinh", entity.DonViTinh),
                     new SqlParameter("@GiaBan", entity.GiaBan)

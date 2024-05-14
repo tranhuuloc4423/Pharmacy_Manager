@@ -14,10 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Quanlyhieuthuoc
-<<<<<<< HEAD
-build_property.ProjectDir = C:\Users\Asus\Downloads\pharmacy\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\
-=======
 build_property.ProjectDir = E:\c#\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\
->>>>>>> 63a418475e4d353562582a64a5306e6356363e47
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

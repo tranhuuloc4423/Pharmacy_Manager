@@ -30,11 +30,12 @@ namespace Quanlyhieuthuoc.PhanLoai
             try
             {
                 var result = manager.ThemLoaiThuoc(entity, ref error);
-                if(result)
+                if (result)
                 {
                     MessageBox.Show("Thêm phân loại thuốc thành công!");
                     this.Close();
-                } else
+                }
+                else
                 {
                     MessageBox.Show(error);
                 }

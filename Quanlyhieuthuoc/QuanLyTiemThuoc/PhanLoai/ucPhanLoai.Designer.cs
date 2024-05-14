@@ -46,7 +46,6 @@
             btnThem = new Button();
             label2 = new Label();
             label1 = new Label();
-            lblPhanLoai = new Label();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgPhanLoai).BeginInit();
@@ -65,8 +64,8 @@
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(1119, 577);
-            tableLayoutPanel1.TabIndex = 3;
+            tableLayoutPanel1.Size = new Size(1006, 577);
+            tableLayoutPanel1.TabIndex = 5;
             // 
             // panel1
             // 
@@ -74,7 +73,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(713, 571);
+            panel1.Size = new Size(600, 571);
             panel1.TabIndex = 0;
             // 
             // dgPhanLoai
@@ -126,7 +125,7 @@
             dataGridViewCellStyle5.Font = new Font("Tahoma", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgPhanLoai.RowsDefaultCellStyle = dataGridViewCellStyle5;
             dgPhanLoai.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgPhanLoai.Size = new Size(713, 571);
+            dgPhanLoai.Size = new Size(600, 571);
             dgPhanLoai.TabIndex = 1;
             dgPhanLoai.CellClick += dgPhanLoai_CellClick;
             // 
@@ -156,9 +155,8 @@
             panel2.Controls.Add(btnThem);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label1);
-            panel2.Controls.Add(lblPhanLoai);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(722, 3);
+            panel2.Location = new Point(609, 3);
             panel2.Name = "panel2";
             panel2.Size = new Size(394, 571);
             panel2.TabIndex = 1;
@@ -167,21 +165,21 @@
             // 
             lblTenLoaiThuoc.AutoSize = true;
             lblTenLoaiThuoc.Font = new Font("Segoe UI", 16F);
-            lblTenLoaiThuoc.Location = new Point(231, 171);
+            lblTenLoaiThuoc.Location = new Point(248, 171);
             lblTenLoaiThuoc.Name = "lblTenLoaiThuoc";
-            lblTenLoaiThuoc.Size = new Size(112, 30);
+            lblTenLoaiThuoc.Size = new Size(28, 30);
             lblTenLoaiThuoc.TabIndex = 19;
-            lblTenLoaiThuoc.Text = "Tên Thuốc";
+            lblTenLoaiThuoc.Text = "...";
             // 
             // lblMaLoaiThuoc
             // 
             lblMaLoaiThuoc.AutoSize = true;
             lblMaLoaiThuoc.Font = new Font("Segoe UI", 16F);
-            lblMaLoaiThuoc.Location = new Point(231, 111);
+            lblMaLoaiThuoc.Location = new Point(248, 111);
             lblMaLoaiThuoc.Name = "lblMaLoaiThuoc";
-            lblMaLoaiThuoc.Size = new Size(112, 30);
+            lblMaLoaiThuoc.Size = new Size(28, 30);
             lblMaLoaiThuoc.TabIndex = 16;
-            lblMaLoaiThuoc.Text = "Tên Thuốc";
+            lblMaLoaiThuoc.Text = "...";
             // 
             // btnSua
             // 
@@ -256,19 +254,9 @@
             label1.Font = new Font("Segoe UI", 16F);
             label1.Location = new Point(41, 111);
             label1.Name = "label1";
-            label1.Size = new Size(153, 30);
+            label1.Size = new Size(165, 30);
             label1.TabIndex = 10;
-            label1.Text = "Mã Phân Loại :";
-            // 
-            // lblPhanLoai
-            // 
-            lblPhanLoai.AutoSize = true;
-            lblPhanLoai.Font = new Font("Segoe UI", 16F);
-            lblPhanLoai.Location = new Point(128, 51);
-            lblPhanLoai.Name = "lblPhanLoai";
-            lblPhanLoai.Size = new Size(170, 30);
-            lblPhanLoai.TabIndex = 9;
-            lblPhanLoai.Text = "Phân Loại Thuốc";
+            label1.Text = "Mã Loại Thuốc :";
             // 
             // ucPhanLoai
             // 
@@ -276,7 +264,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(tableLayoutPanel1);
             Name = "ucPhanLoai";
-            Size = new Size(1119, 577);
+            Size = new Size(1006, 577);
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgPhanLoai).EndInit();
@@ -290,8 +278,6 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Panel panel1;
         private DataGridView dgPhanLoai;
-        private DataGridViewTextBoxColumn MaLoaiThuoc;
-        private DataGridViewTextBoxColumn TenLoaiThuoc;
         private Panel panel2;
         private Label lblTenLoaiThuoc;
         private Label lblMaLoaiThuoc;
@@ -300,6 +286,7 @@
         private Button btnThem;
         private Label label2;
         private Label label1;
-        private Label lblPhanLoai;
+        private DataGridViewTextBoxColumn MaLoaiThuoc;
+        private DataGridViewTextBoxColumn TenLoaiThuoc;
     }
 }

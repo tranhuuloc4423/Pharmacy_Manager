@@ -1,6 +1,6 @@
 ﻿using BLL.Managers;
 using DAL.Entities;
-using Quanlyhieuthuoc.Thuoc;
+using Quanlyhieuthuoc.NhaCungCap;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -74,7 +74,7 @@ namespace Quanlyhieuthuoc.PhanLoai
                     if (result)
                     {
                         MessageBox.Show("Xoá phân loại thuốc thành công!");
-                        
+
                     }
                     else
                     {

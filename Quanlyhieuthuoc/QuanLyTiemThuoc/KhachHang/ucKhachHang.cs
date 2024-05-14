@@ -42,8 +42,6 @@ namespace Quanlyhieuthuoc.KhachHang
                     lblMaKhachHang.Text = rowselected.Cells["MaKhachHang"].Value.ToString();
                     lblHoTen.Text = rowselected.Cells["HoTen"].Value.ToString();
                     lblSoDienThoai.Text = rowselected.Cells["SoDienThoai"].Value.ToString();
-                    lblKHTT.Text = rowselected.Cells["KhachHangThanThiet"].Value.ToString();
-                    lblMuaTL.Text = rowselected.Cells["MuaTichLuy"].Value.ToString();
                 }
             }
         }
@@ -56,8 +54,6 @@ namespace Quanlyhieuthuoc.KhachHang
                 lblMaKhachHang.Text = rowselected.Cells["MaKhachHang"].Value.ToString();
                 lblHoTen.Text = rowselected.Cells["HoTen"].Value.ToString();
                 lblSoDienThoai.Text = rowselected.Cells["SoDienThoai"].Value.ToString();
-                lblKHTT.Text = rowselected.Cells["KhachHangThanThiet"].Value.ToString();
-                lblMuaTL.Text = rowselected.Cells["MuaTichLuy"].Value.ToString();
             }
         }
 

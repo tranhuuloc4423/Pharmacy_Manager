@@ -1,7 +1,7 @@
 ﻿using Quanlyhieuthuoc.BanThuoc;
 using Quanlyhieuthuoc.Hoadon;
 using Quanlyhieuthuoc.KhachHang;
-using Quanlyhieuthuoc.Kho;
+using Quanlyhieuthuoc.NhaCungCap;
 using Quanlyhieuthuoc.PhanLoai;
 using Quanlyhieuthuoc.TaiKhoan;
 using Quanlyhieuthuoc.Thuoc;
@@ -64,13 +64,6 @@ namespace Quanlyhieuthuoc
             handleAddUC(uc, title);
         }
 
-        private void btnKho_Click(object sender, EventArgs e)
-        {
-            ucKho uc = new ucKho();
-            string title = "Kho Thuốc";
-            handleAddUC(uc, title);
-        }
-
         private void btnHoadon_Click(object sender, EventArgs e)
         {
             ucHoadon uc = new ucHoadon();
@@ -92,6 +85,13 @@ namespace Quanlyhieuthuoc
             handleAddUC(uc, title);
         }
 
+        private void btnNCC_Click(object sender, EventArgs e)
+        {
+            ucNhaCungCap uc = new ucNhaCungCap();
+            string title = "Nhà Cung Cấp";
+            handleAddUC(uc, title);
+        }
+
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
 
@@ -101,5 +101,7 @@ namespace Quanlyhieuthuoc
         {
 
         }
+
+        
     }
 }

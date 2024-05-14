@@ -53,8 +53,8 @@
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            tableLayoutPanel1.Size = new Size(484, 450);
-            tableLayoutPanel1.TabIndex = 4;
+            tableLayoutPanel1.Size = new Size(496, 450);
+            tableLayoutPanel1.TabIndex = 6;
             // 
             // panel1
             // 
@@ -63,7 +63,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(478, 54);
+            panel1.Size = new Size(490, 54);
             panel1.TabIndex = 0;
             // 
             // label1
@@ -71,7 +71,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 20F);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(144, 6);
+            label1.Location = new Point(129, 6);
             label1.Name = "label1";
             label1.Size = new Size(219, 37);
             label1.TabIndex = 1;
@@ -87,14 +87,14 @@
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(3, 63);
             panel2.Name = "panel2";
-            panel2.Size = new Size(478, 396);
+            panel2.Size = new Size(490, 396);
             panel2.TabIndex = 1;
             // 
             // txtTenLoaiThuoc
             // 
             txtTenLoaiThuoc.Font = new Font("Segoe UI", 14F);
             txtTenLoaiThuoc.ForeColor = Color.Black;
-            txtTenLoaiThuoc.Location = new Point(204, 85);
+            txtTenLoaiThuoc.Location = new Point(219, 85);
             txtTenLoaiThuoc.Name = "txtTenLoaiThuoc";
             txtTenLoaiThuoc.Size = new Size(252, 32);
             txtTenLoaiThuoc.TabIndex = 22;
@@ -142,20 +142,19 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 16F);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(31, 84);
+            label5.Location = new Point(9, 84);
             label5.Name = "label5";
-            label5.Size = new Size(157, 30);
+            label5.Size = new Size(168, 30);
             label5.TabIndex = 14;
-            label5.Text = "Tên Loại Thuốc";
+            label5.Text = "Tên Loại Thuốc :";
             // 
             // ThemPhanLoai
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(484, 450);
+            ClientSize = new Size(496, 450);
             Controls.Add(tableLayoutPanel1);
             Name = "ThemPhanLoai";
-            StartPosition = FormStartPosition.CenterScreen;
             Text = "ThemPhanLoai";
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);

@@ -55,6 +55,11 @@ namespace BLL.Managers
                 error = "Vui lòng chọn mã loại thuốc!";
                 return false;
             }
+            if (string.IsNullOrEmpty(entity.MaNhaCungCap.ToString()))
+            {
+                error = "Vui lòng chọn mã nhà cung cấp!";
+                return false;
+            }
             return process.ThemThuoc(entity, ref error);
         }
 
@@ -78,6 +83,11 @@ namespace BLL.Managers
             if (string.IsNullOrEmpty(entity.MaLoaiThuoc.ToString()))
             {
                 error = "Vui lòng chọn mã loại thuốc!";
+                return false;
+            }
+            if (string.IsNullOrEmpty(entity.MaNhaCungCap.ToString()))
+            {
+                error = "Vui lòng chọn mã nhà cung cấp!";
                 return false;
             }
             return process.SuaThuoc(entity, ref error);

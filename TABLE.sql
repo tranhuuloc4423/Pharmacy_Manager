@@ -5,64 +5,27 @@ GO
 ------------ Thuoc ------------
 CREATE TABLE PhanLoai (
     MaLoaiThuoc INT PRIMARY KEY IDENTITY(1,1),
-    TenLoaiThuoc NVARCHAR(50) NOT NULL
+    TenLoaiThuoc NVARCHAR(255) NOT NULL
+);
+GO
+
+
+CREATE TABLE NhaCungCap (
+    MaNhaCungCap INT PRIMARY KEY IDENTITY(1,1),
+    TenNhaCungCap NVARCHAR(50) NOT NULL,
+	DiaChi NVARCHAR(255) NOT NULL
 );
 GO
 
 CREATE TABLE Thuoc (
     MaThuoc INT PRIMARY KEY IDENTITY(1,1),
-    MaLoaiThuoc INT FOREIGN KEY REFERENCES PhanLoai(MaLoaiThuoc),
-    TenThuoc NVARCHAR(50) NOT NULL,
+    MaLoaiThuoc INT FOREIGN KEY REFERENCES PhanLoai(MaLoaiThuoc),    
+	MaNhaCungCap INT FOREIGN KEY REFERENCES NhaCungCap(MaNhaCungCap),
+    TenThuoc NVARCHAR(255) NOT NULL,
     DonViTinh NVARCHAR(15) NOT NULL,
     GiaBan DECIMAL(18,0) NOT NULL
 );
 GO
-
------------- Kho ------------
-
-CREATE TABLE KhoThuoc (
-    Thang INT NOT NULL,
-	Nam INT NOT NULL,
-    MaThuoc INT FOREIGN KEY REFERENCES Thuoc(MaThuoc),
-	DauKy INT NOT NULL,
-	NhapTrongKy INT NOT NULL,
-	XuatTrongThang INT NOT NULL,
-    TonKho INT NOT NULL,
-	CONSTRAINT PK_KhoThuoc PRIMARY KEY (Thang, Nam, MaThuoc)
-);
-GO
-
-CREATE TABLE PhieuNhap (
-    MaPhieuNhap INT PRIMARY KEY IDENTITY(1,1),
-    NgayNhap DATE,
-    NguoiNhap NVARCHAR(25)
-);
-GO
-
-CREATE TABLE ChiTietPhieuNhap (
-    MaChiTietPhieuNhap INT PRIMARY KEY IDENTITY(1,1),
-    MaPhieuNhap INT FOREIGN KEY REFERENCES PhieuNhap(MaPhieuNhap),
-    MaThuoc INT FOREIGN KEY REFERENCES Thuoc(MaThuoc),
-    SoLuong INT
-);
-GO
-
-CREATE TABLE PhieuXuat (
-    MaPhieuXuat INT PRIMARY KEY IDENTITY(1,1),
-    NgayXuat DATE,
-    NguoiXuat NVARCHAR(25)
-);
-GO
-
-CREATE TABLE ChiTietPhieuXuat (
-    MaChiTietPhieuXuat INT PRIMARY KEY IDENTITY(1,1),
-    MaPhieuXuat INT FOREIGN KEY REFERENCES PhieuXuat(MaPhieuXuat),
-    MaThuoc INT FOREIGN KEY REFERENCES Thuoc(MaThuoc),
-    SoLuong INT
-);
-GO
-
-
 
 ------------ Tai Khoan ------------
 CREATE TABLE QuyenDangNhap (
@@ -84,12 +47,8 @@ CREATE TABLE KhachHang (
     MaKhachHang INT PRIMARY KEY IDENTITY(1,1),
 	HoTen NVARCHAR(50) NOT NULL,
 	SoDienThoai VARCHAR(10),
-	KhachHangThanThiet INT,
-	MuaTichLuy DECIMAL(18,0)
 );
 GO
-
-
 
 ------------ Hoa Don ------------
 CREATE TABLE HoaDon (
@@ -98,7 +57,6 @@ CREATE TABLE HoaDon (
     NgayBan DATETIME NOT NULL,
     TongTien DECIMAL(18,0) NOT NULL,
 	MaKhachHang INT FOREIGN KEY REFERENCES KhachHang(MaKhachHang),
-	GiamGia INT
 );
 GO
 
@@ -127,12 +85,19 @@ VALUES (N'Hoạt chất'),
        (N'Thuốc hạ sốt');
 GO
 
-INSERT INTO Thuoc (MaLoaiThuoc, TenThuoc, DonViTinh, GiaBan)
-VALUES (1, N'Paracetamol', N'Viên', 5000),
-       (2, N'Amoxicillin', N'Viên', 10000),
-       (3, N'Glyphosate', N'Lít', 200000),
-       (4, N'Cetirizine', N'Viên', 6000),
-       (5, N'Calamine lotion', N'Chai(ml)', 20000);
+INSERT INTO NhaCungCap(TenNhaCungCap, DiaChi)
+VALUES (N'Pharmacity', N'248A Nơ Trang Long, P.12, Q.Bình Thạnh, TP.HCM'),
+       (N'Phano Pharmacy', N'9 Hồ Biểu Chánh, P.11, Q. Phú Nhuận, TP.HCM'),
+       (N'Nhà Thuốc An Khang', N'128 Trần Quang Khải, P. Tân Định, Q.1, TP.HCM'),
+       (N'Nhà Thuốc Minh Châu', N'161 Bạch Đằng, P.2, Q. Tân Bình, TP.HCM');
+GO
+
+INSERT INTO Thuoc (MaLoaiThuoc,MaNhaCungCap, TenThuoc, DonViTinh, GiaBan)
+VALUES (1, 1, N'Paracetamol', N'Viên', 5000),
+       (2, 2, N'Amoxicillin', N'Viên', 10000),
+       (3, 3, N'Glyphosate', N'Lít', 200000),
+       (4, 3, N'Cetirizine', N'Viên', 6000),
+       (5, 4, N'Calamine lotion', N'Chai(ml)', 20000);
 GO
 
 INSERT INTO KhachHang(HoTen, SoDienThoai)
@@ -146,70 +111,16 @@ VALUES (1, N'admin'),
 GO
 INSERT INTO TaiKhoan (TenTaiKhoan, MatKhau, VaiTro, HoTen)
 VALUES (N'admin', '123', 1, N'Quản Trị'),
-       (N'user2', 'pass2', 2, N'Người dùng 2'),
-       (N'user3', 'pass3', 2, N'Người dùng 3');
+       (N'tranhuuloc', '123', 2, N'Lộc'),
+       (N'kimnguyen', '123', 2, N'Nguyên'),
+       (N'thanhtu', '123', 2, N'Tú');
 GO
+
 select * from QuyenDangNhap
 select * from TaiKhoan
 select * from Thuoc
 select * from PhanLoai
-select * from ChiTietPhieuNhap
 select * from ChiTietHoaDon
 select * from HoaDon
 select * from KhachHang
-select * from KhoThuoc
-
-select * from PhieuNhap
-select MaThuoc, TenThuoc from Thuoc
-
-
-
-select MaPhieuNhap, TenThuoc, SoLuong from ChiTietPhieuNhap inner join Thuoc on ChiTietPhieuNhap.MaThuoc = Thuoc.MaThuoc
-
-select Thang, Nam, TenThuoc, DauKy, NhapTrongKy, XuatTrongThang, TonKho from KhoThuoc inner join Thuoc on KhoThuoc.MaThuoc = Thuoc.MaThuoc
-
-select t.MaThuoc, t.TenThuoc, pl.TenLoaiThuoc, t.DonViTinh, t.GiaBan
-from Thuoc t
-inner join PhanLoai pl on t.MaLoaiThuoc = pl.MaLoaiThuoc
-
-select TenTaiKhoan, HoTen, MoTa from TaiKhoan inner join QuyenDangNhap on TaiKhoan.VaiTro = QuyenDangNhap.MaQuyen
-
-select Thuoc.TenThuoc, PhanLoai.TenLoaiThuoc, Thuoc.DonViTinh, Thuoc.GiaBan, KhoThuoc.TonKho from Thuoc 
-inner join KhoThuoc on Thuoc.MaThuoc = KhoThuoc.MaThuoc
-inner join PhanLoai on PhanLoai.MaLoaiThuoc = Thuoc.MaLoaiThuoc
-
-select VaiTro, HoTen from TaiKhoan 
-
-<<<<<<< HEAD
-	
-
-
-INSERT INTO HoaDon ( TenTaiKhoan, NgayBan, TongTien,MaKhachHang,GiamGia)
-VALUES ( 'admin', GETDATE(), 1000, 6, 0)
-
-INSERT INTO ChiTietHoaDon ( MaHoaDon, MaThuoc, SoLuong,DonGia,ThanhTien)
-VALUES (6, 16, 9, 120, 1080),
-       (6, 3, 12, 10000, 120000),
-       (6, 12, 10, 6500, 65000),
-	   (6, 5, 3, 5, 1500)
-
-
-	   SELECT HD.MaHoaDon, HD.TenTaiKhoan, HD.NgayBan, KH.HoTen, HD.GiamGia, HD.TongTien
-  FROM HoaDon HD
-  INNER JOIN KhachHang KH on HD.MaKhachHang = KH.MaKhachHang
-  WHERE HD.NgayBan >= '02/06/2024 9:34:00 PM' AND HD.NgayBan <= GETDATE()
-
- select * from Thuoc
-select * from ChiTietHoaDon
-
-  SELECT T.TenThuoc, T.DonViTinh, CT.SoLuong, CT.DonGia, CT.ThanhTien
-  FROM ChiTietHoaDon CT
-  INNER JOIN Thuoc T on CT.MaThuoc = T.MaThuoc
-  where CT.MaHoaDon = 3
-=======
-
--- select khi in hoá đơn
-
-select th.TenThuoc, th.DonViTinh,  cthd.SoLuong, cthd.DonGia, cthd.ThanhTien from ChiTietHoaDon cthd
-inner join Thuoc th on th.MaThuoc = cthd.MaThuoc
->>>>>>> 63a418475e4d353562582a64a5306e6356363e47
+select * from NhaCungCap

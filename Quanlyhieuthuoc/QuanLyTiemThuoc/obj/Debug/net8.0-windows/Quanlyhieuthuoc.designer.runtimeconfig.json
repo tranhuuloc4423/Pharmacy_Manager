@@ -12,14 +12,9 @@
       }
     ],
     "additionalProbingPaths": [
-<<<<<<< HEAD
-      "C:\\Users\\Asus\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Asus\\.nuget\\packages"
-=======
       "C:\\Users\\TGC\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\TGC\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
->>>>>>> 63a418475e4d353562582a64a5306e6356363e47
     ],
     "configProperties": {
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true,

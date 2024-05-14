@@ -88,11 +88,9 @@ namespace Quanlyhieuthuoc.BanThuoc
             string maThuoc = thuocSelected.Cells["MaThuoc"].Value.ToString();
             string tenThuoc = thuocSelected.Cells["TenThuoc"].Value.ToString();
             string loaiThuoc = thuocSelected.Cells["TenLoaiThuoc"].Value.ToString();
-            int soLuongTonKho = Convert.ToInt32(thuocSelected.Cells["SoLuongTonKho"].Value);
             int soLuong = Convert.ToInt32(nudSoLuong.Value);
             int giaBan = Convert.ToInt32(thuocSelected.Cells["GiaBan"].Value);
             int thanhTien = soLuong * giaBan;
-            MessageBox.Show(soLuongTonKho.ToString());
 
             foreach (DataGridViewRow row in dgCTHD.Rows)
             {
@@ -101,12 +99,6 @@ namespace Quanlyhieuthuoc.BanThuoc
                     MessageBox.Show("Thuốc này đã được thêm vào chi tiết hóa đơn!");
                     return;
                 }
-            }
-
-            if (soLuong > soLuongTonKho)
-            {
-                MessageBox.Show("Số lượng tồn kho không đủ cung cấp!");
-                return;
             }
             
 

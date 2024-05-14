@@ -55,8 +55,8 @@
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            tableLayoutPanel1.Size = new Size(484, 411);
-            tableLayoutPanel1.TabIndex = 3;
+            tableLayoutPanel1.Size = new Size(522, 450);
+            tableLayoutPanel1.TabIndex = 5;
             // 
             // panel1
             // 
@@ -65,7 +65,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(478, 54);
+            panel1.Size = new Size(516, 54);
             panel1.TabIndex = 0;
             // 
             // label1
@@ -73,7 +73,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 20F);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(144, 6);
+            label1.Location = new Point(152, 6);
             label1.Name = "label1";
             label1.Size = new Size(197, 37);
             label1.TabIndex = 1;
@@ -91,14 +91,14 @@
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(3, 63);
             panel2.Name = "panel2";
-            panel2.Size = new Size(478, 396);
+            panel2.Size = new Size(516, 396);
             panel2.TabIndex = 1;
             // 
             // txtTenLoaiThuoc
             // 
             txtTenLoaiThuoc.Font = new Font("Segoe UI", 14F);
             txtTenLoaiThuoc.ForeColor = Color.Black;
-            txtTenLoaiThuoc.Location = new Point(204, 85);
+            txtTenLoaiThuoc.Location = new Point(238, 85);
             txtTenLoaiThuoc.Name = "txtTenLoaiThuoc";
             txtTenLoaiThuoc.Size = new Size(252, 32);
             txtTenLoaiThuoc.TabIndex = 22;
@@ -145,7 +145,7 @@
             // 
             txtMaLoaiThuoc.Font = new Font("Segoe UI", 14F);
             txtMaLoaiThuoc.ForeColor = Color.Black;
-            txtMaLoaiThuoc.Location = new Point(204, 30);
+            txtMaLoaiThuoc.Location = new Point(238, 30);
             txtMaLoaiThuoc.Name = "txtMaLoaiThuoc";
             txtMaLoaiThuoc.ReadOnly = true;
             txtMaLoaiThuoc.Size = new Size(252, 32);
@@ -158,9 +158,9 @@
             label5.ForeColor = Color.Black;
             label5.Location = new Point(31, 84);
             label5.Name = "label5";
-            label5.Size = new Size(157, 30);
+            label5.Size = new Size(168, 30);
             label5.TabIndex = 14;
-            label5.Text = "Tên Loại Thuốc";
+            label5.Text = "Tên Loại Thuốc :";
             // 
             // label2
             // 
@@ -169,18 +169,17 @@
             label2.ForeColor = Color.Black;
             label2.Location = new Point(31, 29);
             label2.Name = "label2";
-            label2.Size = new Size(154, 30);
+            label2.Size = new Size(165, 30);
             label2.TabIndex = 11;
-            label2.Text = "Mã Loại Thuốc";
+            label2.Text = "Mã Loại Thuốc :";
             // 
             // SuaPhanLoai
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(484, 411);
+            ClientSize = new Size(522, 450);
             Controls.Add(tableLayoutPanel1);
             Name = "SuaPhanLoai";
-            StartPosition = FormStartPosition.CenterScreen;
             Text = "SuaPhanLoai";
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
@@ -201,7 +200,6 @@
         private Button btnSua;
         private TextBox txtMaLoaiThuoc;
         private Label label5;
-        private Label label4;
         private Label label2;
     }
 }
