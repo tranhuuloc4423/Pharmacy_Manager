@@ -20,12 +20,21 @@ namespace Quanlyhieuthuoc
 {
     public partial class Main : Form
     {
-        public Main(string hoTen)
+        public Main()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
-            lblTenDayDu.Text = hoTen;
-            btnTrangChu.Click += btnTrangChu_Click;
+            lblTenDayDu.Text = CauHinhHeThong.TenDayDu;
+            handleRole();
+            handleAddUC(new ucTrangChu(), "Trang Chủ");
+        }
+
+        private void handleRole()
+        {
+            if(CauHinhHeThong.VaiTro == 2)
+            {
+                btnTaiKhoan.Enabled = false;
+            }
         }
 
         void handleAddUC(UserControl uc, string title)
@@ -94,7 +103,16 @@ namespace Quanlyhieuthuoc
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
-
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất chương trình?", "Xác nhận đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if(dialogResult == DialogResult.Yes)
+            {
+                this.Close();
+                Dangnhap form = new Dangnhap();
+                form.Show();
+            } else
+            {
+                return;
+            }
         }
 
         private void btnDoiThongTin_Click(object sender, EventArgs e)

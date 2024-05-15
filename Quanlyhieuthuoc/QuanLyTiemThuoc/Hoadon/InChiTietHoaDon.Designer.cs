@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
             label1 = new Label();
@@ -49,8 +49,6 @@
             panel4 = new Panel();
             lblTongTien = new Label();
             label8 = new Label();
-            lblGiamGia = new Label();
-            label6 = new Label();
             panel5 = new Panel();
             label3 = new Label();
             panel6 = new Panel();
@@ -225,8 +223,6 @@
             panel4.BackColor = Color.Thistle;
             panel4.Controls.Add(lblTongTien);
             panel4.Controls.Add(label8);
-            panel4.Controls.Add(lblGiamGia);
-            panel4.Controls.Add(label6);
             panel4.Dock = DockStyle.Fill;
             panel4.Location = new Point(3, 518);
             panel4.Name = "panel4";
@@ -237,7 +233,7 @@
             // 
             lblTongTien.AutoSize = true;
             lblTongTien.Font = new Font("Tahoma", 14F);
-            lblTongTien.Location = new Point(575, 56);
+            lblTongTien.Location = new Point(571, 20);
             lblTongTien.Name = "lblTongTien";
             lblTongTien.Size = new Size(28, 23);
             lblTongTien.TabIndex = 8;
@@ -247,31 +243,11 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Tahoma", 14F);
-            label8.Location = new Point(450, 56);
+            label8.Location = new Point(446, 20);
             label8.Name = "label8";
             label8.Size = new Size(108, 23);
             label8.TabIndex = 7;
             label8.Text = "Tổng Tiền :";
-            // 
-            // lblGiamGia
-            // 
-            lblGiamGia.AutoSize = true;
-            lblGiamGia.Font = new Font("Tahoma", 14F);
-            lblGiamGia.Location = new Point(575, 12);
-            lblGiamGia.Name = "lblGiamGia";
-            lblGiamGia.Size = new Size(28, 23);
-            lblGiamGia.TabIndex = 6;
-            lblGiamGia.Text = "...";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Tahoma", 14F);
-            label6.Location = new Point(450, 12);
-            label6.Name = "label6";
-            label6.Size = new Size(99, 23);
-            label6.TabIndex = 5;
-            label6.Text = "Giảm Giá :";
             // 
             // panel5
             // 
@@ -309,48 +285,48 @@
             dgChiTiet.AllowUserToDeleteRows = false;
             dgChiTiet.AllowUserToResizeColumns = false;
             dgChiTiet.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgChiTiet.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgChiTiet.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgChiTiet.BackgroundColor = Color.LightPink;
             dgChiTiet.CellBorderStyle = DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = SystemColors.Control;
-            dataGridViewCellStyle7.Font = new Font("Tahoma", 14F, FontStyle.Bold);
-            dataGridViewCellStyle7.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            dgChiTiet.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Tahoma", 14F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgChiTiet.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgChiTiet.ColumnHeadersHeight = 40;
             dgChiTiet.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dgChiTiet.Columns.AddRange(new DataGridViewColumn[] { TenThuoc, DonViTinh, SoLuong, DonGia, ThanhTien });
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = SystemColors.Window;
-            dataGridViewCellStyle8.Font = new Font("Tahoma", 14F);
-            dataGridViewCellStyle8.ForeColor = Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = Color.Thistle;
-            dataGridViewCellStyle8.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
-            dgChiTiet.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Window;
+            dataGridViewCellStyle3.Font = new Font("Tahoma", 14F);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = Color.Thistle;
+            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgChiTiet.DefaultCellStyle = dataGridViewCellStyle3;
             dgChiTiet.Dock = DockStyle.Fill;
             dgChiTiet.GridColor = Color.LightPink;
             dgChiTiet.Location = new Point(0, 0);
             dgChiTiet.MultiSelect = false;
             dgChiTiet.Name = "dgChiTiet";
             dgChiTiet.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = SystemColors.Control;
-            dataGridViewCellStyle9.Font = new Font("Tahoma", 14F);
-            dataGridViewCellStyle9.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
-            dgChiTiet.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Tahoma", 14F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgChiTiet.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgChiTiet.RowHeadersVisible = false;
             dgChiTiet.RowHeadersWidth = 40;
             dgChiTiet.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle10.Font = new Font("Tahoma", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgChiTiet.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.Font = new Font("Tahoma", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgChiTiet.RowsDefaultCellStyle = dataGridViewCellStyle5;
             dgChiTiet.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgChiTiet.Size = new Size(688, 329);
             dgChiTiet.TabIndex = 3;
@@ -441,8 +417,6 @@
         private DataGridView dgChiTiet;
         private Label lblTongTien;
         private Label label8;
-        private Label lblGiamGia;
-        private Label label6;
         private Label label3;
         private DataGridViewTextBoxColumn TenThuoc;
         private DataGridViewTextBoxColumn DonViTinh;

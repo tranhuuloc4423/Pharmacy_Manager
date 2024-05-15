@@ -59,8 +59,9 @@ namespace Quanlyhieuthuoc
             {
                 MessageBox.Show("Dang nhap thanh cong, ten nguoi dung la: " + result.Rows[0]["HoTen"].ToString());
                 CauHinhHeThong.TenDangNhap = tenTaiKhoan;
+                CauHinhHeThong.VaiTro = Convert.ToInt32(result.Rows[0]["VaiTro"]);
                 CauHinhHeThong.TenDayDu = result.Rows[0]["HoTen"].ToString();
-                Main frm = new Main(result.Rows[0]["HoTen"].ToString());
+                Main frm = new Main();
                 frm.Show();
                 this.Hide();
             }

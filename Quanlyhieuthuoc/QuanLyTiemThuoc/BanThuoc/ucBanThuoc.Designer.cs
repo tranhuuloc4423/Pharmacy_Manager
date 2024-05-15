@@ -42,6 +42,11 @@
             tableLayoutPanel2 = new TableLayoutPanel();
             panel1 = new Panel();
             dgThuoc = new DataGridView();
+            MaThuoc = new DataGridViewTextBoxColumn();
+            TenThuoc = new DataGridViewTextBoxColumn();
+            TenLoaiThuoc = new DataGridViewTextBoxColumn();
+            DonViTinh = new DataGridViewTextBoxColumn();
+            GiaBan = new DataGridViewTextBoxColumn();
             panel2 = new Panel();
             dgCTHD = new DataGridView();
             MaThuocCTHD = new DataGridViewTextBoxColumn();
@@ -50,20 +55,15 @@
             DonGia = new DataGridViewTextBoxColumn();
             ThanhTien = new DataGridViewTextBoxColumn();
             panel3 = new Panel();
-            lblTongTien = new Button();
             nudSoLuong = new NumericUpDown();
-            lblGiamGia = new Button();
             btnGiam = new Button();
-            lblNguoiBan = new Button();
             btnTang = new Button();
-            lblKhachHang = new Button();
             btnThemKhach = new Button();
             lblGiaBan = new Label();
             btnThanhToan = new Button();
             lblLoaiThuoc = new Label();
             label11 = new Label();
             lblTenThuoc = new Label();
-            label10 = new Label();
             label4 = new Label();
             label9 = new Label();
             label1 = new Label();
@@ -72,11 +72,9 @@
             btnThem = new Button();
             label3 = new Label();
             label2 = new Label();
-            MaThuoc = new DataGridViewTextBoxColumn();
-            TenThuoc = new DataGridViewTextBoxColumn();
-            TenLoaiThuoc = new DataGridViewTextBoxColumn();
-            DonViTinh = new DataGridViewTextBoxColumn();
-            GiaBan = new DataGridViewTextBoxColumn();
+            lblKhachHang = new Label();
+            lblTongTien = new Label();
+            lblNguoiBan = new Label();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -179,6 +177,47 @@
             dgThuoc.Size = new Size(738, 347);
             dgThuoc.TabIndex = 3;
             dgThuoc.CellClick += dgThuoc_CellClick;
+            // 
+            // MaThuoc
+            // 
+            MaThuoc.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            MaThuoc.DataPropertyName = "MaThuoc";
+            MaThuoc.HeaderText = "Mã Thuốc";
+            MaThuoc.Name = "MaThuoc";
+            MaThuoc.ReadOnly = true;
+            MaThuoc.Visible = false;
+            // 
+            // TenThuoc
+            // 
+            TenThuoc.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            TenThuoc.DataPropertyName = "TenThuoc";
+            TenThuoc.HeaderText = "Tên Thuốc";
+            TenThuoc.Name = "TenThuoc";
+            TenThuoc.ReadOnly = true;
+            // 
+            // TenLoaiThuoc
+            // 
+            TenLoaiThuoc.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            TenLoaiThuoc.DataPropertyName = "TenLoaiThuoc";
+            TenLoaiThuoc.HeaderText = "Tên Loại Thuốc";
+            TenLoaiThuoc.Name = "TenLoaiThuoc";
+            TenLoaiThuoc.ReadOnly = true;
+            // 
+            // DonViTinh
+            // 
+            DonViTinh.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            DonViTinh.DataPropertyName = "DonViTinh";
+            DonViTinh.HeaderText = "Đơn Vị Tính";
+            DonViTinh.Name = "DonViTinh";
+            DonViTinh.ReadOnly = true;
+            // 
+            // GiaBan
+            // 
+            GiaBan.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            GiaBan.DataPropertyName = "GiaBan";
+            GiaBan.HeaderText = "Giá Bán";
+            GiaBan.Name = "GiaBan";
+            GiaBan.ReadOnly = true;
             // 
             // panel2
             // 
@@ -284,20 +323,18 @@
             // panel3
             // 
             panel3.BackColor = Color.Thistle;
-            panel3.Controls.Add(lblTongTien);
-            panel3.Controls.Add(nudSoLuong);
-            panel3.Controls.Add(lblGiamGia);
-            panel3.Controls.Add(btnGiam);
             panel3.Controls.Add(lblNguoiBan);
-            panel3.Controls.Add(btnTang);
+            panel3.Controls.Add(lblTongTien);
             panel3.Controls.Add(lblKhachHang);
+            panel3.Controls.Add(nudSoLuong);
+            panel3.Controls.Add(btnGiam);
+            panel3.Controls.Add(btnTang);
             panel3.Controls.Add(btnThemKhach);
             panel3.Controls.Add(lblGiaBan);
             panel3.Controls.Add(btnThanhToan);
             panel3.Controls.Add(lblLoaiThuoc);
             panel3.Controls.Add(label11);
             panel3.Controls.Add(lblTenThuoc);
-            panel3.Controls.Add(label10);
             panel3.Controls.Add(label4);
             panel3.Controls.Add(label9);
             panel3.Controls.Add(label1);
@@ -312,25 +349,6 @@
             panel3.Size = new Size(1354, 354);
             panel3.TabIndex = 1;
             // 
-            // lblTongTien
-            // 
-            lblTongTien.BackColor = Color.White;
-            lblTongTien.Enabled = false;
-            lblTongTien.FlatAppearance.BorderColor = Color.LightPink;
-            lblTongTien.FlatAppearance.BorderSize = 2;
-            lblTongTien.FlatAppearance.CheckedBackColor = Color.LightPink;
-            lblTongTien.FlatAppearance.MouseDownBackColor = Color.LightPink;
-            lblTongTien.FlatAppearance.MouseOverBackColor = Color.LightPink;
-            lblTongTien.FlatStyle = FlatStyle.Flat;
-            lblTongTien.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTongTien.Location = new Point(866, 200);
-            lblTongTien.Margin = new Padding(4, 3, 4, 3);
-            lblTongTien.Name = "lblTongTien";
-            lblTongTien.Size = new Size(186, 39);
-            lblTongTien.TabIndex = 65;
-            lblTongTien.Text = "...";
-            lblTongTien.UseVisualStyleBackColor = false;
-            // 
             // nudSoLuong
             // 
             nudSoLuong.Font = new Font("Segoe UI", 16F);
@@ -339,25 +357,6 @@
             nudSoLuong.Name = "nudSoLuong";
             nudSoLuong.Size = new Size(70, 36);
             nudSoLuong.TabIndex = 58;
-            // 
-            // lblGiamGia
-            // 
-            lblGiamGia.BackColor = Color.White;
-            lblGiamGia.Enabled = false;
-            lblGiamGia.FlatAppearance.BorderColor = Color.LightPink;
-            lblGiamGia.FlatAppearance.BorderSize = 2;
-            lblGiamGia.FlatAppearance.CheckedBackColor = Color.LightPink;
-            lblGiamGia.FlatAppearance.MouseDownBackColor = Color.LightPink;
-            lblGiamGia.FlatAppearance.MouseOverBackColor = Color.LightPink;
-            lblGiamGia.FlatStyle = FlatStyle.Flat;
-            lblGiamGia.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblGiamGia.Location = new Point(866, 141);
-            lblGiamGia.Margin = new Padding(4, 3, 4, 3);
-            lblGiamGia.Name = "lblGiamGia";
-            lblGiamGia.Size = new Size(186, 39);
-            lblGiamGia.TabIndex = 64;
-            lblGiamGia.Text = "...";
-            lblGiamGia.UseVisualStyleBackColor = false;
             // 
             // btnGiam
             // 
@@ -378,25 +377,6 @@
             btnGiam.UseVisualStyleBackColor = false;
             btnGiam.Click += btnGiam_Click;
             // 
-            // lblNguoiBan
-            // 
-            lblNguoiBan.BackColor = Color.White;
-            lblNguoiBan.Enabled = false;
-            lblNguoiBan.FlatAppearance.BorderColor = Color.LightPink;
-            lblNguoiBan.FlatAppearance.BorderSize = 2;
-            lblNguoiBan.FlatAppearance.CheckedBackColor = Color.LightPink;
-            lblNguoiBan.FlatAppearance.MouseDownBackColor = Color.LightPink;
-            lblNguoiBan.FlatAppearance.MouseOverBackColor = Color.LightPink;
-            lblNguoiBan.FlatStyle = FlatStyle.Flat;
-            lblNguoiBan.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblNguoiBan.Location = new Point(866, 88);
-            lblNguoiBan.Margin = new Padding(4, 3, 4, 3);
-            lblNguoiBan.Name = "lblNguoiBan";
-            lblNguoiBan.Size = new Size(186, 39);
-            lblNguoiBan.TabIndex = 63;
-            lblNguoiBan.Text = "...";
-            lblNguoiBan.UseVisualStyleBackColor = false;
-            // 
             // btnTang
             // 
             btnTang.BackColor = Color.White;
@@ -415,25 +395,6 @@
             btnTang.Text = "+";
             btnTang.UseVisualStyleBackColor = false;
             btnTang.Click += btnTang_Click;
-            // 
-            // lblKhachHang
-            // 
-            lblKhachHang.BackColor = Color.White;
-            lblKhachHang.Enabled = false;
-            lblKhachHang.FlatAppearance.BorderColor = Color.LightPink;
-            lblKhachHang.FlatAppearance.BorderSize = 2;
-            lblKhachHang.FlatAppearance.CheckedBackColor = Color.LightPink;
-            lblKhachHang.FlatAppearance.MouseDownBackColor = Color.LightPink;
-            lblKhachHang.FlatAppearance.MouseOverBackColor = Color.LightPink;
-            lblKhachHang.FlatStyle = FlatStyle.Flat;
-            lblKhachHang.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblKhachHang.Location = new Point(866, 33);
-            lblKhachHang.Margin = new Padding(4, 3, 4, 3);
-            lblKhachHang.Name = "lblKhachHang";
-            lblKhachHang.Size = new Size(186, 39);
-            lblKhachHang.TabIndex = 62;
-            lblKhachHang.Text = "...";
-            lblKhachHang.UseVisualStyleBackColor = false;
             // 
             // btnThemKhach
             // 
@@ -460,9 +421,9 @@
             lblGiaBan.Font = new Font("Segoe UI", 16F);
             lblGiaBan.Location = new Point(200, 198);
             lblGiaBan.Name = "lblGiaBan";
-            lblGiaBan.Size = new Size(97, 30);
+            lblGiaBan.Size = new Size(28, 30);
             lblGiaBan.TabIndex = 54;
-            lblGiaBan.Text = "Giá Bán :";
+            lblGiaBan.Text = "...";
             // 
             // btnThanhToan
             // 
@@ -489,9 +450,9 @@
             lblLoaiThuoc.Font = new Font("Segoe UI", 16F);
             lblLoaiThuoc.Location = new Point(200, 88);
             lblLoaiThuoc.Name = "lblLoaiThuoc";
-            lblLoaiThuoc.Size = new Size(128, 30);
+            lblLoaiThuoc.Size = new Size(28, 30);
             lblLoaiThuoc.TabIndex = 53;
-            lblLoaiThuoc.Text = "Loại Thuốc :";
+            lblLoaiThuoc.Text = "...";
             // 
             // label11
             // 
@@ -509,19 +470,9 @@
             lblTenThuoc.Font = new Font("Segoe UI", 16F);
             lblTenThuoc.Location = new Point(200, 33);
             lblTenThuoc.Name = "lblTenThuoc";
-            lblTenThuoc.Size = new Size(123, 30);
+            lblTenThuoc.Size = new Size(28, 30);
             lblTenThuoc.TabIndex = 50;
-            lblTenThuoc.Text = "Tên Thuốc :";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 16F);
-            label10.Location = new Point(645, 140);
-            label10.Name = "label10";
-            label10.Size = new Size(111, 30);
-            label10.TabIndex = 59;
-            label10.Text = "Giảm Giá :";
+            lblTenThuoc.Text = "...";
             // 
             // label4
             // 
@@ -557,7 +508,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 16F);
-            label8.Location = new Point(645, 198);
+            label8.Location = new Point(645, 144);
             label8.Name = "label8";
             label8.Size = new Size(121, 30);
             label8.TabIndex = 61;
@@ -620,46 +571,35 @@
             label2.TabIndex = 44;
             label2.Text = "Tên Thuốc :";
             // 
-            // MaThuoc
+            // lblKhachHang
             // 
-            MaThuoc.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            MaThuoc.DataPropertyName = "MaThuoc";
-            MaThuoc.HeaderText = "Mã Thuốc";
-            MaThuoc.Name = "MaThuoc";
-            MaThuoc.ReadOnly = true;
-            MaThuoc.Visible = false;
+            lblKhachHang.AutoSize = true;
+            lblKhachHang.Font = new Font("Segoe UI", 16F);
+            lblKhachHang.Location = new Point(866, 33);
+            lblKhachHang.Name = "lblKhachHang";
+            lblKhachHang.Size = new Size(28, 30);
+            lblKhachHang.TabIndex = 66;
+            lblKhachHang.Text = "...";
             // 
-            // TenThuoc
+            // lblTongTien
             // 
-            TenThuoc.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            TenThuoc.DataPropertyName = "TenThuoc";
-            TenThuoc.HeaderText = "Tên Thuốc";
-            TenThuoc.Name = "TenThuoc";
-            TenThuoc.ReadOnly = true;
+            lblTongTien.AutoSize = true;
+            lblTongTien.Font = new Font("Segoe UI", 16F);
+            lblTongTien.Location = new Point(866, 144);
+            lblTongTien.Name = "lblTongTien";
+            lblTongTien.Size = new Size(28, 30);
+            lblTongTien.TabIndex = 67;
+            lblTongTien.Text = "...";
             // 
-            // TenLoaiThuoc
+            // lblNguoiBan
             // 
-            TenLoaiThuoc.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            TenLoaiThuoc.DataPropertyName = "TenLoaiThuoc";
-            TenLoaiThuoc.HeaderText = "Tên Loại Thuốc";
-            TenLoaiThuoc.Name = "TenLoaiThuoc";
-            TenLoaiThuoc.ReadOnly = true;
-            // 
-            // DonViTinh
-            // 
-            DonViTinh.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            DonViTinh.DataPropertyName = "DonViTinh";
-            DonViTinh.HeaderText = "Đơn Vị Tính";
-            DonViTinh.Name = "DonViTinh";
-            DonViTinh.ReadOnly = true;
-            // 
-            // GiaBan
-            // 
-            GiaBan.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            GiaBan.DataPropertyName = "GiaBan";
-            GiaBan.HeaderText = "Giá Bán";
-            GiaBan.Name = "GiaBan";
-            GiaBan.ReadOnly = true;
+            lblNguoiBan.AutoSize = true;
+            lblNguoiBan.Font = new Font("Segoe UI", 16F);
+            lblNguoiBan.Location = new Point(866, 88);
+            lblNguoiBan.Name = "lblNguoiBan";
+            lblNguoiBan.Size = new Size(28, 30);
+            lblNguoiBan.TabIndex = 68;
+            lblNguoiBan.Text = "...";
             // 
             // ucBanThuoc
             // 
@@ -694,20 +634,15 @@
         private DataGridViewTextBoxColumn DonGia;
         private DataGridViewTextBoxColumn ThanhTien;
         private Panel panel3;
-        private Button lblTongTien;
         private NumericUpDown nudSoLuong;
-        private Button lblGiamGia;
         private Button btnGiam;
-        private Button lblNguoiBan;
         private Button btnTang;
-        private Button lblKhachHang;
         private Button btnThemKhach;
         private Label lblGiaBan;
         private Button btnThanhToan;
         private Label lblLoaiThuoc;
         private Label label11;
         private Label lblTenThuoc;
-        private Label label10;
         private Label label4;
         private Label label9;
         private Label label1;
@@ -721,5 +656,8 @@
         private DataGridViewTextBoxColumn TenLoaiThuoc;
         private DataGridViewTextBoxColumn DonViTinh;
         private DataGridViewTextBoxColumn GiaBan;
+        private Label lblNguoiBan;
+        private Label lblTongTien;
+        private Label lblKhachHang;
     }
 }

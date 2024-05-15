@@ -26,14 +26,14 @@ namespace Quanlyhieuthuoc.BanThuoc
             hoaDonManager = new HoaDonManager();
             thuocManager = new ThuocManager();
             error = "";
-            hienThiDanhSachKhoThuoc();
+            HienThiDanhSach();
             lblNguoiBan.Text = CauHinhHeThong.TenDayDu;
         }
 
-        private void hienThiDanhSachKhoThuoc()
+        private void HienThiDanhSach()
         {
             DataTable data = new DataTable();
-            data = thuocManager.HienThiDanhSachKhoThuoc(ref error);
+            data = thuocManager.HienThiDanhSachThuoc(ref error);
             if (data == null)
             {
                 MessageBox.Show(error);
@@ -135,7 +135,7 @@ namespace Quanlyhieuthuoc.BanThuoc
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(lblKhachHang.Text))
+            if(khachHangSelected == null)
             {
                 MessageBox.Show("Vui lòng chọn khách hàng");
                 return;
@@ -164,6 +164,7 @@ namespace Quanlyhieuthuoc.BanThuoc
                     }
                 }
                 MessageBox.Show("Thanh Toán Thành Công!");
+                dgCTHD.Rows.Clear();
             }
         }
 

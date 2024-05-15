@@ -46,7 +46,6 @@
             TenTaiKhoan = new DataGridViewTextBoxColumn();
             NgayBan = new DataGridViewTextBoxColumn();
             TenKhachHang = new DataGridViewTextBoxColumn();
-            GiamGia = new DataGridViewTextBoxColumn();
             TongTien = new DataGridViewTextBoxColumn();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
@@ -125,9 +124,10 @@
             // dtpNgayKetThuc
             // 
             dtpNgayKetThuc.Font = new Font("Segoe UI", 16F);
-            dtpNgayKetThuc.Location = new Point(566, 19);
+            dtpNgayKetThuc.Format = DateTimePickerFormat.Custom;
+            dtpNgayKetThuc.Location = new Point(566, 20);
             dtpNgayKetThuc.Name = "dtpNgayKetThuc";
-            dtpNgayKetThuc.Size = new Size(215, 36);
+            dtpNgayKetThuc.Size = new Size(164, 36);
             dtpNgayKetThuc.TabIndex = 1;
             dtpNgayKetThuc.Value = new DateTime(2024, 5, 3, 0, 0, 0, 0);
             dtpNgayKetThuc.ValueChanged += dtpNgayKetThuc_ValueChanged;
@@ -135,9 +135,10 @@
             // dtpNgayBatDau
             // 
             dtpNgayBatDau.Font = new Font("Segoe UI", 16F);
-            dtpNgayBatDau.Location = new Point(175, 20);
+            dtpNgayBatDau.Format = DateTimePickerFormat.Custom;
+            dtpNgayBatDau.Location = new Point(175, 19);
             dtpNgayBatDau.Name = "dtpNgayBatDau";
-            dtpNgayBatDau.Size = new Size(211, 36);
+            dtpNgayBatDau.Size = new Size(170, 36);
             dtpNgayBatDau.TabIndex = 0;
             dtpNgayBatDau.ValueChanged += dtpNgayBatDau_ValueChanged;
             // 
@@ -170,7 +171,7 @@
             dgHoaDon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgHoaDon.ColumnHeadersHeight = 40;
             dgHoaDon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dgHoaDon.Columns.AddRange(new DataGridViewColumn[] { MaHoaDon, TenTaiKhoan, NgayBan, TenKhachHang, GiamGia, TongTien });
+            dgHoaDon.Columns.AddRange(new DataGridViewColumn[] { MaHoaDon, TenTaiKhoan, NgayBan, TenKhachHang, TongTien });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = SystemColors.Window;
             dataGridViewCellStyle3.Font = new Font("Tahoma", 14F);
@@ -205,51 +206,43 @@
             // 
             // MaHoaDon
             // 
+            MaHoaDon.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             MaHoaDon.DataPropertyName = "MaHoaDon";
             MaHoaDon.HeaderText = "Mã Hóa Đơn";
             MaHoaDon.Name = "MaHoaDon";
             MaHoaDon.ReadOnly = true;
-            MaHoaDon.Width = 150;
             // 
             // TenTaiKhoan
             // 
+            TenTaiKhoan.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             TenTaiKhoan.DataPropertyName = "TenTaiKhoan";
             TenTaiKhoan.HeaderText = "Tên Người Bán";
             TenTaiKhoan.Name = "TenTaiKhoan";
             TenTaiKhoan.ReadOnly = true;
-            TenTaiKhoan.Width = 225;
             // 
             // NgayBan
             // 
+            NgayBan.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             NgayBan.DataPropertyName = "NgayBan";
             NgayBan.HeaderText = "Ngày Bán";
             NgayBan.Name = "NgayBan";
             NgayBan.ReadOnly = true;
-            NgayBan.Width = 200;
             // 
             // TenKhachHang
             // 
+            TenKhachHang.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             TenKhachHang.DataPropertyName = "HoTen";
             TenKhachHang.HeaderText = "Tên Khách Hàng";
             TenKhachHang.Name = "TenKhachHang";
             TenKhachHang.ReadOnly = true;
-            TenKhachHang.Width = 200;
-            // 
-            // GiamGia
-            // 
-            GiamGia.DataPropertyName = "GiamGia";
-            GiamGia.HeaderText = "Giảm Giá";
-            GiamGia.Name = "GiamGia";
-            GiamGia.ReadOnly = true;
-            GiamGia.Width = 150;
             // 
             // TongTien
             // 
+            TongTien.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             TongTien.DataPropertyName = "TongTien";
             TongTien.HeaderText = "Tổng Tiền";
             TongTien.Name = "TongTien";
             TongTien.ReadOnly = true;
-            TongTien.Width = 200;
             // 
             // ucHoadon
             // 
@@ -282,7 +275,6 @@
         private DataGridViewTextBoxColumn TenTaiKhoan;
         private DataGridViewTextBoxColumn NgayBan;
         private DataGridViewTextBoxColumn TenKhachHang;
-        private DataGridViewTextBoxColumn GiamGia;
         private DataGridViewTextBoxColumn TongTien;
     }
 }

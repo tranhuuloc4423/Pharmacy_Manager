@@ -18,7 +18,7 @@ namespace DAL.Repos
         {
             try
             {
-                string sql = "SELECT HD.MaHoaDon, HD.TenTaiKhoan, HD.NgayBan, KH.HoTen, HD.GiamGia, HD.TongTien " +
+                string sql = "SELECT HD.MaHoaDon, HD.TenTaiKhoan, HD.NgayBan, KH.HoTen, HD.TongTien " +
                             " FROM HoaDon HD " + 
                             " INNER JOIN KhachHang KH on HD.MaKhachHang = KH.MaKhachHang " +
                             " WHERE HD.NgayBan >= @TuNgay AND HD.NgayBan <= @DenNgay";

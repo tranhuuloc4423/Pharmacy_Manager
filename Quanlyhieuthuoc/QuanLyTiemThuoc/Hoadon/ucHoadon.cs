@@ -59,7 +59,7 @@ namespace Quanlyhieuthuoc.Hoadon
                 HoaDonEntity.TenTaiKhoan = rowselected.Cells["TenTaiKhoan"].Value.ToString();
                 HoaDonEntity.NgayBan = rowselected.Cells["NgayBan"].Value.ToString();
                 HoaDonEntity.TongTien = Convert.ToInt32(rowselected.Cells["TongTien"].Value);
-                HoaDonEntity.GiamGia = Convert.ToInt32(rowselected.Cells["GiamGia"].Value);
+                //HoaDonEntity.GiamGia = Convert.ToInt32(rowselected.Cells["GiamGia"].Value);
                 TenKH = rowselected.Cells["TenKhachHang"].Value.ToString();
             }
         }

@@ -26,7 +26,6 @@ namespace Quanlyhieuthuoc.Hoadon
             lblKhachHang.Text = TenKH;
             lblNgayBan.Text = HoaDonEntity.NgayBan.ToString();
             lblNguoiBan.Text =HoaDonEntity.TenTaiKhoan.ToString();
-            lblGiamGia.Text = HoaDonEntity.GiamGia.ToString();
             lblTongTien.Text = HoaDonEntity.TongTien.ToString();
             HienThiChiTietHoaDon(HoaDonEntity.MaHoaDon);
         }

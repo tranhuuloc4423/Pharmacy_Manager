@@ -10,5 +10,6 @@ namespace Quanlyhieuthuoc
     {
         public static string TenDangNhap;
         public static string TenDayDu;
+        public static int VaiTro;
     }
 }
