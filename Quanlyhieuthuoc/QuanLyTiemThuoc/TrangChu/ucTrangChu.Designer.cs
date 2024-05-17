@@ -30,6 +30,10 @@
         {
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
+            btnThoat = new Button();
+            label1 = new Label();
+            btnDangXuat = new Button();
+            btnDoi = new Button();
             pictureBox1 = new PictureBox();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
@@ -51,6 +55,10 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(btnThoat);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(btnDangXuat);
+            panel1.Controls.Add(btnDoi);
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
@@ -58,9 +66,78 @@
             panel1.Size = new Size(1211, 731);
             panel1.TabIndex = 0;
             // 
+            // btnThoat
+            // 
+            btnThoat.BackColor = Color.White;
+            btnThoat.Cursor = Cursors.Hand;
+            btnThoat.FlatAppearance.BorderColor = Color.LightPink;
+            btnThoat.FlatAppearance.BorderSize = 2;
+            btnThoat.FlatAppearance.MouseDownBackColor = Color.LightPink;
+            btnThoat.FlatAppearance.MouseOverBackColor = Color.LightPink;
+            btnThoat.FlatStyle = FlatStyle.Flat;
+            btnThoat.Font = new Font("Microsoft Sans Serif", 14F);
+            btnThoat.Location = new Point(144, 379);
+            btnThoat.Margin = new Padding(4, 3, 4, 3);
+            btnThoat.Name = "btnThoat";
+            btnThoat.Size = new Size(153, 38);
+            btnThoat.TabIndex = 20;
+            btnThoat.Text = "Thoát";
+            btnThoat.UseVisualStyleBackColor = false;
+            btnThoat.Click += btnThoat_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.White;
+            label1.FlatStyle = FlatStyle.Flat;
+            label1.Font = new Font("Segoe UI", 24F);
+            label1.Location = new Point(54, 23);
+            label1.Name = "label1";
+            label1.Size = new Size(351, 90);
+            label1.TabIndex = 19;
+            label1.Text = "Chào mừng đến với \r\nTiệm Thuốc Pharmacity";
+            label1.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // btnDangXuat
+            // 
+            btnDangXuat.BackColor = Color.White;
+            btnDangXuat.Cursor = Cursors.Hand;
+            btnDangXuat.FlatAppearance.BorderColor = Color.LightPink;
+            btnDangXuat.FlatAppearance.BorderSize = 2;
+            btnDangXuat.FlatAppearance.MouseDownBackColor = Color.LightPink;
+            btnDangXuat.FlatAppearance.MouseOverBackColor = Color.LightPink;
+            btnDangXuat.FlatStyle = FlatStyle.Flat;
+            btnDangXuat.Font = new Font("Microsoft Sans Serif", 14F);
+            btnDangXuat.Location = new Point(144, 287);
+            btnDangXuat.Margin = new Padding(4, 3, 4, 3);
+            btnDangXuat.Name = "btnDangXuat";
+            btnDangXuat.Size = new Size(153, 38);
+            btnDangXuat.TabIndex = 18;
+            btnDangXuat.Text = "Đăng Xuất";
+            btnDangXuat.UseVisualStyleBackColor = false;
+            btnDangXuat.Click += btnDangXuat_Click;
+            // 
+            // btnDoi
+            // 
+            btnDoi.BackColor = Color.White;
+            btnDoi.Cursor = Cursors.Hand;
+            btnDoi.FlatAppearance.BorderColor = Color.LightPink;
+            btnDoi.FlatAppearance.BorderSize = 2;
+            btnDoi.FlatAppearance.MouseDownBackColor = Color.LightPink;
+            btnDoi.FlatAppearance.MouseOverBackColor = Color.LightPink;
+            btnDoi.FlatStyle = FlatStyle.Flat;
+            btnDoi.Font = new Font("Microsoft Sans Serif", 14F);
+            btnDoi.Location = new Point(144, 201);
+            btnDoi.Margin = new Padding(4, 3, 4, 3);
+            btnDoi.Name = "btnDoi";
+            btnDoi.Size = new Size(153, 38);
+            btnDoi.TabIndex = 17;
+            btnDoi.Text = "Đổi thông tin";
+            btnDoi.UseVisualStyleBackColor = false;
+            btnDoi.Click += btnDoi_Click;
+            // 
             // pictureBox1
             // 
-            pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Image = Properties.Resources.trangchu_image;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
@@ -78,6 +155,7 @@
             Size = new Size(1217, 737);
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
@@ -87,5 +165,9 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Panel panel1;
         private PictureBox pictureBox1;
+        private Button btnDangXuat;
+        private Button btnDoi;
+        private Label label1;
+        private Button btnThoat;
     }
 }

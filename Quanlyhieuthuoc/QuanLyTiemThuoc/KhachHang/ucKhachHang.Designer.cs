@@ -36,6 +36,9 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
             dgKhachHang = new DataGridView();
+            MaKhachHang = new DataGridViewTextBoxColumn();
+            HoTen = new DataGridViewTextBoxColumn();
+            SoDienThoai = new DataGridViewTextBoxColumn();
             panel2 = new Panel();
             lblSoDienThoai = new Label();
             lblHoTen = new Label();
@@ -46,9 +49,6 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            MaKhachHang = new DataGridViewTextBoxColumn();
-            HoTen = new DataGridViewTextBoxColumn();
-            SoDienThoai = new DataGridViewTextBoxColumn();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgKhachHang).BeginInit();
@@ -86,15 +86,18 @@
             dgKhachHang.AllowUserToResizeColumns = false;
             dgKhachHang.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = Color.Thistle;
+            dataGridViewCellStyle1.SelectionForeColor = Color.Black;
             dgKhachHang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgKhachHang.BackgroundColor = Color.LightPink;
             dgKhachHang.CellBorderStyle = DataGridViewCellBorderStyle.Sunken;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Control;
             dataGridViewCellStyle2.Font = new Font("Tahoma", 14F, FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = Color.Thistle;
+            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgKhachHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgKhachHang.ColumnHeadersHeight = 40;
@@ -103,9 +106,9 @@
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = SystemColors.Window;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 14F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = Color.Thistle;
+            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgKhachHang.DefaultCellStyle = dataGridViewCellStyle3;
             dgKhachHang.Dock = DockStyle.Fill;
@@ -117,9 +120,9 @@
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = SystemColors.Control;
             dataGridViewCellStyle4.Font = new Font("Tahoma", 14F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = Color.Thistle;
+            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
             dgKhachHang.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgKhachHang.RowHeadersVisible = false;
@@ -131,6 +134,30 @@
             dgKhachHang.Size = new Size(730, 523);
             dgKhachHang.TabIndex = 1;
             dgKhachHang.CellClick += dgKhachHang_CellClick;
+            // 
+            // MaKhachHang
+            // 
+            MaKhachHang.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            MaKhachHang.DataPropertyName = "MaKhachHang";
+            MaKhachHang.HeaderText = "Mã Khách Hàng";
+            MaKhachHang.Name = "MaKhachHang";
+            MaKhachHang.ReadOnly = true;
+            // 
+            // HoTen
+            // 
+            HoTen.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            HoTen.DataPropertyName = "HoTen";
+            HoTen.HeaderText = "Họ Tên";
+            HoTen.Name = "HoTen";
+            HoTen.ReadOnly = true;
+            // 
+            // SoDienThoai
+            // 
+            SoDienThoai.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            SoDienThoai.DataPropertyName = "SoDienThoai";
+            SoDienThoai.HeaderText = "Số ĐT";
+            SoDienThoai.Name = "SoDienThoai";
+            SoDienThoai.ReadOnly = true;
             // 
             // panel2
             // 
@@ -266,30 +293,6 @@
             label1.Size = new Size(180, 27);
             label1.TabIndex = 10;
             label1.Text = "Mã Khách Hàng :";
-            // 
-            // MaKhachHang
-            // 
-            MaKhachHang.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            MaKhachHang.DataPropertyName = "MaKhachHang";
-            MaKhachHang.HeaderText = "Mã Khách Hàng";
-            MaKhachHang.Name = "MaKhachHang";
-            MaKhachHang.ReadOnly = true;
-            // 
-            // HoTen
-            // 
-            HoTen.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            HoTen.DataPropertyName = "HoTen";
-            HoTen.HeaderText = "Họ Tên";
-            HoTen.Name = "HoTen";
-            HoTen.ReadOnly = true;
-            // 
-            // SoDienThoai
-            // 
-            SoDienThoai.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            SoDienThoai.DataPropertyName = "SoDienThoai";
-            SoDienThoai.HeaderText = "Số ĐT";
-            SoDienThoai.Name = "SoDienThoai";
-            SoDienThoai.ReadOnly = true;
             // 
             // ucKhachHang
             // 

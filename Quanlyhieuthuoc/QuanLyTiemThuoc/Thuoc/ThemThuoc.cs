@@ -16,14 +16,17 @@ namespace Quanlyhieuthuoc.Thuoc
     {
         private ThuocManager manager = null;
         private PhanLoaiManager phanLoaiManager = null;
+        private NhaCungCapManager nhaCungCapManager = null;
         private string error = null;
         public ThemThuoc()
         {
             InitializeComponent();
             manager = new ThuocManager();
             phanLoaiManager = new PhanLoaiManager();
+            nhaCungCapManager = new NhaCungCapManager();
             error = "";
             hienThiPhanLoai();
+            hienThiNhaCungCap();
         }
 
         private void hienThiPhanLoai()
@@ -42,18 +45,35 @@ namespace Quanlyhieuthuoc.Thuoc
             }
         }
 
+        private void hienThiNhaCungCap()
+        {
+            DataTable data = new DataTable();
+            data = nhaCungCapManager.HienThiDanhSachTen(ref error);
+            if (data == null)
+            {
+                MessageBox.Show(error);
+            }
+            else
+            {
+                cbNCC.DataSource = data;
+                cbNCC.DisplayMember = "TenNhaCungCap";
+                cbNCC.ValueMember = "MaNhaCungCap";
+            }
+        }
+
         private void btnThem_Click(object sender, EventArgs e)
         {
             ThuocEntity entity = new ThuocEntity();
             entity.MaLoaiThuoc = Convert.ToInt32(cbLoaiThuoc.SelectedValue);
             entity.TenThuoc = txtTenThuoc.Text;
             entity.DonViTinh = txtDonViTinh.Text;
+            entity.MaNhaCungCap = Convert.ToInt32(cbNCC.SelectedValue);
             //Nếu validate như thế này thì giá trị double bị null xong lỗi nên phải kiểm tra trước
             //mà nếu thế thì mỗi bên một ít
             //manager check rồi bên này cũng check, trông hơi khó chịu
             //có thể đổi kiểu dữ liệu thành double? thì kiểm tra full bên manager
             //hoặc kiểm tra full ở đây
-            if(!string.IsNullOrWhiteSpace(txtGiaBan.Text))
+            if (!string.IsNullOrWhiteSpace(txtGiaBan.Text))
             {
                 entity.GiaBan = Convert.ToDouble(txtGiaBan.Text);
             }
@@ -88,8 +108,13 @@ namespace Quanlyhieuthuoc.Thuoc
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
-                e.Handled = true; 
+                e.Handled = true;
             }
+        }
+
+        private void txtGiaBan_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -23,16 +23,7 @@ namespace Quanlyhieuthuoc
             InitializeComponent();
             manager = new TaiKhoanManager();
             error = "";
-        }
-
-        private void txtDangNhap_Click(object sender, EventArgs e)
-        {
-            txtDangNhap.SelectAll();
-        }
-
-        private void txtMatKhau_Click(object sender, EventArgs e)
-        {
-            txtMatKhau.SelectAll();
+            txtMatKhau.UseSystemPasswordChar = true;
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -46,29 +37,36 @@ namespace Quanlyhieuthuoc
             string matKhau = txtMatKhau.Text;
             if (string.IsNullOrEmpty(tenTaiKhoan))
             {
-                MessageBox.Show("Vui long nhap ten tai khoan!");
+                MessageBox.Show("Vui lòng nhập tên tài khoản!");
                 return;
             }
             if (string.IsNullOrEmpty(matKhau))
             {
-                MessageBox.Show("Vui long nhap mat khau!");
+                MessageBox.Show("Vui lòng nhập mật khẩu!");
                 return;
             }
-            var result = manager.KiemTraDangNhap(tenTaiKhoan, matKhau, ref error);
-            if (result != null && result.Rows.Count > 0)
+            try
             {
-                MessageBox.Show("Dang nhap thanh cong, ten nguoi dung la: " + result.Rows[0]["HoTen"].ToString());
-                CauHinhHeThong.TenDangNhap = tenTaiKhoan;
-                CauHinhHeThong.VaiTro = Convert.ToInt32(result.Rows[0]["VaiTro"]);
-                CauHinhHeThong.TenDayDu = result.Rows[0]["HoTen"].ToString();
-                Main frm = new Main();
-                frm.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Loi tai khoan, dang nhap khong thanh cong");
+                var result = manager.KiemTraDangNhap(tenTaiKhoan, matKhau, ref error);
+                if (result != null && result.Rows.Count > 0)
+                {
+                    MessageBox.Show("Đăng nhập thành công : " + result.Rows[0]["HoTen"].ToString());
+                    CauHinhHeThong.TenDangNhap = txtDangNhap.Text;
+                    CauHinhHeThong.VaiTro = Convert.ToInt32(result.Rows[0]["VaiTro"]);
+                    CauHinhHeThong.TenDayDu = result.Rows[0]["HoTen"].ToString();
+                    Main frm = new Main();
+                    frm.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Lỗi tài khoản, đăng nhập không thành công!");
 
+                }
+            }
+            catch (Exception)
+            {
+                throw;
             }
         }
         private void pbOpenEye_Click(object sender, EventArgs e)

@@ -32,6 +32,8 @@
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
+            cbNCC = new ComboBox();
+            label6 = new Label();
             btnThoat = new Button();
             btnThem = new Button();
             cbLoaiThuoc = new ComboBox();
@@ -59,7 +61,7 @@
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            tableLayoutPanel1.Size = new Size(484, 411);
+            tableLayoutPanel1.Size = new Size(525, 452);
             tableLayoutPanel1.TabIndex = 1;
             // 
             // panel1
@@ -69,7 +71,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(478, 54);
+            panel1.Size = new Size(519, 54);
             panel1.TabIndex = 0;
             // 
             // label1
@@ -86,6 +88,8 @@
             // panel2
             // 
             panel2.BackColor = Color.Thistle;
+            panel2.Controls.Add(cbNCC);
+            panel2.Controls.Add(label6);
             panel2.Controls.Add(btnThoat);
             panel2.Controls.Add(btnThem);
             panel2.Controls.Add(cbLoaiThuoc);
@@ -99,8 +103,30 @@
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(3, 63);
             panel2.Name = "panel2";
-            panel2.Size = new Size(478, 396);
+            panel2.Size = new Size(519, 396);
             panel2.TabIndex = 1;
+            // 
+            // cbNCC
+            // 
+            cbNCC.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbNCC.Font = new Font("Segoe UI", 14F);
+            cbNCC.ForeColor = Color.Black;
+            cbNCC.FormattingEnabled = true;
+            cbNCC.Location = new Point(208, 248);
+            cbNCC.Name = "cbNCC";
+            cbNCC.Size = new Size(273, 33);
+            cbNCC.TabIndex = 23;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 16F);
+            label6.ForeColor = Color.Black;
+            label6.Location = new Point(41, 251);
+            label6.Name = "label6";
+            label6.Size = new Size(153, 30);
+            label6.TabIndex = 21;
+            label6.Text = "Nhà Cung Cấp";
             // 
             // btnThoat
             // 
@@ -112,7 +138,7 @@
             btnThoat.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnThoat.FlatStyle = FlatStyle.Flat;
             btnThoat.Font = new Font("Microsoft Sans Serif", 16F);
-            btnThoat.Location = new Point(287, 290);
+            btnThoat.Location = new Point(312, 321);
             btnThoat.Margin = new Padding(4, 3, 4, 3);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(169, 46);
@@ -131,7 +157,7 @@
             btnThem.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnThem.FlatStyle = FlatStyle.Flat;
             btnThem.Font = new Font("Microsoft Sans Serif", 16F);
-            btnThem.Location = new Point(31, 290);
+            btnThem.Location = new Point(41, 321);
             btnThem.Margin = new Padding(4, 3, 4, 3);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(169, 46);
@@ -142,10 +168,11 @@
             // 
             // cbLoaiThuoc
             // 
+            cbLoaiThuoc.DropDownStyle = ComboBoxStyle.DropDownList;
             cbLoaiThuoc.Font = new Font("Segoe UI", 14F);
             cbLoaiThuoc.ForeColor = Color.Black;
             cbLoaiThuoc.FormattingEnabled = true;
-            cbLoaiThuoc.Location = new Point(183, 206);
+            cbLoaiThuoc.Location = new Point(208, 189);
             cbLoaiThuoc.Name = "cbLoaiThuoc";
             cbLoaiThuoc.Size = new Size(273, 33);
             cbLoaiThuoc.TabIndex = 18;
@@ -154,17 +181,18 @@
             // 
             txtGiaBan.Font = new Font("Segoe UI", 14F);
             txtGiaBan.ForeColor = Color.Black;
-            txtGiaBan.Location = new Point(183, 150);
+            txtGiaBan.Location = new Point(208, 133);
             txtGiaBan.Name = "txtGiaBan";
             txtGiaBan.Size = new Size(273, 32);
             txtGiaBan.TabIndex = 17;
+            txtGiaBan.TextChanged += txtGiaBan_TextChanged;
             txtGiaBan.KeyPress += txtGiaBan_KeyPress;
             // 
             // txtDonViTinh
             // 
             txtDonViTinh.Font = new Font("Segoe UI", 14F);
             txtDonViTinh.ForeColor = Color.Black;
-            txtDonViTinh.Location = new Point(183, 95);
+            txtDonViTinh.Location = new Point(208, 78);
             txtDonViTinh.Name = "txtDonViTinh";
             txtDonViTinh.Size = new Size(273, 32);
             txtDonViTinh.TabIndex = 16;
@@ -173,7 +201,7 @@
             // 
             txtTenThuoc.Font = new Font("Segoe UI", 14F);
             txtTenThuoc.ForeColor = Color.Black;
-            txtTenThuoc.Location = new Point(183, 41);
+            txtTenThuoc.Location = new Point(208, 24);
             txtTenThuoc.Name = "txtTenThuoc";
             txtTenThuoc.Size = new Size(273, 32);
             txtTenThuoc.TabIndex = 15;
@@ -183,7 +211,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 16F);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(31, 95);
+            label5.Location = new Point(41, 78);
             label5.Name = "label5";
             label5.Size = new Size(125, 30);
             label5.TabIndex = 14;
@@ -194,7 +222,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 16F);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(31, 153);
+            label4.Location = new Point(41, 136);
             label4.Name = "label4";
             label4.Size = new Size(86, 30);
             label4.TabIndex = 13;
@@ -205,7 +233,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 16F);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(31, 205);
+            label3.Location = new Point(41, 188);
             label3.Name = "label3";
             label3.Size = new Size(117, 30);
             label3.TabIndex = 12;
@@ -216,7 +244,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 16F);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(31, 40);
+            label2.Location = new Point(41, 23);
             label2.Name = "label2";
             label2.Size = new Size(112, 30);
             label2.TabIndex = 11;
@@ -226,8 +254,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(484, 411);
+            ClientSize = new Size(525, 452);
             Controls.Add(tableLayoutPanel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "ThemThuoc";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ThemThuoc";
@@ -255,5 +284,7 @@
         private Label label4;
         private Label label3;
         private Label label2;
+        private Label label6;
+        private ComboBox cbNCC;
     }
 }

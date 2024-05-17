@@ -79,8 +79,6 @@
             txtDangNhap.Name = "txtDangNhap";
             txtDangNhap.Size = new Size(284, 44);
             txtDangNhap.TabIndex = 0;
-            txtDangNhap.Text = "admin";
-            txtDangNhap.Click += txtDangNhap_Click;
             // 
             // txtMatKhau
             // 
@@ -92,8 +90,6 @@
             txtMatKhau.Name = "txtMatKhau";
             txtMatKhau.Size = new Size(279, 44);
             txtMatKhau.TabIndex = 1;
-            txtMatKhau.Text = "123";
-            txtMatKhau.Click += txtMatKhau_Click;
             // 
             // btnDangnhap
             // 
@@ -198,7 +194,7 @@
             Controls.Add(btnThoat);
             Controls.Add(label1);
             Controls.Add(pictureBox3);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 3, 4, 3);
             Name = "Dangnhap";
             StartPosition = FormStartPosition.CenterScreen;

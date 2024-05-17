@@ -56,6 +56,19 @@ namespace DAL.Repos
             return database.ExecuteNonQuery(procedureName, CommandType.StoredProcedure, ref error, parameters);
         }
 
+        public bool CapNhatThongTin(TaiKhoanEntity taikhoan, ref string error)
+        {
+            string procedureName = "CapNhatThongTin";
+            SqlParameter[] parameters =
+            {
+                new SqlParameter("@TenTaiKhoan", taikhoan.TenTaiKhoan),
+                new SqlParameter("@MatKhau", taikhoan.MatKhau),
+                new SqlParameter("@MatKhauMoi", taikhoan.MatKhauMoi),
+                new SqlParameter("@HoTen", taikhoan.HoTen),
+            };
+            return database.ExecuteNonQuery(procedureName, CommandType.StoredProcedure, ref error, parameters);
+        }
+
         public bool XoaTaiKhoan(string tenTaiKhoan, ref string error)
         {
             string query = "XoaTaiKhoan";

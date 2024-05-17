@@ -101,20 +101,6 @@ namespace Quanlyhieuthuoc
             handleAddUC(uc, title);
         }
 
-        private void btnDangXuat_Click(object sender, EventArgs e)
-        {
-            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất chương trình?", "Xác nhận đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if(dialogResult == DialogResult.Yes)
-            {
-                this.Close();
-                Dangnhap form = new Dangnhap();
-                form.Show();
-            } else
-            {
-                return;
-            }
-        }
-
         private void btnDoiThongTin_Click(object sender, EventArgs e)
         {
 

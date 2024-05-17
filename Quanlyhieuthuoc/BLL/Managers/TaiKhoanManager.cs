@@ -68,6 +68,31 @@ namespace BLL.Managers
             return process.SuaTaiKhoan(taiKhoan, ref error);
         }
 
+        public bool CapNhatThongTin(TaiKhoanEntity taiKhoan, ref string error)
+        {
+            if (string.IsNullOrEmpty(taiKhoan.TenTaiKhoan) == true)
+            {
+                error = "Vui lòng nhập tên tài khoản!";
+                return false;
+            }
+            if (string.IsNullOrEmpty(taiKhoan.HoTen) == true)
+            {
+                error = "Vui lòng nhập tên họ tên!";
+                return false;
+            }
+            if (string.IsNullOrEmpty(taiKhoan.MatKhau) == true)
+            {
+                error = "Vui lòng nhập mật khẩu!";
+                return false;
+            }
+            if (string.IsNullOrEmpty(taiKhoan.MatKhauMoi) == true)
+            {
+                error = "Vui lòng nhập mật khẩu mới!";
+                return false;
+            }
+            return process.CapNhatThongTin(taiKhoan, ref error);
+        }
+
         public bool XoaTaiKhoan(string tenTaiKhoan, ref string error)
         {
             if (string.IsNullOrEmpty(tenTaiKhoan) == true)

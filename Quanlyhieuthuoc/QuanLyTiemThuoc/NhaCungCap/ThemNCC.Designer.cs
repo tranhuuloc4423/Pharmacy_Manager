@@ -178,7 +178,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(497, 450);
             Controls.Add(tableLayoutPanel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "ThemNCC";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ThemNCC";
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);

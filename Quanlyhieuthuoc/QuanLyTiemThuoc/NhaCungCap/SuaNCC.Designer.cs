@@ -113,7 +113,7 @@
             btnThoat.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnThoat.FlatStyle = FlatStyle.Flat;
             btnThoat.Font = new Font("Microsoft Sans Serif", 16F);
-            btnThoat.Location = new Point(287, 270);
+            btnThoat.Location = new Point(321, 270);
             btnThoat.Margin = new Padding(4, 3, 4, 3);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(169, 46);
@@ -179,7 +179,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(528, 450);
             Controls.Add(tableLayoutPanel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "SuaNCC";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "SuaNCC";
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);

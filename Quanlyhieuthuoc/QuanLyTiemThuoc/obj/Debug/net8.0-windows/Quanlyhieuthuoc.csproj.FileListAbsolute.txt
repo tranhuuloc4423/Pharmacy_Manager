@@ -172,3 +172,4 @@ C:\Users\Asus\Downloads\pharmacy\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuo
 =======
 E:\c#\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-windows\Quanlyhieuthuoc.DoiThongTin.DoiThongTin.resources
 >>>>>>> 63a418475e4d353562582a64a5306e6356363e47
+E:\c#\Pharmacy_Manager\Quanlyhieuthuoc\QuanLyTiemThuoc\obj\Debug\net8.0-windows\Quanlyhieuthuoc.DoiThongTin.resources

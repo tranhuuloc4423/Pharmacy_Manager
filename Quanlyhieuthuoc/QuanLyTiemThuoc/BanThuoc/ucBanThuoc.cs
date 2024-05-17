@@ -100,7 +100,7 @@ namespace Quanlyhieuthuoc.BanThuoc
                     return;
                 }
             }
-            
+
 
             dgCTHD.Rows.Add(maThuoc, tenThuoc, soLuong.ToString(), giaBan.ToString(), thanhTien.ToString());
 
@@ -113,7 +113,7 @@ namespace Quanlyhieuthuoc.BanThuoc
 
         private void btnGiam_Click(object sender, EventArgs e)
         {
-            if(nudSoLuong.Value == 0) 
+            if (nudSoLuong.Value == 0)
             {
                 return;
             }
@@ -135,7 +135,7 @@ namespace Quanlyhieuthuoc.BanThuoc
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-            if(khachHangSelected == null)
+            if (khachHangSelected == null)
             {
                 MessageBox.Show("Vui lòng chọn khách hàng");
                 return;
@@ -145,10 +145,11 @@ namespace Quanlyhieuthuoc.BanThuoc
             hoaDon.MaKhachHang = Convert.ToInt32(khachHangSelected.Cells["MaKhachHang"].Value);
 
             int maHoaDon = hoaDonManager.ThemHoaDon(hoaDon, ref error);
-            if(maHoaDon == 0)
+            if (maHoaDon == 0)
             {
                 MessageBox.Show(error);
-            } else
+            }
+            else
             {
                 foreach (DataGridViewRow row in dgCTHD.Rows)
                 {
@@ -186,6 +187,16 @@ namespace Quanlyhieuthuoc.BanThuoc
                 lblLoaiThuoc.Text = thuocSelected.Cells["TenLoaiThuoc"].Value.ToString();
                 lblGiaBan.Text = thuocSelected.Cells["GiaBan"].Value.ToString();
             }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgCTHD_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

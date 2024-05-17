@@ -55,9 +55,6 @@
             btnNCC = new Button();
             btnThuoc = new Button();
             btnTrangChu = new Button();
-            panel3 = new Panel();
-            btnDangXuat = new Button();
-            btnDoiThongTin = new Button();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
@@ -72,7 +69,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -87,7 +83,7 @@
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(1359, 748);
+            tableLayoutPanel1.Size = new Size(1359, 651);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -118,7 +114,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 16F);
-            label1.Location = new Point(1033, 10);
+            label1.Location = new Point(1093, 10);
             label1.Name = "label1";
             label1.Size = new Size(99, 30);
             label1.TabIndex = 3;
@@ -128,7 +124,7 @@
             // 
             lblTenDayDu.AutoSize = true;
             lblTenDayDu.Font = new Font("Segoe UI", 16F);
-            lblTenDayDu.Location = new Point(1138, 10);
+            lblTenDayDu.Location = new Point(1208, 10);
             lblTenDayDu.Name = "lblTenDayDu";
             lblTenDayDu.Size = new Size(71, 30);
             lblTenDayDu.TabIndex = 2;
@@ -166,7 +162,7 @@
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Size = new Size(1353, 682);
+            tableLayoutPanel2.Size = new Size(1353, 585);
             tableLayoutPanel2.TabIndex = 1;
             // 
             // pnMain
@@ -175,7 +171,7 @@
             pnMain.Dock = DockStyle.Fill;
             pnMain.Location = new Point(253, 3);
             pnMain.Name = "pnMain";
-            pnMain.Size = new Size(1097, 676);
+            pnMain.Size = new Size(1097, 579);
             pnMain.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -183,14 +179,13 @@
             tableLayoutPanel3.ColumnCount = 1;
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel3.Controls.Add(panel2, 0, 0);
-            tableLayoutPanel3.Controls.Add(panel3, 0, 1);
             tableLayoutPanel3.Dock = DockStyle.Fill;
             tableLayoutPanel3.Location = new Point(3, 3);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
-            tableLayoutPanel3.RowCount = 2;
+            tableLayoutPanel3.RowCount = 1;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 140F));
-            tableLayoutPanel3.Size = new Size(244, 676);
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel3.Size = new Size(244, 579);
             tableLayoutPanel3.TabIndex = 1;
             // 
             // panel2
@@ -216,7 +211,7 @@
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(3, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(238, 530);
+            panel2.Size = new Size(238, 573);
             panel2.TabIndex = 0;
             // 
             // pictureBox8
@@ -451,62 +446,13 @@
             btnTrangChu.UseVisualStyleBackColor = false;
             btnTrangChu.Click += btnTrangChu_Click;
             // 
-            // panel3
-            // 
-            panel3.BackColor = Color.Thistle;
-            panel3.BorderStyle = BorderStyle.FixedSingle;
-            panel3.Controls.Add(btnDangXuat);
-            panel3.Controls.Add(btnDoiThongTin);
-            panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(3, 539);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(238, 134);
-            panel3.TabIndex = 1;
-            // 
-            // btnDangXuat
-            // 
-            btnDangXuat.BackColor = Color.White;
-            btnDangXuat.Cursor = Cursors.Hand;
-            btnDangXuat.FlatAppearance.BorderColor = Color.LightPink;
-            btnDangXuat.FlatAppearance.BorderSize = 2;
-            btnDangXuat.FlatAppearance.MouseDownBackColor = Color.LightPink;
-            btnDangXuat.FlatAppearance.MouseOverBackColor = Color.LightPink;
-            btnDangXuat.FlatStyle = FlatStyle.Flat;
-            btnDangXuat.Font = new Font("Microsoft Sans Serif", 14F);
-            btnDangXuat.Location = new Point(70, 75);
-            btnDangXuat.Margin = new Padding(4, 3, 4, 3);
-            btnDangXuat.Name = "btnDangXuat";
-            btnDangXuat.Size = new Size(153, 38);
-            btnDangXuat.TabIndex = 15;
-            btnDangXuat.Text = "Đăng Xuất";
-            btnDangXuat.UseVisualStyleBackColor = false;
-            btnDangXuat.Click += btnDangXuat_Click;
-            // 
-            // btnDoiThongTin
-            // 
-            btnDoiThongTin.BackColor = Color.White;
-            btnDoiThongTin.Cursor = Cursors.Hand;
-            btnDoiThongTin.FlatAppearance.BorderColor = Color.LightPink;
-            btnDoiThongTin.FlatAppearance.BorderSize = 2;
-            btnDoiThongTin.FlatAppearance.MouseDownBackColor = Color.LightPink;
-            btnDoiThongTin.FlatAppearance.MouseOverBackColor = Color.LightPink;
-            btnDoiThongTin.FlatStyle = FlatStyle.Flat;
-            btnDoiThongTin.Font = new Font("Microsoft Sans Serif", 14F);
-            btnDoiThongTin.Location = new Point(70, 20);
-            btnDoiThongTin.Margin = new Padding(4, 3, 4, 3);
-            btnDoiThongTin.Name = "btnDoiThongTin";
-            btnDoiThongTin.Size = new Size(153, 38);
-            btnDoiThongTin.TabIndex = 14;
-            btnDoiThongTin.Text = "Đổi Thông Tin";
-            btnDoiThongTin.UseVisualStyleBackColor = false;
-            btnDoiThongTin.Click += btnDoiThongTin_Click;
-            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1359, 748);
+            ClientSize = new Size(1359, 651);
             Controls.Add(tableLayoutPanel1);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 3, 4, 3);
             Name = "Main";
             StartPosition = FormStartPosition.CenterScreen;
@@ -526,7 +472,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel3.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -538,7 +483,6 @@
         private Panel pnMain;
         private TableLayoutPanel tableLayoutPanel3;
         private Panel panel2;
-        private Panel panel3;
         private Button btnTrangChu;
         private Button btnTaiKhoan;
         private Button HoaDon;
@@ -546,8 +490,6 @@
         private Button btnBanThuoc;
         private Button btnKhachHang;
         private Button btnThuoc;
-        private Button btnDangXuat;
-        private Button btnDoiThongTin;
         private Label lblDanhMuc;
         private Label lblTrangChu;
         private Label label1;

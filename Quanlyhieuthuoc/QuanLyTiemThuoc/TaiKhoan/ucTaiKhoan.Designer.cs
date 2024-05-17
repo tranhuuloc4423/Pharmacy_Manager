@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
             dgTaiKhoan = new DataGridView();
@@ -40,7 +40,6 @@
             HoTen = new DataGridViewTextBoxColumn();
             MoTa = new DataGridViewTextBoxColumn();
             panel2 = new Panel();
-            cbQuyen = new ComboBox();
             lblHoTen = new Label();
             lblTenTaiKhoan = new Label();
             btnSua = new Button();
@@ -49,6 +48,7 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
+            lblVaiTro = new Label();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgTaiKhoan).BeginInit();
@@ -85,48 +85,48 @@
             dgTaiKhoan.AllowUserToDeleteRows = false;
             dgTaiKhoan.AllowUserToResizeColumns = false;
             dgTaiKhoan.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgTaiKhoan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgTaiKhoan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgTaiKhoan.BackgroundColor = Color.LightPink;
             dgTaiKhoan.CellBorderStyle = DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = SystemColors.Control;
-            dataGridViewCellStyle7.Font = new Font("Tahoma", 14F, FontStyle.Bold);
-            dataGridViewCellStyle7.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            dgTaiKhoan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Tahoma", 14F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgTaiKhoan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgTaiKhoan.ColumnHeadersHeight = 40;
             dgTaiKhoan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dgTaiKhoan.Columns.AddRange(new DataGridViewColumn[] { TenTaiKhoan, HoTen, MoTa });
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = SystemColors.Window;
-            dataGridViewCellStyle8.Font = new Font("Tahoma", 14F);
-            dataGridViewCellStyle8.ForeColor = Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = Color.Thistle;
-            dataGridViewCellStyle8.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
-            dgTaiKhoan.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Window;
+            dataGridViewCellStyle3.Font = new Font("Tahoma", 14F);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = Color.Thistle;
+            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgTaiKhoan.DefaultCellStyle = dataGridViewCellStyle3;
             dgTaiKhoan.Dock = DockStyle.Fill;
             dgTaiKhoan.GridColor = Color.LightPink;
             dgTaiKhoan.Location = new Point(0, 0);
             dgTaiKhoan.MultiSelect = false;
             dgTaiKhoan.Name = "dgTaiKhoan";
             dgTaiKhoan.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = SystemColors.Control;
-            dataGridViewCellStyle9.Font = new Font("Tahoma", 14F);
-            dataGridViewCellStyle9.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
-            dgTaiKhoan.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Tahoma", 14F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgTaiKhoan.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgTaiKhoan.RowHeadersVisible = false;
             dgTaiKhoan.RowHeadersWidth = 40;
             dgTaiKhoan.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle10.Font = new Font("Tahoma", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgTaiKhoan.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.Font = new Font("Tahoma", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgTaiKhoan.RowsDefaultCellStyle = dataGridViewCellStyle5;
             dgTaiKhoan.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgTaiKhoan.Size = new Size(822, 604);
             dgTaiKhoan.TabIndex = 0;
@@ -159,7 +159,7 @@
             // panel2
             // 
             panel2.BackColor = Color.Thistle;
-            panel2.Controls.Add(cbQuyen);
+            panel2.Controls.Add(lblVaiTro);
             panel2.Controls.Add(lblHoTen);
             panel2.Controls.Add(lblTenTaiKhoan);
             panel2.Controls.Add(btnSua);
@@ -174,36 +174,25 @@
             panel2.Size = new Size(394, 604);
             panel2.TabIndex = 1;
             // 
-            // cbQuyen
-            // 
-            cbQuyen.Enabled = false;
-            cbQuyen.Font = new Font("Segoe UI", 14F);
-            cbQuyen.FormattingEnabled = true;
-            cbQuyen.Items.AddRange(new object[] { "admin", "user" });
-            cbQuyen.Location = new Point(185, 165);
-            cbQuyen.Name = "cbQuyen";
-            cbQuyen.Size = new Size(146, 33);
-            cbQuyen.TabIndex = 8;
-            // 
             // lblHoTen
             // 
             lblHoTen.AutoSize = true;
             lblHoTen.Font = new Font("Tahoma", 16F);
-            lblHoTen.Location = new Point(185, 102);
+            lblHoTen.Location = new Point(196, 102);
             lblHoTen.Name = "lblHoTen";
-            lblHoTen.Size = new Size(83, 27);
+            lblHoTen.Size = new Size(33, 27);
             lblHoTen.TabIndex = 7;
-            lblHoTen.Text = "Họ Tên";
+            lblHoTen.Text = "...";
             // 
             // lblTenTaiKhoan
             // 
             lblTenTaiKhoan.AutoSize = true;
             lblTenTaiKhoan.Font = new Font("Tahoma", 16F);
-            lblTenTaiKhoan.Location = new Point(214, 42);
+            lblTenTaiKhoan.Location = new Point(196, 42);
             lblTenTaiKhoan.Name = "lblTenTaiKhoan";
-            lblTenTaiKhoan.Size = new Size(154, 27);
+            lblTenTaiKhoan.Size = new Size(33, 27);
             lblTenTaiKhoan.TabIndex = 6;
-            lblTenTaiKhoan.Text = "Tên Tài Khoản";
+            lblTenTaiKhoan.Text = "...";
             // 
             // btnSua
             // 
@@ -292,6 +281,16 @@
             label1.TabIndex = 1;
             label1.Text = "Tên Tài Khoản :";
             // 
+            // lblVaiTro
+            // 
+            lblVaiTro.AutoSize = true;
+            lblVaiTro.Font = new Font("Tahoma", 16F);
+            lblVaiTro.Location = new Point(196, 168);
+            lblVaiTro.Name = "lblVaiTro";
+            lblVaiTro.Size = new Size(33, 27);
+            lblVaiTro.TabIndex = 8;
+            lblVaiTro.Text = "...";
+            // 
             // ucTaiKhoan
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -321,9 +320,9 @@
         private DataGridView dgTaiKhoan;
         private Label lblHoTen;
         private Label lblTenTaiKhoan;
-        private ComboBox cbQuyen;
         private DataGridViewTextBoxColumn TenTaiKhoan;
         private DataGridViewTextBoxColumn HoTen;
         private DataGridViewTextBoxColumn MoTa;
+        private Label lblVaiTro;
     }
 }

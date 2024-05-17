@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle16 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle17 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle18 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle19 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle20 = new DataGridViewCellStyle();
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
             panel1 = new Panel();
@@ -55,6 +55,9 @@
             DonGia = new DataGridViewTextBoxColumn();
             ThanhTien = new DataGridViewTextBoxColumn();
             panel3 = new Panel();
+            lblNguoiBan = new Label();
+            lblTongTien = new Label();
+            lblKhachHang = new Label();
             nudSoLuong = new NumericUpDown();
             btnGiam = new Button();
             btnTang = new Button();
@@ -72,9 +75,6 @@
             btnThem = new Button();
             label3 = new Label();
             label2 = new Label();
-            lblKhachHang = new Label();
-            lblTongTien = new Label();
-            lblNguoiBan = new Label();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -98,7 +98,7 @@
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(1360, 719);
+            tableLayoutPanel1.Size = new Size(1360, 617);
             tableLayoutPanel1.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -113,7 +113,7 @@
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Size = new Size(1354, 353);
+            tableLayoutPanel2.Size = new Size(1354, 302);
             tableLayoutPanel2.TabIndex = 0;
             // 
             // panel1
@@ -122,7 +122,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(738, 347);
+            panel1.Size = new Size(738, 296);
             panel1.TabIndex = 0;
             // 
             // dgThuoc
@@ -131,50 +131,50 @@
             dgThuoc.AllowUserToDeleteRows = false;
             dgThuoc.AllowUserToResizeColumns = false;
             dgThuoc.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgThuoc.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgThuoc.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             dgThuoc.BackgroundColor = Color.LightPink;
             dgThuoc.CellBorderStyle = DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Tahoma", 14F, FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgThuoc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = SystemColors.Control;
+            dataGridViewCellStyle12.Font = new Font("Tahoma", 14F, FontStyle.Bold);
+            dataGridViewCellStyle12.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
+            dgThuoc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             dgThuoc.ColumnHeadersHeight = 40;
             dgThuoc.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dgThuoc.Columns.AddRange(new DataGridViewColumn[] { MaThuoc, TenThuoc, TenLoaiThuoc, DonViTinh, GiaBan });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Window;
-            dataGridViewCellStyle3.Font = new Font("Tahoma", 14F);
-            dataGridViewCellStyle3.ForeColor = Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = Color.Thistle;
-            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgThuoc.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = SystemColors.Window;
+            dataGridViewCellStyle13.Font = new Font("Tahoma", 14F);
+            dataGridViewCellStyle13.ForeColor = Color.Black;
+            dataGridViewCellStyle13.SelectionBackColor = Color.Thistle;
+            dataGridViewCellStyle13.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle13.WrapMode = DataGridViewTriState.False;
+            dgThuoc.DefaultCellStyle = dataGridViewCellStyle13;
             dgThuoc.Dock = DockStyle.Fill;
             dgThuoc.GridColor = Color.LightPink;
             dgThuoc.Location = new Point(0, 0);
             dgThuoc.MultiSelect = false;
             dgThuoc.Name = "dgThuoc";
             dgThuoc.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Control;
-            dataGridViewCellStyle4.Font = new Font("Tahoma", 14F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgThuoc.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = SystemColors.Control;
+            dataGridViewCellStyle14.Font = new Font("Tahoma", 14F);
+            dataGridViewCellStyle14.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = DataGridViewTriState.True;
+            dgThuoc.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             dgThuoc.RowHeadersVisible = false;
             dgThuoc.RowHeadersWidth = 40;
             dgThuoc.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Font = new Font("Tahoma", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgThuoc.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.Font = new Font("Tahoma", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgThuoc.RowsDefaultCellStyle = dataGridViewCellStyle15;
             dgThuoc.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgThuoc.Size = new Size(738, 347);
+            dgThuoc.Size = new Size(738, 296);
             dgThuoc.TabIndex = 3;
             dgThuoc.CellClick += dgThuoc_CellClick;
             // 
@@ -225,7 +225,7 @@
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(747, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(604, 347);
+            panel2.Size = new Size(604, 296);
             panel2.TabIndex = 1;
             // 
             // dgCTHD
@@ -234,51 +234,52 @@
             dgCTHD.AllowUserToDeleteRows = false;
             dgCTHD.AllowUserToResizeColumns = false;
             dgCTHD.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgCTHD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle16.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgCTHD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             dgCTHD.BackgroundColor = Color.LightPink;
             dgCTHD.CellBorderStyle = DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = SystemColors.Control;
-            dataGridViewCellStyle7.Font = new Font("Tahoma", 14F, FontStyle.Bold);
-            dataGridViewCellStyle7.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            dgCTHD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle17.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = SystemColors.Control;
+            dataGridViewCellStyle17.Font = new Font("Tahoma", 14F, FontStyle.Bold);
+            dataGridViewCellStyle17.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = DataGridViewTriState.True;
+            dgCTHD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             dgCTHD.ColumnHeadersHeight = 40;
             dgCTHD.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dgCTHD.Columns.AddRange(new DataGridViewColumn[] { MaThuocCTHD, Column1, SoLuong, DonGia, ThanhTien });
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = SystemColors.Window;
-            dataGridViewCellStyle8.Font = new Font("Tahoma", 14F);
-            dataGridViewCellStyle8.ForeColor = Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = Color.Thistle;
-            dataGridViewCellStyle8.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
-            dgCTHD.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle18.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = SystemColors.Window;
+            dataGridViewCellStyle18.Font = new Font("Tahoma", 14F);
+            dataGridViewCellStyle18.ForeColor = Color.Black;
+            dataGridViewCellStyle18.SelectionBackColor = Color.Thistle;
+            dataGridViewCellStyle18.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle18.WrapMode = DataGridViewTriState.False;
+            dgCTHD.DefaultCellStyle = dataGridViewCellStyle18;
             dgCTHD.Dock = DockStyle.Fill;
             dgCTHD.GridColor = Color.LightPink;
             dgCTHD.Location = new Point(0, 0);
             dgCTHD.MultiSelect = false;
             dgCTHD.Name = "dgCTHD";
             dgCTHD.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = SystemColors.Control;
-            dataGridViewCellStyle9.Font = new Font("Tahoma", 14F);
-            dataGridViewCellStyle9.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
-            dgCTHD.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle19.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = SystemColors.Control;
+            dataGridViewCellStyle19.Font = new Font("Tahoma", 14F);
+            dataGridViewCellStyle19.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = DataGridViewTriState.True;
+            dgCTHD.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
             dgCTHD.RowHeadersVisible = false;
             dgCTHD.RowHeadersWidth = 40;
             dgCTHD.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle10.Font = new Font("Tahoma", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgCTHD.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle20.Font = new Font("Tahoma", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgCTHD.RowsDefaultCellStyle = dataGridViewCellStyle20;
             dgCTHD.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgCTHD.Size = new Size(604, 347);
+            dgCTHD.Size = new Size(604, 296);
             dgCTHD.TabIndex = 3;
+            dgCTHD.CellClick += dgCTHD_CellClick;
             // 
             // MaThuocCTHD
             // 
@@ -344,15 +345,45 @@
             panel3.Controls.Add(label3);
             panel3.Controls.Add(label2);
             panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(3, 362);
+            panel3.Location = new Point(3, 311);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1354, 354);
+            panel3.Size = new Size(1354, 303);
             panel3.TabIndex = 1;
+            // 
+            // lblNguoiBan
+            // 
+            lblNguoiBan.AutoSize = true;
+            lblNguoiBan.Font = new Font("Segoe UI", 16F);
+            lblNguoiBan.Location = new Point(866, 88);
+            lblNguoiBan.Name = "lblNguoiBan";
+            lblNguoiBan.Size = new Size(28, 30);
+            lblNguoiBan.TabIndex = 68;
+            lblNguoiBan.Text = "...";
+            // 
+            // lblTongTien
+            // 
+            lblTongTien.AutoSize = true;
+            lblTongTien.Font = new Font("Segoe UI", 16F);
+            lblTongTien.Location = new Point(866, 144);
+            lblTongTien.Name = "lblTongTien";
+            lblTongTien.Size = new Size(28, 30);
+            lblTongTien.TabIndex = 67;
+            lblTongTien.Text = "...";
+            // 
+            // lblKhachHang
+            // 
+            lblKhachHang.AutoSize = true;
+            lblKhachHang.Font = new Font("Segoe UI", 16F);
+            lblKhachHang.Location = new Point(866, 33);
+            lblKhachHang.Name = "lblKhachHang";
+            lblKhachHang.Size = new Size(28, 30);
+            lblKhachHang.TabIndex = 66;
+            lblKhachHang.Text = "...";
             // 
             // nudSoLuong
             // 
             nudSoLuong.Font = new Font("Segoe UI", 16F);
-            nudSoLuong.Location = new Point(253, 144);
+            nudSoLuong.Location = new Point(253, 125);
             nudSoLuong.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             nudSoLuong.Name = "nudSoLuong";
             nudSoLuong.Size = new Size(70, 36);
@@ -368,7 +399,7 @@
             btnGiam.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnGiam.FlatStyle = FlatStyle.Flat;
             btnGiam.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnGiam.Location = new Point(205, 145);
+            btnGiam.Location = new Point(205, 126);
             btnGiam.Margin = new Padding(4, 3, 4, 3);
             btnGiam.Name = "btnGiam";
             btnGiam.Size = new Size(36, 33);
@@ -387,7 +418,7 @@
             btnTang.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnTang.FlatStyle = FlatStyle.Flat;
             btnTang.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnTang.Location = new Point(338, 146);
+            btnTang.Location = new Point(338, 127);
             btnTang.Margin = new Padding(4, 3, 4, 3);
             btnTang.Name = "btnTang";
             btnTang.Size = new Size(36, 33);
@@ -406,7 +437,7 @@
             btnThemKhach.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnThemKhach.FlatStyle = FlatStyle.Flat;
             btnThemKhach.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnThemKhach.Location = new Point(645, 271);
+            btnThemKhach.Location = new Point(645, 224);
             btnThemKhach.Margin = new Padding(4, 3, 4, 3);
             btnThemKhach.Name = "btnThemKhach";
             btnThemKhach.Size = new Size(225, 44);
@@ -419,7 +450,7 @@
             // 
             lblGiaBan.AutoSize = true;
             lblGiaBan.Font = new Font("Segoe UI", 16F);
-            lblGiaBan.Location = new Point(200, 198);
+            lblGiaBan.Location = new Point(200, 179);
             lblGiaBan.Name = "lblGiaBan";
             lblGiaBan.Size = new Size(28, 30);
             lblGiaBan.TabIndex = 54;
@@ -435,7 +466,7 @@
             btnThanhToan.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnThanhToan.FlatStyle = FlatStyle.Flat;
             btnThanhToan.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnThanhToan.Location = new Point(888, 271);
+            btnThanhToan.Location = new Point(889, 224);
             btnThanhToan.Margin = new Padding(4, 3, 4, 3);
             btnThanhToan.Name = "btnThanhToan";
             btnThanhToan.Size = new Size(164, 44);
@@ -448,7 +479,7 @@
             // 
             lblLoaiThuoc.AutoSize = true;
             lblLoaiThuoc.Font = new Font("Segoe UI", 16F);
-            lblLoaiThuoc.Location = new Point(200, 88);
+            lblLoaiThuoc.Location = new Point(200, 69);
             lblLoaiThuoc.Name = "lblLoaiThuoc";
             lblLoaiThuoc.Size = new Size(28, 30);
             lblLoaiThuoc.TabIndex = 53;
@@ -468,7 +499,7 @@
             // 
             lblTenThuoc.AutoSize = true;
             lblTenThuoc.Font = new Font("Segoe UI", 16F);
-            lblTenThuoc.Location = new Point(200, 33);
+            lblTenThuoc.Location = new Point(200, 14);
             lblTenThuoc.Name = "lblTenThuoc";
             lblTenThuoc.Size = new Size(28, 30);
             lblTenThuoc.TabIndex = 50;
@@ -478,7 +509,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 16F);
-            label4.Location = new Point(38, 198);
+            label4.Location = new Point(38, 179);
             label4.Name = "label4";
             label4.Size = new Size(97, 30);
             label4.TabIndex = 49;
@@ -498,7 +529,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 16F);
-            label1.Location = new Point(38, 88);
+            label1.Location = new Point(38, 69);
             label1.Name = "label1";
             label1.Size = new Size(128, 30);
             label1.TabIndex = 48;
@@ -524,13 +555,14 @@
             btnXoa.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnXoa.FlatStyle = FlatStyle.Flat;
             btnXoa.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnXoa.Location = new Point(248, 271);
+            btnXoa.Location = new Point(253, 224);
             btnXoa.Margin = new Padding(4, 3, 4, 3);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(164, 44);
             btnXoa.TabIndex = 47;
             btnXoa.Text = "Xoá";
             btnXoa.UseVisualStyleBackColor = false;
+            btnXoa.Click += btnXoa_Click;
             // 
             // btnThem
             // 
@@ -542,7 +574,7 @@
             btnThem.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnThem.FlatStyle = FlatStyle.Flat;
             btnThem.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnThem.Location = new Point(38, 271);
+            btnThem.Location = new Point(38, 224);
             btnThem.Margin = new Padding(4, 3, 4, 3);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(164, 44);
@@ -555,7 +587,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 16F);
-            label3.Location = new Point(38, 140);
+            label3.Location = new Point(38, 121);
             label3.Name = "label3";
             label3.Size = new Size(116, 30);
             label3.TabIndex = 46;
@@ -565,41 +597,11 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 16F);
-            label2.Location = new Point(38, 33);
+            label2.Location = new Point(38, 14);
             label2.Name = "label2";
             label2.Size = new Size(123, 30);
             label2.TabIndex = 44;
             label2.Text = "Tên Thuốc :";
-            // 
-            // lblKhachHang
-            // 
-            lblKhachHang.AutoSize = true;
-            lblKhachHang.Font = new Font("Segoe UI", 16F);
-            lblKhachHang.Location = new Point(866, 33);
-            lblKhachHang.Name = "lblKhachHang";
-            lblKhachHang.Size = new Size(28, 30);
-            lblKhachHang.TabIndex = 66;
-            lblKhachHang.Text = "...";
-            // 
-            // lblTongTien
-            // 
-            lblTongTien.AutoSize = true;
-            lblTongTien.Font = new Font("Segoe UI", 16F);
-            lblTongTien.Location = new Point(866, 144);
-            lblTongTien.Name = "lblTongTien";
-            lblTongTien.Size = new Size(28, 30);
-            lblTongTien.TabIndex = 67;
-            lblTongTien.Text = "...";
-            // 
-            // lblNguoiBan
-            // 
-            lblNguoiBan.AutoSize = true;
-            lblNguoiBan.Font = new Font("Segoe UI", 16F);
-            lblNguoiBan.Location = new Point(866, 88);
-            lblNguoiBan.Name = "lblNguoiBan";
-            lblNguoiBan.Size = new Size(28, 30);
-            lblNguoiBan.TabIndex = 68;
-            lblNguoiBan.Text = "...";
             // 
             // ucBanThuoc
             // 
@@ -607,7 +609,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(tableLayoutPanel1);
             Name = "ucBanThuoc";
-            Size = new Size(1360, 719);
+            Size = new Size(1360, 617);
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             panel1.ResumeLayout(false);

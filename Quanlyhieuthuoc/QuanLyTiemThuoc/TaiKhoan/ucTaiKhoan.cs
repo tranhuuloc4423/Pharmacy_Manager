@@ -24,23 +24,6 @@ namespace Quanlyhieuthuoc.TaiKhoan
             taiKhoanManager = new TaiKhoanManager();
             quyenManager = new QuyenManager();
             hienThiDanhSachTaiKhoan();
-            hienThiQuyen();
-        }
-
-        private void hienThiQuyen()
-        {
-            DataTable data = new DataTable();
-            data = quyenManager.HienThiDanhSach(ref error);
-            if (data == null)
-            {
-                MessageBox.Show(error);
-            }
-            else
-            {
-                cbQuyen.DataSource = data;
-                cbQuyen.DisplayMember = "MoTa";
-                cbQuyen.ValueMember = "MaQuyen";
-            }
         }
 
         private void hienThiDanhSachTaiKhoan()
@@ -59,7 +42,7 @@ namespace Quanlyhieuthuoc.TaiKhoan
                     DataGridViewRow rowselected = dgTaiKhoan.Rows[0];
                     lblTenTaiKhoan.Text = rowselected.Cells["TenTaiKhoan"].Value.ToString();
                     lblHoTen.Text = rowselected.Cells["HoTen"].Value.ToString();
-                    cbQuyen.Text = rowselected.Cells["MoTa"].Value.ToString();
+                    lblVaiTro.Text = rowselected.Cells["MoTa"].Value.ToString();
                 }
             }
         }
@@ -108,7 +91,13 @@ namespace Quanlyhieuthuoc.TaiKhoan
             TaiKhoanEntity entity = new TaiKhoanEntity();
             entity.TenTaiKhoan = lblTenTaiKhoan.Text;
             entity.HoTen = lblHoTen.Text;
-            entity.VaiTro = Convert.ToInt32(cbQuyen.SelectedValue);
+            if(lblVaiTro.Text == "admin")
+            {
+                entity.VaiTro = 1;
+            } else
+            {
+                entity.VaiTro = 2;
+            }
             SuaTaiKhoan form = new SuaTaiKhoan(entity);
             form.ShowDialog();
             hienThiDanhSachTaiKhoan();
@@ -121,7 +110,7 @@ namespace Quanlyhieuthuoc.TaiKhoan
                 DataGridViewRow rowselected = dgTaiKhoan.Rows[e.RowIndex];
                 lblTenTaiKhoan.Text = rowselected.Cells["TenTaiKhoan"].Value.ToString();
                 lblHoTen.Text = rowselected.Cells["HoTen"].Value.ToString();
-                cbQuyen.Text = rowselected.Cells["MoTa"].Value.ToString();
+                lblVaiTro.Text = rowselected.Cells["MoTa"].Value.ToString();
             }
         }
     }

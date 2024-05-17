@@ -86,15 +86,18 @@
             dgNCC.AllowUserToResizeColumns = false;
             dgNCC.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = Color.Thistle;
+            dataGridViewCellStyle1.SelectionForeColor = Color.Black;
             dgNCC.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgNCC.BackgroundColor = Color.LightPink;
             dgNCC.CellBorderStyle = DataGridViewCellBorderStyle.Sunken;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Control;
             dataGridViewCellStyle2.Font = new Font("Tahoma", 14F, FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = Color.Thistle;
+            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgNCC.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgNCC.ColumnHeadersHeight = 40;
@@ -103,9 +106,9 @@
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = SystemColors.Window;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 14F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = Color.Thistle;
+            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgNCC.DefaultCellStyle = dataGridViewCellStyle3;
             dgNCC.Dock = DockStyle.Fill;
@@ -117,9 +120,9 @@
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = SystemColors.Control;
             dataGridViewCellStyle4.Font = new Font("Tahoma", 14F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = Color.Thistle;
+            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
             dgNCC.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgNCC.RowHeadersVisible = false;
@@ -178,7 +181,7 @@
             // 
             lblDiaChi.AutoSize = true;
             lblDiaChi.Font = new Font("Segoe UI", 16F);
-            lblDiaChi.Location = new Point(248, 227);
+            lblDiaChi.Location = new Point(231, 186);
             lblDiaChi.Name = "lblDiaChi";
             lblDiaChi.Size = new Size(28, 30);
             lblDiaChi.TabIndex = 21;
@@ -188,7 +191,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 16F);
-            label4.Location = new Point(41, 227);
+            label4.Location = new Point(24, 186);
             label4.Name = "label4";
             label4.Size = new Size(92, 30);
             label4.TabIndex = 20;
@@ -198,7 +201,7 @@
             // 
             lblTenNCC.AutoSize = true;
             lblTenNCC.Font = new Font("Segoe UI", 16F);
-            lblTenNCC.Location = new Point(248, 171);
+            lblTenNCC.Location = new Point(231, 130);
             lblTenNCC.Name = "lblTenNCC";
             lblTenNCC.Size = new Size(28, 30);
             lblTenNCC.TabIndex = 19;
@@ -208,7 +211,7 @@
             // 
             lblMaNCC.AutoSize = true;
             lblMaNCC.Font = new Font("Segoe UI", 16F);
-            lblMaNCC.Location = new Point(248, 111);
+            lblMaNCC.Location = new Point(231, 70);
             lblMaNCC.Name = "lblMaNCC";
             lblMaNCC.Size = new Size(28, 30);
             lblMaNCC.TabIndex = 16;
@@ -275,7 +278,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 16F);
-            label2.Location = new Point(41, 171);
+            label2.Location = new Point(24, 130);
             label2.Name = "label2";
             label2.Size = new Size(204, 30);
             label2.TabIndex = 11;
@@ -285,7 +288,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 16F);
-            label1.Location = new Point(41, 111);
+            label1.Location = new Point(24, 70);
             label1.Name = "label1";
             label1.Size = new Size(201, 30);
             label1.TabIndex = 10;

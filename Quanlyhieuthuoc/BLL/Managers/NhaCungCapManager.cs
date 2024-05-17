@@ -23,6 +23,11 @@ namespace BLL.Managers
             return process.HienThiDanhSach(ref error);
         }
 
+        public DataTable HienThiDanhSachTen(ref string error)
+        {
+            return process.HienThiDanhSachTen(ref error);
+        }
+
         public bool ThemNCC(NhaCungCapEntity entity, ref string error)
         {
             return process.ThemNCC(entity, ref error);

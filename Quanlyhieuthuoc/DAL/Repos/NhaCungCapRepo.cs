@@ -30,6 +30,22 @@ namespace DAL.Repos
             }
         }
 
+        public DataTable HienThiDanhSachTen(ref string error)
+        {
+            try
+            {
+                string sql = "select MaNhaCungCap, TenNhaCungCap from NhaCungCap";
+                DataTable dt = new DataTable();
+                dt = database.GetData(sql, ref error);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                error = "Loi : " + ex.Message;
+                throw;
+            }
+        }
+
         public bool ThemNCC(NhaCungCapEntity entity, ref string error)
         {
             try

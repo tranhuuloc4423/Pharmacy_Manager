@@ -16,5 +16,35 @@ namespace Quanlyhieuthuoc.TrangChu
         {
             InitializeComponent();
         }
+
+        private void btnDoi_Click(object sender, EventArgs e)
+        {
+            DoiThongTin form = new DoiThongTin();
+            form.ShowDialog();
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất chương trình?", "Xác nhận đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Dangnhap form = new Dangnhap();
+                form.Show();
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -253,6 +253,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(499, 462);
             Controls.Add(tableLayoutPanel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "SuaThuoc";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SuaThuoc";
