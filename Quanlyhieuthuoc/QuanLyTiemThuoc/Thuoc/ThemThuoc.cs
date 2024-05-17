@@ -114,7 +114,11 @@ namespace Quanlyhieuthuoc.Thuoc
 
         private void txtGiaBan_TextChanged(object sender, EventArgs e)
         {
+            int cursorPosition = txtGiaBan.SelectionStart;
 
+            txtGiaBan.Text = new string(txtGiaBan.Text.Where(c => char.IsDigit(c)).ToArray());
+
+            txtGiaBan.SelectionStart = Math.Min(cursorPosition, txtGiaBan.Text.Length);
         }
     }
 }

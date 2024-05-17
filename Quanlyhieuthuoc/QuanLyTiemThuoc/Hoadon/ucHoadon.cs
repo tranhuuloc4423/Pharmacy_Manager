@@ -31,6 +31,12 @@ namespace Quanlyhieuthuoc.Hoadon
             TenKH = "";
             error = "";
 
+            dtpNgayBatDau.Format = DateTimePickerFormat.Custom;
+            dtpNgayBatDau.CustomFormat = "dd/MM/yyyy";
+
+            dtpNgayKetThuc.Format = DateTimePickerFormat.Custom;
+            dtpNgayKetThuc.CustomFormat = "dd/MM/yyyy";
+
             dtpNgayBatDau.Value = DateTime.Now.AddDays(-31);
             dtpNgayKetThuc.Value = DateTime.Now;
             HienThiHoaDon();

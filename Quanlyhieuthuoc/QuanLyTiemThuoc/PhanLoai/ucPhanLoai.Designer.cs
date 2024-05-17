@@ -46,6 +46,7 @@
             btnThem = new Button();
             label2 = new Label();
             label1 = new Label();
+            txtTimKiem = new TextBox();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgPhanLoai).BeginInit();
@@ -151,6 +152,7 @@
             // panel2
             // 
             panel2.BackColor = Color.Thistle;
+            panel2.Controls.Add(txtTimKiem);
             panel2.Controls.Add(lblTenLoaiThuoc);
             panel2.Controls.Add(lblMaLoaiThuoc);
             panel2.Controls.Add(btnSua);
@@ -168,7 +170,7 @@
             // 
             lblTenLoaiThuoc.AutoSize = true;
             lblTenLoaiThuoc.Font = new Font("Segoe UI", 16F);
-            lblTenLoaiThuoc.Location = new Point(248, 171);
+            lblTenLoaiThuoc.Location = new Point(195, 170);
             lblTenLoaiThuoc.Name = "lblTenLoaiThuoc";
             lblTenLoaiThuoc.Size = new Size(28, 30);
             lblTenLoaiThuoc.TabIndex = 19;
@@ -178,7 +180,7 @@
             // 
             lblMaLoaiThuoc.AutoSize = true;
             lblMaLoaiThuoc.Font = new Font("Segoe UI", 16F);
-            lblMaLoaiThuoc.Location = new Point(248, 111);
+            lblMaLoaiThuoc.Location = new Point(195, 110);
             lblMaLoaiThuoc.Name = "lblMaLoaiThuoc";
             lblMaLoaiThuoc.Size = new Size(28, 30);
             lblMaLoaiThuoc.TabIndex = 16;
@@ -245,7 +247,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 16F);
-            label2.Location = new Point(41, 171);
+            label2.Location = new Point(24, 170);
             label2.Name = "label2";
             label2.Size = new Size(168, 30);
             label2.TabIndex = 11;
@@ -255,11 +257,21 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 16F);
-            label1.Location = new Point(41, 111);
+            label1.Location = new Point(24, 110);
             label1.Name = "label1";
             label1.Size = new Size(165, 30);
             label1.TabIndex = 10;
             label1.Text = "Mã Loại Thuốc :";
+            // 
+            // txtTimKiem
+            // 
+            txtTimKiem.Font = new Font("Segoe UI", 16F);
+            txtTimKiem.Location = new Point(24, 16);
+            txtTimKiem.Name = "txtTimKiem";
+            txtTimKiem.PlaceholderText = "Tìm kiếm";
+            txtTimKiem.Size = new Size(357, 36);
+            txtTimKiem.TabIndex = 25;
+            txtTimKiem.TextChanged += txtTimKiem_TextChanged;
             // 
             // ucPhanLoai
             // 
@@ -291,5 +303,6 @@
         private Label label1;
         private DataGridViewTextBoxColumn MaLoaiThuoc;
         private DataGridViewTextBoxColumn TenLoaiThuoc;
+        private TextBox txtTimKiem;
     }
 }

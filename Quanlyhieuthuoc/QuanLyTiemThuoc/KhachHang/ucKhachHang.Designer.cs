@@ -49,6 +49,7 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
+            txtTimKiem = new TextBox();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgKhachHang).BeginInit();
@@ -162,6 +163,7 @@
             // panel2
             // 
             panel2.BackColor = Color.Thistle;
+            panel2.Controls.Add(txtTimKiem);
             panel2.Controls.Add(lblSoDienThoai);
             panel2.Controls.Add(lblHoTen);
             panel2.Controls.Add(lblMaKhachHang);
@@ -181,7 +183,7 @@
             // 
             lblSoDienThoai.AutoSize = true;
             lblSoDienThoai.Font = new Font("Tahoma", 16F);
-            lblSoDienThoai.Location = new Point(215, 146);
+            lblSoDienThoai.Location = new Point(200, 233);
             lblSoDienThoai.Name = "lblSoDienThoai";
             lblSoDienThoai.Size = new Size(33, 27);
             lblSoDienThoai.TabIndex = 21;
@@ -191,7 +193,7 @@
             // 
             lblHoTen.AutoSize = true;
             lblHoTen.Font = new Font("Tahoma", 16F);
-            lblHoTen.Location = new Point(215, 95);
+            lblHoTen.Location = new Point(200, 182);
             lblHoTen.Name = "lblHoTen";
             lblHoTen.Size = new Size(33, 27);
             lblHoTen.TabIndex = 19;
@@ -201,7 +203,7 @@
             // 
             lblMaKhachHang.AutoSize = true;
             lblMaKhachHang.Font = new Font("Tahoma", 16F);
-            lblMaKhachHang.Location = new Point(215, 45);
+            lblMaKhachHang.Location = new Point(200, 132);
             lblMaKhachHang.Name = "lblMaKhachHang";
             lblMaKhachHang.Size = new Size(33, 27);
             lblMaKhachHang.TabIndex = 16;
@@ -268,7 +270,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Tahoma", 16F);
-            label3.Location = new Point(32, 146);
+            label3.Location = new Point(17, 233);
             label3.Name = "label3";
             label3.Size = new Size(163, 27);
             label3.TabIndex = 13;
@@ -278,7 +280,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Tahoma", 16F);
-            label2.Location = new Point(32, 95);
+            label2.Location = new Point(17, 182);
             label2.Name = "label2";
             label2.Size = new Size(105, 27);
             label2.TabIndex = 11;
@@ -288,11 +290,21 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Tahoma", 16F);
-            label1.Location = new Point(32, 45);
+            label1.Location = new Point(17, 132);
             label1.Name = "label1";
             label1.Size = new Size(180, 27);
             label1.TabIndex = 10;
             label1.Text = "Mã Khách Hàng :";
+            // 
+            // txtTimKiem
+            // 
+            txtTimKiem.Font = new Font("Segoe UI", 16F);
+            txtTimKiem.Location = new Point(17, 17);
+            txtTimKiem.Name = "txtTimKiem";
+            txtTimKiem.PlaceholderText = "Tìm kiếm";
+            txtTimKiem.Size = new Size(357, 36);
+            txtTimKiem.TabIndex = 26;
+            txtTimKiem.TextChanged += txtTimKiem_TextChanged;
             // 
             // ucKhachHang
             // 
@@ -328,5 +340,6 @@
         private DataGridViewTextBoxColumn MaKhachHang;
         private DataGridViewTextBoxColumn HoTen;
         private DataGridViewTextBoxColumn SoDienThoai;
+        private TextBox txtTimKiem;
     }
 }

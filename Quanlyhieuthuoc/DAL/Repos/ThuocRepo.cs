@@ -34,6 +34,24 @@ namespace DAL.Repos
             }
         }
 
+        public DataTable HienThiDanhSachThuocBan(ref string error)
+        {
+            try
+            {
+                string sql = "select t.MaThuoc, t.TenThuoc, pl.TenLoaiThuoc, t.DonViTinh, t.GiaBan " +
+                    " from Thuoc t " +
+                    " inner join PhanLoai pl on t.MaLoaiThuoc = pl.MaLoaiThuoc ";
+                DataTable dt = new DataTable();
+                dt = database.GetData(sql, ref error);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                error = "Loi : " + ex.Message;
+                throw;
+            }
+        }
+
         public bool ThemThuoc(ThuocEntity entity, ref string error)
         {
             try

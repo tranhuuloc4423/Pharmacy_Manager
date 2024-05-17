@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Quanlyhieuthuoc.BanThuoc
 {
@@ -33,7 +34,7 @@ namespace Quanlyhieuthuoc.BanThuoc
         private void HienThiDanhSach()
         {
             DataTable data = new DataTable();
-            data = thuocManager.HienThiDanhSachThuoc(ref error);
+            data = thuocManager.HienThiDanhSachThuocBan(ref error);
             if (data == null)
             {
                 MessageBox.Show(error);
@@ -41,13 +42,6 @@ namespace Quanlyhieuthuoc.BanThuoc
             else
             {
                 dgThuoc.DataSource = data;
-                if (dgThuoc.Rows.Count > 0)
-                {
-                    thuocSelected = dgThuoc.Rows[0];
-                    //lblTenThuoc.Text = thuocSelected.Cells["TenThuoc"].Value.ToString();
-                    //lblLoaiThuoc.Text = thuocSelected.Cells["TenLoaiThuoc"].Value.ToString();
-                    //lblGiaBan.Text = thuocSelected.Cells["GiaBan"].Value.ToString();
-                }
             }
         }
 
@@ -59,8 +53,7 @@ namespace Quanlyhieuthuoc.BanThuoc
                 int value = Convert.ToInt32(row.Cells["ThanhTien"].Value);
                 sum += value;
             }
-
-            lblTongTien.Text = sum.ToString();
+            lblTongTien.Text = sum.ToString("#,##0.##");
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -73,7 +66,7 @@ namespace Quanlyhieuthuoc.BanThuoc
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(lblTenThuoc.Text))
+            if (thuocSelected == null)
             {
                 MessageBox.Show("Vui lòng chọn thuốc muốn mua");
                 return;
@@ -84,7 +77,6 @@ namespace Quanlyhieuthuoc.BanThuoc
                 MessageBox.Show("Vui lòng nhập số lượng");
                 return;
             }
-
             string maThuoc = thuocSelected.Cells["MaThuoc"].Value.ToString();
             string tenThuoc = thuocSelected.Cells["TenThuoc"].Value.ToString();
             string loaiThuoc = thuocSelected.Cells["TenLoaiThuoc"].Value.ToString();
@@ -92,21 +84,30 @@ namespace Quanlyhieuthuoc.BanThuoc
             int giaBan = Convert.ToInt32(thuocSelected.Cells["GiaBan"].Value);
             int thanhTien = soLuong * giaBan;
 
+            bool isExist = false;
+
             foreach (DataGridViewRow row in dgCTHD.Rows)
             {
                 if (row.Cells["MaThuocCTHD"].Value != null && row.Cells["MaThuocCTHD"].Value.ToString() == maThuoc)
                 {
-                    MessageBox.Show("Thuốc này đã được thêm vào chi tiết hóa đơn!");
-                    return;
-                }
+                    int value = Convert.ToInt32(row.Cells["SoLuong"].Value);
+                    int soLuongMoi = value + soLuong;
+                    row.Cells["SoLuong"].Value = "";
+                    row.Cells["SoLuong"].Value = soLuongMoi;
+                    isExist = true;
+                    row.Cells["ThanhTien"].Value = "";
+                    row.Cells["ThanhTien"].Value = (soLuongMoi * giaBan);
+                    CapNhatTongTien();
+                } 
             }
 
 
-            dgCTHD.Rows.Add(maThuoc, tenThuoc, soLuong.ToString(), giaBan.ToString(), thanhTien.ToString());
+            if(!isExist)
+            {
+                dgCTHD.Rows.Add(maThuoc, tenThuoc, soLuong, giaBan, thanhTien);
+            }
 
-            lblTenThuoc.Text = "";
-            lblLoaiThuoc.Text = "";
-            lblGiaBan.Text = "";
+           
             nudSoLuong.Value = 0;
             CapNhatTongTien();
         }
@@ -185,18 +186,51 @@ namespace Quanlyhieuthuoc.BanThuoc
                 thuocSelected = dgThuoc.Rows[e.RowIndex];
                 lblTenThuoc.Text = thuocSelected.Cells["TenThuoc"].Value.ToString();
                 lblLoaiThuoc.Text = thuocSelected.Cells["TenLoaiThuoc"].Value.ToString();
-                lblGiaBan.Text = thuocSelected.Cells["GiaBan"].Value.ToString();
+                decimal giaBan = (decimal)thuocSelected.Cells["GiaBan"].Value;
+                lblGiaBan.Text = giaBan.ToString("#,##0.##");
             }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-
+            if (dgCTHD.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dgCTHD.SelectedRows)
+                {
+                    dgCTHD.Rows.Remove(row);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn chi tiết hoá đơn để xoá.");
+            }
         }
 
-        private void dgCTHD_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgCTHD_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.ColumnIndex == dgCTHD.Columns["SoLuong"].Index)
+            {
+                int rowIndex = e.RowIndex;
+                DataGridViewRow row = dgCTHD.Rows[rowIndex];
 
+                int soLuong = Convert.ToInt32(row.Cells["SoLuong"].Value);
+                double donGia = Convert.ToDouble(row.Cells["DonGia"].Value);
+
+                double thanhTien = soLuong * donGia;
+
+                row.Cells["ThanhTien"].Value = thanhTien;
+                CapNhatTongTien();
+            }
+        }
+
+        private void dgCTHD_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            DataGridViewColumn soLuong = dgCTHD.Columns["SoLuong"];
+
+            if (dgCTHD.Columns[e.ColumnIndex] != soLuong)
+            {
+                dgCTHD.CancelEdit();
+            }
         }
     }
 }

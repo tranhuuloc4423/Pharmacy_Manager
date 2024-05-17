@@ -22,8 +22,7 @@ namespace Quanlyhieuthuoc
         {
             InitializeComponent();
             manager = new TaiKhoanManager();
-            error = "";
-            txtMatKhau.UseSystemPasswordChar = true;
+            //txtMatKhau.UseSystemPasswordChar = true;
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -35,6 +34,7 @@ namespace Quanlyhieuthuoc
         {
             string tenTaiKhoan = txtDangNhap.Text;
             string matKhau = txtMatKhau.Text;
+            string error = string.Empty;
             if (string.IsNullOrEmpty(tenTaiKhoan))
             {
                 MessageBox.Show("Vui lòng nhập tên tài khoản!");
@@ -45,6 +45,9 @@ namespace Quanlyhieuthuoc
                 MessageBox.Show("Vui lòng nhập mật khẩu!");
                 return;
             }
+            MessageBox.Show("Tài khoản : " + tenTaiKhoan);
+            MessageBox.Show("Mật khẩu : " + matKhau);
+
             try
             {
                 var result = manager.KiemTraDangNhap(tenTaiKhoan, matKhau, ref error);

@@ -44,6 +44,8 @@
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
+            cbNCC = new ComboBox();
+            label7 = new Label();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -61,7 +63,7 @@
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            tableLayoutPanel1.Size = new Size(499, 462);
+            tableLayoutPanel1.Size = new Size(499, 506);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -88,6 +90,8 @@
             // panel2
             // 
             panel2.BackColor = Color.Thistle;
+            panel2.Controls.Add(cbNCC);
+            panel2.Controls.Add(label7);
             panel2.Controls.Add(txtMaThuoc);
             panel2.Controls.Add(label6);
             panel2.Controls.Add(btnThoat);
@@ -103,7 +107,7 @@
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(3, 63);
             panel2.Name = "panel2";
-            panel2.Size = new Size(493, 396);
+            panel2.Size = new Size(493, 440);
             panel2.TabIndex = 1;
             // 
             // txtMaThuoc
@@ -137,7 +141,7 @@
             btnThoat.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnThoat.FlatStyle = FlatStyle.Flat;
             btnThoat.Font = new Font("Microsoft Sans Serif", 16F);
-            btnThoat.Location = new Point(287, 315);
+            btnThoat.Location = new Point(287, 359);
             btnThoat.Margin = new Padding(4, 3, 4, 3);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(169, 46);
@@ -156,7 +160,7 @@
             btnSua.FlatAppearance.MouseOverBackColor = Color.LightPink;
             btnSua.FlatStyle = FlatStyle.Flat;
             btnSua.Font = new Font("Microsoft Sans Serif", 16F);
-            btnSua.Location = new Point(31, 315);
+            btnSua.Location = new Point(31, 359);
             btnSua.Margin = new Padding(4, 3, 4, 3);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(169, 46);
@@ -167,6 +171,7 @@
             // 
             // cbLoaiThuoc
             // 
+            cbLoaiThuoc.DropDownStyle = ComboBoxStyle.DropDownList;
             cbLoaiThuoc.Font = new Font("Segoe UI", 14F);
             cbLoaiThuoc.ForeColor = Color.Black;
             cbLoaiThuoc.FormattingEnabled = true;
@@ -247,11 +252,33 @@
             label2.TabIndex = 11;
             label2.Text = "Tên Thuốc";
             // 
+            // cbNCC
+            // 
+            cbNCC.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbNCC.Font = new Font("Segoe UI", 14F);
+            cbNCC.ForeColor = Color.Black;
+            cbNCC.FormattingEnabled = true;
+            cbNCC.Location = new Point(183, 298);
+            cbNCC.Name = "cbNCC";
+            cbNCC.Size = new Size(273, 33);
+            cbNCC.TabIndex = 24;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 16F);
+            label7.ForeColor = Color.Black;
+            label7.Location = new Point(31, 297);
+            label7.Name = "label7";
+            label7.Size = new Size(153, 30);
+            label7.TabIndex = 23;
+            label7.Text = "Nhà Cung Cấp";
+            // 
             // SuaThuoc
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(499, 462);
+            ClientSize = new Size(499, 506);
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "SuaThuoc";
@@ -283,5 +310,7 @@
         private Label label1;
         private TextBox txtMaThuoc;
         private Label label6;
+        private ComboBox cbNCC;
+        private Label label7;
     }
 }

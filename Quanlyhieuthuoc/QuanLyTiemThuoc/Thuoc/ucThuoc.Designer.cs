@@ -57,6 +57,7 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
+            txtTimKiem = new TextBox();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgThuoc).BeginInit();
@@ -194,6 +195,7 @@
             // panel2
             // 
             panel2.BackColor = Color.Thistle;
+            panel2.Controls.Add(txtTimKiem);
             panel2.Controls.Add(lblMaThuoc);
             panel2.Controls.Add(label5);
             panel2.Controls.Add(lblGiaBan);
@@ -217,7 +219,7 @@
             // 
             lblMaThuoc.AutoSize = true;
             lblMaThuoc.Font = new Font("Segoe UI", 16F);
-            lblMaThuoc.Location = new Point(186, 30);
+            lblMaThuoc.Location = new Point(186, 84);
             lblMaThuoc.Name = "lblMaThuoc";
             lblMaThuoc.Size = new Size(28, 30);
             lblMaThuoc.TabIndex = 23;
@@ -227,7 +229,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 16F);
-            label5.Location = new Point(22, 30);
+            label5.Location = new Point(22, 84);
             label5.Name = "label5";
             label5.Size = new Size(120, 30);
             label5.TabIndex = 22;
@@ -237,7 +239,7 @@
             // 
             lblGiaBan.AutoSize = true;
             lblGiaBan.Font = new Font("Segoe UI", 16F);
-            lblGiaBan.Location = new Point(186, 255);
+            lblGiaBan.Location = new Point(186, 309);
             lblGiaBan.Name = "lblGiaBan";
             lblGiaBan.Size = new Size(28, 30);
             lblGiaBan.TabIndex = 21;
@@ -247,7 +249,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 16F);
-            label6.Location = new Point(22, 255);
+            label6.Location = new Point(22, 309);
             label6.Name = "label6";
             label6.Size = new Size(97, 30);
             label6.TabIndex = 20;
@@ -257,7 +259,7 @@
             // 
             lblDonViTinh.AutoSize = true;
             lblDonViTinh.Font = new Font("Segoe UI", 16F);
-            lblDonViTinh.Location = new Point(186, 205);
+            lblDonViTinh.Location = new Point(186, 259);
             lblDonViTinh.Name = "lblDonViTinh";
             lblDonViTinh.Size = new Size(28, 30);
             lblDonViTinh.TabIndex = 19;
@@ -269,16 +271,16 @@
             cbLoaiThuoc.Font = new Font("Segoe UI", 14F);
             cbLoaiThuoc.FormattingEnabled = true;
             cbLoaiThuoc.Items.AddRange(new object[] { "admin", "user" });
-            cbLoaiThuoc.Location = new Point(186, 139);
+            cbLoaiThuoc.Location = new Point(186, 193);
             cbLoaiThuoc.Name = "cbLoaiThuoc";
-            cbLoaiThuoc.Size = new Size(146, 33);
+            cbLoaiThuoc.Size = new Size(193, 33);
             cbLoaiThuoc.TabIndex = 18;
             // 
             // lblTenThuoc
             // 
             lblTenThuoc.AutoSize = true;
             lblTenThuoc.Font = new Font("Segoe UI", 16F);
-            lblTenThuoc.Location = new Point(186, 79);
+            lblTenThuoc.Location = new Point(186, 133);
             lblTenThuoc.Name = "lblTenThuoc";
             lblTenThuoc.Size = new Size(28, 30);
             lblTenThuoc.TabIndex = 16;
@@ -345,7 +347,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 16F);
-            label3.Location = new Point(22, 205);
+            label3.Location = new Point(22, 259);
             label3.Name = "label3";
             label3.Size = new Size(136, 30);
             label3.TabIndex = 13;
@@ -355,7 +357,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 16F);
-            label2.Location = new Point(22, 139);
+            label2.Location = new Point(22, 193);
             label2.Name = "label2";
             label2.Size = new Size(128, 30);
             label2.TabIndex = 11;
@@ -365,11 +367,21 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 16F);
-            label1.Location = new Point(22, 79);
+            label1.Location = new Point(22, 133);
             label1.Name = "label1";
             label1.Size = new Size(123, 30);
             label1.TabIndex = 10;
             label1.Text = "Tên Thuốc :";
+            // 
+            // txtTimKiem
+            // 
+            txtTimKiem.Font = new Font("Segoe UI", 16F);
+            txtTimKiem.Location = new Point(22, 14);
+            txtTimKiem.Name = "txtTimKiem";
+            txtTimKiem.PlaceholderText = "Tìm kiếm";
+            txtTimKiem.Size = new Size(357, 36);
+            txtTimKiem.TabIndex = 24;
+            txtTimKiem.TextChanged += txtTimKiem_TextChanged;
             // 
             // ucThuoc
             // 
@@ -412,5 +424,6 @@
         private DataGridViewTextBoxColumn DonViTinh;
         private DataGridViewTextBoxColumn GiaBan;
         private DataGridViewTextBoxColumn TenNhaCungCap;
+        private TextBox txtTimKiem;
     }
 }

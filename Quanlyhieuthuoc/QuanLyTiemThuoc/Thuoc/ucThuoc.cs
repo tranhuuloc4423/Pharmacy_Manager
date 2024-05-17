@@ -17,6 +17,8 @@ namespace Quanlyhieuthuoc.Thuoc
     {
         private ThuocManager manager = null;
         private string error = null;
+
+        private DataTable originalDataTable = null;
         public ucThuoc()
         {
             InitializeComponent();
@@ -35,6 +37,7 @@ namespace Quanlyhieuthuoc.Thuoc
             }
             else
             {
+                originalDataTable = data;
                 dgThuoc.DataSource = data;
                 if (dgThuoc.Rows.Count > 0)
                 {
@@ -110,6 +113,31 @@ namespace Quanlyhieuthuoc.Thuoc
             SuaThuoc form = new SuaThuoc(entity);
             form.ShowDialog();
             hienThiDanhSach();
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = txtTimKiem.Text.Trim().ToLower();
+            if (originalDataTable != null)
+            {
+                DataTable filteredDataTable = originalDataTable.Clone();
+
+                foreach (DataRow row in originalDataTable.Rows)
+                {
+                    if (
+                        row["TenThuoc"].ToString().ToLower().Contains(keyword)
+                        || row["TenLoaiThuoc"].ToString().ToLower().Contains(keyword)
+                        || row["DonViTinh"].ToString().ToLower().Contains(keyword)
+                        || row["GiaBan"].ToString().ToLower().Contains(keyword)
+                        || row["TenNhaCungCap"].ToString().ToLower().Contains(keyword)
+                        )
+                    {
+                        filteredDataTable.ImportRow(row);
+                    }
+                }
+
+                dgThuoc.DataSource = filteredDataTable;
+            }
         }
     }
 }

@@ -179,7 +179,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(522, 450);
             Controls.Add(tableLayoutPanel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "SuaPhanLoai";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "SuaPhanLoai";
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);

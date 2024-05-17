@@ -23,6 +23,11 @@ namespace BLL.Managers
             return process.HienThiDanhSachThuoc(ref error);
         }
 
+        public DataTable HienThiDanhSachThuocBan(ref string error)
+        {
+            return process.HienThiDanhSachThuocBan(ref error);
+        }
+
         public bool ThemThuoc(ThuocEntity entity, ref string error)
         {
             if(string.IsNullOrEmpty(entity.TenThuoc))

@@ -17,6 +17,7 @@ namespace Quanlyhieuthuoc.TaiKhoan
     {
         private TaiKhoanManager taiKhoanManager = null;
         private QuyenManager quyenManager = null;
+        private DataTable originalDataTable = null;
         private string error = "";
         public ucTaiKhoan()
         {
@@ -36,6 +37,7 @@ namespace Quanlyhieuthuoc.TaiKhoan
             }
             else
             {
+                originalDataTable = data;
                 dgTaiKhoan.DataSource = data;
                 if (dgTaiKhoan.Rows.Count > 0)
                 {
@@ -83,7 +85,7 @@ namespace Quanlyhieuthuoc.TaiKhoan
                     return;
                 }
             }
-            hienThiDanhSachTaiKhoan() ;
+            hienThiDanhSachTaiKhoan();
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
@@ -91,10 +93,11 @@ namespace Quanlyhieuthuoc.TaiKhoan
             TaiKhoanEntity entity = new TaiKhoanEntity();
             entity.TenTaiKhoan = lblTenTaiKhoan.Text;
             entity.HoTen = lblHoTen.Text;
-            if(lblVaiTro.Text == "admin")
+            if (lblVaiTro.Text == "admin")
             {
                 entity.VaiTro = 1;
-            } else
+            }
+            else
             {
                 entity.VaiTro = 2;
             }
@@ -111,6 +114,29 @@ namespace Quanlyhieuthuoc.TaiKhoan
                 lblTenTaiKhoan.Text = rowselected.Cells["TenTaiKhoan"].Value.ToString();
                 lblHoTen.Text = rowselected.Cells["HoTen"].Value.ToString();
                 lblVaiTro.Text = rowselected.Cells["MoTa"].Value.ToString();
+            }
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = txtTimKiem.Text.Trim().ToLower();
+            if (originalDataTable != null)
+            {
+                DataTable filteredDataTable = originalDataTable.Clone();
+
+                foreach (DataRow row in originalDataTable.Rows)
+                {
+                    if (
+                        row["TenTaiKhoan"].ToString().ToLower().Contains(keyword)
+                        || row["HoTen"].ToString().ToLower().Contains(keyword)
+                        || row["MoTa"].ToString().ToLower().Contains(keyword)
+                        )
+                    {
+                        filteredDataTable.ImportRow(row);
+                    }
+                }
+
+                dgTaiKhoan.DataSource = filteredDataTable;
             }
         }
     }

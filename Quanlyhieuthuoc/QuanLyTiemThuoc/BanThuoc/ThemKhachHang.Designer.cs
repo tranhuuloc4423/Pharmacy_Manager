@@ -171,6 +171,7 @@
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ThemKhachHang";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ThemKhachHang";
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);

@@ -185,7 +185,6 @@
             txtGiaBan.Name = "txtGiaBan";
             txtGiaBan.Size = new Size(273, 32);
             txtGiaBan.TabIndex = 17;
-            txtGiaBan.TextChanged += txtGiaBan_TextChanged;
             txtGiaBan.KeyPress += txtGiaBan_KeyPress;
             // 
             // txtDonViTinh

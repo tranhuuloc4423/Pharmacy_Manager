@@ -1,6 +1,7 @@
 ﻿using BLL.Managers;
 using DAL.Entities;
 using Quanlyhieuthuoc.NhaCungCap;
+using Quanlyhieuthuoc.Thuoc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,7 @@ namespace Quanlyhieuthuoc.PhanLoai
     public partial class ucPhanLoai : UserControl
     {
         private PhanLoaiManager manager = null;
+        private DataTable originalDataTable = null;
         private string error = null;
         public ucPhanLoai()
         {
@@ -35,6 +37,7 @@ namespace Quanlyhieuthuoc.PhanLoai
             }
             else
             {
+                originalDataTable = data;
                 dgPhanLoai.DataSource = data;
                 if (dgPhanLoai.Rows.Count > 0)
                 {
@@ -99,6 +102,28 @@ namespace Quanlyhieuthuoc.PhanLoai
             SuaPhanLoai form = new SuaPhanLoai(entity);
             form.ShowDialog();
             hienThiDanhSach();
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = txtTimKiem.Text.Trim().ToLower();
+            if (originalDataTable != null)
+            {
+                DataTable filteredDataTable = originalDataTable.Clone();
+
+                foreach (DataRow row in originalDataTable.Rows)
+                {
+                    if (
+                        row["TenLoaiThuoc"].ToString().ToLower().Contains(keyword)
+                        || row["MaLoaiThuoc"].ToString().ToLower().Contains(keyword)
+                        )
+                    {
+                        filteredDataTable.ImportRow(row);
+                    }
+                }
+
+                dgPhanLoai.DataSource = filteredDataTable;
+            }
         }
     }
 }

@@ -30,20 +30,22 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
+            lblMaHoaDon = new Label();
+            lblNguoiBan = new Label();
+            label2 = new Label();
+            label9 = new Label();
+            panel3 = new Panel();
             lblNgayBan = new Label();
             label5 = new Label();
-            lblMaHoaDon = new Label();
-            label2 = new Label();
-            panel3 = new Panel();
-            lblNguoiBan = new Label();
-            label9 = new Label();
             lblKhachHang = new Label();
             label7 = new Label();
             panel4 = new Panel();
@@ -115,35 +117,15 @@
             // panel2
             // 
             panel2.BackColor = Color.Thistle;
-            panel2.Controls.Add(lblNgayBan);
-            panel2.Controls.Add(label5);
             panel2.Controls.Add(lblMaHoaDon);
+            panel2.Controls.Add(lblNguoiBan);
             panel2.Controls.Add(label2);
+            panel2.Controls.Add(label9);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(3, 63);
             panel2.Name = "panel2";
             panel2.Size = new Size(688, 54);
             panel2.TabIndex = 1;
-            // 
-            // lblNgayBan
-            // 
-            lblNgayBan.AutoSize = true;
-            lblNgayBan.Font = new Font("Tahoma", 14F);
-            lblNgayBan.Location = new Point(576, 16);
-            lblNgayBan.Name = "lblNgayBan";
-            lblNgayBan.Size = new Size(28, 23);
-            lblNgayBan.TabIndex = 4;
-            lblNgayBan.Text = "...";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Tahoma", 14F);
-            label5.Location = new Point(443, 16);
-            label5.Name = "label5";
-            label5.Size = new Size(104, 23);
-            label5.TabIndex = 3;
-            label5.Text = "Ngày Bán :";
             // 
             // lblMaHoaDon
             // 
@@ -155,6 +137,16 @@
             lblMaHoaDon.TabIndex = 2;
             lblMaHoaDon.Text = "...";
             // 
+            // lblNguoiBan
+            // 
+            lblNguoiBan.AutoSize = true;
+            lblNguoiBan.Font = new Font("Tahoma", 14F);
+            lblNguoiBan.Location = new Point(560, 16);
+            lblNguoiBan.Name = "lblNguoiBan";
+            lblNguoiBan.Size = new Size(28, 23);
+            lblNguoiBan.TabIndex = 8;
+            lblNguoiBan.Text = "...";
+            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -165,11 +157,21 @@
             label2.TabIndex = 1;
             label2.Text = "Mã Hoá Đơn :";
             // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Tahoma", 14F);
+            label9.Location = new Point(443, 16);
+            label9.Name = "label9";
+            label9.Size = new Size(111, 23);
+            label9.TabIndex = 7;
+            label9.Text = "Người Bán :";
+            // 
             // panel3
             // 
             panel3.BackColor = Color.Thistle;
-            panel3.Controls.Add(lblNguoiBan);
-            panel3.Controls.Add(label9);
+            panel3.Controls.Add(lblNgayBan);
+            panel3.Controls.Add(label5);
             panel3.Controls.Add(lblKhachHang);
             panel3.Controls.Add(label7);
             panel3.Dock = DockStyle.Fill;
@@ -178,25 +180,25 @@
             panel3.Size = new Size(688, 54);
             panel3.TabIndex = 2;
             // 
-            // lblNguoiBan
+            // lblNgayBan
             // 
-            lblNguoiBan.AutoSize = true;
-            lblNguoiBan.Font = new Font("Tahoma", 14F);
-            lblNguoiBan.Location = new Point(576, 18);
-            lblNguoiBan.Name = "lblNguoiBan";
-            lblNguoiBan.Size = new Size(28, 23);
-            lblNguoiBan.TabIndex = 8;
-            lblNguoiBan.Text = "...";
+            lblNgayBan.AutoSize = true;
+            lblNgayBan.Font = new Font("Tahoma", 14F);
+            lblNgayBan.Location = new Point(455, 18);
+            lblNgayBan.Name = "lblNgayBan";
+            lblNgayBan.Size = new Size(28, 23);
+            lblNgayBan.TabIndex = 4;
+            lblNgayBan.Text = "...";
             // 
-            // label9
+            // label5
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Tahoma", 14F);
-            label9.Location = new Point(443, 18);
-            label9.Name = "label9";
-            label9.Size = new Size(111, 23);
-            label9.TabIndex = 7;
-            label9.Text = "Người Bán :";
+            label5.AutoSize = true;
+            label5.Font = new Font("Tahoma", 14F);
+            label5.Location = new Point(345, 18);
+            label5.Name = "label5";
+            label5.Size = new Size(104, 23);
+            label5.TabIndex = 3;
+            label5.Text = "Ngày Bán :";
             // 
             // lblKhachHang
             // 
@@ -300,33 +302,33 @@
             dgChiTiet.ColumnHeadersHeight = 40;
             dgChiTiet.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dgChiTiet.Columns.AddRange(new DataGridViewColumn[] { TenThuoc, DonViTinh, SoLuong, DonGia, ThanhTien });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Window;
-            dataGridViewCellStyle3.Font = new Font("Tahoma", 14F);
-            dataGridViewCellStyle3.ForeColor = Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = Color.Thistle;
-            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgChiTiet.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = SystemColors.Window;
+            dataGridViewCellStyle5.Font = new Font("Tahoma", 14F);
+            dataGridViewCellStyle5.ForeColor = Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = Color.Thistle;
+            dataGridViewCellStyle5.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            dgChiTiet.DefaultCellStyle = dataGridViewCellStyle5;
             dgChiTiet.Dock = DockStyle.Fill;
             dgChiTiet.GridColor = Color.LightPink;
             dgChiTiet.Location = new Point(0, 0);
             dgChiTiet.MultiSelect = false;
             dgChiTiet.Name = "dgChiTiet";
             dgChiTiet.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Control;
-            dataGridViewCellStyle4.Font = new Font("Tahoma", 14F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgChiTiet.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.Control;
+            dataGridViewCellStyle6.Font = new Font("Tahoma", 14F);
+            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dgChiTiet.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             dgChiTiet.RowHeadersVisible = false;
             dgChiTiet.RowHeadersWidth = 40;
             dgChiTiet.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Font = new Font("Tahoma", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgChiTiet.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle7.Font = new Font("Tahoma", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgChiTiet.RowsDefaultCellStyle = dataGridViewCellStyle7;
             dgChiTiet.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgChiTiet.Size = new Size(688, 329);
             dgChiTiet.TabIndex = 3;
@@ -359,6 +361,8 @@
             // 
             DonGia.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             DonGia.DataPropertyName = "DonGia";
+            dataGridViewCellStyle3.Format = "N0";
+            DonGia.DefaultCellStyle = dataGridViewCellStyle3;
             DonGia.HeaderText = "Đơn Giá";
             DonGia.Name = "DonGia";
             DonGia.ReadOnly = true;
@@ -367,6 +371,8 @@
             // 
             ThanhTien.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             ThanhTien.DataPropertyName = "ThanhTien";
+            dataGridViewCellStyle4.Format = "N0";
+            ThanhTien.DefaultCellStyle = dataGridViewCellStyle4;
             ThanhTien.HeaderText = "Thành Tiền";
             ThanhTien.Name = "ThanhTien";
             ThanhTien.ReadOnly = true;

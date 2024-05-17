@@ -154,7 +154,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(496, 450);
             Controls.Add(tableLayoutPanel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "ThemPhanLoai";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ThemPhanLoai";
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);

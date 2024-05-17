@@ -3,6 +3,24 @@ GO
 
 /****************** TAIKHOAN   ******************/
 
+
+CREATE PROCEDURE CapNhatThongTin
+(
+  @TenTaiKhoan NVARCHAR(25),
+  @MatKhau NVARCHAR(30),
+  @MatKhauMoi NVARCHAR(30),
+  @HoTen NVARCHAR(30)
+)
+AS
+BEGIN
+  UPDATE TaiKhoan
+  SET MatKhau = @MatKhauMoi,
+  HoTen = @HoTen
+  WHERE TenTaiKhoan = @TenTaiKhoan and MatKhau = @MatKhau;
+END;
+
+GO
+
 CREATE PROCEDURE KiemTraTaiKhoan
 (
     @TenTaiKhoan NVARCHAR(25),

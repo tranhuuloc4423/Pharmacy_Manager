@@ -57,7 +57,7 @@ namespace DAL.Repos
                 SqlParameter[] parameters =
                 {
                     new SqlParameter("@MaLoaiThuoc", entity.MaLoaiThuoc),
-                    new SqlParameter("@MaLoaiThuoc", entity.MaLoaiThuoc),
+                    new SqlParameter("@TenLoaiThuoc", entity.TenLoaiThuoc),
                 };
                 return database.ExecuteNonQuery(procedureName, CommandType.StoredProcedure, ref error, parameters);
             }

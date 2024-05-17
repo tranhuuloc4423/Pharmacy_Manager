@@ -17,6 +17,7 @@ namespace Quanlyhieuthuoc.KhachHang
     {
         private KhachHangManager manager = null;
         private string error = null;
+        private DataTable originalDataTable = null;
         public ucKhachHang()
         {
             InitializeComponent();
@@ -35,6 +36,7 @@ namespace Quanlyhieuthuoc.KhachHang
             }
             else
             {
+                originalDataTable = data;
                 dgKhachHang.DataSource = data;
                 if (dgKhachHang.Rows.Count > 0)
                 {
@@ -103,6 +105,29 @@ namespace Quanlyhieuthuoc.KhachHang
                 }
             }
             hienThiDanhSach();
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = txtTimKiem.Text.Trim().ToLower();
+            if (originalDataTable != null)
+            {
+                DataTable filteredDataTable = originalDataTable.Clone();
+
+                foreach (DataRow row in originalDataTable.Rows)
+                {
+                    if (
+                        row["MaKhachHang"].ToString().ToLower().Contains(keyword)
+                        || row["HoTen"].ToString().ToLower().Contains(keyword)
+                        || row["SoDienThoai"].ToString().ToLower().Contains(keyword)
+                        )
+                    {
+                        filteredDataTable.ImportRow(row);
+                    }
+                }
+
+                dgKhachHang.DataSource = filteredDataTable;
+            }
         }
     }
 }

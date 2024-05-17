@@ -16,6 +16,7 @@ namespace Quanlyhieuthuoc.Thuoc
     {
         private ThuocManager manager = null;
         private PhanLoaiManager phanLoaiManager = null;
+        private NhaCungCapManager nhaCungCapManager = null;
         private ThuocEntity thuoc = null;
         private string error = null;
         public SuaThuoc(ThuocEntity thuoc)
@@ -23,10 +24,12 @@ namespace Quanlyhieuthuoc.Thuoc
             InitializeComponent();
             manager = new ThuocManager();
             phanLoaiManager = new PhanLoaiManager();
+            nhaCungCapManager = new NhaCungCapManager();
             error = "";
             this.thuoc = thuoc;
             hienThiPhanLoai();
             hienThiThongTinSuaThuoc();
+            hienThiNhaCungCap();
         }
 
         private void hienThiPhanLoai()
@@ -45,6 +48,22 @@ namespace Quanlyhieuthuoc.Thuoc
             }
         }
 
+        private void hienThiNhaCungCap()
+        {
+            DataTable data = new DataTable();
+            data = nhaCungCapManager.HienThiDanhSachTen(ref error);
+            if (data == null)
+            {
+                MessageBox.Show(error);
+            }
+            else
+            {
+                cbNCC.DataSource = data;
+                cbNCC.DisplayMember = "TenNhaCungCap";
+                cbNCC.ValueMember = "MaNhaCungCap";
+            }
+        }
+
         private void hienThiThongTinSuaThuoc()
         {
             txtMaThuoc.Text = thuoc.MaThuoc.ToString();
@@ -59,6 +78,7 @@ namespace Quanlyhieuthuoc.Thuoc
             ThuocEntity entity = new ThuocEntity();
             entity.MaThuoc = thuoc.MaThuoc;
             entity.MaLoaiThuoc = Convert.ToInt32(cbLoaiThuoc.SelectedValue);
+            entity.MaNhaCungCap = Convert.ToInt32(cbNCC.SelectedValue);
             entity.TenThuoc = txtTenThuoc.Text;
             entity.DonViTinh = txtDonViTinh.Text;
             //Nếu validate như thế này thì giá trị double bị null xong lỗi nên phải kiểm tra trước

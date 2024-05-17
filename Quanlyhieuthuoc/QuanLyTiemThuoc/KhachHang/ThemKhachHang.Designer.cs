@@ -141,6 +141,7 @@
             txtSoDienThoai.Size = new Size(253, 32);
             txtSoDienThoai.TabIndex = 16;
             txtSoDienThoai.TextChanged += txtSoDienThoai_TextChanged;
+            txtSoDienThoai.KeyPress += txtSoDienThoai_KeyPress;
             // 
             // txtHoTen
             // 
@@ -179,6 +180,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(484, 461);
             Controls.Add(tableLayoutPanel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "ThemKhachHang";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ThemKhachHang";
