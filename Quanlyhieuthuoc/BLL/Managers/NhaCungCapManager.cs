@@ -30,16 +30,43 @@ namespace BLL.Managers
 
         public bool ThemNCC(NhaCungCapEntity entity, ref string error)
         {
+            if (string.IsNullOrEmpty(entity.TenNhaCungCap))
+            {
+                error = "Vui lòng nhập tên nhà cung cấp!";
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(entity.DiaChi))
+            {
+                error = "Vui lòng nhập địa chỉ nhà cung cấp!";
+                return false;
+            }
             return process.ThemNCC(entity, ref error);
         }
 
         public bool SuaNCC(NhaCungCapEntity entity, ref string error)
         {
+            if (string.IsNullOrEmpty(entity.TenNhaCungCap))
+            {
+                error = "Vui lòng nhập tên nhà cung cấp!";
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(entity.DiaChi))
+            {
+                error = "Vui lòng nhập địa chỉ nhà cung cấp!";
+                return false;
+            }
             return process.SuaNCC(entity, ref error);
         }
 
         public bool XoaNCC(int maNCC, ref string error)
         {
+            if (maNCC == 0)
+            {
+                error = "Vui lòng nhập mã nhà cung cấp!";
+                return false;
+            }
             return process.XoaNCC(maNCC, ref error);
         }
     }

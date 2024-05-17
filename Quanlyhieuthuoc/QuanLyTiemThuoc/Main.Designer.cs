@@ -114,17 +114,17 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 16F);
-            label1.Location = new Point(1093, 10);
+            label1.Location = new Point(1084, 10);
             label1.Name = "label1";
-            label1.Size = new Size(99, 30);
+            label1.Size = new Size(110, 30);
             label1.TabIndex = 3;
-            label1.Text = "Xin Chào";
+            label1.Text = "Xin Chào :";
             // 
             // lblTenDayDu
             // 
             lblTenDayDu.AutoSize = true;
             lblTenDayDu.Font = new Font("Segoe UI", 16F);
-            lblTenDayDu.Location = new Point(1208, 10);
+            lblTenDayDu.Location = new Point(1189, 10);
             lblTenDayDu.Name = "lblTenDayDu";
             lblTenDayDu.Size = new Size(71, 30);
             lblTenDayDu.TabIndex = 2;
@@ -144,7 +144,7 @@
             // 
             lblDanhMuc.AutoSize = true;
             lblDanhMuc.Font = new Font("Segoe UI", 16F);
-            lblDanhMuc.Location = new Point(224, 10);
+            lblDanhMuc.Location = new Point(220, 10);
             lblDanhMuc.Name = "lblDanhMuc";
             lblDanhMuc.Size = new Size(71, 30);
             lblDanhMuc.TabIndex = 0;

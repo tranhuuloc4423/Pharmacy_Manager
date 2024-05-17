@@ -95,20 +95,22 @@ namespace DLL.Repos
             try
             {
                 connect.Open();
-                command.CommandType = type;
-                command.CommandText = procedureName;
-                command.Parameters.AddRange(parameters);
-                SqlDataReader reader = command.ExecuteReader();
-                if (reader.HasRows)
+                using (SqlCommand command = new SqlCommand(procedureName, connect))
                 {
-                    DataTable data = new DataTable();
-                    data.Load(reader);
-                    return data;
-                }
-                else
-                {
-                    // Không có dữ liệu trả về
-                    return null;
+                    command.CommandType = type;
+                    command.CommandText = procedureName;
+                    command.Parameters.AddRange(parameters);
+                    SqlDataReader reader = command.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        DataTable data = new DataTable();
+                        data.Load(reader);
+                        return data;
+                    }
+                    else
+                    {
+                        return null;
+                    }
                 }
 
             } catch (Exception ex)

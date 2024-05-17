@@ -38,6 +38,8 @@
             txtMaNCC = new TextBox();
             label5 = new Label();
             label2 = new Label();
+            txtDiaChi = new TextBox();
+            label3 = new Label();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -82,6 +84,8 @@
             // panel2
             // 
             panel2.BackColor = Color.Thistle;
+            panel2.Controls.Add(txtDiaChi);
+            panel2.Controls.Add(label3);
             panel2.Controls.Add(txtTenNCC);
             panel2.Controls.Add(btnThoat);
             panel2.Controls.Add(btnSua);
@@ -173,6 +177,26 @@
             label2.TabIndex = 11;
             label2.Text = "Mã Nhà Cung Cấp :";
             // 
+            // txtDiaChi
+            // 
+            txtDiaChi.Font = new Font("Segoe UI", 14F);
+            txtDiaChi.ForeColor = Color.Black;
+            txtDiaChi.Location = new Point(238, 148);
+            txtDiaChi.Name = "txtDiaChi";
+            txtDiaChi.Size = new Size(252, 32);
+            txtDiaChi.TabIndex = 24;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 16F);
+            label3.ForeColor = Color.Black;
+            label3.Location = new Point(31, 147);
+            label3.Name = "label3";
+            label3.Size = new Size(92, 30);
+            label3.TabIndex = 23;
+            label3.Text = "Địa Chỉ :";
+            // 
             // SuaNCC
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -203,5 +227,7 @@
         private TextBox txtMaNCC;
         private Label label5;
         private Label label2;
+        private TextBox txtDiaChi;
+        private Label label3;
     }
 }

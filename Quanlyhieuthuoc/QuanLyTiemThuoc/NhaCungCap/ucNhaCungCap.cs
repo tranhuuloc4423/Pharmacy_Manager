@@ -56,7 +56,7 @@ namespace Quanlyhieuthuoc.NhaCungCap
         private void btnXoa_Click(object sender, EventArgs e)
         {
             int maNCC = Convert.ToInt32(lblMaNCC.Text);
-            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa phân loại này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa nhà cung cấp này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dialogResult == DialogResult.Yes)
             {
                 try
@@ -64,12 +64,12 @@ namespace Quanlyhieuthuoc.NhaCungCap
                     var result = manager.XoaNCC(maNCC, ref error);
                     if (result)
                     {
-                        MessageBox.Show("Xoá phân loại thuốc thành công!");
+                        MessageBox.Show("Xoá nhà cung cấp thành công!");
 
                     }
                     else
                     {
-                        MessageBox.Show("Xoá phân loại thuốc không thành công!");
+                        MessageBox.Show("Xoá nhà cung cấp không thành công!");
                     }
                 }
                 catch (Exception ex)

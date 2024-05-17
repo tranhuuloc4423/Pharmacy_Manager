@@ -181,7 +181,7 @@
             // 
             lblDiaChi.AutoSize = true;
             lblDiaChi.Font = new Font("Segoe UI", 16F);
-            lblDiaChi.Location = new Point(231, 186);
+            lblDiaChi.Location = new Point(122, 186);
             lblDiaChi.Name = "lblDiaChi";
             lblDiaChi.Size = new Size(28, 30);
             lblDiaChi.TabIndex = 21;

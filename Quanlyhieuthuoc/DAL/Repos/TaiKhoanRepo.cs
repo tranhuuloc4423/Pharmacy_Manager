@@ -81,11 +81,9 @@ namespace DAL.Repos
 
         public DataTable KiemTraDangNhap(string tenTaiKhoan, string matKhau, ref string error)
         {
-            error = "";
-
             try
             {
-                SqlParameter[] parameters = new SqlParameter[2]
+                SqlParameter[] parameters = 
                 {
                     new SqlParameter("@TenTaiKhoan", tenTaiKhoan),
                     new SqlParameter("@MatKhau", matKhau)

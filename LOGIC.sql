@@ -28,7 +28,6 @@ CREATE PROCEDURE KiemTraTaiKhoan
 )
 AS
 BEGIN
-    SET NOCOUNT ON;
     SELECT VaiTro, HoTen
     FROM TaiKhoan
     WHERE TenTaiKhoan = @TenTaiKhoan AND MatKhau = @MatKhau

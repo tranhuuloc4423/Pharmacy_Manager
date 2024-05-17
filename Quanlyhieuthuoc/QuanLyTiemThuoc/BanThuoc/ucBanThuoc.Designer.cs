@@ -33,7 +33,6 @@
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
@@ -42,15 +41,11 @@
             DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
             panel1 = new Panel();
             dgThuoc = new DataGridView();
-            MaThuoc = new DataGridViewTextBoxColumn();
-            TenThuoc = new DataGridViewTextBoxColumn();
-            TenLoaiThuoc = new DataGridViewTextBoxColumn();
-            DonViTinh = new DataGridViewTextBoxColumn();
-            GiaBan = new DataGridViewTextBoxColumn();
             panel2 = new Panel();
             dgCTHD = new DataGridView();
             MaThuocCTHD = new DataGridViewTextBoxColumn();
@@ -79,6 +74,11 @@
             btnThem = new Button();
             label3 = new Label();
             label2 = new Label();
+            MaThuoc = new DataGridViewTextBoxColumn();
+            TenThuoc = new DataGridViewTextBoxColumn();
+            TenLoaiThuoc = new DataGridViewTextBoxColumn();
+            DonViTinh = new DataGridViewTextBoxColumn();
+            GiaBan = new DataGridViewTextBoxColumn();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -181,50 +181,6 @@
             dgThuoc.Size = new Size(738, 296);
             dgThuoc.TabIndex = 3;
             dgThuoc.CellClick += dgThuoc_CellClick;
-            // 
-            // MaThuoc
-            // 
-            MaThuoc.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            MaThuoc.DataPropertyName = "MaThuoc";
-            MaThuoc.HeaderText = "Mã Thuốc";
-            MaThuoc.Name = "MaThuoc";
-            MaThuoc.ReadOnly = true;
-            MaThuoc.Visible = false;
-            // 
-            // TenThuoc
-            // 
-            TenThuoc.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            TenThuoc.DataPropertyName = "TenThuoc";
-            TenThuoc.HeaderText = "Tên Thuốc";
-            TenThuoc.Name = "TenThuoc";
-            TenThuoc.ReadOnly = true;
-            // 
-            // TenLoaiThuoc
-            // 
-            TenLoaiThuoc.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            TenLoaiThuoc.DataPropertyName = "TenLoaiThuoc";
-            TenLoaiThuoc.HeaderText = "Tên Loại Thuốc";
-            TenLoaiThuoc.Name = "TenLoaiThuoc";
-            TenLoaiThuoc.ReadOnly = true;
-            // 
-            // DonViTinh
-            // 
-            DonViTinh.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            DonViTinh.DataPropertyName = "DonViTinh";
-            DonViTinh.HeaderText = "Đơn Vị Tính";
-            DonViTinh.Name = "DonViTinh";
-            DonViTinh.ReadOnly = true;
-            // 
-            // GiaBan
-            // 
-            GiaBan.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            GiaBan.DataPropertyName = "GiaBan";
-            dataGridViewCellStyle3.Format = "N0";
-            dataGridViewCellStyle3.NullValue = null;
-            GiaBan.DefaultCellStyle = dataGridViewCellStyle3;
-            GiaBan.HeaderText = "Giá Bán";
-            GiaBan.Name = "GiaBan";
-            GiaBan.ReadOnly = true;
             // 
             // panel2
             // 
@@ -616,6 +572,50 @@
             label2.TabIndex = 44;
             label2.Text = "Tên Thuốc :";
             // 
+            // MaThuoc
+            // 
+            MaThuoc.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            MaThuoc.DataPropertyName = "MaThuoc";
+            MaThuoc.HeaderText = "Mã Thuốc";
+            MaThuoc.Name = "MaThuoc";
+            MaThuoc.ReadOnly = true;
+            MaThuoc.Visible = false;
+            // 
+            // TenThuoc
+            // 
+            TenThuoc.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            TenThuoc.DataPropertyName = "TenThuoc";
+            TenThuoc.HeaderText = "Tên Thuốc";
+            TenThuoc.Name = "TenThuoc";
+            TenThuoc.ReadOnly = true;
+            // 
+            // TenLoaiThuoc
+            // 
+            TenLoaiThuoc.DataPropertyName = "TenLoaiThuoc";
+            TenLoaiThuoc.HeaderText = "Tên Loại Thuốc";
+            TenLoaiThuoc.Name = "TenLoaiThuoc";
+            TenLoaiThuoc.ReadOnly = true;
+            TenLoaiThuoc.Width = 180;
+            // 
+            // DonViTinh
+            // 
+            DonViTinh.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            DonViTinh.DataPropertyName = "DonViTinh";
+            DonViTinh.HeaderText = "Đơn Vị Tính";
+            DonViTinh.Name = "DonViTinh";
+            DonViTinh.ReadOnly = true;
+            // 
+            // GiaBan
+            // 
+            GiaBan.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            GiaBan.DataPropertyName = "GiaBan";
+            dataGridViewCellStyle3.Format = "N0";
+            dataGridViewCellStyle3.NullValue = null;
+            GiaBan.DefaultCellStyle = dataGridViewCellStyle3;
+            GiaBan.HeaderText = "Giá Bán";
+            GiaBan.Name = "GiaBan";
+            GiaBan.ReadOnly = true;
+            // 
             // ucBanThuoc
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -664,15 +664,15 @@
         private Label lblNguoiBan;
         private Label lblTongTien;
         private Label lblKhachHang;
-        private DataGridViewTextBoxColumn MaThuoc;
-        private DataGridViewTextBoxColumn TenThuoc;
-        private DataGridViewTextBoxColumn TenLoaiThuoc;
-        private DataGridViewTextBoxColumn DonViTinh;
-        private DataGridViewTextBoxColumn GiaBan;
         private DataGridViewTextBoxColumn MaThuocCTHD;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn SoLuong;
         private DataGridViewTextBoxColumn DonGia;
         private DataGridViewTextBoxColumn ThanhTien;
+        private DataGridViewTextBoxColumn MaThuoc;
+        private DataGridViewTextBoxColumn TenThuoc;
+        private DataGridViewTextBoxColumn TenLoaiThuoc;
+        private DataGridViewTextBoxColumn DonViTinh;
+        private DataGridViewTextBoxColumn GiaBan;
     }
 }

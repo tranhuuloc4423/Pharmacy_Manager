@@ -38,7 +38,7 @@ namespace Quanlyhieuthuoc.NhaCungCap
             NhaCungCapEntity entity = new NhaCungCapEntity();
             entity.MaNhaCungCap = nhaCungCapEntity.MaNhaCungCap;
             entity.TenNhaCungCap = nhaCungCapEntity.TenNhaCungCap.Trim();
-
+            entity.DiaChi = nhaCungCapEntity.DiaChi.Trim();
             try
             {
                 var result = manager.SuaNCC(entity, ref error);

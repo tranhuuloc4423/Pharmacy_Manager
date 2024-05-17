@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
             dgThuoc = new DataGridView();
@@ -44,6 +44,7 @@
             GiaBan = new DataGridViewTextBoxColumn();
             TenNhaCungCap = new DataGridViewTextBoxColumn();
             panel2 = new Panel();
+            txtTimKiem = new TextBox();
             lblMaThuoc = new Label();
             label5 = new Label();
             lblGiaBan = new Label();
@@ -57,7 +58,6 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            txtTimKiem = new TextBox();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgThuoc).BeginInit();
@@ -94,48 +94,48 @@
             dgThuoc.AllowUserToDeleteRows = false;
             dgThuoc.AllowUserToResizeColumns = false;
             dgThuoc.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgThuoc.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgThuoc.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             dgThuoc.BackgroundColor = Color.LightPink;
             dgThuoc.CellBorderStyle = DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Tahoma", 14F, FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgThuoc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = SystemColors.Control;
+            dataGridViewCellStyle8.Font = new Font("Tahoma", 14F, FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
+            dgThuoc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             dgThuoc.ColumnHeadersHeight = 40;
             dgThuoc.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dgThuoc.Columns.AddRange(new DataGridViewColumn[] { MaThuoc, TenThuoc, TenLoaiThuoc, DonViTinh, GiaBan, TenNhaCungCap });
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Window;
-            dataGridViewCellStyle4.Font = new Font("Tahoma", 14F);
-            dataGridViewCellStyle4.ForeColor = Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = Color.Thistle;
-            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dgThuoc.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = SystemColors.Window;
+            dataGridViewCellStyle10.Font = new Font("Tahoma", 14F);
+            dataGridViewCellStyle10.ForeColor = Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = Color.Thistle;
+            dataGridViewCellStyle10.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.False;
+            dgThuoc.DefaultCellStyle = dataGridViewCellStyle10;
             dgThuoc.Dock = DockStyle.Fill;
             dgThuoc.GridColor = Color.LightPink;
             dgThuoc.Location = new Point(0, 0);
             dgThuoc.MultiSelect = false;
             dgThuoc.Name = "dgThuoc";
             dgThuoc.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = SystemColors.Control;
-            dataGridViewCellStyle5.Font = new Font("Tahoma", 14F);
-            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dgThuoc.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = SystemColors.Control;
+            dataGridViewCellStyle11.Font = new Font("Tahoma", 14F);
+            dataGridViewCellStyle11.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.True;
+            dgThuoc.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             dgThuoc.RowHeadersVisible = false;
             dgThuoc.RowHeadersWidth = 40;
             dgThuoc.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle6.Font = new Font("Tahoma", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgThuoc.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Font = new Font("Tahoma", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgThuoc.RowsDefaultCellStyle = dataGridViewCellStyle12;
             dgThuoc.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgThuoc.Size = new Size(731, 545);
             dgThuoc.TabIndex = 1;
@@ -178,9 +178,9 @@
             // 
             GiaBan.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             GiaBan.DataPropertyName = "GiaBan";
-            dataGridViewCellStyle3.Format = "N0";
-            dataGridViewCellStyle3.NullValue = null;
-            GiaBan.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Format = "N0";
+            dataGridViewCellStyle9.NullValue = null;
+            GiaBan.DefaultCellStyle = dataGridViewCellStyle9;
             GiaBan.HeaderText = "Giá Bán";
             GiaBan.Name = "GiaBan";
             GiaBan.ReadOnly = true;
@@ -214,6 +214,16 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(394, 545);
             panel2.TabIndex = 1;
+            // 
+            // txtTimKiem
+            // 
+            txtTimKiem.Font = new Font("Segoe UI", 16F);
+            txtTimKiem.Location = new Point(22, 14);
+            txtTimKiem.Name = "txtTimKiem";
+            txtTimKiem.PlaceholderText = "Tìm kiếm";
+            txtTimKiem.Size = new Size(357, 36);
+            txtTimKiem.TabIndex = 24;
+            txtTimKiem.TextChanged += txtTimKiem_TextChanged;
             // 
             // lblMaThuoc
             // 
@@ -372,16 +382,6 @@
             label1.Size = new Size(123, 30);
             label1.TabIndex = 10;
             label1.Text = "Tên Thuốc :";
-            // 
-            // txtTimKiem
-            // 
-            txtTimKiem.Font = new Font("Segoe UI", 16F);
-            txtTimKiem.Location = new Point(22, 14);
-            txtTimKiem.Name = "txtTimKiem";
-            txtTimKiem.PlaceholderText = "Tìm kiếm";
-            txtTimKiem.Size = new Size(357, 36);
-            txtTimKiem.TabIndex = 24;
-            txtTimKiem.TextChanged += txtTimKiem_TextChanged;
             // 
             // ucThuoc
             // 
